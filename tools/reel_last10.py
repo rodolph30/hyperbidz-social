@@ -220,10 +220,9 @@ def end_card(t):
     wm = Image.new("RGBA", (hy.width + bz.width, max(hy.height, bz.height)), (0, 0, 0, 0))
     wm.alpha_composite(hy, (0, 0)); wm.alpha_composite(bz, (hy.width, 0))
     paste_center(im, wm, W / 2, 880, a, 1 + (1 - a) * 0.04)
-    paste_center(im, text_layer("MA FI EKHER SE3ER. FI EKHER SENYE.", font(34, mono=True), (235, 238, 255), tracking=5), W / 2, 1010, ease_out((k - 0.9) / 0.35))
-    wrap_center(im, "Live auctions for Lebanon. Coming soon.", font(58, 500), WHITE, 1130, alpha=ease_out((k - 1.2) / 0.35), max_w=860, line_h=1.15)
-    b = ease_out((k - 1.6) / 0.35)
-    paste_center(im, pill("Follow @hyperbidz", font(54, 700), NAVY, WHITE, pad=(56, 30)), W / 2, 1330, b, 0.94 + 0.06 * b)
+    wrap_center(im, "Live auctions for Lebanon. Coming soon.", font(58, 500), WHITE, 1060, alpha=ease_out((k - 0.9) / 0.35), max_w=860, line_h=1.15)
+    b = ease_out((k - 1.3) / 0.35)
+    paste_center(im, pill("Follow @hyperbidz", font(54, 700), NAVY, WHITE, pad=(56, 30)), W / 2, 1270, b, 0.94 + 0.06 * b)
     return im.convert("RGB")
 
 # ---------- audio ----------
