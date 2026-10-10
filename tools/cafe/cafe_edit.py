@@ -34,8 +34,6 @@ def overlay(base, t):
     for y in range(560):
         sd.line([(0, y), (W, y)], fill=(11, 14, 20, int(150 * (1 - y / 560) ** 1.4)))
     im.alpha_composite(scrim, (0, 0))
-    # honesty label
-    R.paste_center(im, glass_chip("AI-GENERATED SCENE", (235, 238, 245), (11, 14, 20, 150), size=22, tracking=3, pad=(22, 10)), W / 2, 250, 1.0)
     # hook line
     if t < 2.6:
         k = R.ease_out(t / 0.3) * (1 - R.clamp((t - 2.35) / 0.25))
