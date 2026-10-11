@@ -106,7 +106,7 @@ def slide(s, i, n):
         if kind == "kicker": h = 40
         elif kind == "chip": h = 96
         elif kind == "big": h = 240
-        elif kind in ("headline", "accent"): h = int(len(wrap(txt, font(hsize), R - L)) * hsize * 0.98)
+        elif kind in ("headline", "accent"): h = int(len(wrap(txt, font(hsize), R - L)) * hsize * 0.98) + 28
         elif kind == "sub": h = int(len(wrap(txt, font(50, 500), R - L)) * 50 * 1.18)
         else: h = 116
         rendered.append((kind, txt, h)); total += h + 36
