@@ -78,7 +78,19 @@ CLEAN FRAME: screens and signs glow plain violet and blank; objects plain and un
 - **Use a first-frame image** when the location must match an earlier shot exactly. Use reference images for a new location.
 - **Describe hero items identically every time,** for example "a glossy white vintage scooter, no logos".
 
-## 4. Lock the first frame when blocking matters
+## 4. Never ask one shot to choreograph several people
+
+Video models handle one person doing one clear action well. They fail when several people must take turns with small props in one shot: hands overlap, the order breaks, objects get used wrongly. Real ads aren't filmed that way either. So:
+- **Build interplay from short single-action shots,** usually 4 to 6 s, and let the edit create the sequence and the cause and effect:
+  - a close-up of two hands reaching
+  - an extreme close-up of one face reacting
+  - a close-up of a hand placing a bill
+  - a medium shot of one person raising a finger
+  - a close-up of a knock
+- **Reaction close-ups can be stills.** I animate them with push-ins and sound, which is cheap and never breaks.
+- **Let overlays carry the rest.** When the interaction is a bidding duel, pop-ups (bids, chats, notifications) can carry it while the footage stays on one person's reactions. That's why "Pulled In" worked.
+
+## 5. Lock the first frame when blocking matters
 
 When a scene has several people in set positions, or the lighting is specific, don't ask a video model to invent the frame. Do it in two steps:
 1. **Make a still image of the opening frame** and iterate on it cheaply until the cast, positions, lighting and palette are right.
@@ -86,13 +98,13 @@ When a scene has several people in set positions, or the lighting is specific, d
 
 Choose a camera position that shows every face and the key hands at once, for example over the shoulder of the person behind a counter. A character who speaks is best seen from behind or off-camera: their voice is heard, but there's no lip-sync to break.
 
-## 5. Model choice and cost
+## 6. Model choice and cost
 
 - **A shot continuing an existing frame:** first frame plus Veo. Fast is enough to test the logic.
 - **A known character in a new place:** Omni Flash with the character reference. It keeps identity better, and small mistakes can be fixed with an edit to the same clip instead of a new generation.
 - **Always 1 output.** Ask Flow for a transcript of the speech with timestamps along with the clip.
 
-## 6. Review before editing (every clip, every cut)
+## 7. Review before editing (every clip, every cut)
 
 - **Check the transcript against the script.** Words, numbers, call order and speaker should all match. Overlays follow the transcript; drop any overlay the audio doesn't support.
 - **Check the frames at every cut and about every 0.5 s.** Look for:
@@ -105,7 +117,7 @@ Choose a camera position that shows every face and the key hands at once, for ex
 - **Fix what the edit can fix.** Blur text, trim, cover with an overlay.
 - **Flag what it can't.** If the story depends on it, ask for an Omni edit or a regeneration, and tell the owner exactly what's wrong.
 
-## 7. Mistakes already seen (do not repeat)
+## 8. Mistakes already seen (do not repeat)
 
 From "Pulled In", episode 1 (12 Oct 2026):
 - **The prices didn't match.** The auctioneer said "ten thousand, twelve thousand" while the overlays showed $1,100 to $1,350.
@@ -124,7 +136,9 @@ From "The Last One", episode 1, take 1 (Omni Flash, text only, 4 people, 10 s):
 
 The cause: too many people and beats for a text-only prompt. The fix is a locked first frame plus Veo.
 
-## 8. Worked example: the auction shot, written with this method
+Take 2 (Veo Quality, locked first frame): the look and cast held, but the four-person sequence still broke. The baker fiddled with the manouche and swung the rolling pin overhead, a glass guard blocked the customers from the tray, and the beats overlapped. The lesson is section 4: split the scene into single-action shots.
+
+## 9. Worked example: the auction shot, written with this method
 
 Price ladder: someone else is at $10,000 when Karim arrives. Karim bids $12,000 and wins at $12,000. Overlays: earlier bids $8,000 and $9,000, then "rami_k $10,000" at 00:00.5, "Karim $12,000" at 00:03.6, "Going once…" at 00:04.8, "Going twice…" at 00:05.8, "SOLD." at 00:07.2.
 
