@@ -62,6 +62,35 @@ Every video, whether generated (Higgsfield, Google Flow/Veo) or made in code, mu
 - The owner prefers formats with digital pop-ups over the footage (chats, notifications, app moments) and ideas that can become a recurring series. Simple, intriguing, clear cause and effect; never a gag that needs explaining.
 - Google Flow (Veo) is available through the owner: write the full Flow prompt (portrait 9:16), the owner generates it and attaches the clip, then edit and brand it.
 
+## Logic and continuity rules for every video (owner's standing rule, 12 Oct 2026)
+
+The owner reviewed the first "Pulled In" Reel and flagged these as mistakes that must not happen again. Viewers notice them and the video feels fake.
+
+When writing a generation prompt:
+1. **Script every spoken line word for word, with timestamps, and say who says it.** Only that person's lips move. Name everyone else as silent with their mouth closed (Karim never speaks).
+2. **Spoken numbers and on-screen numbers are the same numbers.** Decide the price ladder before writing anything: the item, a realistic opening bid, the increments and the winning bid, in USD. Put it in the auctioneer's lines (for example "Do I hear ten? Ten thousand… Twelve! Twelve thousand…"), and use exactly that ladder in the bid pop-ups.
+3. **The auction call order is always the same.** The last bid, then "Going once…", then "Going twice…", then "Sold!". The gavel strikes once, on "Sold!" only, never on "Going once". Write each call into the prompt with its timestamp.
+4. **Props stay put.** List every prop and who holds it for the whole shot, for example "the auctioneer holds a handheld microphone in his left hand for the entire clip and the gavel in his right". Prefer props that can't vanish, like a microphone on a stand fixed to the podium.
+5. **Continuity carries across shots.** The end state of one shot is the start state of the next. If Karim leaves holding his phone, he lands back on the couch still holding it, and the prompt says so.
+6. **Crowds behave like individuals.** Paddles go up one or two at a time, from different parts of the room, at different moments, and come down at different times, with varied reactions. Never all together.
+7. **Keep each clip simple.** Fewer actions per clip; every extra action is another chance for the model to break the logic.
+
+Before sending a cut to the owner:
+- **Get a transcript of each clip's speech with timestamps.** This workspace has no speech-to-text, so ask the owner to paste Flow's transcript along with the clip ("Transcribe all speech in this clip with timestamps").
+- **Sync the overlays to that transcript.** Bid amounts, "Going once…", "Going twice…" and "SOLD." appear when the words are said. If a call is missing from the audio, drop that overlay rather than invent it.
+- **Check the frames at every cut and about every 0.5 s.** Look for:
+  - props that vanish or change
+  - hands that appear or disappear
+  - a non-speaking character who seems to talk
+  - a crowd moving in unison
+  - garbled text
+- **Fix it or flag it.** Blur garbled text. If the story depends on a broken detail, ask for an Omni edit or a regeneration instead of shipping it, and tell the owner what's wrong.
+
+## Recurring characters (series)
+
+- **Karim:** 23, Beirut. Short dark curly hair, light stubble, plain black hoodie, black sweatpants, white sneakers. Easygoing deal hunter, secretly competitive, never speaks; small honest reactions. Saved as a character in Google Flow. Episode 1: "Pulled In" (pulled into the phone into a live auction, wins a vintage scooter).
+- **Marwan (planned):** about 41, grey at the temples, salt-and-pepper beard, black turtleneck, charcoal blazer, steel watch with no logo. Calm luxury collector who bids with one raised finger; Karim's rival.
+
 ## Board data model (`posts/<id>`)
 
 Id format `p<NNN>-<slug>` (next number after the highest existing). Fields: `title`, `format` (carousel | reel | image), `pillar`, `cta`, `slot` (ISO with +03:00), `status` (waiting | changes | approved | scheduled | published | failed), `stage` ("concept" for an idea that needs Higgsfield credits, otherwise absent), `credits` (estimate, concept only), `revision`, `why` (one plain sentence on the idea), `caption`, `captionAlt`, `note` (the owner's change request), `media` ([{asset, alt}] board asset ids for previews), `cover` (asset id for a Reel poster), `previewUrl` (optional link to the full video), `publish` ({network: "instagram", igType: POST | REEL | TRIAL_REEL, mediaUrls: [public URLs in order], coverMs, isAiGenerated}), `metricool` ({id, uuid}), `igUrl`, `decidedAt`. Board previews must be uploaded to the board's asset store (Artifact tool: action publish, `url` = the board, `asset: true`, `file_paths`); external links don't load inside the board.

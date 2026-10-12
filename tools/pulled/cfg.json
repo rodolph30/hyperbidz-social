@@ -1,0 +1,153 @@
+{
+ "segments": [
+  {
+   "tag": "A",
+   "src": "shot1.mp4",
+   "in": 0.2,
+   "out": 4.6,
+   "gain": 0.8,
+   "cues": {
+    "notif": 0.25,
+    "zoom": [
+     3.55,
+     4.4
+    ],
+    "zoom_path": [
+     [
+      3.55,
+      0.22,
+      0.55
+     ],
+     [
+      3.85,
+      0.42,
+      0.43
+     ],
+     [
+      4.1,
+      0.5,
+      0.38
+     ]
+    ]
+   }
+  },
+  {
+   "tag": "B",
+   "src": "shot2b.mp4",
+   "in": 0.0,
+   "out": 8.0,
+   "gain": 1.0,
+   "cues": {
+    "countdown": 3.5,
+    "going_once": 4.9,
+    "going_twice": 5.35,
+    "hammer": 5.75,
+    "gavel": 6.08,
+    "sold_y": 440,
+    "flash_in": 0.3,
+    "chip_x": 600
+   }
+  },
+  {
+   "tag": "C",
+   "src": "shot1.mp4",
+   "in": 6.5,
+   "out": 8.0,
+   "hold": 1.4,
+   "gain": 0.5,
+   "cues": {
+    "notif": 1.0
+   }
+  }
+ ],
+ "notif1": {
+  "title": "Live auction starting now",
+  "body": "214 people bidding \u00b7 Tap to join"
+ },
+ "notif2": {
+  "title": "You won it.",
+  "body": "Vintage scooter \u00b7 $1,350"
+ },
+ "B": {
+  "hero": "Karim",
+  "viewers": 214,
+  "bids": [
+   [
+    2.2,
+    "maya.b",
+    1100
+   ],
+   [
+    2.6,
+    "rami_k",
+    1150
+   ],
+   [
+    3.0,
+    "nour.s",
+    1200
+   ],
+   [
+    3.3,
+    "elie.h",
+    1250
+   ],
+   [
+    3.85,
+    "joe.d",
+    1300
+   ],
+   [
+    4.45,
+    "Karim",
+    1350
+   ]
+  ],
+  "masks": [
+   [
+    3.35,
+    4.98,
+    0.85,
+    0.29,
+    1.0,
+    0.46,
+    0.0
+   ],
+   [
+    4.95,
+    6.9,
+    0.87,
+    0.33,
+    1.0,
+    0.48,
+    0.0
+   ],
+   [
+    6.85,
+    8.1,
+    0.68,
+    0.29,
+    1.0,
+    0.47,
+    0.0
+   ],
+   [
+    6.85,
+    8.1,
+    0.0,
+    0.29,
+    0.11,
+    0.47,
+    0.0
+   ]
+  ],
+  "feed_rows": 3,
+  "feed_y": 1520
+ },
+ "end_lines": [
+  "A whole auction house.",
+  "In your pocket."
+ ],
+ "end_len": 3.6,
+ "still_times": []
+}
