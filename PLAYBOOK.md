@@ -50,6 +50,18 @@ Confirmed product facts: a last-second bid adds time to the clock ("time added")
 - Signature device: a countdown on every carousel (00:0N timer and a draining bar), and in Reels the app's final-seconds sequence.
 - Motion: the "stamp" curve cubic-bezier(0.2, 1.3, 0.35, 1) for verdicts landing, 420 ms; breathing violet frame in the final seconds.
 
+## Brand look for every video (owner's standing rule)
+
+Every video, whether generated (Higgsfield, Google Flow/Veo) or made in code, must look like the app. Put this palette block in every generation prompt, in words with the hex codes as hints:
+
+"Color palette for the whole video (strict): deep near-black backgrounds (#0B0E14), electric blue (#2F7BFF) blending into violet (#7C5CFF) as the only light colors, soft light-violet highlights (#A78BFA), and clean white. No warm, orange, gold, red or green lighting anywhere. Modern, sleek, high-contrast, like a premium tech brand."
+
+- Wardrobe and props in black, white and dark grey; accents in violet. Avoid off-palette clothing colors.
+- Overlays and pop-ups (chats, notifications, countdowns, "New bid", "Going once… Going twice…", "Hammer falling", "You won it.") use the design system: Space Grotesk / Space Mono, glass or near-black bubbles, violet for the user's own messages and the final seconds, green only for "time added".
+- Every video ends on the gradient end card: Z mark, HYPERBIDZ wordmark, the message line, "Live auctions for Lebanon. Coming soon." and the call to action.
+- The owner prefers formats with digital pop-ups over the footage (chats, notifications, app moments) and ideas that can become a recurring series. Simple, intriguing, clear cause and effect; never a gag that needs explaining.
+- Google Flow (Veo) is available through the owner: write the full Flow prompt (portrait 9:16), the owner generates it and attaches the clip, then edit and brand it.
+
 ## Board data model (`posts/<id>`)
 
 Id format `p<NNN>-<slug>` (next number after the highest existing). Fields: `title`, `format` (carousel | reel | image), `pillar`, `cta`, `slot` (ISO with +03:00), `status` (waiting | changes | approved | scheduled | published | failed), `stage` ("concept" for an idea that needs Higgsfield credits, otherwise absent), `credits` (estimate, concept only), `revision`, `why` (one plain sentence on the idea), `caption`, `captionAlt`, `note` (the owner's change request), `media` ([{asset, alt}] board asset ids for previews), `cover` (asset id for a Reel poster), `previewUrl` (optional link to the full video), `publish` ({network: "instagram", igType: POST | REEL | TRIAL_REEL, mediaUrls: [public URLs in order], coverMs, isAiGenerated}), `metricool` ({id, uuid}), `igUrl`, `decidedAt`. Board previews must be uploaded to the board's asset store (Artifact tool: action publish, `url` = the board, `asset: true`, `file_paths`); external links don't load inside the board.
