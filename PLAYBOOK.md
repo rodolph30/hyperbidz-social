@@ -77,6 +77,10 @@ The owner judges every video on whether it could be real: spoken numbers must ma
 
 ## Recurring characters (series)
 
+The owner doesn't want every video tied to one character. Use a new cast whenever the idea is better with one. Recurring characters are optional. Series are defined by their format:
+- **"Pulled In":** someone is pulled into their phone and into a live auction.
+- **"The Last One":** two strangers, one last thing, a silent auction breaks out over it, and an unexpected winner. Episode 1 is the last manouche at a late-night bakery.
+
 - **Karim:** 23, Beirut. Short dark curly hair, light stubble, plain black hoodie, black sweatpants, white sneakers. Easygoing deal hunter, secretly competitive, never speaks; small honest reactions. Saved as a character in Google Flow. Episode 1: "Pulled In" (pulled into the phone into a live auction, wins a vintage scooter).
 - **Marwan (planned):** about 41, grey at the temples, salt-and-pepper beard, black turtleneck, charcoal blazer, steel watch with no logo. Calm luxury collector who bids with one raised finger; Karim's rival.
 
