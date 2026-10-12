@@ -59,6 +59,7 @@ CLEAN FRAME: screens and signs glow plain violet and blank; objects plain and un
 - **Every spoken line goes in quotes, with the speaker and a timestamp.** Name everyone else as silent with their mouth closed.
 - **Short lines:** about 2 to 3 words per second at most, each line under 10 words. Spell numbers the way they're said ("twelve thousand").
 - **The spoken numbers are the overlay numbers.** I decide them first, put them in the script, then use the same ones in the edit.
+- **Arabic speech.** Write each line in Arabic script and in Arabizi, and specify "Lebanese Arabic, casual Beirut dialect". Keep it to a few short, everyday words (واحد… تنين… تلاتة!, مبروك). AI voices drift to Egyptian or formal Arabic on long lines, and Lebanese viewers notice instantly. If the accent comes out wrong, mute the voice in the edit and let the overlays and sound effects carry the scene.
 
 **Text, logos and numbers in the picture**
 - **Models garble text.** Keep every screen, sign, paper and paddle blank in the footage. Every readable word, price and logo comes from my overlays.
