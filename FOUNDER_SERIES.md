@@ -216,3 +216,21 @@ Every founder episode uses the owner's own voice: Higgsfield voice element "Rodo
 4. **"Service?"** (driver's seat of an old cream Beirut taxi): "Service? Hamra? Verdun?" → "Just kidding. This old taxi goes live… and collectors are already fighting for it." *Edit:* taxi meter → bid counter.
 5. **"Three generations"** (classic white wedding car with flowers, old stone church): "This car drove three generations of brides to the church… and tonight, three generations of collectors will bid for it." *Edit:* zaffe drums.
 6. **"Never sell"** (snowy road to Faraya, Sunday): "Everyone in Lebanon has a car they'll never sell… until they see what it's worth. The first car auctions are coming."
+
+### Season 4 as made (14 Oct 2026)
+
+The owner generated these clips; all seven are on the board as `waiting`, in his own voice, one a day from 9 to 15 Nov (10:00 Beirut). The planned eps 3–6 above ("Grandma drove it to church", "Service?", "Three generations", "Never sell") were replaced by what he made.
+
+| Ep | Post | Title | Where | What the edit does |
+|---|---|---|---|---|
+| 1 | p029 | Not a crime movie | gas station, midnight | Thriller (crime grade, letterbox, "00:14 · DORA HIGHWAY", unknown-number texts) → record scratch, freeze, PLOT TWIST stamp → clean live auction card and bids. Pump sign blurred. |
+| 2 | p030 | Forty bidders disagree | mechanic | Doctor's bad news: clinic grade, ECG, diagnosis card "$3,000", flatline → jolt → pull back, 40 bidders, bid line to $7,400. Plate (masked around his head) and badge blurred. |
+| 3 | p031 | Auction it once | rooftop, dusk | 100 missed calls, 1,000 lowballs flood in, shake → one wave, ONE LIVE AUCTION, SOLD $38,000. |
+| 4 | p028 | Fought over | private garage | (the original opener) rev-counter gauge, LIVE badge. |
+| 5 | p032 | Lights on | dark warehouse | Darkness → headlights clack on with flares; search "0 results" → private invitation, one night only, Remind me tapped. |
+| 6 | p033 | Drove it home | Corniche, blue hour | 23 bidders → 22 fall away, one drove it home $41,500 → NEXT CAR AUCTION · SOON → YOU + crown. |
+| 7 | p034 | You just won (finale) | Raouché, golden hour | 3 · 2 · 1 countdown, gavel strike on "Sold", SOLD stamp, confetti, "You won your first car" notification. Hubcap emblem tracked and blurred. |
+
+Edit scripts: `tools/founder/s4gas_edit.py`, `s4mech_edit.py`, `s4roof_edit.py`, `s4lights_edit.py`, `s4drive_edit.py`, `s4final_edit.py`, shared pieces in `s4_common.py` (looks, letterbox, grain, `blur_unless` for plates behind a moving head, `zcrop`, `tone`). `remux.py` swaps in rebuilt audio without re-rendering; `peek.py` / `cover.py` render single frames.
+
+Sound rule kept: nothing loud under key words (moved the rooftop whoosh off "Auction", nothing under "lowballs"/"once"; the finale's gavel crack is tamed so the voice sits at the usual level).
