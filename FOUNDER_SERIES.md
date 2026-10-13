@@ -185,6 +185,8 @@ Ideas for later seasons: sneakers and streetwear (young crowd), antiques and art
 5. **S3E5 "Something you love"** (golden hour; holds a brass Arabic coffee pot): "Selling something you love shouldn't feel like losing. When people compete for it… you walk away proud." Looks at the pot at 3.5 s, proud smile at 5.8 s. *Edit:* bids climbing until SOLD to the 9th bidder.
 6. **S3E6 "The very first"** (sunset; seated on the window ledge, medium-wide): "The first HyperBidz auctions need great items. Yours could open the very first one. Send us a message." Points at 3.1 s, nods at 6 s. *Edit:* "Be one of the first sellers"; caption CTA: DM us "SELLER".
 
+**Props:** see VIDEO_PROMPTS.md "Props in hand". The prop stays still in the same grip for the whole clip; the actions are on the head and face only.
+
 Never use "last price?" (or "akher se3er") in any lowball message: too close to the banned slogan.
 
 ## Owner's voice (from 14 Oct 2026)

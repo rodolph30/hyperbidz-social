@@ -179,3 +179,12 @@ Sound: low murmur of the seated crowd, the auctioneer's amplified voice, one sha
 Palette: deep near-black (#0B0E14), electric blue (#2F7BFF) blending into violet (#7C5CFF) as the only light colors, soft light-violet highlights (#A78BFA), clean white; cool, modern, high-contrast.
 Realism: real skin texture, natural imperfect movement, every object stays where it is unless someone moves it, a clean picture without captions or subtitles.
 ```
+
+## Props in hand (lesson from S3E2, 14 Oct 2026)
+
+Veo fumbles small objects when the prompt asks the hands to *do* something with them (S3E2: "closes his hand around the watch" made both hands grab and twist the watch for 2 seconds, and the strap vanished). A big object held still (S3E1's tawleh in both hands) stayed perfect.
+
+- Hold the prop **still, in the same grip, for the whole clip**: "He holds X steadily in both hands at chest height the entire time; his grip never changes; he never passes it between hands; the object keeps its exact shape and size."
+- Put the actions on the **head and face only** (look down at it, raise the eyes, smile, nod), never on the hands holding the prop.
+- Prefer **larger props** that need two hands (a board, a coffee pot, a box) over tiny ones (a watch, a ring).
+- In the edit, a fumble during a pause in the speech can be covered with a cutaway built from earlier frames of the same clip (S3E2: a memory close-up of the watch in his palm).
