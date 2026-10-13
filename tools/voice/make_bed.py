@@ -29,7 +29,15 @@ if __name__ == "__main__":
     final, raw, pre = sys.argv[1:4]
     mix = dec(final); v = dec(raw)
     lag = best_lag(mix, v); vs = shift(v, lag, len(mix))
-    g = float(np.dot(mix, vs) / np.dot(vs, vs)); bed = mix - g * vs
+    g = float(np.dot(mix, vs) / np.dot(vs, vs))
+    # the effective gain drifts by about 1% across the clip (AAC); fit it per 0.5 s window where the voice is present
+    win = SR // 2; gs = np.full(len(mix), g)
+    centers, vals = [], []
+    for i0 in range(0, len(mix) - win, win // 2):
+        seg = vs[i0:i0 + win]; e = np.dot(seg, seg)
+        if e > win * 0.01 ** 2 * 50: centers.append(i0 + win // 2); vals.append(np.dot(mix[i0:i0 + win], seg) / e)
+    if len(vals) >= 2: gs = np.interp(np.arange(len(mix)), centers, vals)
+    bed = mix - gs * vs
     speech = np.abs(vs) > 0.02
     leak = float(np.sqrt(np.mean((bed[speech]) ** 2)) / np.sqrt(np.mean((g * vs[speech]) ** 2)))
     with wave.open(pre + ".bed.wav", "wb") as w:
