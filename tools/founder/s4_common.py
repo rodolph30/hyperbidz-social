@@ -111,3 +111,27 @@ def drone(mx, t0, t1, f=55, g=0.12):
 def hum(mx, t0, t1, g=0.04):
     y = mx.tt(t1 - t0); s = np.sign(np.sin(2 * np.pi * 100 * y)) * 0.5 + np.sin(2 * np.pi * 200 * y) * 0.5
     mx.fadd(mx.lp(s, 8) * np.minimum(1, (y[-1] - y) / 0.05), t0, g)
+
+def blur_unless(im, box, r, keep, clean=9, edge=10):
+    """Blur a region (a plate) without smearing what's in front of it: `keep(arr)` marks the pixels to keep (his head).
+    Stray keep-pixels (letter edges) are removed by an opening; the blur is a normalized convolution of the background
+    pixels only, and the patch fades out at its border."""
+    x0, y0, x1, y1 = box; a = np.asarray(im.crop(box).convert("RGB"), np.float32)
+    k = Image.fromarray((keep(a) * 255).astype(np.uint8)).filter(ImageFilter.MinFilter(clean)).filter(ImageFilter.MaxFilter(clean + 2))
+    bg = 1 - np.asarray(k, np.float32) / 255
+    def gb(x): return np.asarray(Image.fromarray(np.clip(x, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(r)), np.float32)
+    m = gb(bg * 255) / 255 + 1e-4
+    bl = np.stack([gb(a[..., c] * bg) / m for c in range(3)], -1)
+    soft = np.asarray(Image.fromarray((bg * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.5)), np.float32) / 255
+    hh, ww = soft.shape; ey = np.minimum(np.arange(hh), hh - 1 - np.arange(hh)) / edge; ex = np.minimum(np.arange(ww), ww - 1 - np.arange(ww)) / edge
+    soft = (soft * np.clip(ey, 0, 1)[:, None] * np.clip(ex, 0, 1)[None, :])[..., None]
+    out = a * (1 - soft) + bl * soft; im.paste(Image.fromarray(np.clip(out, 0, 255).astype(np.uint8)), (x0, y0)); return im
+
+def zcrop(im, z, focus):
+    if z <= 1.0005: return im
+    w, h = W / z, H / z; cx, cy = focus; l = min(max(cx - w / 2, 0), W - w); tp = min(max(cy - h / 2, 0), H - h)
+    return im.crop((int(l), int(tp), int(l + w), int(tp + h))).resize((W, H), Image.BICUBIC)
+
+def tone(mx, t0, t1, freqs, g, fade=0.4):
+    y = mx.tt(t1 - t0); s = sum(np.sin(2 * np.pi * f * y + i) * a for i, (f, a) in enumerate(freqs))
+    env = np.minimum(1, y / fade) * np.minimum(1, (y[-1] - y) / 0.12); mx.fadd(s * env, t0, g)
