@@ -33,7 +33,10 @@ if __name__ == "__main__":
     mask = env(raw) > 0.02 * env(raw).max() * 3
     mask = np.pad(mask, (0, max(0, len(al) - len(mask))))[: len(al)]
     rms_new = np.sqrt(np.mean(al[mask] ** 2)) + 1e-9; rms_old = np.sqrt(np.mean(raw[mask[: len(raw)]] ** 2)) + 1e-9
-    voice = al * (rms_old / rms_new) * meta["gain"]
+    # soft gate from the original speech timing (±120 ms), so conversion noise between phrases stays low
+    k = int(0.12 * SR); dil = np.convolve(mask.astype(float), np.ones(2 * k + 1), mode="same") > 0
+    gate = np.convolve(dil.astype(float), np.ones(1440) / 1440, mode="same"); gate = 0.25 + 0.75 * gate
+    voice = al * gate * (rms_old / rms_new) * meta["gain"]
     mix = bed + voice; pk = np.max(np.abs(mix))
     if pk > 0.97: mix *= 0.97 / pk
     with wave.open("mix.wav", "wb") as w:
