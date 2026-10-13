@@ -65,6 +65,7 @@ class Mix:
         self.n = int((clip + end) * SR); self.clip, self.end = clip, end; self.rng = np.random.default_rng(7)
         v = np.frombuffer(subprocess.run(["ffmpeg", "-loglevel", "error", "-i", src, "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True).stdout, dtype=np.int16).astype(np.float64) / 32768
         self.voice = v / (np.max(np.abs(v)) + 1e-9) * 0.9
+        if len(self.voice) < int(clip * SR): self.voice = np.concatenate([self.voice, np.zeros(int(clip * SR) - len(self.voice))])   # held last shot
         env = np.convolve(np.abs(self.voice), np.ones(2400) / 2400, mode="same"); self.duck = 1 - 0.65 * np.clip(env / (env.max() + 1e-9) * 3, 0, 1)
         x = np.arange(len(self.voice)) / SR
         pad = sum(np.sin(2 * np.pi * f * x + i) * a for i, (f, a) in enumerate(pad_freqs)) * (0.85 + 0.15 * np.sin(2 * np.pi * 0.5 * x)) * 0.06 * np.minimum(1, x / 0.5)
@@ -94,6 +95,14 @@ class Mix:
         out = out / (np.max(np.abs(out)) + 1e-9) * 0.92
         with wave.open(path, "wb") as w_:
             w_.setnchannels(1); w_.setsampwidth(2); w_.setframerate(SR); w_.writeframes((out * 32767).astype(np.int16).tobytes())
+
+def hold_zoom(im, t, shot=8.0, start=7.0, hold=1.4, z1=1.08, focus=(540, 700)):
+    """owner's rule (14 Oct): let the last shot breathe. From `start` to the end of the hold, push in slowly toward
+    `focus`; the video itself is frozen on its last frame after `shot`."""
+    if t < start: return im
+    k = R.clamp((t - start) / (shot + hold - start)); z = 1 + (z1 - 1) * (k * k * (3 - 2 * k))
+    w, h = W / z, H / z; cx, cy = focus; l = min(max(cx - w / 2, 0), W - w); tp = min(max(cy - h / 2, 0), H - h)
+    return im.crop((int(l), int(tp), int(l + w), int(tp + h))).resize((W, H), Image.BICUBIC)
 
 def render(frame, total, audio_path, out):
     if "--stills" in sys.argv:
