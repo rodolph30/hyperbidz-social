@@ -130,8 +130,8 @@ if __name__ == "__main__":
         mx = Mix(CLIP, END, pad_freqs=((73.4, .30), (110, .22), (146.8, .16), (220, .06)))
         mx.shimmer(SWEEP + 0.2, 2093, 0.05)
         rev(mx, GAUGE_IN, 38, 52, 0.5, 0.18)
-        for i, (at, v, n) in enumerate(BIDS): rev(mx, at - 0.03, 45 + i * 6, 70 + i * 12, 0.32, 0.16); mx.ping(at + 0.05, 1046.5 * 2 ** (i * 2 / 12), 0.06)
+        for i, (at, v, n) in enumerate(BIDS): rev(mx, at - 0.03, 45 + i * 6, 70 + i * 12, 0.26, 0.07); mx.ping(at + 0.05, 1046.5 * 2 ** (i * 2 / 12), 0.05)   # quiet under 'fought over'
         mx.ping(BRAND, 1318.5, 0.08)
-        rev(mx, LIVE - 0.12, 60, 140, 1.1, 0.26); mx.thud(LIVE, 0.6); mx.shimmer(LIVE + 0.03, 1318.5, 0.12)
+        mx.thud(LIVE, 0.35); mx.shimmer(LIVE + 0.03, 1318.5, 0.06); rev(mx, 6.85, 60, 140, 1.1, 0.26)   # the roar comes after 'live'
         mx.write("s4e1_audio.wav")
     render(frame, TOTAL, "s4e1_audio.wav", OUT)
