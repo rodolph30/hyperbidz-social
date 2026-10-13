@@ -173,6 +173,8 @@ Ideas for later seasons: sneakers and streetwear (young crowd), antiques and art
 
 ## Season 3: for sellers, "What it's really worth" (old Beirut house)
 
+**Final running order (owner, 14 Oct 2026):** the owner dropped "Jeddo's tawleh" (its files stay in posts/2026-11-03-p022-founder-s3e1 but it is off the board and must not be posted). Season 3 is 5 episodes: 1 Forty years (Nov 3), 2 Not begging (Nov 4), 3 They come to you (Nov 5), 4 Something you love (Nov 6), 5 The very first (Nov 7). The list below keeps the original prompt numbers.
+
 **Feeling:** pride and dignity. Your things carry stories, and selling shouldn't feel like losing. The arc: memory → story → dignity → reversal → pride → call to action.
 
 **Character image:** the owner's "me 3" character in Flow: cream linen shirt, thin gold chain, round sunglasses. Every prompt adds "no bookshelves, no books, no desk" because the portrait has bookshelves behind him.
