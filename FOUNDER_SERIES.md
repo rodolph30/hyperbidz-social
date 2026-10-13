@@ -31,6 +31,10 @@ Only claim features the owner has confirmed. Known from the app's design: live b
 - **Recurring lines** the audience learns: "Don't sell it. Let them bid for it." and "Find out the second price."
 - **Cadence:** about 3 founder episodes a week, plus fiction or carousels in between.
 
+## Approval (owner's rule)
+
+No episode of this series goes to Instagram until the owner approves it on the Approval Board. Finished cuts go on the board as `waiting`, and the approval check posts them only once they are `approved`.
+
 ## Production rules for the founder clips (owner's rule: one prompt per episode)
 
 - **One prompt and one 8-second clip per episode.** The owner attaches only his photo as the character reference in Veo. No first-frame images, no multi-clip episodes.

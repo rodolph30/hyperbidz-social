@@ -77,6 +77,8 @@ The owner judges every video on whether it could be real: spoken numbers must ma
 
 ## Founder series (owner's priority from 13 Oct 2026)
 
+**Approval rule (owner, 13 Oct 2026):** never publish a founder-series episode until the owner has approved it on the Approval Board. Put each finished episode on the board with `status: waiting`, a cover, a preview link and the caption. Post it only after the board shows `approved`. A "post it" message in chat for this series still means: put it on the board for approval.
+
 The owner, Rodolph, is now the main on-camera character. His episodes promote the app itself: the problems it solves, why bidding beats classifieds (never name competitors), and building the community. Read `FOUNDER_SERIES.md` for the positioning, formats, production rules and episode list before writing any founder episode.
 
 ## Recurring characters (series)
