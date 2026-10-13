@@ -1,0 +1,8 @@
+{"name": "p007", "slides": [
+ {"tone": "gradient", "kicker": "Buying from a stranger?", "headline": "Know who's on the other side.", "sub": "Here's how HyperBidz shows you before you bid."},
+ {"tone": "dark", "kicker": "01 · Trust tiers", "headline": "Every seller has a tier.", "accent": "Five of them.", "sub": "New · Verified · Established · Trusted · Top seller"},
+ {"tone": "dark", "kicker": "02 · Public reviews", "headline": "Reviews are public.", "accent": "Read first, then bid.", "sub": "See what past buyers said about a seller."},
+ {"tone": "dark", "kicker": "03 · A small hold", "headline": "A small hold keeps everyone serious.", "sub": "On bids and on listings. Outbid? Your hold comes back."},
+ {"tone": "dark", "kicker": "04 · Reserve", "chip": "Reserve met", "headline": "Sellers can set a reserve.", "sub": "You see “reserve met” or “reserve not met” while you bid."},
+ {"tone": "gradient", "headline": "Trust you can see before you bid.", "sub": "Live auctions for Lebanon. Coming soon.", "cta": "Save this for launch day"}
+]}
