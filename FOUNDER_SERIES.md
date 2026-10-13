@@ -51,6 +51,7 @@ No episode of this series goes to Instagram until the owner approves it on the A
 - **Voice line in every prompt:** English with a light Lebanese accent, calm, confident, warm, medium-low.
 - **Keep prompts simple,** in the style of the Ep. 1 prompt, which the owner called perfect: a short setting, a short "only these things in the frame" line, his lines with timestamps, and at most 2 actions.
 - **Always end the prompt with:** "No captions, no subtitles, no text or writing anywhere on the video."
+- **Hold the last shot (owner, 14 Oct 2026):** before the end card, let the last shot breathe for about 1.4 s, frozen on its last frame with a slow push-in (`hold_zoom` in founder_common.py: start the push about 1 s before the clip ends, zoom to about 1.08 toward his face), keeping the last caption and pop-ups on screen. Viewers need time to take in the final moment.
 - **The edit makes it an episode:** captions, pop-ups acting out the line, sound design, and the end card.
 
 ## Seasons (owner's plan, 14 Oct 2026)
