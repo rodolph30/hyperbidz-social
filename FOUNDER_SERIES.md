@@ -53,6 +53,30 @@ No episode of this series goes to Instagram until the owner approves it on the A
 - **Always end the prompt with:** "No captions, no subtitles, no text or writing anywhere on the video."
 - **The edit makes it an episode:** captions, pop-ups acting out the line, sound design, and the end card.
 
+## Seasons (owner's plan, 14 Oct 2026)
+
+Each season targets one audience, is shot in one place and keeps one outfit. The same setting text and the same outfit line go in every prompt of that season, so the episodes look like one show. His face, beard, round black sunglasses and thin gold chain never change.
+
+| Season | Audience | Place | Outfit line |
+|---|---|---|---|
+| 1 | Auction awareness (done: Ep. 1–6 below) | Mixed | Black crew-neck t-shirt |
+| 2 | Buyers | Rooftop infinity pool, Beirut, night | "He wears a black short-sleeve button shirt with an open collar and a thin gold chain." (locked from S2E1) |
+| 3 | Sellers | Old Beirut house, triple-arched window, afternoon sun | "He wears a black crew-neck t-shirt and a thin gold chain." |
+| 4 | Cars | Dark private garage, one classic car under a spotlight | "He wears a black leather jacket over a black crew-neck t-shirt and a thin gold chain." |
+| 5 | Watches | Dark walnut private vault, one lit glass case | "He wears a navy blazer over a black crew-neck t-shirt and a thin gold chain. His wrists are bare." |
+| 6 | Bags (mainly women) | Bright boutique dressing room | Owner to decide: him, or a female co-host |
+
+Ideas for later seasons: sneakers and streetwear (young crowd), antiques and art (Lebanese heritage).
+
+**Setting texts for the next seasons:**
+
+- **S3 Sellers:** "Setting: inside an old Beirut house. Behind him, a tall triple-arched window with warm afternoon sunlight, pale stone walls and patterned floor tiles. Nothing else in the frame: no furniture, no objects, no other people."
+- **S4 Cars:** "Setting: a dark private garage at night. Behind him, one classic silver sports car under a single soft spotlight, its body clean and smooth, with no badges, no logos and no license plate. Nothing else in the frame: no other cars, no objects, no other people."
+- **S5 Watches:** "Setting: a quiet private vault with dark walnut walls. Behind him, one small glass display case lit from inside, holding a single steel watch. Nothing else in the frame: no other objects, no other people."
+- **S6 Bags:** "Setting: a bright luxury boutique dressing room in soft daylight, cream walls and a warm marble floor. Behind him, one shelf holding three handbags in black, cream and caramel, with plain leather and no logos. Nothing else in the frame: no other objects, no other people."
+
+**Cadence:** Metricool is on the Free plan (20 posts a month), so a 6-episode season takes about a week and a half alongside other posts.
+
 ## Episodes
 
 ### Ep. 1: "They bid" (The Old Way)
