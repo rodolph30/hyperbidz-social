@@ -102,7 +102,8 @@ Choose a camera position that shows every face and the key hands at once, for ex
 
 - **A shot continuing an existing frame:** first frame plus Veo. Fast is enough to test the logic.
 - **A known character in a new place:** Omni Flash with the character reference. It keeps identity better, and small mistakes can be fixed with an edit to the same clip instead of a new generation.
-- **Always 1 output.** Ask Flow for a transcript of the speech with timestamps along with the clip.
+- **Always 1 output.**
+- **Transcribe the speech yourself.** Use `tools/asr/transcribe.py`. Setup: `pip install sherpa-onnx --break-system-packages`, then download and unpack https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-base.en.tar.bz2 into /home/claude/asr. It prints each phrase with start and end times, in English only. For Arabic, or if it fails, ask the owner for Flow's transcript.
 
 ## Pacing (owner's friends' feedback on "The Last Manouche", 13 Oct 2026)
 
