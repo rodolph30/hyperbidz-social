@@ -1,6 +1,6 @@
 # Founder series: Rodolph on camera (strategy and episode bible)
 
-The owner, Rodolph, appears on camera as himself: bald, full dark beard, round black sunglasses, black crew-neck t-shirt, a thin gold chain. His look must stay identical in every episode. Generate him in Google Flow from his photo, which the owner keeps; never publish the photo to this public repo.
+The owner, Rodolph, appears on camera as himself: bald, full dark beard, round black sunglasses, black crew-neck t-shirt, a thin gold chain. His face, beard and sunglasses stay the same in every season; each season has its own dressed character image (see Seasons). Generate him in Google Flow from his photo, which the owner keeps; never publish the photo to this public repo.
 
 ## Positioning (never name competitors)
 
@@ -55,16 +55,18 @@ No episode of this series goes to Instagram until the owner approves it on the A
 
 ## Seasons (owner's plan, 14 Oct 2026)
 
-Each season targets one audience, is shot in one place and keeps one outfit. The same setting text and the same outfit line go in every prompt of that season, so the episodes look like one show. His face, beard, round black sunglasses and thin gold chain never change.
+Each season targets one audience and is shot in one place, with the same setting text in every prompt of that season.
 
-| Season | Audience | Place | Outfit line |
+**Character image per season:** for each season the owner makes one character image that is already dressed (same face, beard and sunglasses every time; the sunglasses and style may change in later seasons). He attaches that image in Veo. Prompts never describe his clothes: the image decides the outfit. Design the next season's look with the owner, then give him an image prompt for it. A character image should have a plain background so the setting comes only from the prompt.
+
+| Season | Audience | Place | Character image |
 |---|---|---|---|
-| 1 | Auction awareness (done: Ep. 1–6 below) | Mixed | Black crew-neck t-shirt |
-| 2 | Buyers | Rooftop infinity pool, Beirut, night | "He wears a black short-sleeve button shirt with an open collar and a thin gold chain." (locked from S2E1) |
-| 3 | Sellers | Old Beirut house, triple-arched window, afternoon sun | "He wears a black crew-neck t-shirt and a thin gold chain." |
-| 4 | Cars | Dark private garage, one classic car under a spotlight | "He wears a black leather jacket over a black crew-neck t-shirt and a thin gold chain." |
-| 5 | Watches | Dark walnut private vault, one lit glass case | "He wears a navy blazer over a black crew-neck t-shirt and a thin gold chain. His wrists are bare." |
-| 6 | Bags (mainly women) | Bright boutique dressing room | Owner to decide: him, or a female co-host |
+| 1 | Auction awareness (done: Ep. 1–6 below) | Mixed | Owner's photo, black crew-neck tee |
+| 2 | Buyers | Rooftop infinity pool, Beirut, night | Owner's S2 character, black short-sleeve button shirt |
+| 3 | Sellers | Old Beirut house, triple-arched window, afternoon sun | To design with the owner |
+| 4 | Cars | Dark private garage, one classic car under a spotlight | Later |
+| 5 | Watches | Dark walnut private vault, one lit glass case | Later (no watch on his wrists unless the episode needs one) |
+| 6 | Bags (mainly women) | Bright boutique dressing room | Later (owner to decide: him, or a female co-host) |
 
 Ideas for later seasons: sneakers and streetwear (young crowd), antiques and art (Lebanese heritage).
 
