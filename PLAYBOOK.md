@@ -75,6 +75,10 @@ Read `VIDEO_PROMPTS.md` in this repo before writing any video generation prompt 
 
 The owner judges every video on whether it could be real: spoken numbers must match the overlays, calls must come in the right order, props must never vanish, crowds must never move in unison, and only the scripted speaker talks.
 
+## Founder series (owner's priority from 13 Oct 2026)
+
+The owner, Rodolph, is now the main on-camera character. His episodes promote the app itself: the problems it solves, why bidding beats classifieds (never name competitors), and building the community. Read `FOUNDER_SERIES.md` for the positioning, formats, production rules and episode list before writing any founder episode.
+
 ## Recurring characters (series)
 
 The owner doesn't want every video tied to one character. Use a new cast whenever the idea is better with one. Recurring characters are optional. Series are defined by their format:
