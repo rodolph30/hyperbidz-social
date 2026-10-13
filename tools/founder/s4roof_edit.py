@@ -124,11 +124,12 @@ if __name__ == "__main__":
         S.tone(mx, 0.0, WIPE, ((110, .25), (164.8, .18), (220, .12)), 0.04, 0.6)
         for i, at in enumerate(CALL_AT): S.beep(mx, at, 880 if i % 2 else 740, 0.08, 0.03)    # quiet ringtone blips
         for i, at in enumerate(LOW_AT):
+            if at > 3.6: continue
             y = mx.tt(0.1); mx.fadd(np.sin(2 * np.pi * (1500 + 60 * (i % 5)) * y) * np.exp(-y * 40), at, 0.02 + 0.015 * i / len(LOWS))
-        y = mx.tt(LOW1 - LOW0); mx.fadd(mx.lp(mx.rng.normal(0, 1, len(y)), 6) * (y / y[-1]) ** 2, LOW0, 0.05)    # rising noise
-        mx.whoosh(WIPE - 0.1, 0.5, 0.4); mx.thud(WIPE + 0.02, 0.35)
-        S.tone(mx, PILL, CLIP, ((146.8, .3), (185, .22), (220, .2), (293.7, .1)), 0.05, 0.4)
-        mx.shimmer(PILL + 0.05, 1174.7, 0.06)
+        y = mx.tt(1.2); mx.fadd(mx.lp(mx.rng.normal(0, 1, len(y)), 6) * (y / y[-1]) ** 2, LOW0, 0.05)              # rising noise, gone before 'lowballs'
+        mx.whoosh(WIPE - 0.5, 0.48, 0.4); mx.thud(WIPE - 0.04, 0.3)      # done before "Auction"
+        S.tone(mx, 5.7, CLIP, ((146.8, .3), (185, .22), (220, .2), (293.7, .1)), 0.05, 0.4)                 # after 'once'
+        mx.shimmer(5.72, 1174.7, 0.06)
         for i, (at, *_ ) in enumerate(BIDS): mx.ping(at + 0.02, 880 * 2 ** (i * 3 / 12), 0.035)
         mx.thud(SOLD, 0.55); mx.shimmer(SOLD + 0.03, 1318.5, 0.1)
         mx.write("s4roof_audio.wav")
