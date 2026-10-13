@@ -159,3 +159,39 @@ Ideas for later seasons: sneakers and streetwear (young crowd), antiques and art
 4. **S2E4 "Just bid":** "No 'is it still available?' No waiting for replies. If it's live, it's available. You just bid."
 5. **S2E5 "Same chance":** "Every bid is live, in front of everyone. No secret deals. No special prices for friends. Same chance for all."
 6. **S2E6 "First win":** "Remember your first win? You will. The first HyperBidz auctions are coming. Be there… and bid."
+
+### Season 1, Ep. 7: "Two prices" (replaces the earlier presenter clip, p010)
+
+**Setting:** a modern Beirut apartment at golden hour, a large window behind him.
+
+**Line:** "Everything you own has two prices. The one you'd sell it for… and the one someone would fight for."
+
+**Actions:** a slight lean toward the camera on "fight for", then a knowing smile and nod.
+
+**Edit:** the two price tags from the first version ("YOUR PRICE $20" and "THEIR PRICE" climbing, then "$ ???"), end card "Find out the second price."
+
+## Season 3: for sellers, "What it's really worth" (old Beirut house)
+
+**Feeling:** pride and dignity. Your things carry stories, and selling shouldn't feel like losing. The arc: noticing → refusing less → reversal → pride → call to action.
+
+**Character image:** cream linen shirt, sleeves rolled, top two buttons open, thin gold chain, stone trousers, same round black sunglasses, no watch or rings.
+
+**Fixed setting block (every S3 prompt):** "The man in the attached photo stands facing the camera inside an old Beirut house. Behind him, a tall triple-arched window with warm afternoon sunlight, pale stone walls and patterned floor tiles. Nothing else in the frame: no furniture, no objects, no other people. His hands are empty and his sunglasses stay on his face the whole time. Static camera, medium shot from the waist up."
+
+1. **S3E1 "Something waiting":** "In every Lebanese home, something is waiting. A watch. A camera. A ring. It's worth more than you think." Glances around the room; knowing smile.
+2. **S3E2 "It has a story":** "Everything you sell has a story. Don't let a lowball offer write the ending. Let them compete for it." Looks down on "story"; slow nod.
+3. **S3E3 "Not desperate":** "You're not desperate. You're selling something good. So why accept less? Let the bids decide." Head shake; open palm.
+4. **S3E4 "They come to you":** "For years, you chased buyers. Answered every message. Dropped your price. Now… buyers chase you." One step closer on "Now".
+5. **S3E5 "Walk away proud":** "Selling your things shouldn't feel like losing. When people compete for them… you walk away proud." Straightens up, chin raised.
+6. **S3E6 "Open the first auction":** "The first HyperBidz auctions need great items. Yours could open the very first one. Send us a message." Points at camera; nod. Caption CTA: DM us "SELLER".
+
+**Edit direction:** warmer, softer music than S2; memory-style item pop-ups; lowball messages struck out; bids climbing for something that matters.
+
+## Owner's voice (from 14 Oct 2026)
+
+Every founder episode uses the owner's own voice: Higgsfield voice element "Rodolph" (`854d5761-a599-4fc1-9f5b-b1f61cc1632f`, voice_type `element`), about 1 credit per 8-second clip. Workflow:
+1. Edit the episode as usual from the raw Veo clip.
+2. Put the raw clip in `raw/` in this repo, import it into Higgsfield with `media_import_url` through jsDelivr (`https://cdn.jsdelivr.net/gh/rodolph30/hyperbidz-social@<commit>/raw/<file>`; raw.githubusercontent serves mp4 as octet-stream and is refused), then run `voice_change` on it.
+3. `tools/voice/make_bed.py` splits the finished episode into a voice-free bed (`voice/<name>.bed.wav` + `.json`).
+4. In the Higgsfield sandbox, `tools/voice/mix_voice.py` puts the new voice on the bed under the untouched video. Run it with stdin from /dev/null inside loops (ffmpeg eats stdin).
+5. Bring the result into Higgsfield by serving the sandbox folder (`python3 -m http.server 8000`) and calling `media_import_url` on `https://8000-<E2B_SANDBOX_ID>.e2b.app/<file>`. Use the Higgsfield CDN URL as the post's media URL. This workspace cannot download from Higgsfield.
