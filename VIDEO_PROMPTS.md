@@ -104,6 +104,13 @@ Choose a camera position that shows every face and the key hands at once, for ex
 - **A known character in a new place:** Omni Flash with the character reference. It keeps identity better, and small mistakes can be fixed with an edit to the same clip instead of a new generation.
 - **Always 1 output.** Ask Flow for a transcript of the speech with timestamps along with the clip.
 
+## Pacing (owner's friends' feedback on "The Last Manouche", 13 Oct 2026)
+
+The first cut, at 12 to 16 seconds, was too fast: viewers couldn't read the text or follow the story.
+- **Every on-screen line stays up long enough to read twice:** at least 0.4 s per word, and never under 1.5 s for a name tag or caption.
+- **Each story beat gets at least 0.8 to 1.2 s;** reaction close-ups get about 0.8 s.
+- **A story Reel with text usually lands at 20 to 30 seconds.** Fast cutting is fine for energy, but never faster than the text it carries.
+
 ## 7. Review before editing (every clip, every cut)
 
 - **Check the transcript against the script.** Words, numbers, call order and speaker should all match. Overlays follow the transcript; drop any overlay the audio doesn't support.
