@@ -138,8 +138,8 @@ if __name__ == "__main__":
         tone_ = np.sin(2 * np.pi * np.cumsum(70 + 90 * (y / y[-1]) ** 2) / SR) * (0.3 + 0.7 * y / y[-1])
         mx.fadd((rise * 0.5 + tone_ * 0.6) * np.minimum(1, (y[-1] - y) / 0.03), 0.0, 0.07)
         for at, *_ in NUMS: mx.thud(at - 0.03, 0.5); S.beep(mx, at + 0.45, 1760, 0.05, 0.04)                                     # boom + tick per number
-        y = mx.tt(0.06); mx.fadd(mx.lp(mx.rng.normal(0, 1, len(y)), 1) * np.exp(-y * 70), STRIKE - 0.03, 0.75)                   # the gavel crack
-        mx.thud(STRIKE - 0.02, 0.7)
+        y = mx.tt(0.06); mx.fadd(np.clip(mx.lp(mx.rng.normal(0, 1, len(y)), 2), -1.5, 1.5) * np.exp(-y * 70), STRIKE - 0.03, 0.32)                   # the gavel crack
+        mx.thud(STRIKE - 0.02, 0.5)
         for j in range(5): y = mx.tt(0.08); mx.fadd(mx.lp(mx.rng.normal(0, 1, len(y)), 2) * np.exp(-y * 50), 3.52 + j * 0.05, 0.12)   # confetti pops, after 'Sold'
         y = mx.tt(2.0); cheer = mx.lp(mx.rng.normal(0, 1, len(y)), 4) * (0.7 + 0.3 * np.sin(2 * np.pi * 5.3 * y) * np.sin(2 * np.pi * 3.1 * y))
         mx.fadd(cheer * np.minimum(1, y / 0.15) * np.exp(-y * 1.3), 3.52, 0.12)                                                  # a crowd's cheer
