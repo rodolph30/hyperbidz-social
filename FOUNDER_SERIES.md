@@ -56,3 +56,13 @@ Only claim features the owner has confirmed. Known from the app's design: live b
 **Actions:** a small shrug on "not one real offer", then he points at the camera on "they bid".
 
 **Edit:** a message counter and a flood of "Is it still available?" bubbles, the bubbles getting swept away by live bids climbing, then the end card "Don't sell it. Let them bid for it."
+
+### Ep. 2: "Worthless" (Myths)
+
+**Setting:** a Beirut rooftop at blue hour.
+
+**Line:** "Everyone thinks their old stuff is worthless… until three people want it at the same time. That's an auction."
+
+**Actions:** he raises three fingers on "three people", then gives a small confident nod at the end.
+
+**Edit:** a "WORTHLESS?" tag that gets struck through, three bidder avatars popping in one by one, a price ticker jumping, then the end card "Find out the second price."
