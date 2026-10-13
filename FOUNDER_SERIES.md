@@ -72,3 +72,43 @@ No episode of this series goes to Instagram until the owner approves it on the A
 **Actions:** he raises three fingers on "three people", then gives a small confident nod at the end.
 
 **Edit:** a "WORTHLESS?" tag that gets struck through, three bidder avatars popping in one by one, a price ticker jumping, then the end card "Find out the second price."
+
+### Ep. 3: "Be in the room" (Luxury Drop, FOMO)
+
+**Setting:** a dark private gallery, with a glass case holding one steel watch.
+
+**Line:** "The rarest pieces in Lebanon won't sit in a shop window. They'll go live. Once. Be in the room."
+
+**Actions:** a hand on the case, then a nod.
+
+**Edit:** violet light particles rising from the case, a "LIVE ONCE" tag, the bidder count climbing, end card.
+
+### Ep. 4: "Pay attention" (Myths)
+
+**Setting:** a private members' lounge, him seated in a leather armchair.
+
+**Line:** "Auctions were never for the rich. They're for the people who pay attention. Most people don't."
+
+**Actions:** he taps his temple, then leans back with a smile.
+
+**Edit:** a "FOR THE RICH" label stamped "MYTH", then a deal ticker showing smart buyers' wins.
+
+### Ep. 5: "How smart people sell" (How it works)
+
+**Setting:** a Beirut marina terrace at night.
+
+**Line:** "You set the starting price. The market sets the final one. That's not luck. That's how smart people sell."
+
+**Actions:** his palm moves down, then rises.
+
+**Edit:** a "STARTING PRICE $100" chip at his low hand, a "FINAL $640" counter rising with his hand.
+
+### Ep. 6: "Don't hear about it later" (Launch FOMO)
+
+**Setting:** a penthouse at night, him holding his phone with the screen facing him.
+
+**Line:** "The first HyperBidz auction is coming. First in always gets the best deals. Don't hear about it later."
+
+**Actions:** a glance at the phone, then a nod.
+
+**Edit:** a "FIRST AUCTION · SOON" countdown, a "Turn on notifications" chip, a Follow call to action.
