@@ -49,6 +49,8 @@ No episode of this series goes to Instagram until the owner approves it on the A
   - nothing else enters the frame
   - static camera, a clean picture with no text anywhere
 - **Voice line in every prompt:** English with a light Lebanese accent, calm, confident, warm, medium-low.
+- **Keep prompts simple,** in the style of the Ep. 1 prompt, which the owner called perfect: a short setting, a short "only these things in the frame" line, his lines with timestamps, and at most 2 actions.
+- **Always end the prompt with:** "No captions, no subtitles, no text or writing anywhere on the video."
 - **The edit makes it an episode:** captions, pop-ups acting out the line, sound design, and the end card.
 
 ## Episodes
