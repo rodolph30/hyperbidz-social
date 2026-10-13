@@ -93,8 +93,8 @@ if __name__ == "__main__":
         for at, *_ in MSGS: y = mx.tt(0.12); mx.fadd(np.sin(2 * np.pi * 1200 * y) * np.exp(-y * 40), at, 0.12)   # message sent
         for at, _ in PRICES[1:]: y = mx.tt(0.25); mx.fadd(np.sin(2 * np.pi * np.cumsum(700 - 400 * y / 0.25) / 48000) * np.exp(-y * 9), at - 0.15, 0.12)  # dropping
         mx.whoosh(NOW - 0.05, 0.5, 0.3); mx.thud(NOW, 0.4)
-        for i, (at, *_ ) in enumerate(BIDS): mx.ping(at + 0.35, 1046.5 * 2 ** (i * 3 / 12), 0.12)
+        for i, (at, *_ ) in enumerate(BIDS[:2]): mx.ping(at + 0.35, 1046.5 * 2 ** (i * 3 / 12), 0.1)   # keep 'you' clear
         for i, f in enumerate([440, 554.4, 659.3, 880]): pluck(mx, 7.5 + i * 0.12, f, 0.06, 1.4)                   # rising, warm
-        mx.thud(TOP, 0.45); mx.shimmer(TOP + 0.02, 1318.5, 0.12)
+        mx.thud(7.5, 0.45); mx.shimmer(7.52, 1318.5, 0.12)
         mx.write("s3e4_audio.wav")
     render(frame, TOTAL, "s3e4_audio.wav", OUT)
