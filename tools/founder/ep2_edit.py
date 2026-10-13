@@ -14,7 +14,7 @@ OUT = sys.argv[1]
 CLIP = 8.0; XF = 0.35; END = 3.6; TOTAL = CLIP + END
 CUT_IN, CUT_OUT = 1.70, 4.00                 # cutaway hides the early, oversized three-finger gesture
 STAMP = 2.15                                  # "worthless"
-BIDDERS = [(3.20, "M", 150, 690), (3.45, "K", 930, 620), (3.70, "R", 540, 395)]   # absolute positions around the card   # on "three people"
+BIDDERS = [(3.20, "M", 150, 720), (3.45, "K", 930, 640), (3.70, "R", 540, 345)]   # absolute positions around the card   # on "three people"
 CAPS = [(0.45, 1.66, ["Everyone thinks", "their old stuff"]), (1.70, 2.90, ["is [worthless]…"]), (2.95, 3.98, ["until [three people]"]),
         (4.00, 5.40, ["want it [at the same time.]"]), (6.55, 7.70, ["[That's an auction.]"])]
 RACE = [(4.05, 180), (4.35, 205), (4.65, 230), (4.95, 245), (5.2, 260)]
@@ -35,13 +35,11 @@ def stage():
 STAGE = stage()
 
 def item_card():
-    ph = Image.open("buzz5.png").convert("RGB").crop((150, 440, 470, 710))
-    ph = ImageEnhance.Sharpness(ph.resize((620, 523), Image.LANCZOS)).enhance(1.6)
-    ph = ImageEnhance.Brightness(ph).enhance(1.25)
-    w, h = 660, 640; card = M.glass(w, h, 40, fill=(20, 22, 32, 240), border=(255, 255, 255, 60))
+    ph = Image.open("camera_hq.png").convert("RGB").resize((620, 620), Image.LANCZOS)
+    w, h = 660, 740; card = M.glass(w, h, 40, fill=(20, 22, 32, 240), border=(255, 255, 255, 60))
     m = Image.new("L", ph.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, ph.width - 1, ph.height - 1), radius=28, fill=255)
     card.paste(ph, (20, 20), m)
-    t = R.text_layer("Old film camera", R.font(40, 700), WHITE); card.alpha_composite(t, (36, 556)); return card
+    t = R.text_layer("Old film camera", R.font(40, 700), WHITE); card.alpha_composite(t, (36, 660)); return card
 CARD = item_card()
 
 def price_pill(v, hot=False):
@@ -116,7 +114,7 @@ def cutaway(t):
         if t >= at: hot = True
     vals = [20] + [a for a in (60, 120, 180)]; n_b = sum(1 for at, _, _, _ in BIDDERS if t >= at); v = vals[n_b]
     pp = price_pill(v, hot); bump = 1 + 0.12 * (1 - R.clamp((t - BIDDERS[n_b - 1][0]) / 0.2)) if n_b else 1
-    R.paste_center(im, pp, cx, cy + 390, R.clamp((k - 0.2) / 0.2), bump)
+    R.paste_center(im, pp, cx, cy + 440, R.clamp((k - 0.2) / 0.2), bump)
     # WORTHLESS? stamp, cracks away on "until"
     if t >= STAMP:
         s = (t - STAMP) / 0.3; sc2 = 1.7 - 0.7 * R.stamp(s) if s < 1 else 1.0
