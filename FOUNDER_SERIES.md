@@ -112,3 +112,24 @@ No episode of this series goes to Instagram until the owner approves it on the A
 **Actions:** a glance at the phone, then a nod.
 
 **Edit:** a "FIRST AUCTION · SOON" countdown, a "Turn on notifications" chip, a Follow call to action.
+
+## Season 2: for buyers (all episodes in one place)
+
+**Goal:** make buyers excited to buy through auctions instead of fixed-price marketplaces. The benefits:
+- you decide what it's worth to you
+- deals below retail
+- the thrill of the last seconds
+- no "is it still available?"
+- every bid is visible and the rules are the same for everyone
+- the joy of the first win
+
+**Fixed setting:** use this exact text in every Season 2 prompt.
+
+> Setting: a luxury rooftop terrace in Beirut at night. Behind him, the glowing blue water of an infinity pool and, beyond it, the softly blurred city lights and the dark sea. A thin violet light line runs along the edge of the pool. Nothing else in the frame: no furniture, no objects, no other people.
+
+1. **S2E1 "You decide":** "On other apps, the seller decides the price. Here… you do. Bid what it's worth to you. Not a dollar more."
+2. **S2E2 "Full price?":** "Why pay full price? On HyperBidz, the same thing can go for way less… if you're there when it happens."
+3. **S2E3 "The rush":** "Ten seconds left. You're winning. Someone bids. Your heart jumps… and you bid again. Nothing else feels like that."
+4. **S2E4 "Just bid":** "No 'is it still available?' No waiting for replies. If it's live, it's available. You just bid."
+5. **S2E5 "Same chance":** "Every bid is live, in front of everyone. No secret deals. No special prices for friends. Same chance for all."
+6. **S2E6 "First win":** "Remember your first win? You will. The first HyperBidz auctions are coming. Be there… and bid."
