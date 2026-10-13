@@ -200,3 +200,11 @@ Every founder episode uses the owner's own voice: Higgsfield voice element "Rodo
 3. `tools/voice/make_bed.py` splits the finished episode into a voice-free bed (`voice/<name>.bed.wav` + `.json`).
 4. In the Higgsfield sandbox, `tools/voice/mix_voice.py` puts the new voice on the bed under the untouched video. Run it with stdin from /dev/null inside loops (ffmpeg eats stdin).
 5. Bring the result into Higgsfield by serving the sandbox folder (`python3 -m http.server 8000`) and calling `media_import_url` on `https://8000-<E2B_SANDBOX_ID>.e2b.app/<file>`. Use the Higgsfield CDN URL as the post's media URL. This workspace cannot download from Higgsfield.
+
+## Season 4: cars ("the founder's garage")
+
+**Character (owner, 14 Oct 2026):** classy entrepreneur, the owner of the app. A tailored navy two-piece suit, a crisp white shirt open at the collar with no tie, a thin gold chain, the same round black sunglasses, no watch or rings. Flow character info: the host of a private car collection, refined, calm, quietly powerful. The owner rejected a leather-jacket "car guy" look: keep this season classy.
+
+**Place:** a dark private garage at night, one classic car under a single spotlight, a polished concrete floor. Cars never show badges, logos or license plates. Later episodes can move: leaning on the car, behind the wheel at night, a rooftop parking deck over Beirut.
+
+1. **S4E1 "Fought over":** "A car like this doesn't get sold. It gets fought over. On HyperBidz, it goes live." Left hand rests on the roof the whole time; glance at the car at 3 s; half-smile at 5.5 s; slow push-in. *Edit:* night grade, a light sweep on the body, bids on a rev-counter needle with engine revs, a LIVE badge, held last shot.
