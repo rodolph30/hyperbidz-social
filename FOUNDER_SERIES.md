@@ -172,20 +172,20 @@ Ideas for later seasons: sneakers and streetwear (young crowd), antiques and art
 
 ## Season 3: for sellers, "What it's really worth" (old Beirut house)
 
-**Feeling:** pride and dignity. Your things carry stories, and selling shouldn't feel like losing. The arc: noticing → refusing less → reversal → pride → call to action.
+**Feeling:** pride and dignity. Your things carry stories, and selling shouldn't feel like losing. The arc: memory → story → dignity → reversal → pride → call to action.
 
-**Character image:** cream linen shirt, sleeves rolled, top two buttons open, thin gold chain, stone trousers, same round black sunglasses, no watch or rings.
+**Character image:** the owner's "me 3" character in Flow: cream linen shirt, thin gold chain, round sunglasses. Every prompt adds "no bookshelves, no books, no desk" because the portrait has bookshelves behind him.
 
-**Fixed setting block (every S3 prompt):** "The man in the attached photo stands facing the camera inside an old Beirut house. Behind him, a tall triple-arched window with warm afternoon sunlight, pale stone walls and patterned floor tiles. Nothing else in the frame: no furniture, no objects, no other people. His hands are empty and his sunglasses stay on his face the whole time. Static camera, medium shot from the waist up."
+**What varies per episode (owner's ask, 14 Oct):** a different object in his hands or a different position, and the light moves through the day across the season (afternoon in ep. 1 → sunset in ep. 6). The house stays the same: a tall triple-arched window, pale stone walls, patterned floor tiles.
 
-1. **S3E1 "Something waiting":** "In every Lebanese home, something is waiting. A watch. A camera. A ring. It's worth more than you think." Glances around the room; knowing smile.
-2. **S3E2 "It has a story":** "Everything you sell has a story. Don't let a lowball offer write the ending. Let them compete for it." Looks down on "story"; slow nod.
-3. **S3E3 "Not desperate":** "You're not desperate. You're selling something good. So why accept less? Let the bids decide." Head shake; open palm.
-4. **S3E4 "They come to you":** "For years, you chased buyers. Answered every message. Dropped your price. Now… buyers chase you." One step closer on "Now".
-5. **S3E5 "Walk away proud":** "Selling your things shouldn't feel like losing. When people compete for them… you walk away proud." Straightens up, chin raised.
-6. **S3E6 "Open the first auction":** "The first HyperBidz auctions need great items. Yours could open the very first one. Send us a message." Points at camera; nod. Caption CTA: DM us "SELLER".
+1. **S3E1 "Your dad's camera"** (afternoon; holds an old silver film camera): "In every Lebanese home, something is waiting. Your dad's camera. Your teta's ring. It's worth more than you think." Starts looking down at the camera, raises his eyes at 2.5 s. *Edit:* faded memory photos of the camera and a ring.
+2. **S3E2 "Forty years"** (afternoon; a vintage watch in his open palm, wrists bare): "This watch has a story. Forty years on one wrist. Don't let a lowball offer write the ending." Closes his hand around it and looks up at 4.8 s. *Edit:* a 1985 → 2026 counter, a lowball message struck out.
+3. **S3E3 "Not begging"** (late afternoon; seated on a wooden chair, leaning forward, medium close-up): "I know things are hard. But selling isn't begging. You're not desperate. Let them bid." Head shake at 4.5 s, sits up at 6.3 s. *Edit:* lowball DMs crumble, then LET THEM BID.
+4. **S3E4 "They come to you"** (late afternoon; starts looking out the window, turns at 1 s): "For years, you chased buyers. Answered every message. Dropped your price. Now… they come to you." Smile at 6 s. *Edit:* his chat bubbles to buyers flip around, and bidders come to him.
+5. **S3E5 "Something you love"** (golden hour; holds a brass Arabic coffee pot): "Selling something you love shouldn't feel like losing. When people compete for it… you walk away proud." Looks at the pot at 3.5 s, proud smile at 5.8 s. *Edit:* bids climbing until SOLD to the 9th bidder.
+6. **S3E6 "The very first"** (sunset; seated on the window ledge, medium-wide): "The first HyperBidz auctions need great items. Yours could open the very first one. Send us a message." Points at 3.1 s, nods at 6 s. *Edit:* "Be one of the first sellers"; caption CTA: DM us "SELLER".
 
-**Edit direction:** warmer, softer music than S2; memory-style item pop-ups; lowball messages struck out; bids climbing for something that matters.
+Never use "last price?" (or "akher se3er") in any lowball message: too close to the banned slogan.
 
 ## Owner's voice (from 14 Oct 2026)
 
