@@ -31,25 +31,28 @@ Only claim features the owner has confirmed. Known from the app's design: live b
 - **Recurring lines** the audience learns: "Don't sell it. Let them bid for it." and "Find out the second price."
 - **Cadence:** about 3 founder episodes a week, plus fiction or carousels in between.
 
-## Production rules for the founder clips (Veo 3.1 Fast)
+## Production rules for the founder clips (owner's rule: one prompt per episode)
 
-- **Image first, then video.** One locked first-frame image per framing, made from his photo as the identity reference (a medium waist-up shot and a chest-up close shot). Animate each clip from one of these frames.
-- **Each clip is 8 s, with at most about 18 to 20 spoken words.** An episode is 2 or 3 clips joined with jump cuts.
-- **List exactly what is in the frame.** Hands empty unless a prop is named, sunglasses stay on his face, nothing enters the frame, static tripod camera.
-- **Describe the same voice in every prompt:** English with a light Lebanese accent, calm, confident, warm, medium-low.
-- **If his voice changes between clips,** re-voice them with his HeyGen voice clone (voice id 35c625b2f8de4c0295892685eac8e527) and lip-sync, or keep the best clip's voice.
-- **Brand look:** a dark modern room at night, blue and violet light, Beirut city lights through the window.
+- **One prompt and one 8-second clip per episode.** The owner attaches only his photo as the character reference in Veo. No first-frame images, no multi-clip episodes.
+- **Each prompt describes:**
+  - where he stands
+  - exactly what is in the frame
+  - what he says: at most about 20 words, with timestamps
+  - at most 1 or 2 simple actions, with timestamps
+- **Anti-hallucination lines:**
+  - his hands are empty unless a prop is named
+  - the sunglasses stay on his face
+  - nothing else enters the frame
+  - static camera, a clean picture with no text anywhere
+- **Voice line in every prompt:** English with a light Lebanese accent, calm, confident, warm, medium-low.
+- **The edit makes it an episode:** captions, pop-ups acting out the line, sound design, and the end card.
 
 ## Episodes
 
-### Ep. 1: "Not one real offer" (The Old Way)
+### Ep. 1: "They bid" (The Old Way)
 
-- **Clip 1 (medium):** "You posted it. Three hundred views. Twelve messages." / "'Is it still available?'… and not one real offer."
-- **Clip 2 (close):** "That's not a selling problem. That's a pricing problem." / "One buyer sets the price… and it's always lower."
-- **Clip 3 (medium):** "On HyperBidz, buyers compete. Live. The price goes up, not down." / "I'm Rodolph. Let's fix how Lebanon sells."
+**Line:** "You posted it. Twelve messages. 'Is it still available?' Not one real offer. On HyperBidz, they don't message… they bid."
 
-**Edit:**
-- Clip 1: view and message counters, then a flood of "Is it still available?" bubbles.
-- Clip 2: an offer bubble shrinking "$80 → $60 → $45", then "ONE BUYER = ONE PRICE".
-- Clip 3: a bid feed climbing, a price arrow going up.
-- End card: "Don't sell it. Let them bid for it."
+**Actions:** a small shrug on "not one real offer", then he points at the camera on "they bid".
+
+**Edit:** a message counter and a flood of "Is it still available?" bubbles, the bubbles getting swept away by live bids climbing, then the end card "Don't sell it. Let them bid for it."
