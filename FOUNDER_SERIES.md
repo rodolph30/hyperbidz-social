@@ -269,3 +269,9 @@ Slots 16–20 Nov, 10:00 Beirut, all `waiting` on the board.
 | 6 | Bid like you mean it (finale) | pistachio mini bag | "The first bags go live soon. Set your reminder, call your girls… and bid like you mean it." |
 
 **Edit vibe:** warm night grade with soft bokeh and light leaks, a slow deep-house groove under the voice (pads and soft kicks, ducked under every word), pop-ups that pulse gently with the beat, held last shot, end card.
+
+### Season 6 as made (14 Oct 2026)
+
+The owner made all six clips from the prompts above (his character wears a navy oversized tee and navy trousers; the light runs sunset → dusk → blue hour). Owner's note on the edit: "keep the motions classy". All six are on the board as `waiting`, 21–26 Nov, 10:00 Beirut (p040–p045).
+
+Kit: `tools/founder/s6_common.py`: warm `night_grade` with a soft bloom, a slow `light_leak`, frosted `shield`/`panel` cards with hairline borders, champagne mono `tag`s, `hairline_ring`, frosted `captions`, `blur_mark` for embossed logo marks on the bags (episodes 1, 2, 4 and 6), a deep-house `groove` (112 BPM, soft kick, off-beat hats, Rhodes stabs in A minor, sub, gentle pump) ducked under the voice by `GrooveMix`, and an `end_card` on the blurred last frame with drifting bokeh. Motion rule for this season: fades and small rises only; no stamps, bounces, shakes or bursts.
