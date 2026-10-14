@@ -36,7 +36,7 @@ rng = np.random.default_rng(41); BUBS = []; pts = []
 while len(pts) < len(GUESSES):
     tx, ty = rng.uniform(110, 970), rng.uniform(290, 1290)
     if abs(tx - 540) < 250 and ty < 900: continue
-    if any((tx - a) ** 2 + ((ty - b) * 1.7) ** 2 < 112 ** 2 for a, b in pts): continue
+    if any(((tx - a) / 2.1) ** 2 + (ty - b) ** 2 < 84 ** 2 for a, b in pts): continue
     pts.append((tx, ty))
 for i, ((tx, ty), g) in enumerate(zip(pts, GUESSES)):
     t0 = GUESS0 + (SAME - GUESS0 - 0.1) * (i / len(GUESSES)) ** 0.75
