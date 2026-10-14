@@ -105,13 +105,17 @@ def lot_card(title, price, label, button=None, w=1034, border=EDGE, label_col=(2
     lb = R.text_layer(label, R.font(int(9.5 * S), 600), label_col, tracking=2); card.alpha_composite(lb, (p + 4 + pr.width + int(10 * S), p + hrow + (prow - lb.height) // 2 + 6))
     if button:
         d.line([(p, p + hrow + prow), (w - p, p + hrow + prow)], fill=(255, 255, 255, 30), width=2)
-        txt, small, big = button; by = p + hrow + prow + int(10 * S); bh = int(56 * S)
+        txt, small, big = button[:3]; green = len(button) > 3 and button[3] == "green"; by = p + hrow + prow + int(10 * S); bh = int(56 * S)
         b = Image.new("RGBA", (w - 2 * p, bh), (0, 0, 0, 0)); db = ImageDraw.Draw(b)
-        db.rounded_rectangle((0, 0, b.width - 1, bh - 1), radius=bh // 2, fill=(10, 12, 20, 255), outline=BTN + (255,), width=4)
-        gav(b, int(16 * S), bh // 2)
-        bt = R.text_layer(txt, R.font(int(17 * S), 700), WHITE); b.alpha_composite(bt, (int(16 * S) + int(30 * S), (bh - bt.height) // 2 - 3))
+        if green:
+            m = Image.new("L", b.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, b.width - 1, bh - 1), radius=bh // 2, fill=255)
+            b.paste(lin_grad(b.width, bh, (47, 191, 113), (22, 143, 78), 90), (0, 0), m); tx0 = int(18 * S)
+        else:
+            db.rounded_rectangle((0, 0, b.width - 1, bh - 1), radius=bh // 2, fill=(10, 12, 20, 255), outline=BTN + (255,), width=4)
+            gav(b, int(16 * S), bh // 2); tx0 = int(16 * S) + int(30 * S)
+        bt = R.text_layer(txt, R.font(int(17 * S), 700), WHITE); b.alpha_composite(bt, (tx0, (bh - bt.height) // 2 - 3))
         if small:
-            pw, ph = int(68 * S), int(44 * S); pill = Image.new("RGBA", (pw, ph), (0, 0, 0, 0)); ImageDraw.Draw(pill).rounded_rectangle((0, 0, pw - 1, ph - 1), radius=ph // 2, fill=(124, 92, 255, 56))
+            pw, ph = int(68 * S), int(44 * S); pill = Image.new("RGBA", (pw, ph), (0, 0, 0, 0)); ImageDraw.Draw(pill).rounded_rectangle((0, 0, pw - 1, ph - 1), radius=ph // 2, fill=(0, 0, 0, 56) if green else (124, 92, 255, 56))
             s1 = R.text_layer(small, R.font(int(9.5 * S), 600), (255, 255, 255), tracking=1); s2 = R.text_layer(big, R.font(int(15 * S), 700), WHITE)
             pill.alpha_composite(s1, ((pw - s1.width) // 2, 8)); pill.alpha_composite(s2, ((pw - s2.width) // 2, 8 + s1.height - 6))
             b.alpha_composite(pill, (b.width - pw - int(6 * S), (bh - ph) // 2))
