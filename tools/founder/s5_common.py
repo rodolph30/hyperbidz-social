@@ -174,10 +174,12 @@ def vault_pill(text="FROM THE VAULT"):
 
 def live_line(text="5 VAULT LOTS LIVE NOW", t=0.0):
     lb = mono(text, int(10.5 * S), LAV, tracking=3); r = int(3.5 * S)
-    im = Image.new("RGBA", (lb.width + 4 * r + 20, max(lb.height, 4 * r) + 20), (0, 0, 0, 0)); d = ImageDraw.Draw(im); cy = im.height / 2
+    w, h = 30 + 2 * r + 16 + lb.width + 30, lb.height + 30
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); cy = h / 2
+    d.rounded_rectangle((0, 0, w - 1, h - 1), radius=h // 2, fill=(6, 7, 11, 200), outline=(124, 92, 255, 110), width=2)
     a = int(160 + 95 * (0.5 + 0.5 * np.sin(t * 6)))
-    g = Image.new("RGBA", im.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse((10 - r, cy - 2 * r, 10 + 3 * r, cy + 2 * r), fill=LIVE_RED + (a,)); im.alpha_composite(g.filter(ImageFilter.GaussianBlur(5)))
-    d.ellipse((10, cy - r, 10 + 2 * r, cy + r), fill=LIVE_RED + (255,)); im.alpha_composite(lb, (10 + 2 * r + 14, int(cy - lb.height / 2))); return im
+    g = Image.new("RGBA", im.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse((30 - r, cy - 2 * r, 30 + 3 * r, cy + 2 * r), fill=LIVE_RED + (a,)); im.alpha_composite(g.filter(ImageFilter.GaussianBlur(5)))
+    d = ImageDraw.Draw(im); d.ellipse((30, cy - r, 30 + 2 * r, cy + r), fill=LIVE_RED + (255,)); im.alpha_composite(lb, (30 + 2 * r + 16, int(cy - lb.height / 2))); return im
 
 def won_panel(when, lot, price, w=900):
     h = 470; g = lin_grad(w, h, (91, 59, 232), (22, 12, 70), 165)
