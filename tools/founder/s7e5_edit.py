@@ -33,7 +33,12 @@ amts = ["+$100", "+$200", "+$50", "+$500", "+$150", "+$300", "+$1,000", "+$250",
 for i, (tx, ty) in enumerate(pts):
     t0 = T3 + 0.15 + (SOLD - T3 - 0.25) * (i / len(pts)) ** 0.7
     STORM.append((t0, tx, ty, Q.bid_chip("ABCDEGHJKLMNRSTZ"[i % 16], amts[i % len(amts)], Q.CROWD_COLS[(i * 3) % 8], 32), i))
-SOLD_L = Q.big("SOLD", 200, WHITE, (255, 80, 110))
+def sold_card(w=600, h=300):
+    im = Q.glass_layer(w, h, 30, fill=(14, 14, 30, 246), edge=Q.CORAL + (255,))
+    L = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(L).rounded_rectangle((10, 10, w - 11, h - 11), radius=24, outline=Q.CORAL + (255,), width=6); im.alpha_composite(L)
+    tl = Q.big("SOLD", 150, Q.CORAL, (255, 80, 110)); im.alpha_composite(tl, ((w - tl.width) // 2, -10))
+    lb = Q.mono("WHAT IT'S WORTH TO THEM", 22, Q.LAV, 5); im.alpha_composite(lb, ((w - lb.width) // 2, h - 60)); return im.rotate(-6, expand=True, resample=Image.BICUBIC)
+SOLD_L = sold_card()
 
 def flare(t, at, peak, d=0.7): return peak * np.exp(-max(0, t - at) / d * 3) if t >= at else 0
 
@@ -76,8 +81,7 @@ def scene(t):
         ring = Q.ring_timer(frac, f"0:0{sec}", hot)
         R.paste_center(im, ring, W / 2, 1095, 1 - ease((t - SOLD) / 0.25), Q.slam((t - T3) / 0.22) * (1 + 0.07 * beat))
     if t >= SOLD:                                                                                     # SOLD
-        R.paste_center(im, SOLD_L, W / 2, 1080, min(1, (t - SOLD) / 0.05), Q.slam((t - SOLD) / 0.2) * (1 - 0.18 * ease((t - SOLD - 0.6) / 0.6)))
-        R.paste_center(im, Q.mono("WHAT IT'S WORTH TO THEM", 26, Q.LAV, 6), W / 2, 1215, ease((t - 6.0) / 0.4))
+        R.paste_center(im, SOLD_L, W / 2, 1090, min(1, (t - SOLD) / 0.05), Q.slam((t - SOLD) / 0.2) * (1 - 0.1 * ease((t - SOLD - 0.6) / 0.6)))
     Q.shockwave(im, *SEAL, (t - THEM) / 0.6); Q.shockwave(im, *SEAL, (t - THEM - 0.12) / 0.6, Q.LAV, 380, 4)
     Q.flash(im, flare(t, T3, 0.25, 0.3) + flare(t, SOLD, 0.7, 0.35) + flare(t, THEM, 0.25, 0.3), (255, 238, 242))
     captions(im, t, CAPS, y=1730, size=58)

@@ -17,7 +17,7 @@ FR = decode()
 SEAL = (402, 1505); SEAL_BASE = 0.74
 CAPS = [(3.40, 6.05, ["Because the price isn't", "where you [start.]"]), (6.55, 9.35, ["It's where they [stop.]"])]
 HOOK = [[("Why would I start", False)], [("this watch at $1?", True)]]; HOOK_N = 34; CPS = 36
-ONE, GO, LEGIBLE, STOP, RED, FLY0, FLY1 = 2.15, 3.45, 5.6, 6.63, 6.66, 7.05, 7.38
+ONE, GO, LEGIBLE, STOP, RED, FLY0, FLY1 = 2.15, 3.45, 5.6, 6.63, 6.63, 7.05, 7.38
 PART = Q.part_tag(4); KR = np.log(480) / (LEGIBLE - GO)
 
 def value(t):
@@ -95,10 +95,10 @@ def scene(t):
         lab = Q.mono("STARTING BID" if tt < GO + 0.25 else ("WHERE THEY STOP" if t >= RED else "LIVE"), 26, Q.LAV, 7)
         s = Q.slam((t - ONE) / 0.22) * (1 + 0.04 * np.sin(tt * 40) * run)
         if t < FLY0:
-            R.paste_center(im, lay, W / 2, 1090, min(1, (t - ONE) / 0.06), s)
+            if t < STOP: R.paste_center(im, lay, W / 2, 1090, min(1, (t - ONE) / 0.06), s)
             R.paste_center(im, lab, W / 2, 935, ease((t - ONE - 0.1) / 0.2))
             if t >= RED:                                                                              # redacted
-                kb = ease((t - RED) / 0.1); bw = int(780 * kb); bar = Image.new("RGBA", (max(2, bw), 190), (0, 0, 0, 0))
+                kb = 1.0; bw = int(780 * (1 + 0.12 * Q.slam((t - RED) / 0.15) - 0.12)); bar = Image.new("RGBA", (max(2, bw), 190), (0, 0, 0, 0))
                 ImageDraw.Draw(bar).rounded_rectangle((0, 0, max(2, bw) - 1, 189), radius=26, fill=(4, 4, 10, 255), outline=Q.VIO + (235,), width=4)
                 R.paste_center(im, bar, W / 2 - 390 + bw / 2, 1095); R.paste_center(im, Q.lock_icon(40), W / 2 - 200, 935, kb)
         else:
