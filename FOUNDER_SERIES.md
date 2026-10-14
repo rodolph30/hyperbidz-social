@@ -317,3 +317,5 @@ Kit: `tools/founder/s7_common.py`:
   - `pop`: a playful overshoot (this season is fun, unlike S6's classy rule)
 - **Sound:** `sneaky`, a 100 BPM pizzicato (Karplus-Strong) groove in D minor with a G#, clock tick-tocks, a soft kick and snaps. `HQMix` ends on a pluck arpeggio and a D major chord.
 - **End card:** `end_card7`, a crisp HQ end card: dark wall gradient, violet strips, the envelope icon with a glowing seal, THE ENVELOPE · SEASON 7, the lines, the wordmark and the Follow pill. A 0.45 s crossfade leads into it.
+
+**E2 "What's it worth?"** (p047, 28 Nov, `waiting`). The line came out exactly as written. The hands stayed still from the first frame to the last, so the whole 8 s is used. The seal glows at base 0.62. The end card reads "You don't know. / Not yet."
