@@ -232,3 +232,20 @@ def color_cutout(src, box, keep):
     reg = src.crop(box).convert("RGB"); a = np.asarray(reg, np.int32)
     m = Image.fromarray((np.clip(keep(a), 0, 1) * 255).astype(np.uint8)).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(2.5))
     out = reg.convert("RGBA"); out.putalpha(m); return out
+
+def panel(im, cx, cy, w, h, a, radius=30):
+    """frosted panel with the classy rise; returns its top-left corner"""
+    y_off = (1 - a) * 16; box = (cx - w / 2, cy - h / 2 + y_off, cx + w / 2, cy + h / 2 + y_off)
+    shield(im, box, a, radius); return box[0], box[1]
+
+def put(im, layer, x, y, a):
+    if a <= 0.01: return
+    if a < 0.999: layer = layer.copy(); layer.putalpha(layer.getchannel("A").point(lambda v: int(v * a)))
+    im.alpha_composite(layer, (int(x), int(y)))
+
+def dot(col=(255, 77, 106), r=7):
+    im = Image.new("RGBA", (2 * r + 2, 2 * r + 2), (0, 0, 0, 0)); ImageDraw.Draw(im).ellipse((1, 1, 2 * r, 2 * r), fill=col + (255,)); return im
+
+def avatar(ch, col, s=58):
+    im = Image.new("RGBA", (s, s), (0, 0, 0, 0)); d = ImageDraw.Draw(im); d.ellipse((1, 1, s - 2, s - 2), fill=col + (255,), outline=(255, 255, 255, 200), width=2)
+    tl = R.text_layer(ch, R.font(int(s * 0.42), 700), WHITE); im.alpha_composite(tl, ((s - tl.width) // 2, (s - tl.height) // 2 - 2)); return im
