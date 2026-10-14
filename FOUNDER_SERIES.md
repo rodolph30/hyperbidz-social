@@ -342,3 +342,31 @@ The owner tried two Lebanese Arabic clips with the same line: "تعرف شو ا�
   - Size text layers from the bbox bottom, or the dots under ي and في get cropped.
   - RTL typing with the cursor at the left, frosted Arabic captions, people avatars with checks, the dashed مطرحك seat, and an Arabic end card with the follow pill built from two runs (`@hyperbidz` + تابعنا).
 - **Clean-up:** Veo baked a floating HyperBidz watermark into the ceiling of test 1 and put an Apple logo on the laptop in both clips. Both are removed with cv2 inpaint (`clean.py`).
+
+## Season 8: بالعربي (Lebanese Arabic, from 14 Oct 2026)
+
+**Setting:** the golden-hour HyperBidz office with the city view; olive overshirt, black tee, round sunglasses. Season sound: `ar_common.darbuka_groove`, a maqsum darbuka pattern with oud-like Karplus-Strong plucks in D Hijaz. The `HQMix` D-major pluck ending resolves it. Arabic text uses Readex Pro (see the Arabic tests notes).
+
+**E1 "شو بتشوف؟"** (p054, 4 Dec).
+- **Line:** "في ناس بتشوف بضاعة. وفي ناس بتشوف فرصة. إنت شو بتشوف؟"
+- **Grey world:** grey goods tags (`item_tag`) are pinned to tracked objects; tracking uses template matching (`ar_common.track`), because the shot drifts.
+- **Reveal:** colour floods back from his face in a circle (`grey`/`reveal`) and the tags flip to violet فرصة tags.
+- **Ending:** a punch-in on إنت, then an Instagram-style poll (`poll_sticker`, which shows no results).
+- **Clean-up:** the Apple logo is found and inpainted in every frame.
+
+**E2 "بدّك تشوف شو في بـ HyperBidz؟"** (p055).
+- **Clip:** he asks the question, picks up the phone and holds its black screen to camera.
+- **Phone screen:** found by a <5 luminance threshold (`phone.py`), smoothed. The rebuilt app screen (`app_ui.py`) is perspective-warped into it: a splash, then the listing.
+- **Dive:** an ease-in zoom (×3.9) into the screen with zoom blur. A flash hands over to the full-screen app.
+- **The app:** `app_ui.listing` is rebuilt from the flows document (C1 screens) at 1080 px, in Space Grotesk and Space Mono. It has:
+  - the hero with the back, seller and wallet chips
+  - the "X leads" / "You're leading" pills and LIVE
+  - CURRENT BID with a rolling number, and ENDS IN
+  - the progress bar and "N bids in the last 5 min"
+  - bid rows with TOP BID, and All N bids
+  - the red "Re-bid" / green "Raise your max" CTA
+  - an iOS outbid push, and the "You won it" hammer screen
+- **Hero photo:** taken from the app screenshot; the chips are inpainted and the brand lettering softened.
+- **The war:** +$23 steps from $815 to $1,045 between Ralph, Abir, Karim and You. The clock runs about 2× real time for urgency.
+- **Rewind:** a VHS rewind (`vhs`: chroma split, jitter, noise band, "◀◀ REWIND") plays everything backwards to the frame where he looks at the camera with the phone on the table (2.45 s). That frame is held with "قريباً… على تلفونك."
+- **Voice:** only the first 2 s carry it, and the raw audio stays at its own timeline, so `make_bed` still works.
