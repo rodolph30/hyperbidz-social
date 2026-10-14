@@ -123,14 +123,14 @@ if __name__ == "__main__":
     if "--stills" not in sys.argv:
         mx = Q.HQMix(CLIP, END, pad_freqs=((146.8, 0.0),))
         g = Q.sneaky(CLIP + 0.2, 0.0, 1.0, seed=12); x = np.arange(len(g)) / SR
-        env = np.minimum(1, x / 0.5) * np.clip((CLIP + 0.05 - x) / 0.12, 0, 1) * np.where((x > FIXED - 0.02) & (x < BOOM), 0.35, 1.0)
+        env = np.minimum(1, x / 0.5) * np.clip((CLIP + 0.05 - x) / 0.12, 0, 1) * np.where((x > FIXED - 0.02) & (x < BOOM), 0.35, np.where((x > GUESS0) & (x < 4.4), 0.75, 1.0))
         env = np.convolve(env, np.ones(480) / 480, "same"); mx.fadd(g * env, 0.0, 0.5)
         for i in range(HOOK_N): Q.key_click(mx, i / CPS, 0.028)
-        for t0, *_ in BUBS: Q.bubble_pop(mx, t0, 0.035)
+        for t0, *_ in BUBS: Q.bubble_pop(mx, t0, 0.022)
         Q.bips(mx, SAME + 0.03, 0.05); mx.whoosh(SAME + 0.1, 0.45, 0.1)
-        Q.impact(mx, FIXED, 0.35); Q.ding(mx, FIXED + 0.02, 1046.5, 0.05)
+        Q.impact(mx, FIXED, 0.25); Q.ding(mx, FIXED + 0.02, 1046.5, 0.05)
         y = mx.tt(0.22); mx.fadd(mx.lp(mx.rng.normal(0, 1, len(y)), 1) * (np.sin(2 * np.pi * 37 * y) > 0) * 0.6, WRONG, 0.12)   # glitch crackle
         Q.buzzer(mx, WRONG + 0.02, 0.1, 0.25)
-        Q.impact(mx, BOOM, 0.45); mx.whoosh(BOOM, 0.5, 0.2); Q.V.chime(mx, BOOM + 0.05, 1318.5, 0.05); mx.shimmer(BOOM + 0.08, 1568, 0.03)
+        Q.impact(mx, BOOM, 0.3); mx.whoosh(BOOM, 0.5, 0.2); Q.V.chime(mx, BOOM + 0.05, 1318.5, 0.05); mx.shimmer(BOOM + 0.08, 1568, 0.03)
         mx.write("s7e6_audio.wav")
     render(frame, TOTAL, "s7e6_audio.wav", OUT)
