@@ -253,3 +253,112 @@ def bubble_pop(mx, at, g=0.12):
 def bips(mx, at, g=0.05):
     for d in (0, 0.09):
         y = mx.tt(0.05); mx.fadd(np.sin(2 * np.pi * 2093 * y) * np.exp(-y * 40), at + d, g)
+
+# ---------- the crazy kit (owner, E3–E6: "I want something crazy") ----------
+CORAL = (255, 92, 120)
+CROWD_COLS = [(221, 92, 140), (109, 77, 255), (53, 126, 221), (46, 170, 140), (240, 150, 60), (150, 110, 255), (255, 110, 110), (70, 190, 220)]
+
+def ease_in(x):
+    x = min(1.0, max(0.0, x)); return x * x * x
+
+def slam(x):
+    """scale for a stamp slam: 2.2 → 1 with a tiny settle"""
+    x = min(1.0, max(0.0, x)); return 1 + 1.2 * (1 - x) ** 3 - 0.05 * np.sin(np.pi * x) * (x > 0.6)
+
+def shake_off(t, t0, amp=14, d=0.35, seed=0):
+    k = (t - t0) / d
+    if not 0 <= k < 1: return 0.0, 0.0
+    a = amp * (1 - k) ** 2; return a * np.sin(t * 93 + seed), a * np.cos(t * 71 + seed * 2)
+
+def shake(im, dx, dy, z=1.03):
+    if abs(dx) < 0.3 and abs(dy) < 0.3: return im
+    w, h = W / z, H / z; l = (W - w) / 2 + dx; tp = (H - h) / 2 + dy
+    return im.crop((int(l), int(tp), int(l + w), int(tp + h))).resize((W, H), Image.BILINEAR)
+
+def flash(im, a, col=(255, 255, 255)):
+    if a > 0.01: im.alpha_composite(Image.new("RGBA", (W, H), col + (int(255 * min(1, a)),)))
+
+_VG = {}
+def vignette(im, a, col=CORAL):
+    if a <= 0.01: return
+    if "m" not in _VG:
+        small = np.clip((((_xx[::4, ::4] - 540) / 600) ** 2 + ((_yy[::4, ::4] - 960) / 980) ** 2) - 0.3, 0, 1) ** 1.1
+        _VG["m"] = Image.fromarray((small * 255).astype(np.uint8)).resize((W, H), Image.BILINEAR)
+    lay = Image.new("RGBA", (W, H), col + (0,)); lay.putalpha(_VG["m"].point(lambda v: int(v * min(1, a)))); im.alpha_composite(lay)
+
+def xmark(s=150, col=CORAL, w=24):
+    im = Image.new("RGBA", (s + 30, s + 30), (0, 0, 0, 0)); sh = Image.new("RGBA", im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(sh)
+    for c, o, ww in (((0, 0, 0, 150), 6, w + 6), (col + (255,), 0, w)):
+        L = Image.new("RGBA", im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(L)
+        dl.line([(15 + w, 15 + w + o), (15 + s - w, 15 + s - w + o)], fill=c, width=ww); dl.line([(15 + s - w, 15 + w + o), (15 + w, 15 + s - w + o)], fill=c, width=ww)
+        im.alpha_composite(L.filter(ImageFilter.GaussianBlur(5)) if o else L)
+    return im
+
+def bid_chip(ini, amount, col, size=34):
+    av = K.avatar(ini, col, 52); tx = R.text_layer(amount, R.font(size, 700), WHITE)
+    h = 68; w = 8 + 52 + 14 + tx.width + 26
+    im = glass_layer(w, h, h // 2, fill=(16, 16, 34, 238), edge=(205, 194, 255, 120))
+    im.alpha_composite(av, (8, 8)); im.alpha_composite(tx, (74, (h - tx.height) // 2 - 3)); return im
+
+def speed_lines(im, t, a, cx=540, cy=1090, n=46, seed=3):
+    if a <= 0.01: return
+    rng = np.random.default_rng(seed); lay = Image.new("RGBA", (W // 2, H // 2), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    for i in range(n):
+        ang = rng.uniform(0, 2 * np.pi); sp = rng.uniform(900, 1700); ph = rng.uniform(0, 1); L = rng.uniform(80, 260)
+        r0 = 160 + ((t * sp / 1000 + ph) % 1.0) * 1100
+        x0, y0 = cx + np.cos(ang) * r0, cy + np.sin(ang) * r0; x1, y1 = cx + np.cos(ang) * (r0 + L), cy + np.sin(ang) * (r0 + L)
+        d.line([(x0 / 2, y0 / 2), (x1 / 2, y1 / 2)], fill=(215, 205, 255, int(150 * a)), width=2)
+    im.alpha_composite(lay.resize((W, H), Image.BILINEAR))
+
+def ring_timer(frac, label, hot=0.0, s=300):
+    im = Image.new("RGBA", (s + 60, s + 60), (0, 0, 0, 0)); c = (s + 60) / 2; r = s / 2
+    gl = Image.new("RGBA", im.size, (0, 0, 0, 0)); ImageDraw.Draw(gl).ellipse((c - r, c - r, c + r, c + r), fill=(255, 70, 100, int(110 * hot)))
+    im.alpha_composite(gl.filter(ImageFilter.GaussianBlur(26)))
+    d = ImageDraw.Draw(im); d.ellipse((c - r + 10, c - r + 10, c + r - 10, c + r - 10), fill=(14, 14, 30, 242))
+    L = Image.new("RGBA", im.size, (0, 0, 0, 0)); dl = ImageDraw.Draw(L)
+    dl.arc((c - r + 4, c - r + 4, c + r - 4, c + r - 4), 0, 360, fill=(255, 255, 255, 40), width=12)
+    col = tuple(int(a + (b - a) * hot) for a, b in zip(VIO, (255, 80, 110)))
+    if frac > 0: dl.arc((c - r + 4, c - r + 4, c + r - 4, c + r - 4), -90, -90 + 360 * frac, fill=col + (255,), width=12)
+    im.alpha_composite(L); tl = R.text_layer(label, R.font(104, 700), WHITE); im.alpha_composite(tl, (int(c - tl.width / 2), int(c - tl.height / 2 - 8)))
+    return im
+
+def big(text_, size=220, col=WHITE, glow=None):
+    tl = R.text_layer(text_, R.font(size, 700), col)
+    if not glow: return tl
+    im = Image.new("RGBA", (tl.width + 120, tl.height + 120), (0, 0, 0, 0)); g = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    g.paste(glow + (210,), (60, 60), tl.getchannel("A")); im.alpha_composite(g.filter(ImageFilter.GaussianBlur(26))); im.alpha_composite(tl, (60, 60)); return im
+
+# sounds
+def buzzer(mx, at, g=0.22, d=0.55):
+    y = mx.tt(d); s = sum(np.sign(np.sin(2 * np.pi * f * y)) for f in (110, 116.5, 221)) / 3
+    mx.fadd(mx.lp(s, 6) * np.minimum(1, y / 0.01) * np.clip((d - y) / 0.06, 0, 1), at, g)
+
+def ding(mx, at, f=1568, g=0.08):
+    y = mx.tt(1.0); mx.fadd(sum(np.sin(2 * np.pi * f * m * y) * np.exp(-y * dd) * a for m, dd, a in ((1, 4, 1), (2.0, 6, .4), (3.01, 9, .2))), at, g)
+
+def impact(mx, at, g=0.45):
+    y = mx.tt(1.0); boom = np.sin(2 * np.pi * np.cumsum(38 + 90 * np.exp(-y * 18)) / SR) * np.exp(-y * 4.5)
+    mx.fadd(boom + mx.lp(mx.rng.normal(0, 1, len(y)), 3) * np.exp(-y * 14) * 0.5, at, g)
+
+def riser(mx, t0, t1, g=0.12, f0=200, f1=1600):
+    D = t1 - t0; y = mx.tt(D); k = y / D; f = f0 + (f1 - f0) * k ** 2
+    s = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.5 + mx.lp(mx.rng.normal(0, 1, len(y)), 4) * 0.5; mx.fadd(s * k ** 1.5, t0, g)
+
+def heartbeat(mx, at, g=0.55):
+    for d, a in ((0, 1), (0.17, 0.7)):
+        y = mx.tt(0.28); mx.fadd(np.sin(2 * np.pi * np.cumsum(42 + 34 * np.exp(-y * 25)) / SR) * np.exp(-y * 15) * a, at + d, g)
+
+def coin(mx, at, g=0.04):
+    y = mx.tt(0.18); f = 2600 + mx.rng.uniform(-200, 500); mx.fadd((np.sin(2 * np.pi * f * y) + 0.5 * np.sin(2 * np.pi * f * 1.5 * y)) * np.exp(-y * 28), at, g)
+
+def gavel(mx, at, g=0.5):
+    y = mx.tt(0.5); s = np.sin(2 * np.pi * np.cumsum(90 + 120 * np.exp(-y * 40)) / SR) * np.exp(-y * 18)
+    s += mx.lp(mx.rng.normal(0, 1, len(y)), 1) * np.exp(-y * 70) * 0.8; mx.fadd(s, at, g)
+
+def shockwave(im, cx, cy, k, col=(205, 194, 255), rmax=520, width=7):
+    """a ring blasting out of a point (k = 0..1)"""
+    if not 0 < k < 1: return
+    r = 20 + rmax * (1 - (1 - k) ** 2); a = (1 - k) ** 1.5
+    lay = Image.new("RGBA", (int(2 * r + 40), int(1.2 * r + 40)), (0, 0, 0, 0))
+    ImageDraw.Draw(lay).ellipse((20, 20, 20 + 2 * r, 20 + 1.2 * r), outline=col + (int(255 * a),), width=max(2, int(width * (1 - k) + 2)))
+    R.paste_center(im, lay.filter(ImageFilter.GaussianBlur(1.5)), cx, cy)
