@@ -115,16 +115,16 @@ if __name__ == "__main__":
     if "--stills" not in sys.argv:
         mx = Q.HQMix(CLIP, END, pad_freqs=((146.8, 0.0),))
         g = Q.sneaky(CLIP + 0.2, 0.0, 1.0, seed=9); x = np.arange(len(g)) / SR
-        g = g * (1 + 0.6 * np.clip((x - GO) / (STOP - GO), 0, 1) * (x < STOP))                          # it builds
+        g = g * (1 + 0.35 * np.clip((x - GO) / (STOP - GO), 0, 1) * (x < STOP))                          # it builds
         D = 0.32; i0 = int((STOP - D) * SR); tau = np.arange(int(D * SR)) / SR; pos = (STOP - D) + tau - tau ** 2 / (2 * D)   # tape stop
         g[i0:i0 + len(tau)] = np.interp(pos, x, g) * (1 - tau / D) ** 0.5; g[int(STOP * SR):] = 0
         env = np.minimum(1, x / 0.5); mx.fadd(g * env, 0.0, 0.5)
         for i in range(HOOK_N): Q.key_click(mx, i / CPS, 0.028)
-        Q.impact(mx, ONE, 0.42); Q.ding(mx, ONE + 0.02, 2093, 0.05)
-        Q.riser(mx, GO, STOP, 0.16, 150, 2200)
+        Q.impact(mx, ONE, 0.28); Q.ding(mx, ONE + 0.02, 2093, 0.05)
+        Q.riser(mx, GO, STOP, 0.11, 150, 2200)
         tk = GO; k = 0
-        while tk < STOP: Q.coin(mx, tk, 0.022); k += 1; tk += 1 / (5 + 28 * ((tk - GO) / (STOP - GO)) ** 1.5)
-        Q.gavel(mx, STOP, 0.5); Q.impact(mx, STOP, 0.3); Q.V.lock(mx, RED, 0.2)
-        mx.whoosh(FLY0, 0.33, 0.2); Q.impact(mx, FLY1, 0.3); Q.V.chime(mx, FLY1 + 0.02, 1318.5, 0.05); mx.shimmer(FLY1 + 0.05, 1568, 0.03)
+        while tk < STOP: Q.coin(mx, tk, 0.017); k += 1; tk += 1 / (5 + 28 * ((tk - GO) / (STOP - GO)) ** 1.5)
+        Q.gavel(mx, STOP, 0.34); Q.impact(mx, STOP, 0.2); Q.V.lock(mx, RED, 0.2)
+        mx.whoosh(FLY0, 0.33, 0.2); Q.impact(mx, FLY1, 0.2); Q.V.chime(mx, FLY1 + 0.02, 1318.5, 0.05); mx.shimmer(FLY1 + 0.05, 1568, 0.03)
         mx.write("s7e4_audio.wav")
     render(frame, TOTAL, "s7e4_audio.wav", OUT)
