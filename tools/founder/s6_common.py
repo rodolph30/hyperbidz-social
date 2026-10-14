@@ -249,3 +249,35 @@ def dot(col=(255, 77, 106), r=7):
 def avatar(ch, col, s=58):
     im = Image.new("RGBA", (s, s), (0, 0, 0, 0)); d = ImageDraw.Draw(im); d.ellipse((1, 1, s - 2, s - 2), fill=col + (255,), outline=(255, 255, 255, 200), width=2)
     tl = R.text_layer(ch, R.font(int(s * 0.42), 700), WHITE); im.alpha_composite(tl, ((s - tl.width) // 2, (s - tl.height) // 2 - 2)); return im
+
+# ---------- crisp end card (owner, 14 Oct: the blurred-frame ending looked weird) ----------
+_EC2 = {}
+def end_card2(k, lines, END):
+    """the series' blue→violet gradient, deepened for the night, soft warm glow at the foot, a few slow bokeh dots;
+    Z mark, ROOFTOP NIGHTS · SEASON 6, the lines, follow — all with slow fades and small rises"""
+    if "bg" not in _EC2:
+        g = np.asarray(R.GRAD_BG.convert("RGB"), np.float32)
+        shade = (0.62 + 0.38 * (_yy / H))[..., None]                                                       # darker at the top
+        warm = np.exp(-(((_xx - 540) / 700) ** 2 + ((_yy - 2050) / 420) ** 2))[..., None] * np.array([255, 150, 110], np.float32) * 0.35
+        _EC2["bg"] = Image.fromarray(np.clip(g * shade + warm, 0, 255).astype(np.uint8)).convert("RGBA")
+    im = _EC2["bg"].copy()
+    bok = Image.new("RGBA", (W // 2, H // 2), (0, 0, 0, 0)); d = ImageDraw.Draw(bok)
+    for x, y, r, i in _BOKEH:
+        yy = (y - k * (10 + i % 5 * 5)) % H; xx = x + 16 * np.sin(k * 0.5 + i)
+        d.ellipse(((xx - r * 0.6) / 2, (yy - r * 0.6) / 2, (xx + r * 0.6) / 2, (yy + r * 0.6) / 2), fill=(255, 255, 255, int(18 + 10 * np.sin(k * 1.2 + i))))
+    im.alpha_composite(bok.filter(ImageFilter.GaussianBlur(1.2)).resize((W, H), Image.BILINEAR))
+    place(im, R.z_mark(150), W / 2, 630, ease(k / 0.6), 18)
+    place(im, mono("ROOFTOP NIGHTS  ·  SEASON 6", 24, (235, 238, 255), 7), W / 2, 770, ease((k - 0.3) / 0.6))
+    for i, line in enumerate(lines):
+        place(im, text(line, 96, 700), W / 2, 900 + i * 116, ease((k - 0.55 - i * 0.3) / 0.6), 18)
+    y0 = 900 + len(lines) * 116 + 26
+    hy, bz = R.text_layer("HYPER", R.font(52, 500), (215, 225, 255), tracking=6), R.text_layer("BIDZ", R.font(52, 700), WHITE, tracking=6)
+    wm = Image.new("RGBA", (hy.width + bz.width, max(hy.height, bz.height)), (0, 0, 0, 0)); wm.alpha_composite(hy, (0, 0)); wm.alpha_composite(bz, (hy.width, 0))
+    place(im, wm, W / 2, y0, ease((k - 1.25) / 0.6))
+    place(im, text("Live auctions for Lebanon. Coming soon.", 44, 500, (235, 238, 255)), W / 2, y0 + 82, ease((k - 1.45) / 0.6))
+    fl = text("Follow @hyperbidz", 48, 700, (42, 21, 128)); w, h = fl.width + 110, fl.height + 52
+    pill = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(pill).rounded_rectangle((0, 0, w - 1, h - 1), radius=h // 2, fill=(255, 255, 255, 255))
+    pill.alpha_composite(fl, (55, 23)); place(im, pill, W / 2, y0 + 230, ease((k - 1.8) / 0.6))
+    out = im.convert("RGB")
+    if k > END - 0.6: out = Image.blend(out, Image.new("RGB", (W, H), (0, 0, 0)), min(1, (k - (END - 0.6)) / 0.6))
+    return out
