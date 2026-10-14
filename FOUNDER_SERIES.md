@@ -275,3 +275,27 @@ Slots 16–20 Nov, 10:00 Beirut, all `waiting` on the board.
 The owner made all six clips from the prompts above (his character wears a navy oversized tee and navy trousers; the light runs sunset → dusk → blue hour). Owner's note on the edit: "keep the motions classy". All six are on the board as `waiting`, 21–26 Nov, 10:00 Beirut (p040–p045).
 
 Kit: `tools/founder/s6_common.py`: warm `night_grade` with a soft bloom, a slow `light_leak`, frosted `shield`/`panel` cards with hairline borders, champagne mono `tag`s, `hairline_ring`, frosted `captions`, `blur_mark` for embossed logo marks on the bags (episodes 1, 2, 4 and 6), a deep-house `groove` (112 BPM, soft kick, off-beat hats, Rhodes stabs in A minor, sub, gentle pump) ducked under the voice by `GrooveMix`, and an `end_card` on the blurred last frame with drifting bokeh. Motion rule for this season: fades and small rises only; no stamps, bounces, shakes or bursts.
+
+After the owner's note that the E6 ending looked blurry, all six now end on `end_card2` instead: a crisp series gradient with bokeh, the Z mark, the episode line, the wordmark and a Follow pill, reached with a 0.5 s crossfade. The voiced audio was kept (`tools/founder/s6_reend.py`, revision 2 on the board).
+
+## Season 7: "The Envelope" (planned 14 Oct 2026)
+
+**Owner's brief:** set in the HyperBidz HQ office ambience. Create a problem and solve it, or leave people with questions they can't answer; play on psychology; viral, meaningful and hooky. For E1 he asked for "short clips… ecstatic, real, and hooky".
+
+**The hook:** a sealed envelope and a watch in a small glass box sit on his desk. The envelope holds the price he thinks this watch will sell for. Viewers guess in the comments. The envelope stays sealed until launch night, when the first live HyperBidz auction opens it. The payoff is honest: there is no fake sale before launch.
+
+**Place (same every episode):** an office at night, with a dark wall showing only a glowing blue-violet Z (no letters; the wordmark is added in the edit), violet light strips, a shelf with warm LEDs, plants and plain book spines, and a black desk with a closed plain silver laptop (no logo). The envelope (cream, plain dark-violet wax seal) and the glass watch box lie flat in front of him; his hands rest beside them and never pick them up. Black tee, round sunglasses.
+
+| Ep | Title | Line |
+|---|---|---|
+| 1 | The envelope | "Okay. I sealed a number in this envelope. It's what this watch will sell for. Yalla… guess it." |
+| 2 | What's it worth? | "What's your car worth? Not what you paid. Not what you want. What someone would actually pay. You don't know." |
+| 3 | Who decides? | "Who decides what something's worth? You? A dealer? Your cousin who 'knows a guy'? No. The buyers do. All at once." |
+| 4 | The $1 start | "Why would I start this watch at one dollar? Because the price isn't where you start. It's where they stop." |
+| 5 | The last three seconds | "Most auctions are decided in the last three seconds. That's when people finally admit what something's worth to them." |
+| 6 | Same watch | "Notice something? You all guessed a different price for the same watch. That's why a fixed price is always wrong." (the edit shows real guesses from the E1 comments) |
+| 7 | Launch night | "This envelope stays sealed until launch night. The first HyperBidz auction opens it. Will you be right?" |
+
+**Edit:** a typed question in the first second, a "Part N/7" tag, and a violet seal on the envelope that glows a little brighter each episode. Held last shot with a push-in, the owner's voice, an end card in the series style.
+
+**Open decision (owner):** whether the closest guess wins something, for example first access on launch night.
