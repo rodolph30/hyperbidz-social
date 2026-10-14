@@ -19,10 +19,11 @@ def clean(fr):
     m = np.zeros(reg.shape[:2], np.uint8); cv2.ellipse(m, (62, 63), (30, 36), 0, 0, 360, 255, -1); a[y0:y1, x0:x1] = cv2.inpaint(reg, m, 9, cv2.INPAINT_TELEA)
     return Image.fromarray(a)
 FR = [clean(f) for f in decode()]
-SIGN = (150, 130, 730, 410); SIGN_C = (430, 275); SEAT = (920, 640)
+SIGN = (150, 130, 730, 410); SIGN_C = (430, 275); SEAT = (885, 630)
 Q1, PEOPLE, HB, PLACE, YOU = 0.0, 2.22, 4.26, 4.98, 5.68
 CAPS = [(2.16, 3.5, [("الناس الصحّ.", True)]), (3.6, 4.95, [("ومع HyperBidz،", False)]), (4.95, CLIP - 0.05, [("في مطرح إلك.", True)])]
 HOOK = [("تعرف شو اللي بيخلّي", False), ("الشغل يكبر؟", True)]; HOOK_N = sum(len(s) for s, _ in HOOK); CPS = 30
+LABEL_PILL = Q.glass_layer(A.SEAT_LABEL.width + 44, A.SEAT_LABEL.height + 6, 30, fill=(14, 14, 30, 225)); LABEL_PILL.alpha_composite(A.SEAT_LABEL, (22, 0))
 CLUSTER = [(95, 565), (232, 600), (112, 735), (245, 778)]
 
 def sign_glow(im, k):
@@ -67,7 +68,7 @@ def scene(t):
             if t >= t0: R.paste_center(im, lay, x, y + 4 * np.sin(t * 2 + i), min(1, (t - t0) / 0.06) * a_all, Q.slam((t - t0) / 0.22) * 0.85)
         if t >= PLACE:                                                                                 # your place
             R.paste_center(im, A.seat(t, 132), *SEAT, min(1, (t - PLACE) / 0.08) * a_all, 0.6 + 0.4 * Q.pop((t - PLACE) / 0.4))
-            R.paste_center(im, A.SEAT_LABEL, SEAT[0], SEAT[1] - 120, ease((t - PLACE - 0.25) / 0.3) * a_all)
+            R.paste_center(im, LABEL_PILL, SEAT[0], SEAT[1] - 122, ease((t - PLACE - 0.25) / 0.3) * a_all)
     Q.shockwave(im, *SIGN_C, (t - HB) / 0.6, (170, 150, 255), 460); Q.shockwave(im, *SIGN_C, (t - HB - 0.12) / 0.6, Q.LAV, 320, 4)
     Q.shockwave(im, *SEAT, (t - YOU) / 0.55, Q.LAV, 330, 5)
     Q.flash(im, flare(t, HB, 0.22, 0.3), (240, 232, 255))
