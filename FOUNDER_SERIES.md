@@ -299,3 +299,20 @@ After the owner's note that the E6 ending looked blurry, all six now end on `end
 **Edit:** a typed question in the first second, a "Part N/7" tag, and a violet seal on the envelope that glows a little brighter each episode. Held last shot with a push-in, the owner's voice, an end card in the series style.
 
 **Open decision (owner):** whether the closest guess wins something, for example first access on launch night.
+
+### Season 7 as made
+
+**E1 "The envelope"** (p046, 27 Nov, `waiting`). The owner's line came out as "Okay, I sealed a number in this envelope. It's what this watch will sell for. I want you to… guess it." The last 0.2 s of the clip (hands lifting) is cut, and the hold freezes at 7.8 s.
+
+Kit: `tools/founder/s7_common.py`:
+- **Grade and light:** `hq_grade`, a cool-violet grade that keeps the warm shelf LEDs. `z_glow` flares the wall Z by screen-blending its own blue-violet pixels. `seal_glow` lights the wax seal (base 0.55 in E1; raise it each episode).
+- **Overlays:**
+  - `typed_lines` for typed hooks with a violet cursor
+  - `number_card`: a scrambling amount, then a redaction bar and the SEALED · OPENS LAUNCH NIGHT label
+  - `brackets`: focus corners
+  - `qmarks`: bobbing $ ? ? ?
+  - `composer`: an Instagram-style "Your guess: $" field
+  - `part_tag`
+  - `pop`: a playful overshoot (this season is fun, unlike S6's classy rule)
+- **Sound:** `sneaky`, a 100 BPM pizzicato (Karplus-Strong) groove in D minor with a G#, clock tick-tocks, a soft kick and snaps. `HQMix` ends on a pluck arpeggio and a D major chord.
+- **End card:** `end_card7`, a crisp HQ end card: dark wall gradient, violet strips, the envelope icon with a glowing seal, THE ENVELOPE · SEASON 7, the lines, the wordmark and the Follow pill. A 0.45 s crossfade leads into it.
