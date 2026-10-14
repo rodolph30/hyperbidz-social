@@ -250,3 +250,22 @@ Sound rule kept: nothing loud under key words (moved the rooftop whoosh off "Auc
 | 5 | p039 | You know what to do (finale) | hotel entrance, night | Vault profile noticed → last-second win → seal → Join the Vault tapped |
 
 Slots 16–20 Nov, 10:00 Beirut, all `waiting` on the board.
+
+## Season 6: bags, "rooftop nights" (planned 14 Oct 2026)
+
+**Owner's brief:** Seasons 1 and 2 are his favourites because they are cool and the ambiance is nice; Season 6 should have that vibe ("I wanna be vibing"). Audience: mainly women.
+
+**Character:** ivory short-sleeve knit shirt with an open camp collar, relaxed black tailored trousers, thin gold chain, the same round black sunglasses. Relaxed, warm, playful; the host of Beirut's coolest rooftop.
+
+**Place (same text every episode; only the time of day and the bag change):** a seaside rooftop lounge in Beirut, sunset in ep. 1 moving to deep night in ep. 6. String lights, blurred city lights and the sea, a thin violet light line along a low glass railing. One handbag rests on a white stone ledge beside him; he never touches it (props rule). No music in Veo: the groove is added in the edit, so the voice swap stays clean.
+
+| Ep | Title | Bag | Line |
+|---|---|---|---|
+| 1 | The one that got away | small caramel shoulder bag | "Everyone has that one bag they still think about. The one that got away. On HyperBidz… it comes back." |
+| 2 | That bag | cream tote | "That bag you never carry anymore? Someone in Beirut is waiting for exactly that one. Let them bid." |
+| 3 | Not full price | glossy black mini top-handle | "Why pay boutique price for the bag everyone has? Bid on the one nobody else has. For less." |
+| 4 | Girls' night | red clutch | "Girls' night. Dinner at nine, auction at eleven. Ten seconds left… and your best friend bids against you." |
+| 5 | Its next story | vintage tan bucket bag | "This bag has been to weddings, Faraya weekends and three first dates. Now it's ready for its next story." |
+| 6 | Bid like you mean it (finale) | pistachio mini bag | "The first bags go live soon. Set your reminder, call your girls… and bid like you mean it." |
+
+**Edit vibe:** warm night grade with soft bokeh and light leaks, a slow deep-house groove under the voice (pads and soft kicks, ducked under every word), pop-ups that pulse gently with the beat, held last shot, end card.
