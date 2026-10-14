@@ -330,3 +330,15 @@ Keep the effects under the voice: in the first passes, loud impacts pulled the v
 | 4 "The $1 start" | p049 | 30 Nov | A giant $1 slams in, then rockets up with chips, speed lines and a riser. Past $480 it becomes a blur. On "stop" the groove tape-stops, a gavel bangs, the number is redacted the instant it freezes and it flies into the seal. |
 | 5 "The last three seconds" | p050 | 1 Dec | A ring timer counts 0:03 → 0:00 with heartbeats, a red pulse and a bid storm. Then a SOLD stamp card (WHAT IT'S WORTH TO THEM) lands, and the seal blasts on "them". The Veo clip cut to a wide shot at 7.55 s, so the hold starts at 7.5 s. |
 | 6 "Same watch" | p051 | 2 Dec | A guess storm of comment bubbles, each linked by a line to the watch. A FIXED PRICE tag glitches and shatters. The guesses are illustrations. The owner decided on 14 Oct not to swap in real comments, since there may be none. To change them anyway, edit `GUESSES` in `s7e6_edit.py`, re-render the picture and mux it with the existing voiced audio. |
+
+## Arabic tests (14 Oct 2026)
+
+The owner tried two Lebanese Arabic clips with the same line: "تعرف شو اللي بيخلّي الشغل يكبر؟ الناس الصحّ. ومع HyperBidz، في مطرح إلك." They are p052 and p053 on the board under Other posts, `waiting`, with no slot yet.
+
+- **Voice:** Higgsfield's voice change keeps the Arabic words.
+- **Transcription:** use faster-whisper `large-v3` in the Higgsfield sandbox, with `language='ar'` and a Lebanese prompt. The local English recogniser can't do Arabic.
+- **Kit:** `tools/founder/ar_common.py`
+  - Readex Pro, merged from @fontsource's Arabic and Latin subsets into `tools/founder/fonts`. Cairo's subset drops the dots on medial ب/ي, so don't use it.
+  - Size text layers from the bbox bottom, or the dots under ي and في get cropped.
+  - RTL typing with the cursor at the left, frosted Arabic captions, people avatars with checks, the dashed مطرحك seat, and an Arabic end card with the follow pill built from two runs (`@hyperbidz` + تابعنا).
+- **Clean-up:** Veo baked a floating HyperBidz watermark into the ceiling of test 1 and put an Apple logo on the laptop in both clips. Both are removed with cv2 inpaint (`clean.py`).
