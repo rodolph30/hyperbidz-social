@@ -195,7 +195,7 @@ Never use "last price?" (or "akher se3er") in any lowball message: too close to 
 
 ## Owner's voice (from 14 Oct 2026)
 
-Every founder episode uses the owner's own voice: Higgsfield voice element "Rodolph" (`854d5761-a599-4fc1-9f5b-b1f61cc1632f`, voice_type `element`), about 1 credit per 8-second clip. Workflow:
+Every founder episode uses the owner's own voice. **From 14 Oct 2026 the voice is "Rodolph v2"** (`3a53be98-162b-4283-a1c5-85985fa8c70e`, voice_type `element`), cloned from his own recording of about 1–2 minutes in English and Lebanese Arabic; the owner chose it ("Rodolph v2 it is"). The old clone "Rodolph" (`854d5761-a599-4fc1-9f5b-b1f61cc1632f`, from 12 s of English) is retired, about 1 credit per 8-second clip. Workflow:
 1. Edit the episode as usual from the raw Veo clip.
 2. Put the raw clip in `raw/` in this repo, import it into Higgsfield with `media_import_url` through jsDelivr (`https://cdn.jsdelivr.net/gh/rodolph30/hyperbidz-social@<commit>/raw/<file>`; raw.githubusercontent serves mp4 as octet-stream and is refused), then run `voice_change` on it.
 3. `tools/voice/make_bed.py` splits the finished episode into a voice-free bed (`voice/<name>.bed.wav` + `.json`).
