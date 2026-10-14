@@ -197,18 +197,17 @@ if __name__ == "__main__":
     if "--stills" not in sys.argv:
         mx = Q.HQMix(CLIP, END, pad_freqs=((146.8, 0.0),))
         g = A.darbuka_groove(TOTAL, 1.0, bpm=96, seed=9); x = np.arange(len(g)) / SR
-        env = np.minimum(1, x / 0.4) * (0.55 + 0.45 * np.clip((x - APP0) / 0.2, 0, 1)) * np.where((x > REW0) & (x < REW1 + 0.15), 0.0, 1.0) * np.where(x > HAM, np.clip((HAM + 0.05 - x) / 0.08, 0, 1) + np.clip((x - REW1 - 0.2) / 0.4, 0, 1) * 0.45, 1.0)
+        env = np.minimum(1, x / 0.4) * (0.6 + 0.4 * np.clip((x - 2.2) / 0.6, 0, 1)) * (0.85 + 0.15 * np.clip((x - APP0) / 0.2, 0, 1)) * np.where((x > REW0) & (x < REW1 + 0.15), 0.0, 1.0) * np.where(x > HAM, np.clip((HAM + 0.05 - x) / 0.08, 0, 1) + np.clip((x - REW1 - 0.2) / 0.4, 0, 1) * 0.45, 1.0)
         env *= np.clip((CLIP + 0.05 - x) / 0.15, 0, 1); env = np.convolve(env, np.ones(240) / 240, "same"); mx.fadd(g * env, 0.0, 0.5)
-        mx.shimmer(T_UI0, 1568, 0.03); Q.riser(mx, Z0 - 0.3, Z1, 0.12, 180, 2400); mx.whoosh(Z1 - 0.35, 0.45, 0.25); Q.impact(mx, Z1, 0.3)
+        mx.shimmer(T_UI0, 1568, 0.03); Q.riser(mx, Z0 - 0.3, Z1, 0.12, 180, 2400); mx.whoosh(Z1 - 0.35, 0.45, 0.25); Q.impact(mx, Z1, 0.18)
         y = mx.tt(0.5); pulse = np.sin(2 * np.pi * 55 * y) * np.exp(-y * 7)                                     # tension pulse under the war
         tt = APP0
         while tt < HAM: mx.fadd(pulse, tt, 0.18 + 0.12 * (tt - APP0) / (HAM - APP0)); tt += 0.47
         for s in range(15): Q.V.ticks(mx, APP0 + s * 0.47, APP0 + s * 0.47 + 0.01, rate=1, g=0.06)
-        for et, n, a in EVENTS:
-            if n == "You": Q.key_click(mx, et - 0.05, 0.06); Q.V.chime(mx, et + 0.02, 1568, 0.04)
-            else: Q.coin(mx, et, 0.05); Q.coin(mx, et + 0.06, 0.03)
+        for et, n, a in [e for e in EVENTS if e[1] == "You"]: Q.key_click(mx, et - 0.05, 0.06); Q.V.chime(mx, et + 0.02, 1568, 0.04)
+        for et, n, a in [e for e in EVENTS if e[1] != "You"]: Q.coin(mx, et, 0.05); Q.coin(mx, et + 0.06, 0.03)
         Q.bubble_pop(mx, 7.95, 0.06); Q.ding(mx, 7.97, 1318.5, 0.04)
-        Q.gavel(mx, HAM, 0.45); Q.impact(mx, HAM, 0.3)
+        Q.gavel(mx, HAM, 0.16); Q.impact(mx, HAM, 0.12)
         for i, m in enumerate((62, 66, 69, 74, 78)):
             p_ = Q.pluck(Q.note(m), 0.9, 0.55) * np.exp(-np.arange(int(0.9 * SR)) / SR * 4); mx.fadd(p_, HAM + 0.15 + i * 0.08, 0.16)
         mx.shimmer(HAM + 0.5, 1568, 0.035)
@@ -216,4 +215,4 @@ if __name__ == "__main__":
         sq = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.35 + mx.lp(mx.rng.normal(0, 1, len(y)), 2) * 0.5; sq *= np.minimum(1, y / 0.1) * np.clip((D - y) / 0.1, 0, 1)
         mx.fadd(sq, REW0, 0.12); mx.whoosh(REW0, 0.5, 0.18); Q.impact(mx, REW1, 0.2)
         mx.write("s8e2_audio.wav")
-    render(frame, TOTAL, "s8e2_audio.wav", OUT := sys.argv[1]) if False else render(frame, TOTAL, "s8e2_audio.wav", sys.argv[1])
+    render(frame, TOTAL, "s8e2_audio.wav", sys.argv[1])
