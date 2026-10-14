@@ -234,3 +234,19 @@ The owner generated these clips; all seven are on the board as `waiting`, in his
 Edit scripts: `tools/founder/s4gas_edit.py`, `s4mech_edit.py`, `s4roof_edit.py`, `s4lights_edit.py`, `s4drive_edit.py`, `s4final_edit.py`, shared pieces in `s4_common.py` (looks, letterbox, grain, `blur_unless` for plates behind a moving head, `zcrop`, `tone`). `remux.py` swaps in rebuilt audio without re-rendering; `peek.py` / `cover.py` render single frames.
 
 Sound rule kept: nothing loud under key words (moved the rooftop whoosh off "Auction", nothing under "lowballs"/"once"; the finale's gavel crack is tamed so the voice sits at the usual level).
+
+## Season 5: watches = the HyperBidz Vault (made 14 Oct 2026)
+
+**Look:** the owner's Vault design canvas (https://claude.ai/artifact/QG4bob3hsS82xDNVoEiGFR): black stage `#06070B`, a lit gradient edge (`#2F7BFF → #7C5CFF`, border `#6D4DFF`, blue-violet glow), the Z mark as a members' seal (black disc, `#6D4DFF` ring, Z in `#5C95FF → #A08BFF`), Space Mono labels in `#B9A8FF`, lot card with Place Bid / NEXT, TOP BID and YOU chips, the Won card (`#5B3BE8 → #3A22B8 → #160C46`), Join the Vault in the brand gradient. Kit: `tools/founder/s5_common.py` (Vault grade, `lit_edge`, `seal`, `lot_card`, `bid_chip`, `timer_chip`, `won_panel`/`won_strip`, `vault_end_card`, `VaultMix` with a vault-door end sound, watch ticks, lock, chime). Never show a membership price: the design marks it as an example.
+
+**Character:** black overshirt, white tee, thin gold chain, round sunglasses (owner made the clips himself).
+
+| Ep | Post | Title | Clip | Edit |
+|---|---|---|---|---|
+| 1 | p035 | Worth the chase | two clips with the same line, cut together (counter → glass case → close-up) | cold open with the seal, timer + TOP BID chips chasing, lit edge on the close-up, YOU lead, hammer falls |
+| 2 | p036 | Your move | boutique, seated | frosted doors + BY INVITATION ONLY → lock opens → Place Bid → You're leading → seal |
+| 3 | p037 | Want it | boutique ("knowing you want it") | retail tag vs the Watch heart (41 others want it) → Vault lot card, FROM THE VAULT |
+| 4 | p038 | How you got it | private showroom | ticking dial, heartbeat edge on "Mmm", spec card flips into provenance |
+| 5 | p039 | You know what to do (finale) | hotel entrance, night | Vault profile noticed → last-second win → seal → Join the Vault tapped |
+
+Slots 16–20 Nov, 10:00 Beirut, all `waiting` on the board.
