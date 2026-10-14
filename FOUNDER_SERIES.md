@@ -319,3 +319,14 @@ Kit: `tools/founder/s7_common.py`:
 - **End card:** `end_card7`, a crisp HQ end card: dark wall gradient, violet strips, the envelope icon with a glowing seal, THE ENVELOPE · SEASON 7, the lines, the wordmark and the Follow pill. A 0.45 s crossfade leads into it.
 
 **E2 "What's it worth?"** (p047, 28 Nov, `waiting`). The line came out exactly as written. The hands stayed still from the first frame to the last, so the whole 8 s is used. The seal glows at base 0.62. The end card reads "You don't know. / Not yet."
+
+**E3–E6: "something crazy" (owner, 14 Oct 2026).** These four go full energy, with slams, shakes, flashes, music dropouts and swarms. The S7 kit gained a crazy set: `slam`, `shake`, `flash`, `vignette`, `xmark`, `bid_chip`, `speed_lines`, `ring_timer`, `big`, `shockwave`, plus the sounds `buzzer`, `ding`, `impact`, `riser`, `heartbeat`, `coin` and `gavel`. Every episode ends with the seal blasting a shockwave, and the seal glows a step brighter each time (E3 0.68, E4 0.74, E5 0.80, E6 0.86).
+
+Keep the effects under the voice: in the first passes, loud impacts pulled the voice gain down to about 0.44. Effects were trimmed until the bed sits at about 0.3 of the voice and the gain is about 0.65.
+
+| Ep | Post | Slot | Edit |
+|---|---|---|---|
+| 3 "Who decides?" | p048 | 29 Nov | A game show. Contestant cards (You? · A dealer? · Your cousin + "trust me habibi") each come with a ding. On "No." the groove cuts, a buzzer sounds and X stamps land. On "The buyers do." a crowd of avatars and +$ chips explodes out, then rushes into the seal on "All at once." |
+| 4 "The $1 start" | p049 | 30 Nov | A giant $1 slams in, then rockets up with chips, speed lines and a riser. Past $480 it becomes a blur. On "stop" the groove tape-stops, a gavel bangs, the number is redacted the instant it freezes and it flies into the seal. |
+| 5 "The last three seconds" | p050 | 1 Dec | A ring timer counts 0:03 → 0:00 with heartbeats, a red pulse and a bid storm. Then a SOLD stamp card (WHAT IT'S WORTH TO THEM) lands, and the seal blasts on "them". The Veo clip cut to a wide shot at 7.55 s, so the hold starts at 7.5 s. |
+| 6 "Same watch" | p051 | 2 Dec | A guess storm of comment bubbles, each linked by a line to the watch. A FIXED PRICE tag glitches and shatters. **Its guesses are placeholders** (`GUESSES` in `s7e6_edit.py`). Re-render the picture with the real guesses from E1's comments, then mux it with the existing voiced audio; no new voice credit is needed. |
