@@ -48,7 +48,7 @@ This file is the complete instructions for the daily lesson run and the posting 
 ## Lessons board
 
 `https://claude.ai/artifact/1y9fTB5thL1iwc2versHBa` ("HyperBidz Lessons"; the board itself is internal and can carry the name). Database:
-- `lessons/<id>` (id like `L02`, a redo `L02-v2`): `lesson` (number), `title` (`[word]` = emphasis), `topic`, `hook`, `learn` (one line: what viewers learn), `caption`, `captionAlt`, `quiz` `{question, options[4], answer (index), extra}`, `sources` `[{label, url}]`, `script` (the narration lines as plain text), `video` and `cover` (asset ids), `duration`, `status` (`waiting` → owner sets `approved` or `changes` with `note` → you set `scheduled` → `published`; `failed` if Metricool refuses), `slot` (ISO time, 19:00 Beirut), `revision`, `createdAt`, `mediaUrl`, `metricoolId`, `igUrl`, `metrics` `{reach, plays, saves, shares, quizCorrect}`.
+- `lessons/<id>` (id like `L02`, a redo `L02-v2`): `lesson` (number), `title` (`[word]` = emphasis), `topic`, `hook`, `learn` (one line: what viewers learn), `caption`, `captionAlt`, `quiz` `{question, options[4], answer (index), extra}`, `sources` `[{label, url}]`, `script` (the narration lines as plain text), `video` and `cover` (asset ids), `duration`, `status` (`waiting` → owner sets `approved` or `changes` with `note` → you set `scheduled` → `published`; `manual` when Metricool's monthly limit is full and the owner posts it himself, then he taps "I posted it" → `published`; `failed` if Metricool refuses), `slot` (ISO time, 19:00 Beirut), `revision`, `createdAt`, `mediaUrl`, `metricoolId`, `igUrl`, `metrics` `{reach, plays, saves, shares, quizCorrect}`.
 - `campaign/plan` `{total, titles[]}` (titles from `QUEUE.md`; update it when you add lessons to the queue).
 - Upload media with the Artifact tool (`url` = the board, `file_path`, `asset: true`) and store the returned ids. Write documents with the ArtifactData tool.
 
@@ -69,10 +69,13 @@ This file is the complete instructions for the daily lesson run and the posting 
 
 1. Read `lessons` on the board.
 2. For each `approved` lesson without `metricoolId`: its slot is its own `slot` if that is still at least 10 minutes away, otherwise the next 19:00 Beirut that's at least 10 minutes away and not taken by another scheduled lesson. Check the Metricool monthly cap (`PLAYBOOK.md`). Schedule it in Metricool (brand `7343454`, Instagram Reel, timezone Asia/Beirut) with the lesson's `mediaUrl` (Metricool copies the mp4 from it when the post is created) and caption option 1. `isAiGenerated: true` (the narrator voice is synthetic; the owner's standing rule keeps Instagram's AI flag on, with no on-screen AI label). Then set `status: scheduled`, `slot`, `metricoolId`.
-3. If the cap is full, don't schedule: set the lesson's `note` to say so and message the owner that he can post it himself from the board (Save video + Copy caption).
-4. Scheduled lessons whose time has passed: confirm in Metricool, set `published` (+ `igUrl` if available). From the day after, record metrics when available.
-5. Reminder: in the **17:45** run, if today's lesson is still `waiting`, send the owner one line: "Lesson NN is still waiting. Approve it before 6:45 pm to post at 7: <board link>".
-6. If you scheduled something, tell the owner in one line. Otherwise end quietly.
+3. **Monthly limit (owner, 16 Oct 2026: "schedule up to the limit, and tell me when the limit hits").** Metricool's free plan allows 20 posts a month, counted as in `PLAYBOOK.md` (everything published or scheduled in Metricool that month).
+   - If scheduling a lesson uses the **last** slot of the month, tell the owner right away: "Heads-up: Metricool's limit for <month> is now full (20/20). From <next lesson's date> until <1st of next month>, lessons won't post by themselves; I'll mark them 'Post it yourself' on the board."
+   - If the month is **already full**, don't schedule. Set the lesson to `status: manual` (keep its `slot`) and message the owner: "Metricool's monthly limit is full, so Lesson NN won't post by itself. At 7 pm, open the board, tap Save video and Copy caption, post it, then tap 'I posted it'." The board shows a "Post it yourself" card for it.
+   - On the 1st of a month the count resets: approved lessons go back to normal scheduling.
+4. Scheduled lessons whose time has passed: confirm in Metricool, set `published` (+ `igUrl` if available). From the day after, record metrics when available. Lessons the owner marked "I posted it" are already `published` (`postedBy: owner`).
+5. Reminders, in the **17:45** run: if today's lesson is still `waiting`, send the owner one line: "Lesson NN is still waiting. Approve it before 6:45 pm to post at 7: <board link>". If today's lesson is `manual`, remind him to post it at 7 from the board. In the **18:45** run, repeat the `manual` reminder only if it's still `manual`.
+6. If you scheduled something or a message above is due, tell the owner in one or two lines. Otherwise end quietly.
 
 ## Measurement
 

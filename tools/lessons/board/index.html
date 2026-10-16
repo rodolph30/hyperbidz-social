@@ -60,6 +60,7 @@ header{display:flex;flex-direction:column;gap:14px}
 .strip i.approved,.strip i.scheduled{background:var(--gold);border-color:var(--gold)}
 .strip i.published{background:var(--ok);border-color:var(--ok)}
 .strip i.changes,.strip i.failed{background:var(--bad);border-color:var(--bad)}
+.strip i.manual{background:var(--accent);border-color:var(--gold)}
 .stripkey{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
 .stripkey span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--k)}
 
@@ -75,6 +76,7 @@ header{display:flex;flex-direction:column;gap:14px}
 .chip.st-approved,.chip.st-scheduled{background:var(--warn-bg);color:var(--warn)}
 .chip.st-published{background:var(--ok-bg);color:var(--ok)}
 .chip.st-changes,.chip.st-failed{background:var(--bad-bg);color:var(--bad)}
+.chip.st-manual{background:var(--accent-soft);color:var(--on-accent-soft)}
 .tonight h2{font-size:32px;line-height:1.1}
 .hook{margin:0;font-size:16px;color:var(--fg-2)}
 .slot{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:14px;color:var(--fg-2)}
@@ -180,10 +182,6 @@ section{display:flex;flex-direction:column;gap:12px}
     <div class="list" id="list"></div>
   </section>
 
-  <section aria-label="Measurement">
-    <div class="shead"><h2>Before <em>and</em> after</h2><span class="label">How we measure the campaign</span></div>
-    <div class="measure" id="measure"></div>
-  </section>
 </div>
 <div class="toast" id="toast" role="status" hidden></div>
 
@@ -200,7 +198,7 @@ section{display:flex;flex-direction:column;gap:12px}
   const blob = id => id ? '/_blob/' + safeId(id) : '';
   const pad = n => String(Number(n) || 0).padStart(2, '0');
   const st = l => l.status || 'waiting';
-  const LABEL = {waiting:'Needs you', approved:'Approved', changes:'Being redone', scheduled:'Scheduled', published:'Live', failed:'Needs attention'};
+  const LABEL = {waiting:'Needs you', approved:'Approved', changes:'Being redone', scheduled:'Scheduled', published:'Live', failed:'Needs attention', manual:'Post it yourself'};
   const emph = s => esc(s).replace(/\[([^\]]+)\]/g, '<em>$1</em>');
   const beirut = (iso, o) => { try { return new Intl.DateTimeFormat('en-GB', Object.assign({timeZone:'Asia/Beirut'}, o)).format(new Date(iso)); } catch { return ''; } };
   const dayKey = d => beirut(d, {year:'numeric', month:'2-digit', day:'2-digit'});
@@ -220,7 +218,7 @@ section{display:flex;flex-direction:column;gap:12px}
     const by = {}; lessons.forEach(l => { const n = Number(l.lesson); if (!by[n] || (Number(l.revision)||1) > (Number(by[n].revision)||1)) by[n] = l; });
     let h = ''; for (let i = 1; i <= total; i++){ const l = by[i]; const t = l ? `Lesson ${i}: ${l.title || ''} (${LABEL[st(l)] || st(l)})` : `Lesson ${i}${plan && plan.titles && plan.titles[i-1] ? ': ' + plan.titles[i-1] : ''} (planned)`; h += `<i class="${l ? st(l) : ''}" title="${esc(t)}"></i>`; }
     $('strip').innerHTML = h;
-    const need = lessons.filter(l => st(l) === 'waiting').length, up = lessons.filter(l => ['approved','scheduled'].includes(st(l))).length, live = lessons.filter(l => st(l) === 'published').length;
+    const need = lessons.filter(l => ['waiting','manual'].includes(st(l))).length, up = lessons.filter(l => ['approved','scheduled'].includes(st(l))).length, live = lessons.filter(l => st(l) === 'published').length;
     $('tally').innerHTML = `<span class="${need ? 'hot' : ''}"><b>${need}</b> need you</span><span><b>${up}</b> coming up</span><span><b>${live}</b> live</span><span><b>${lessons.length}</b> of ${total} made</span>`;
   }
 
@@ -233,14 +231,16 @@ section{display:flex;flex-direction:column;gap:12px}
       return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>Approve for 7 pm</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
     }
     if (s === 'approved' || s === 'changes') return `<div class="actions"><button class="btn btn-ghost" data-act="undo" data-id="${id}"${dis}>Undo, I'm not sure yet</button></div>`;
+    if (s === 'manual') return `<div class="actions"><button class="btn btn-approve" data-act="posted" data-id="${id}"${dis}>I posted it</button></div>`;
     return '';
   }
   const STATUS_LINE = {
-    approved: 'Approved. I put it in Metricool for the 7:00 pm slot at my next check (checks run at 12:50, 3:50, 5:50 and 6:45 pm).',
+    approved: 'Approved. I put it in Metricool for the 7:00 pm slot at my next check (checks run at 12:45, 3:45, 5:45 and 6:45 pm).',
     changes: 'I’m redoing this lesson and will bring it back here.',
     scheduled: 'In Metricool. It goes live automatically at the time above.',
     published: 'Live on Instagram.',
-    failed: 'Metricool could not take this one. I’ll sort it out at my next check.'
+    failed: 'Metricool could not take this one. I’ll sort it out at my next check.',
+    manual: 'Metricool’s monthly limit is full, so this one won’t post by itself. At 7 pm, save the video and copy the caption below, post it on Instagram, then tap “I posted it”.'
   };
 
   function paneHTML(l){
@@ -254,7 +254,7 @@ section{display:flex;flex-direction:column;gap:12px}
     } else if (t === 'quiz'){
       const q = l.quiz || {};
       body = q.question ? `<div class="quiz"><h4>${esc(q.question)}</h4><ol type="A">${(q.options || []).map((o, i) => `<li class="${i === Number(q.answer) ? 'right' : ''}">${esc(o)}</li>`).join('')}</ol>
-        <small>Post this as a Quiz sticker in your story the day after the lesson. Its correct-answer rate is how we measure learning.${q.extra ? ' ' + esc(q.extra) : ''}</small></div>` : '<p class="status-line">Quiz on the way.</p>';
+        <small>Optional: a Quiz sticker for your story the day after the lesson.</small></div>` : '<p class="status-line">Quiz on the way.</p>';
     } else if (t === 'sources'){
       const s = Array.isArray(l.sources) ? l.sources : [];
       body = s.length ? `<ul class="sources">${s.map(x => `<li>${esc(x.label || '')}${x.url ? ` · <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url.replace(/^https?:\/\//, '').slice(0, 70))}</a>` : ''}</li>`).join('')}</ul>` : '<p class="status-line">Sources on the way.</p>';
@@ -301,6 +301,8 @@ section{display:flex;flex-direction:column;gap:12px}
     const by = id => lessons.find(l => safeId(l.id) === id);
     if (focusId && by(focusId)) return by(focusId);
     const order = l => Number(l.lesson) || 0;
+    const manual = lessons.filter(l => st(l) === 'manual').sort((a, b) => order(a) - order(b));
+    if (manual.length) return manual[0];
     const waiting = lessons.filter(l => st(l) === 'waiting').sort((a, b) => order(a) - order(b));
     if (waiting.length) return waiting[0];
     const changes = lessons.filter(l => st(l) === 'changes').sort((a, b) => order(a) - order(b));
@@ -360,7 +362,6 @@ section{display:flex;flex-direction:column;gap:12px}
     $('list').innerHTML = nextPlanned.reverse().map(n => plannedRow(n, titles[n-1])).join('') + sorted.map(l => rowHTML(l, f && l.id === f.id)).join('')
       + (titles.length > 3 ? `<button class="mini more" data-act="all">${showAll ? 'Show fewer planned lessons' : 'Show the whole plan'}</button>` : '')
       || '<div class="empty"><b>The course is empty.</b>Lessons appear here as they’re made.</div>';
-    $('measure').innerHTML = measureHTML();
   }
 
   async function decide(id, patch, msg){
@@ -407,6 +408,7 @@ section{display:flex;flex-direction:column;gap:12px}
       decide(id, {status:'changes', decidedAt: now, note}, 'Change requested');
     }
     else if (act === 'undo'){ decide(id, {status:'waiting', decidedAt: null, note: ''}, 'Moved back to Needs you'); }
+    else if (act === 'posted'){ decide(id, {status:'published', postedBy:'owner', postedAt: now}, 'Marked as posted'); }
     else if (act === 'dl' && l){ saveBlob(blob(l.video), `HyperBidz Lesson ${pad(l.lesson)} - ${String(l.title || '').replace(/[\[\]]/g, '').replace(/[\\/:*?"<>|]+/g, ' ').trim()}.mp4`, 'video/mp4'); }
     else if (act === 'dlcover' && l){ saveBlob(blob(l.cover), `HyperBidz Lesson ${pad(l.lesson)} cover.jpg`, 'image/jpeg'); }
     else if (act === 'frame'){ saveBlob(blob(b.dataset.asset), 'HyperBidz ' + b.dataset.name, 'image/jpeg'); }
@@ -422,7 +424,6 @@ section{display:flex;flex-direction:column;gap:12px}
         lessons = snap.docs.map(d => Object.assign({id: d.id}, d.data(), alt[d.id] ? {_alt: true} : {})); loaded = true; render(); },
       () => { $('tonight').innerHTML = '<div class="empty"><b>The board lost its connection.</b>Reload the page to see the latest lesson.</div>'; });
     db.doc('campaign/plan').onSnapshot(d => { plan = d && d.exists ? d.data() : null; render(); }, () => {});
-    db.doc('campaign/survey').onSnapshot(d => { survey = d && d.exists ? d.data() : null; render(); }, () => {});
   }
   start();
 })();
