@@ -20,6 +20,7 @@ This file is the source of truth for every scheduled run. Read it in full before
 ## The owner's standing instructions (always apply)
 
 - Do NOT use the line "Ma fi ekher se3er. Fi ekher senye." (or any spelling of it) anywhere: captions, slides, Reels, end cards.
+- **Owner, 16 Oct 2026: don't add the AI content tag** (`isAiGenerated: false`) to the auction lessons; see `LESSONS_SERIES.md`.
 - Do NOT put an on-screen "AI-generated" label or tag in videos or images. Keep Instagram's own AI disclosure flag (`isAiGenerated: true` in Metricool) on posts whose media is AI-generated, since Instagram requires it for realistic AI video.
 - Every note the owner leaves in a change request is a standing rule unless it is clearly about one post only. Apply it to every later post and add it here.
 - Before posting anything, read the post's current board document: if its status is "changes", never publish it until the change is made.

@@ -24,6 +24,7 @@ This file is the complete instructions for the daily lesson run and the posting 
 9. **Facts only.** Every number, date, name and quote must come from a source you opened (the research file's links, re-checked). Write numbers for the voice in words with `{shown|spoken}` markup, e.g. `{$14.83|fourteen dollars and eighty-three cents}`. Cartoon prices (Sami's radio) are illustrations and must look like it.
 10. **Neutral on Lebanon.** Explain how things work; never blame or name a bank, judge, official, party or person; no crisis jokes; no politics. No legal or financial advice ("this is how it works", never "you should buy").
 11. No slogan "Ma fi ekher se3er…", no "last price?/akher se3er".
+12. No AI content tag on Instagram (`isAiGenerated: false`) and no on-screen AI label.
 
 ## Format
 
@@ -81,7 +82,7 @@ This file is the complete instructions for the daily lesson run and the posting 
 ## Procedure P: the posting check (12:45, 15:45, 17:45 and 18:45 Beirut)
 
 1. Read `lessons` on the board.
-2. For each `approved` lesson without `metricoolId`: its slot is its own `slot` if that is still at least 10 minutes away, otherwise the next 19:00 Beirut that's at least 10 minutes away and not taken by another scheduled lesson. Check the Metricool monthly cap (`PLAYBOOK.md`). Schedule it in Metricool (brand `7343454`, Instagram Reel, timezone Asia/Beirut) with the lesson's `mediaUrl` (Metricool copies the mp4 from it when the post is created) and caption option 1. `isAiGenerated: true` (the narrator voice is synthetic; the owner's standing rule keeps Instagram's AI flag on, with no on-screen AI label). Then set `status: scheduled`, `slot`, `metricoolId`.
+2. For each `approved` lesson without `metricoolId`: its slot is its own `slot` if that is still at least 10 minutes away, otherwise the next 19:00 Beirut that's at least 10 minutes away and not taken by another scheduled lesson. Check the Metricool monthly cap (`PLAYBOOK.md`). Schedule it in Metricool (brand `7343454`, Instagram Reel, timezone Asia/Beirut) with the lesson's `mediaUrl` (Metricool copies the mp4 from it when the post is created) and caption option 1. `isAiGenerated: false`: **never add the AI content tag to lessons** (owner, 16 Oct 2026, after Lesson 01 went out with it). Then set `status: scheduled`, `slot`, `metricoolId`.
 3. **Monthly limit (owner, 16 Oct 2026: "schedule up to the limit, and tell me when the limit hits").** Metricool's free plan allows 20 posts a month, counted as in `PLAYBOOK.md` (everything published or scheduled in Metricool that month).
    - If scheduling a lesson uses the **last** slot of the month, tell the owner right away: "Heads-up: Metricool's limit for <month> is now full (20/20). From <next lesson's date> until <1st of next month>, lessons won't post by themselves; I'll mark them 'Post it yourself' on the board."
    - If the month is **already full**, don't schedule. Set the lesson to `status: manual` (keep its `slot`) and message the owner: "Metricool's monthly limit is full, so Lesson NN won't post by itself. At 7 pm, open the board, tap Save video and Copy caption, post it, then tap 'I posted it'." The board shows a "Post it yourself" card for it.
