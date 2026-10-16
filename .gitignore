@@ -1,2 +1,4 @@
 tools/fonts/
 __pycache__/
+tools/lessons/.voice_cache/
+__pycache__/

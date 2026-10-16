@@ -6,6 +6,8 @@ This file is the source of truth for every scheduled run. Read it in full before
 
 ## Fixed facts
 
+- **Owner, 16 Oct 2026:** the Approval Board keeps only the founder series (seasons 1–8); add nothing new to it and make no new founder videos. The every-4-days content run is paused. The current campaign is the daily **auction lessons** (no HyperBidz branding at all): read `LESSONS_SERIES.md`; its own board is `https://claude.ai/artifact/1y9fTB5thL1iwc2versHBa`.
+
 - Metricool brand id `7343454`, timezone `Asia/Beirut`, network: Instagram only (@hyperbidz). Metricool is on the Free plan: at most 20 scheduled posts a month. No boosts or ads.
 - **Board by seasons (owner, 14 Oct 2026):** the Approval Board shows the founder series grouped by season. Every founder-episode doc in `posts` must carry `season` (number), `episode` (number) and `epTitle` (the short episode name); posts without `season` fold into "Other posts" at the bottom. Each season has a doc in the `seasons` collection (`s1`, `s2`, …: `number`, `name`, `audience`, `place`, `look`, `state` = live / in production / planned, `planned` episode count, optional `plan` list of episode titles). Add or update the season doc when a season starts.
 - **Monthly cap check (before giving any post a slot):** count the month's posts in Metricool (published plus scheduled) plus the board's `approved` and `waiting` posts slotted in that month. If the count is already 20, slot the new post in the next month. Founder-series episodes have priority: when a month is tight, move your own content-run posts to the next month, never a founder episode. October 2026 is full (20 with S2E2–S2E4 on Oct 25–27); S2E5 and S2E6 go to Nov 1 and 2.

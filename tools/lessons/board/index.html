@@ -1,0 +1,429 @@
+<title>HyperBidz Lessons</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: a course syllabus. Header with a 30-cell lesson strip, then "Tonight at 7" (the lesson that needs a decision,
+   video beside the decision), then the rest of the lessons as a numbered list, then the before/after survey that measures
+   the campaign. Dark plum stage like the videos; serif headlines with italic lavender emphasis. */
+:root{
+  --bg:#F3F1F7; --surface:#FFFFFF; --surface-2:#ECE8F3; --line:#DDD6E8;
+  --fg:#1C1724; --fg-2:#4E4660; --muted:#6E6680;
+  --accent:#6B4CF0; --accent-soft:#ECE6FF; --on-accent-soft:#4F33D6; --emph:#6B4CF0;
+  --paper:#FBF6EA; --paper-ink:#2A2230; --gold:#9A7420;
+  --ok:#00875A; --ok-bg:#DCF5EA; --warn:#8A6100; --warn-bg:#FFF1CF; --bad:#C21A36; --bad-bg:#FFE6EA;
+  --on-accent:#FFFFFF;
+  --font-display:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-ui:"Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"Space Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141019; --surface:#1E1827; --surface-2:#271F33; --line:#352B45;
+  --fg:#F2EDF8; --fg-2:#CFC6DD; --muted:#A59BB6;
+  --accent:#8C70FF; --accent-soft:#2A2145; --on-accent-soft:#D3C7FF; --emph:#BEACFF;
+  --paper:#F0E7D4; --paper-ink:#2A2230; --gold:#E2BC70;
+  --ok:#3FD18F; --ok-bg:#10301F; --warn:#F2C14E; --warn-bg:#332708; --bad:#FF8A9A; --bad-bg:#3A1320;
+  --on-accent:#FFFFFF; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#141019; --surface:#1E1827; --surface-2:#271F33; --line:#352B45;
+  --fg:#F2EDF8; --fg-2:#CFC6DD; --muted:#A59BB6;
+  --accent:#8C70FF; --accent-soft:#2A2145; --on-accent-soft:#D3C7FF; --emph:#BEACFF;
+  --paper:#F0E7D4; --paper-ink:#2A2230; --gold:#E2BC70;
+  --ok:#3FD18F; --ok-bg:#10301F; --warn:#F2C14E; --warn-bg:#332708; --bad:#FF8A9A; --bad-bg:#3A1320;
+  --on-accent:#FFFFFF; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-ui);font-size:15px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:22px 56px}
+.wrap{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:-0.005em;text-wrap:balance;margin:0}
+h1 em,h2 em,h3 em{color:var(--emph)}
+.label{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* header */
+header{display:flex;flex-direction:column;gap:14px}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand svg{width:44px;height:44px;flex:none}
+.brand h1{font-size:34px;line-height:1.05}
+.brand p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.tally{display:flex;flex-wrap:wrap;gap:8px}
+.tally span{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--surface-2);color:var(--fg-2);font-variant-numeric:tabular-nums}
+.tally span b{color:var(--fg)}
+.tally .hot{background:var(--accent-soft);color:var(--on-accent-soft)}
+.tally .hot b{color:var(--on-accent-soft)}
+.strip{display:grid;grid-template-columns:repeat(30,minmax(0,1fr));gap:3px}
+.strip i{display:block;height:10px;border-radius:2px;background:var(--surface-2);border:1px solid var(--line)}
+.strip i.waiting{background:var(--accent);border-color:var(--accent)}
+.strip i.approved,.strip i.scheduled{background:var(--gold);border-color:var(--gold)}
+.strip i.published{background:var(--ok);border-color:var(--ok)}
+.strip i.changes,.strip i.failed{background:var(--bad);border-color:var(--bad)}
+.stripkey{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted)}
+.stripkey span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--k)}
+
+/* tonight */
+.tonight{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.player{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:12px;overflow:hidden;background:#000}
+.player video,.player img{width:100%;height:100%;object-fit:cover;display:block}
+.player .none{position:absolute;inset:0;display:grid;place-items:center;color:#cfc6dd;font-size:13px;text-align:center;padding:16px}
+.detail{display:flex;flex-direction:column;gap:14px;min-width:0}
+.eyerow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chip{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg-2)}
+.chip.st-waiting{background:var(--accent-soft);color:var(--on-accent-soft)}
+.chip.st-approved,.chip.st-scheduled{background:var(--warn-bg);color:var(--warn)}
+.chip.st-published{background:var(--ok-bg);color:var(--ok)}
+.chip.st-changes,.chip.st-failed{background:var(--bad-bg);color:var(--bad)}
+.tonight h2{font-size:32px;line-height:1.1}
+.hook{margin:0;font-size:16px;color:var(--fg-2)}
+.slot{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:14px;color:var(--fg-2)}
+.slot b{font-family:var(--font-mono);font-size:13px;color:var(--fg);letter-spacing:.02em}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px;cursor:pointer;min-height:46px}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn-approve{background:var(--accent);color:var(--on-accent)}
+.btn-change{background:var(--surface-2);color:var(--fg)}
+.btn-ghost{background:transparent;color:var(--fg-2);border:1px solid var(--line)}
+.ask{display:flex;flex-direction:column;gap:8px}
+.ask label{font-weight:700;font-size:14px}
+.ask textarea{font:inherit;min-height:90px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:10px 12px;resize:vertical}
+.note{margin:0;padding:10px 12px;border-radius:10px;background:var(--bad-bg);color:var(--fg);font-size:14px}
+.status-line{margin:0;font-size:14px;color:var(--fg-2)}
+
+/* tabs inside a lesson: caption / quiz / sources / script */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;border-bottom:2px solid transparent;padding:8px 10px;margin-bottom:-1px;color:var(--muted);cursor:pointer;font-weight:500;font-size:14px}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+.pane{font-size:14.5px;color:var(--fg);min-width:0}
+.pane pre{white-space:pre-wrap;word-break:break-word;font-family:var(--font-ui);font-size:14.5px;margin:0;line-height:1.55}
+.pane .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.mini{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:10px;padding:7px 12px;font-weight:500;font-size:13.5px;cursor:pointer}
+.quiz{background:var(--paper);color:var(--paper-ink);border-radius:12px;padding:14px 16px}
+.quiz h4{font-family:var(--font-display);font-weight:400;font-size:20px;margin:0 0 8px}
+.quiz ol{margin:0;padding-left:22px}
+.quiz li{padding:2px 0}
+.quiz li.right{font-weight:700}
+.quiz li.right::after{content:" ✓ correct";font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:#00875A}
+.quiz small{display:block;margin-top:8px;color:#6b5f55}
+.sources{margin:0;padding-left:18px}
+.sources li{padding:3px 0;word-break:break-word}
+.sources a{color:var(--accent)}
+
+/* lesson list */
+.list{display:flex;flex-direction:column;gap:10px}
+.lrow{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px 10px 10px}
+.lrow .num{font-family:var(--font-display);font-size:34px;line-height:1;color:var(--muted);text-align:center}
+.lrow .thumb{width:72px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--surface-2);display:grid;place-items:center}
+.lrow .thumb img{width:100%;height:100%;object-fit:cover}
+.lrow h3{font-size:19px;line-height:1.2}
+.lrow p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+.lrow .open{white-space:nowrap}
+.lrow.planned{background:transparent;border-style:dashed}
+.lrow.planned h3{color:var(--fg-2)}
+.lrow.current{outline:2px solid var(--accent);outline-offset:-1px}
+.more{align-self:flex-start}
+
+/* measurement */
+.measure{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.mcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.mcard h3{font-size:22px}
+.mcard p{margin:0;color:var(--fg-2);font-size:14px}
+.frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.frames button{padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface-2);cursor:pointer;aspect-ratio:9/16}
+.frames img{width:100%;height:100%;object-fit:cover;display:block}
+table.res{width:100%;border-collapse:collapse;font-size:13.5px}
+table.res th,table.res td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.res td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-family:var(--font-mono);font-size:12.5px}
+table.res td.up{color:var(--ok)}
+.tablewrap{overflow-x:auto}
+.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+.empty b{display:block;color:var(--fg);font-family:var(--font-display);font-weight:400;font-size:22px;margin-bottom:4px}
+section{display:flex;flex-direction:column;gap:12px}
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px}
+.shead h2{font-size:26px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:500;font-size:14px;z-index:20;max-width:calc(100% - 32px)}
+
+@media (max-width:720px){
+  .tonight{grid-template-columns:minmax(0,1fr);padding:14px}
+  .player{max-width:340px;width:100%;margin:0 auto}
+  .measure{grid-template-columns:minmax(0,1fr)}
+  .brand h1{font-size:28px}
+  .tonight h2{font-size:27px}
+  .lrow{grid-template-columns:56px minmax(0,1fr);}
+  .lrow .thumb{width:56px}
+  .lrow .open{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto!important} }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="top">
+      <div class="brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F7BFF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs><path fill="url(#zg)" d="M24.75,16 L84.75,16 L81.94,36 L59.69,54.36 L44.98,41.74 L51.94,36 L21.94,36 Z"/><path fill="url(#zg)" d="M55,58.23 L48.01,64 L78.01,64 L75.2,84 L15.2,84 L18.01,64 L40.29,45.62 Z"/></svg>
+        <div><h1>HyperBidz <em>Lessons</em></h1><p>One auction lesson a day · posts at 7:00 pm Beirut once you approve it</p></div>
+      </div>
+      <div class="tally" id="tally"></div>
+    </div>
+    <div class="strip" id="strip" aria-label="Lesson progress"></div>
+    <div class="stripkey"><span style="--k:var(--accent)">Needs you</span><span style="--k:var(--gold)">Approved or scheduled</span><span style="--k:var(--ok)">Live</span><span style="--k:var(--bad)">Being redone</span><span style="--k:var(--surface-2)">Planned</span></div>
+  </header>
+
+  <section id="tonightSec" aria-label="Tonight">
+    <div class="shead"><h2 id="tonightTitle">Tonight at <em>7</em></h2><span class="label" id="tonightSub"></span></div>
+    <div id="tonight"><div class="empty"><b>Loading the lessons…</b>The newest lesson shows here with its video and the approve button.</div></div>
+  </section>
+
+  <section aria-label="All lessons">
+    <div class="shead"><h2>The <em>course</em></h2><span class="label" id="courseSub"></span></div>
+    <div class="list" id="list"></div>
+  </section>
+
+  <section aria-label="Measurement">
+    <div class="shead"><h2>Before <em>and</em> after</h2><span class="label">How we measure the campaign</span></div>
+    <div class="measure" id="measure"></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const toastEl = $('toast');
+  let db = null, downloads = null, readonly = false;
+  let lessons = [], plan = null, survey = null, loaded = false;
+  let tab = {}, openAsk = new Set(), drafts = {}, busy = new Set(), showAll = false, focusId = null;
+
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safeId = s => String(s ?? '').replace(/[^A-Za-z0-9_\-]/g, '');
+  const blob = id => id ? '/_blob/' + safeId(id) : '';
+  const pad = n => String(Number(n) || 0).padStart(2, '0');
+  const st = l => l.status || 'waiting';
+  const LABEL = {waiting:'Needs you', approved:'Approved', changes:'Being redone', scheduled:'Scheduled', published:'Live', failed:'Needs attention'};
+  const emph = s => esc(s).replace(/\[([^\]]+)\]/g, '<em>$1</em>');
+  const beirut = (iso, o) => { try { return new Intl.DateTimeFormat('en-GB', Object.assign({timeZone:'Asia/Beirut'}, o)).format(new Date(iso)); } catch { return ''; } };
+  const dayKey = d => beirut(d, {year:'numeric', month:'2-digit', day:'2-digit'});
+  function when(iso){
+    if (!iso) return 'Next free 7:00 pm slot';
+    const today = dayKey(new Date()), tmr = dayKey(new Date(Date.now() + 864e5)), k = dayKey(iso);
+    const time = beirut(iso, {hour:'numeric', minute:'2-digit', hour12:true}).replace(' ', ' ');
+    if (k === today) return 'Today, ' + time;
+    if (k === tmr) return 'Tomorrow, ' + time;
+    return beirut(iso, {weekday:'short', day:'numeric', month:'short'}) + ', ' + time;
+  }
+  function toast(msg){ toastEl.textContent = msg; toastEl.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => toastEl.hidden = true, 2600); }
+
+  function stripHTML(){
+    const total = Math.max(30, Number(plan && plan.total) || 0, ...lessons.map(l => Number(l.lesson) || 0));
+    $('strip').style.gridTemplateColumns = `repeat(${total}, minmax(0,1fr))`;
+    const by = {}; lessons.forEach(l => { const n = Number(l.lesson); if (!by[n] || (Number(l.revision)||1) > (Number(by[n].revision)||1)) by[n] = l; });
+    let h = ''; for (let i = 1; i <= total; i++){ const l = by[i]; const t = l ? `Lesson ${i}: ${l.title || ''} (${LABEL[st(l)] || st(l)})` : `Lesson ${i}${plan && plan.titles && plan.titles[i-1] ? ': ' + plan.titles[i-1] : ''} (planned)`; h += `<i class="${l ? st(l) : ''}" title="${esc(t)}"></i>`; }
+    $('strip').innerHTML = h;
+    const need = lessons.filter(l => st(l) === 'waiting').length, up = lessons.filter(l => ['approved','scheduled'].includes(st(l))).length, live = lessons.filter(l => st(l) === 'published').length;
+    $('tally').innerHTML = `<span class="${need ? 'hot' : ''}"><b>${need}</b> need you</span><span><b>${up}</b> coming up</span><span><b>${live}</b> live</span><span><b>${lessons.length}</b> of ${total} made</span>`;
+  }
+
+  function actionsHTML(l){
+    if (readonly) return '';
+    const id = safeId(l.id), s = st(l), dis = busy.has(id) ? ' disabled' : '';
+    if (s === 'waiting'){
+      if (openAsk.has(id)) return `<div class="ask"><label for="note-${id}">What should change?</label><textarea id="note-${id}" data-note="${id}" placeholder="e.g. make the hook shorter, swap the Lebanon example, slower captions">${esc(drafts[id] || '')}</textarea>
+        <div class="actions"><button class="btn btn-approve" data-act="send" data-id="${id}"${dis}>Send change request</button><button class="btn btn-ghost" data-act="cancel" data-id="${id}">Cancel</button></div></div>`;
+      return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>Approve for 7 pm</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
+    }
+    if (s === 'approved' || s === 'changes') return `<div class="actions"><button class="btn btn-ghost" data-act="undo" data-id="${id}"${dis}>Undo, I'm not sure yet</button></div>`;
+    return '';
+  }
+  const STATUS_LINE = {
+    approved: 'Approved. I put it in Metricool for the 7:00 pm slot at my next check (checks run at 12:50, 3:50, 5:50 and 6:45 pm).',
+    changes: 'I’m redoing this lesson and will bring it back here.',
+    scheduled: 'In Metricool. It goes live automatically at the time above.',
+    published: 'Live on Instagram.',
+    failed: 'Metricool could not take this one. I’ll sort it out at my next check.'
+  };
+
+  function paneHTML(l){
+    const id = safeId(l.id), t = tab[id] || 'caption';
+    const tabs = [['caption','Caption'],['quiz','Quiz'],['sources','Sources'],['script','Script']].filter(([k]) => k !== 'script' || l.script);
+    let body = '';
+    if (t === 'caption'){
+      body = `<pre id="cap-${id}">${esc(l.caption || 'Caption on the way.')}</pre>
+        <div class="row">${l.caption ? `<button class="mini" data-act="copy" data-id="${id}" data-what="caption">Copy caption</button>` : ''}${l.captionAlt ? `<button class="mini" data-act="alt" data-id="${id}">Show option 2</button>` : ''}</div>
+        ${l._alt ? `<pre style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)" id="alt-${id}">${esc(l.captionAlt)}</pre><div class="row"><button class="mini" data-act="copy" data-id="${id}" data-what="alt">Copy option 2</button></div>` : ''}`;
+    } else if (t === 'quiz'){
+      const q = l.quiz || {};
+      body = q.question ? `<div class="quiz"><h4>${esc(q.question)}</h4><ol type="A">${(q.options || []).map((o, i) => `<li class="${i === Number(q.answer) ? 'right' : ''}">${esc(o)}</li>`).join('')}</ol>
+        <small>Post this as a Quiz sticker in your story the day after the lesson. Its correct-answer rate is how we measure learning.${q.extra ? ' ' + esc(q.extra) : ''}</small></div>` : '<p class="status-line">Quiz on the way.</p>';
+    } else if (t === 'sources'){
+      const s = Array.isArray(l.sources) ? l.sources : [];
+      body = s.length ? `<ul class="sources">${s.map(x => `<li>${esc(x.label || '')}${x.url ? ` · <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url.replace(/^https?:\/\//, '').slice(0, 70))}</a>` : ''}</li>`).join('')}</ul>` : '<p class="status-line">Sources on the way.</p>';
+    } else {
+      body = `<pre>${esc(l.script || '')}</pre>`;
+    }
+    return `<div class="tabs" role="tablist">${tabs.map(([k, n]) => `<button class="tab" role="tab" aria-selected="${k === t}" data-act="tab" data-id="${id}" data-tab="${k}">${n}</button>`).join('')}</div><div class="pane" role="tabpanel">${body}</div>`;
+  }
+
+  function featureHTML(l){
+    const id = safeId(l.id), s = st(l);
+    const video = l.video ? `<video controls playsinline preload="metadata" ${l.cover ? `poster="${blob(l.cover)}"` : ''} src="${blob(l.video)}"></video>`
+      : (l.cover ? `<img src="${blob(l.cover)}" alt="">` : `<div class="none">Video on the way</div>`);
+    return `<article class="tonight" id="lesson-${id}">
+      <div><div class="player">${video}</div>
+        ${l.video ? `<div class="row" style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="mini" data-act="dl" data-id="${id}">Save video</button>${l.cover ? `<button class="mini" data-act="dlcover" data-id="${id}">Save cover</button>` : ''}</div>` : ''}</div>
+      <div class="detail">
+        <div class="eyerow"><span class="label">Lesson ${pad(l.lesson)}${l.topic ? ' · ' + esc(l.topic) : ''}</span><span class="chip st-${s}">${LABEL[s] || esc(s)}</span>${Number(l.revision) > 1 ? `<span class="chip">Version ${Number(l.revision)}</span>` : ''}</div>
+        <h2>${emph(l.title || 'Untitled lesson')}</h2>
+        ${l.hook ? `<p class="hook">${esc(l.hook)}</p>` : ''}
+        <div class="slot"><span>Posts</span><b>${esc(when(l.slot))}</b>${l.duration ? `<span>${esc(l.duration)}</span>` : ''}</div>
+        ${l.learn ? `<p class="status-line"><b>Viewers learn:</b> ${esc(l.learn)}</p>` : ''}
+        ${l.note && s === 'changes' ? `<p class="note"><b>Your note:</b> ${esc(l.note)}</p>` : ''}
+        ${STATUS_LINE[s] ? `<p class="status-line">${STATUS_LINE[s]}</p>` : ''}
+        ${l.igUrl ? `<a class="mini" style="align-self:flex-start;text-decoration:none" href="${esc(l.igUrl)}" target="_blank" rel="noopener">View on Instagram ↗</a>` : ''}
+        ${actionsHTML(l)}
+        ${paneHTML(l)}
+      </div></article>`;
+  }
+
+  function rowHTML(l, current){
+    const id = safeId(l.id), s = st(l);
+    return `<div class="lrow${current ? ' current' : ''}">
+      <div class="thumb">${l.cover ? `<img src="${blob(l.cover)}" alt="" loading="lazy">` : `<span class="num">${pad(l.lesson)}</span>`}</div>
+      <div style="min-width:0"><div class="eyerow"><span class="label">Lesson ${pad(l.lesson)}</span><span class="chip st-${s}">${LABEL[s] || esc(s)}</span></div>
+        <h3>${emph(l.title || '')}</h3><p>${esc(when(l.slot))}${l.metrics && l.metrics.reach ? ` · ${Number(l.metrics.reach).toLocaleString('en')} reached` : ''}${l.metrics && l.metrics.quizCorrect != null ? ` · quiz ${Number(l.metrics.quizCorrect)}% right` : ''}</p></div>
+      ${current ? '' : `<button class="mini open" data-act="focus" data-id="${id}">Open</button>`}</div>`;
+  }
+  function plannedRow(n, title){
+    return `<div class="lrow planned"><div class="thumb"><span class="num">${pad(n)}</span></div><div style="min-width:0"><span class="label">Lesson ${pad(n)} · planned</span><h3>${emph(title || 'To be researched')}</h3></div></div>`;
+  }
+
+  function pickFeature(){
+    const by = id => lessons.find(l => safeId(l.id) === id);
+    if (focusId && by(focusId)) return by(focusId);
+    const order = l => Number(l.lesson) || 0;
+    const waiting = lessons.filter(l => st(l) === 'waiting').sort((a, b) => order(a) - order(b));
+    if (waiting.length) return waiting[0];
+    const changes = lessons.filter(l => st(l) === 'changes').sort((a, b) => order(a) - order(b));
+    if (changes.length) return changes[0];
+    return lessons.slice().sort((a, b) => order(b) - order(a))[0];
+  }
+
+  function measureHTML(){
+    const sv = survey || {};
+    const frameBtns = (key) => (Array.isArray(sv[key + 'Frames']) ? sv[key + 'Frames'] : []).map((a, i) => `<button data-act="frame" data-asset="${safeId(a)}" data-name="${key}-${pad(i)}.jpg" aria-label="Save ${key} story frame ${i + 1}"><img src="${blob(a)}" alt="" loading="lazy"></button>`).join('');
+    const qs = Array.isArray(sv.questions) ? sv.questions : [];
+    const b = sv.baseline || {}, e = sv.endline || {};
+    const val = (r, i) => r && Array.isArray(r.results) && r.results[i] != null && r.results[i] !== '' ? r.results[i] : '–';
+    const rows = qs.map((q, i) => {
+      const bv = val(b, i), ev = val(e, i); const num = x => parseFloat(String(x).replace('%', ''));
+      const up = !isNaN(num(bv)) && !isNaN(num(ev)) && num(ev) > num(bv);
+      return `<tr><td>${esc(q.text)}<br><span class="label">${esc(q.kind || '')}${q.measures ? ' · ' + esc(q.measures) : ''}</span></td><td class="n">${esc(bv)}</td><td class="n${up ? ' up' : ''}">${esc(ev)}</td></tr>`;
+    }).join('');
+    return `<div class="mcard"><span class="label">Step 1 · before Lesson 01</span><h3>Baseline <em>story</em></h3>
+        <p>Post these frames as stories before the first lesson goes live, adding the sticker named on each frame (poll, quiz or slider). Tap a frame to save it. Screenshot the results after 24 hours and send them to me.</p>
+        ${frameBtns('baseline') ? `<div class="frames">${frameBtns('baseline')}</div>` : '<p class="status-line">Frames on the way.</p>'}
+        ${b.date ? `<p><b>Ran:</b> ${esc(b.date)}${b.n ? ' · ' + esc(b.n) + ' answers' : ''}</p>` : ''}</div>
+      <div class="mcard"><span class="label">Step 2 · after the last lesson</span><h3>Endline <em>story</em></h3>
+        <p>The same questions again, plus “Did you watch our lessons?” so we can compare people who watched with people who didn’t.</p>
+        ${frameBtns('endline') ? `<div class="frames">${frameBtns('endline')}</div>` : ''}
+        ${e.date ? `<p><b>Ran:</b> ${esc(e.date)}${e.n ? ' · ' + esc(e.n) + ' answers' : ''}</p>` : ''}</div>
+      ${qs.length ? `<div class="mcard" style="grid-column:1 / -1"><span class="label">Results</span><h3>What <em>changed</em></h3>
+        <div class="tablewrap"><table class="res"><thead><tr><th>Question</th><th style="text-align:right">Before</th><th style="text-align:right">After</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p>Knowledge = share of correct quiz answers. Willingness = the slider average and the share answering “Yes” to using an auction app. Each lesson’s own quiz result shows in the course list above.</p></div>` : ''}`;
+  }
+
+  function render(){
+    if (!loaded) return;
+    stripHTML();
+    const f = pickFeature();
+    if (f){
+      const s = st(f);
+      const dk = f.slot ? dayKey(f.slot) : null, isToday = dk === dayKey(new Date()), isTmr = dk === dayKey(new Date(Date.now() + 864e5));
+      $('tonightTitle').innerHTML = s === 'waiting' ? (isToday || !f.slot ? 'Tonight at <em>7</em>' : isTmr ? 'Tomorrow at <em>7</em>' : 'Next at <em>7</em>') : s === 'changes' ? 'Being <em>redone</em>' : 'Latest <em>lesson</em>';
+      $('tonightSub').textContent = s === 'waiting' ? (isToday || !f.slot ? 'Approve before 6:45 pm for tonight' : 'Approve any time before 6:45 pm on the day') : '';
+      const focused = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.note : null;
+      const vid = document.querySelector('#tonight video'); const same = vid && vid.dataset && vid.getAttribute('src') === blob(f.video);
+      const keepTime = same ? vid.currentTime : 0, keepPlay = same && !vid.paused;
+      $('tonight').innerHTML = featureHTML(f);
+      if (same){ const v = document.querySelector('#tonight video'); if (v){ try { v.currentTime = keepTime; if (keepPlay) v.play().catch(() => {}); } catch {} } }
+      if (focused){ const t = document.querySelector(`[data-note="${focused}"]`); if (t){ t.focus(); t.setSelectionRange(t.value.length, t.value.length); } }
+    } else {
+      $('tonightTitle').innerHTML = 'Tonight at <em>7</em>'; $('tonightSub').textContent = '';
+      $('tonight').innerHTML = '<div class="empty"><b>No lesson yet.</b>Each morning a new lesson lands here with its video, caption and quiz. Approve it and it posts at 7:00 pm.</div>';
+    }
+    const total = Math.max(30, Number(plan && plan.total) || 0);
+    const sorted = lessons.slice().sort((a, b) => (Number(b.lesson) || 0) - (Number(a.lesson) || 0) || (Number(b.revision) || 1) - (Number(a.revision) || 1));
+    const made = new Set(lessons.map(l => Number(l.lesson)));
+    const nextPlanned = []; const titles = (plan && Array.isArray(plan.titles)) ? plan.titles : [];
+    for (let i = 1; i <= total && nextPlanned.length < (showAll ? total : 3); i++) if (!made.has(i) && titles[i-1]) nextPlanned.push(i);
+    $('courseSub').textContent = `${lessons.length} made · ${Math.max(0, total - lessons.length)} to go`;
+    $('list').innerHTML = nextPlanned.reverse().map(n => plannedRow(n, titles[n-1])).join('') + sorted.map(l => rowHTML(l, f && l.id === f.id)).join('')
+      + (titles.length > 3 ? `<button class="mini more" data-act="all">${showAll ? 'Show fewer planned lessons' : 'Show the whole plan'}</button>` : '')
+      || '<div class="empty"><b>The course is empty.</b>Lessons appear here as they’re made.</div>';
+    $('measure').innerHTML = measureHTML();
+  }
+
+  async function decide(id, patch, msg){
+    if (!db) return;
+    busy.add(id); render();
+    try { await db.doc('lessons/' + id).update(patch); toast(msg); openAsk.delete(id); delete drafts[id]; }
+    catch (e){ if (e && e.code === 'invalid_argument'){ readonly = true; toast('Only the board owner can approve lessons.'); } else toast('That didn’t save. Try again in a moment.'); }
+    finally { busy.delete(id); render(); }
+  }
+
+  async function saveBlob(url, filename, type){
+    if (!downloads){ toast('Saving files isn’t available in this view. Open the board in Claude on a computer.'); return; }
+    try {
+      toast('Preparing ' + filename + '…');
+      const r = await fetch(url); if (!r.ok) throw new Error('http');
+      const data = new Blob([await r.arrayBuffer()], {type});
+      await downloads.save({filename, data}); toast('Saved ' + filename);
+    } catch (err){
+      const code = err && err.code;
+      toast(code === 'declined' ? 'Save cancelled.' : code === 'rate_limited' ? 'A save prompt is already open.' : 'The save didn’t go through here. Try the board in Claude on a computer.');
+    }
+  }
+  async function copyText(text, el){
+    try { await navigator.clipboard.writeText(text); toast('Caption copied'); }
+    catch { if (el){ const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); } toast('Selected. Press copy to grab it.'); }
+  }
+
+  document.addEventListener('input', e => { const id = e.target.dataset && e.target.dataset.note; if (id) drafts[id] = e.target.value; });
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-act]'); if (!b) return;
+    const id = b.dataset.id, act = b.dataset.act, now = new Date().toISOString();
+    const l = lessons.find(x => safeId(x.id) === id);
+    if (act === 'tab'){ tab[id] = b.dataset.tab; render(); }
+    else if (act === 'alt' && l){ l._alt = !l._alt; render(); }
+    else if (act === 'copy' && l){ const alt = b.dataset.what === 'alt'; copyText(alt ? l.captionAlt : l.caption, $((alt ? 'alt-' : 'cap-') + id)); }
+    else if (act === 'focus'){ focusId = id; render(); $('tonightSec').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); }
+    else if (act === 'all'){ showAll = !showAll; render(); }
+    else if (act === 'ask'){ openAsk.add(id); render(); const t = $('note-' + id); if (t) t.focus(); }
+    else if (act === 'cancel'){ openAsk.delete(id); render(); }
+    else if (act === 'approve'){ decide(id, {status:'approved', decidedAt: now, note: ''}, 'Approved. It posts at the next 7:00 pm slot.'); }
+    else if (act === 'send'){
+      const note = (drafts[id] || '').trim();
+      if (!note){ toast('Add a short note so I know what to change.'); const t = $('note-' + id); if (t) t.focus(); return; }
+      decide(id, {status:'changes', decidedAt: now, note}, 'Change requested');
+    }
+    else if (act === 'undo'){ decide(id, {status:'waiting', decidedAt: null, note: ''}, 'Moved back to Needs you'); }
+    else if (act === 'dl' && l){ saveBlob(blob(l.video), `HyperBidz Lesson ${pad(l.lesson)} - ${String(l.title || '').replace(/[\[\]]/g, '').replace(/[\\/:*?"<>|]+/g, ' ').trim()}.mp4`, 'video/mp4'); }
+    else if (act === 'dlcover' && l){ saveBlob(blob(l.cover), `HyperBidz Lesson ${pad(l.lesson)} cover.jpg`, 'image/jpeg'); }
+    else if (act === 'frame'){ saveBlob(blob(b.dataset.asset), 'HyperBidz ' + b.dataset.name, 'image/jpeg'); }
+  });
+
+  async function start(){
+    const c = window.claude;
+    if (c && c.use) c.use('downloads').then(d => { downloads = d; }).catch(() => {});
+    db = c && c.use ? await c.use('db') : null;
+    if (!db){ $('tonight').innerHTML = '<div class="empty"><b>The lessons can’t load here.</b>Open the board from your Claude account to watch and approve lessons.</div>'; return; }
+    try { const u = await c.use('user'); if (u && typeof u.can === 'function'){ const w = await u.can('data.write'); if (w === false) readonly = true; } } catch {}
+    db.collection('lessons').onSnapshot(snap => { const alt = {}; lessons.forEach(l => { if (l._alt) alt[l.id] = true; });
+        lessons = snap.docs.map(d => Object.assign({id: d.id}, d.data(), alt[d.id] ? {_alt: true} : {})); loaded = true; render(); },
+      () => { $('tonight').innerHTML = '<div class="empty"><b>The board lost its connection.</b>Reload the page to see the latest lesson.</div>'; });
+    db.doc('campaign/plan').onSnapshot(d => { plan = d && d.exists ? d.data() : null; render(); }, () => {});
+    db.doc('campaign/survey').onSnapshot(d => { survey = d && d.exists ? d.data() : null; render(); }, () => {});
+  }
+  start();
+})();
+</script>

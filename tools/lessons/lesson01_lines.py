@@ -1,0 +1,23 @@
+# narration for lesson 01 v2 "Haggle or bid?" (key, text, pause after). {shown|spoken}, [emphasis]
+LINES = [
+    ("p1", "Here's a [paradox.]", 0.45),
+    ("p2", "In Lebanon, we love to haggle.", 0.25),
+    ("p3", "And haggling quietly [costs sellers money.]", 0.5),
+    ("p4", "One buyer. One seller. The price starts at {$120…|a hundred and twenty dollars,}", 0.15),
+    ("p5", "and it can only go one way. [Down.]", 0.6),
+    ("p6", "Meanwhile, someone who would have paid {$140|a hundred and forty} was [never even asked.]", 0.75),
+    ("d1", "Economists have a name for the fix: [price discovery.]", 0.35),
+    ("d2", "A price isn't really known until people [compete for it.]", 0.3),
+    ("d3", "And that's exactly what an [auction] does.", 0.7),
+    ("s1", "Here's a true story.", 0.3),
+    ("s2", "In {1995|nineteen ninety-five}, a programmer in California listed a [broken laser pointer] on his new auction website.", 0.4),
+    ("s3", "It sold for [{$14.83.|fourteen dollars and eighty-three cents.}]", 0.6),
+    ("s4", "He asked the buyer if he knew it was broken.", 0.3),
+    ("s5", "The reply: [I'm a collector of broken laser pointers.]", 0.6),
+    ("s6", "That little website became [eBay.]", 0.8),
+    ("l1", "The lesson? You don't know what your things are worth.", 0.3),
+    ("l2", "[The buyers do.]", 0.7),
+    ("c1", "So next time you sell something special, don't haggle it down.", 0.25),
+    ("c2", "[Let people bid.]", 0.9),
+    ("e1", "Follow to learn how auctions really work.", 1.2),
+]
