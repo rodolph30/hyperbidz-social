@@ -4,7 +4,7 @@ One lesson a day. The daily run takes the **first lesson with `status: todo`**. 
 
 Format per lesson: number · title · status · pace (quick or standard, see `LESSONS_SERIES.md`) · music style · research items · the idea (hook → lesson → story → takeaway) · quiz idea (optional story sticker).
 
-Pace (owner, 16 Oct): lesson 01 felt slow but good. Mix both: **quick** lessons (20–35 s, one fact, snappy) and **standard** ones (50–70 s). A quick lesson must still be easy to follow: one idea per screen, nothing overwhelming.
+These are **viral animated informative shorts** (owner, 16 Oct): every lesson follows the viral checklist in `LESSONS_SERIES.md`. Pace: most are **quick** (20–35 s, one fact, snappy); a few that need steps are **standard** (40–55 s). A quick lesson must still be easy to follow: one idea per screen, nothing overwhelming.
 
 ---
 
@@ -32,7 +32,7 @@ Quiz: "In a Dutch auction, who wins?" (the first to accept the falling price).
 Items: W9. Hook: "This tuna sold for $3.24 million." Teach: open competition and the value of being first / prestige; why one buyer would pay that. Takeaway: in an auction the price reflects how much someone wants it, not a label.
 Quiz: "Why did the tuna sell for so much?" (two buyers really wanted it / competition).
 
-### 07 · The winner's curse · status: todo · pace: standard · music: marimba
+### 07 · The winner's curse · status: todo · pace: quick · music: marimba
 Items: W6. Hook: "A jar of coins worth $8 sold, on average, for $10.01." Teach the winner's curse and how to bid smart: decide your maximum before you start. Takeaway: auctions reward a plan.
 Quiz: "Best way to avoid the winner's curse?" (set a maximum before bidding).
 
@@ -48,7 +48,7 @@ Quiz: "When does the 10% rule apply?" (when the winner doesn't pay in time).
 Items: W5, W4. Hook: "A painting sold for $450.3 million after 19 minutes of bidding." Teach the auctioneer's job: increments, the hammer, phone bidders. Story: Salvator Mundi at Christie's, 2017. Takeaway: competition, not the seller, set that price.
 Quiz: "Who decided Salvator Mundi's price?" (the bidders).
 
-### 11 · A Nobel Prize for auctions · status: todo · pace: standard · music: keys
+### 11 · A Nobel Prize for auctions · status: todo · pace: quick · music: keys
 Items: W7. Hook: "In 2020, two economists won the Nobel Prize for designing auctions." Teach: auctions can sell things that are hard to price (radio airwaves); the first US spectrum auction raised $617M in 47 rounds. Takeaway: when nobody knows the price, an auction finds it.
 Quiz: "What did the 2020 Nobel winners design?" (auction formats).
 
@@ -84,7 +84,7 @@ Quiz: "What's an auction estimate?" (the expected range, not the price).
 Items: L18. Hook: "Lebanon's state auctions olive harvests, a weekly souk, even a used car." Teach public auctions (مزايدة): published notice, sealed or open bids, highest bid wins, a bid guarantee ($25 for the car). Neutral and factual.
 Quiz: "What's a bid guarantee?" (money that shows you're serious).
 
-### 20 · Borrowing by auction · status: todo · pace: standard · music: lofi
+### 20 · Borrowing by auction · status: todo · pace: quick · music: lofi
 Items: S5, S6. Hook: "Governments borrow money by auction." Teach Treasury auctions (US: anyone can bid from $100; Lebanon: BDL's weekly T-bill auctions). No advice.
 Quiz: "How do many governments sell their bonds?" (by auction).
 
@@ -94,7 +94,7 @@ Teach the sealed-bid auction (first-price) vs open bidding, with a sourced real 
 ### 22 · Pay the second price · status: todo (needs research) · pace: standard · music: marimba
 Teach the Vickrey (second-price) auction and why bidding your true maximum is safe; link to eBay's proxy bidding (source eBay's help pages). Quiz on proxy bidding.
 
-### 23 · Banks must sell what they take · status: todo · pace: standard · music: ambient
+### 23 · Banks must sell what they take · status: todo · pace: quick · music: ambient
 Items: L15. Teach, neutrally, why a bank that ends up owning a property has to sell it, and how it's sold. Avoid any crisis blame.
 Quiz from the verified rule.
 
@@ -105,13 +105,13 @@ Quiz: "What's the minimum for jewellery in a Lebanese court sale?" (90% of value
 ### 25 · Reserve price, explained · status: todo (needs research) · pace: quick · music: lofi
 Teach reserve vs no-reserve auctions with a sourced example (auction-house glossary). Quiz.
 
-### 26 · Customs auctions done in the open · status: todo · pace: standard · music: keys
+### 26 · Customs auctions done in the open · status: todo · pace: quick · music: keys
 Items: W13. Teach how other countries publish customs auctions online (dates, lots, photos) so anyone can bid. Takeaway: published auctions bring more bidders and better prices. Don't compare Lebanon negatively; just show how it works elsewhere.
 
 ### 27 · "Auction" means "to increase" · status: todo · pace: quick · music: marimba
 Items: W1, W4 and one fresh fact. A short history of auctions in 60 seconds (Rome → auction houses → online). Quiz on the Latin root.
 
-### 28 · Why sellers love competition · status: todo (needs research) · pace: standard · music: ambient
+### 28 · Why sellers love competition · status: todo (needs research) · pace: quick · music: ambient
 Teach the economics in plain words: more bidders → higher expected price (a sourced study or auction-theory result). Sami sells twice: to one buyer, then to five bidders.
 
 ### 29 · How to bid like a pro · status: todo · pace: quick · music: pluck

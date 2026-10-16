@@ -28,10 +28,23 @@ This file is the complete instructions for the daily lesson run and the posting 
 ## Format
 
 - 1080x1920, 30 fps, H.264, under 19 MB (re-encode at a higher CRF if larger; the board's upload cap is 20 MB).
-- **Two paces, mixed (owner, 16 Oct: "lesson 01 was slow; good, but quick things can be catchy, so be both").** The pace for each lesson is in `QUEUE.md`.
-  - **Standard:** 50–70 s, 140–175 words, narrator speed 1.0, pauses 0.3–0.7 s, up to 10 scenes.
-  - **Quick:** 20–35 s, 55–90 words, one fact and one takeaway, narrator speed 1.08 (`Timeline(LINES, speed=1.08)`), pauses 0.12–0.3 s, 3–5 scenes, transitions on the beat. Still one idea per screen: fewer props, bigger numbers, nothing overwhelming. Hook in the first second.
-  - Even standard lessons should never drag: cut any pause that isn't doing work.
+- **What these are (owner, 16 Oct 2026): viral, animated, informative shorts about auctions.** Every one must be built to stop the scroll, hold to the end and get shared, while still teaching one true thing. Judge each script against the viral checklist below before you build it.
+- **Length and pace.** Shorts win on retention, so keep them tight. Two paces, mixed (owner: "lesson 01 was slow; good, but quick things can be catchy, so be both"); the pace for each lesson is in `QUEUE.md`.
+  - **Quick (most lessons):** 20–35 s, 55–90 words, one fact, one takeaway, narrator speed 1.08 (`Timeline(LINES, speed=1.08)`), pauses 0.1–0.25 s, 3–6 scenes.
+  - **Standard:** 40–55 s (never over 60), 110–150 words, narrator speed 1.03, pauses 0.2–0.5 s, up to 9 scenes.
+  - Cut every pause and every line that isn't doing work. Lesson 01 (70 s) is the upper limit we'll never reach again.
+
+### Viral checklist (every lesson)
+
+1. **The first second is the whole game.** The first frame shows the most surprising thing in the story (the $3.24M fish, the emperor's crown with a price tag), with a big on-screen hook of 3 to 7 words (`headline` at y≈330, size 84–96) and the narrator starting on word one. No setup, no "today we'll learn". The first frame doubles as the cover.
+2. **Hook formulas that work:** a shocking number ("This fish sold for $3.24 million."), a paradox ("Haggling costs sellers money."), a "you didn't know" ("Rome was once sold at an auction."), a direct challenge ("You've been selling things wrong.").
+3. **Open a loop early, pay it off late.** Tease the best part in the first 5 seconds ("…and the winner's reply is the best part") so people stay.
+4. **Something changes every 2 to 3 seconds:** a cut, a zoom, a number counting, a stamp, a character reaction, a sound accent. Still one idea on screen at a time: change the picture, don't pile things up.
+5. **Big, readable numbers** drawn into the scene (counters, price tags, stamps). Subtitles always on, so it works with the sound off.
+6. **A twist or payoff near the end**, then a **loop line**: the last line flows back into the first frame so the replay feels seamless (e.g. ends on the same object the video opened on).
+7. **Give people a reason to share or save:** a takeaway that makes them look smart, or a line they'd send a friend ("Send this to someone who still haggles"). Captions open with the hook and end with a question that invites comments.
+8. **Energy:** the narrator sounds curious and confident (quick pace), music bed with a light pulse (marimba, pluck or lofi for quick lessons), sound accents on every reveal.
+9. **Recurring cast for recognition:** Sami and Nour appear in every lesson, even briefly, so followers start to recognise the series.
 - Arc (one idea per beat; a quick lesson keeps hook → story/number → takeaway → end card): **hook** (a paradox, a surprising number or a question, spoken in the first 2 s, with the subject already on screen) → **the idea** (one teaching device: a definition card, a simple diagram, a step list of at most 4 steps, or a chart) → **the true story** (props + the number) → **the lesson** (one sentence on a card) → **callback** to the hook with the answer → **end card**: a short line like "Follow to learn how auctions really work." (no brand).
 - Text: subtitles at y≈1600 via `subtitle(im, t, TL)`; a headline only for the hook; big numbers drawn as part of the scene (counters, marquee years, cards).
 - Transitions: `zoom_through` 0.36 s between scenes; gentle camera push inside scenes.
