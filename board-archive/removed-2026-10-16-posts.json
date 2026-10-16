@@ -1,0 +1,418 @@
+[
+ {
+  "id": "p001-ma-fi-ekher-se3er",
+  "data": {
+   "caption": "Ma fi ekher se3er. Fi ekher senye. ⏱\n\nThere's no \"last price\" here. There's a last second.\nBuyers bid live, the price climbs, and the highest bid wins when the clock hits zero.\n\nFollow @hyperbidz so you're here when the first countdown starts.\n\n#Lebanon #Beirut #LiveAuction #HyperBidz #ComingSoon",
+   "cta": "Follow",
+   "format": "carousel",
+   "igUrl": "https://www.instagram.com/p/DeUB1C1CgvM/",
+   "media": [
+    {
+     "alt": "Ma fi ekher se3er. There's no last price.",
+     "asset": "9b6d73992dcc73586b1cd987197349fa"
+    },
+    {
+     "alt": "Going twice, 00:03. Fi ekher senye.",
+     "asset": "aa116b9114c61cfdd221a27006f98359"
+    },
+    {
+     "alt": "Sellers list. Buyers bid. Live.",
+     "asset": "2b6dfdb5ac31bf441378cab60d841fa9"
+    },
+    {
+     "alt": "The price climbs while you watch.",
+     "asset": "83a8c4523fcad448775f45e4916ce08c"
+    },
+    {
+     "alt": "Hammer falling. Highest bid wins.",
+     "asset": "2e1be8191763d866d140d3b08ca44f1d"
+    },
+    {
+     "alt": "HyperBidz. Follow @hyperbidz.",
+     "asset": "ab24e032e273c71a804f14dfc85da79f"
+    }
+   ],
+   "metricool": {
+    "id": 392702127,
+    "uuid": "6278136410475744605"
+   },
+   "pillar": "The thrill",
+   "revision": 1,
+   "slot": "2026-10-10T14:56:00+03:00",
+   "status": "published",
+   "title": "Ma fi ekher se3er"
+  }
+ },
+ {
+  "id": "p002-last-10-seconds",
+  "data": {
+   "caption": "The last 10 seconds hit different. ⏱\n\nLive auctions are coming to Lebanon. Watch the price climb and bid before the clock runs out.\n\nSend this to the friend who always waits until the last second.\n\n#Lebanon #Beirut #LiveAuction #HyperBidz #ComingSoon",
+   "cover": "b87374df21192aef994ff69963beb55f",
+   "cta": "Send to a friend",
+   "decidedAt": "2026-10-10T12:23:52.530Z",
+   "format": "reel",
+   "igUrl": "https://www.instagram.com/reel/DeUKjaWlOKy/",
+   "media": [
+    {
+     "alt": "Countdown from 00:10 to Hammer falling, ending on the HyperBidz logo.",
+     "asset": "b6464e5052043376d6deea15394a8669"
+    }
+   ],
+   "metricool": {
+    "id": 392735752,
+    "uuid": "1844547490482507263"
+   },
+   "note": "",
+   "pillar": "The thrill",
+   "publish": {
+    "coverMs": 7500,
+    "igType": "REEL",
+    "isAiGenerated": false,
+    "mediaUrls": [
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-12-post2/hyperbidz-post2-reel-v2.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 2,
+   "slot": "2026-10-10T16:13:00+03:00",
+   "status": "published",
+   "title": "The last 10 seconds",
+   "why": "Version 2: slogan removed from the end card as you asked. Posted now at your request."
+  }
+ },
+ {
+  "id": "p003-cafe-lakta",
+  "data": {
+   "caption": "POV: 3 seconds left on the lakta. 😬\n\nThat moment when the clock hits zero and it's yours. Live auctions are coming to Lebanon.\n\nTag the friend who'd be screaming in this café.\n\n#Lebanon #Beirut #Lakta #LiveAuction #HyperBidz",
+   "captionAlt": "Going once… going twice… yours.\n\nHyperBidz brings live auctions to Lebanon. Coming soon.\n\nSend this to your bidding partner.\n\n#Lebanon #Beirut #LiveAuction #HyperBidz #ComingSoon",
+   "cover": "eeda6c49882b5a09b0ed4203f9a582d1",
+   "cta": "Tag a friend",
+   "decidedAt": "2026-10-10T13:34:35.973Z",
+   "format": "reel",
+   "higgsfield": {
+    "credits": 20,
+    "job": "0de4217d-a0c2-4493-aa25-40962a935f05",
+    "model": "kling3_0 pro"
+   },
+   "igUrl": "https://www.instagram.com/reel/DeUNoRODyra/",
+   "media": [],
+   "metricool": {
+    "id": 392747798,
+    "uuid": "1884546772345114404"
+   },
+   "note": "",
+   "pillar": "The thrill",
+   "previewUrl": "https://d2ol7oe51mr4n9.cloudfront.net/user_3KV9ZL6IgSoUQrN1oHJT9LtiBf0/1ae401f9-c125-4f73-8099-fd0a6b1f91ee.mp4",
+   "publish": {
+    "coverMs": 1200,
+    "igType": "REEL",
+    "isAiGenerated": true,
+    "mediaUrls": [
+     "https://d2ol7oe51mr4n9.cloudfront.net/user_3KV9ZL6IgSoUQrN1oHJT9LtiBf0/1ae401f9-c125-4f73-8099-fd0a6b1f91ee.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "slot": "2026-10-10T16:40:00+03:00",
+   "status": "published",
+   "title": "3 seconds left on the lakta",
+   "why": "First Higgsfield Reel (20 credits): three friends in a Beirut café in the final seconds of an auction, then the win. App-style countdown overlays, an on-screen \"AI-generated scene\" label, and the end card without the slogan. It will be marked as AI content on Instagram."
+  }
+ },
+ {
+  "id": "p004-4-buyers",
+  "data": {
+   "caption": "Every seller in Lebanon has met all 4 of these buyers. 😅\n\nThe negotiator, the ghost, the committee and the \"I'll pass by tomorrow.\"\nWe're building a place where buyers compete for your item instead, live, and the clock decides.\n\nTag a friend who's selling something right now.\n\n#Lebanon #Beirut #SellInLebanon #Lakta #HyperBidz",
+   "cta": "Tag a friend",
+   "format": "carousel",
+   "igUrl": "https://www.instagram.com/p/DeXHfGviKcs/",
+   "media": [
+    {
+     "alt": "You've met all 4 of these buyers.",
+     "asset": "78bd63903ad467e8bd7664de388e73b6"
+    },
+    {
+     "alt": "Buyer 1, the negotiator.",
+     "asset": "8997f3f733c42b1dba5b5a93be78afec"
+    },
+    {
+     "alt": "Buyer 2, the ghost.",
+     "asset": "aa02c2ba8bc0e231e50046bfef468641"
+    },
+    {
+     "alt": "Buyer 3, the committee.",
+     "asset": "f085007a03a886dbc52514c778ff1e92"
+    },
+    {
+     "alt": "Buyer 4, the tomorrow.",
+     "asset": "57f6b10c0a2f7b9d2b3595525f9afa61"
+    },
+    {
+     "alt": "What if buyers had to compete instead?",
+     "asset": "e4423903a9cc8fd3a6a8b75d6368f21f"
+    }
+   ],
+   "metricool": {
+    "id": 393383289,
+    "uuid": "-7644768545294954651"
+   },
+   "pillar": "For sellers",
+   "publish": {
+    "igType": "POST",
+    "isAiGenerated": false,
+    "mediaUrls": [
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-11-p004-4-buyers/hyperbidz-p004-slide1.jpg"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "slot": "2026-10-11T19:43:00+03:00",
+   "status": "published",
+   "title": "You've met all 4 of these buyers",
+   "why": "Posted right away at your request. A relatable seller-side carousel (the negotiator, the ghost, the committee, the tomorrow) that ends on buyers competing instead. Made in code, no credits."
+  }
+ },
+ {
+  "id": "p005-last-manouche",
+  "data": {
+   "caption": "1 manouche left. Two people want it. Then there's Marwan. 🫓\n\nAbou Sami: regular since 1987. Maya: 3 exams tomorrow. Marwan: didn't even look up.\n\nThat's an auction: it goes to whoever wants it most, right up to the last second.\n\nThe Last One · Ep. 1\nHyperBidz: live auctions for Lebanon. Coming soon.\n\nTag the Marwan in your group 👀\n\n#HyperBidz #Lebanon #Beirut #Manouche #LebaneseHumor #LiveAuction",
+   "captionAlt": "Who are you in this bakery: Abou Sami, Maya or Marwan? 👀\n\nThe Last One · Ep. 1. Live auctions are coming to Lebanon.\n\n#HyperBidz #Lebanon #Beirut #Manouche #LiveAuction",
+   "cover": "56bb524cd3e33cb22906820d6ee20df1",
+   "cta": "Tag the Marwan in your group",
+   "decidedAt": "2026-10-12T20:49:00.000Z",
+   "format": "reel",
+   "igUrl": "https://www.instagram.com/reel/DebOjaXjLIq/",
+   "media": [],
+   "metricool": {
+    "id": 394629185,
+    "uuid": "-2636133983386384022"
+   },
+   "note": "",
+   "pillar": "The thrill",
+   "previewUrl": "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-13-p005-last-manouche/hyperbidz-p005-last-manouche-v5.mp4",
+   "publish": {
+    "coverMs": 2600,
+    "igType": "REEL",
+    "isAiGenerated": true,
+    "mediaUrls": [
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-13-p005-last-manouche/hyperbidz-p005-last-manouche-v5.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 5,
+   "slot": "2026-10-13T10:00:00+03:00",
+   "status": "published",
+   "title": "The Last One, ep. 1: The Last Manouche",
+   "why": "First episode of the series \"The Last One\": a silent western-style standoff over the last manouche in a late-night bakery. Abou Sami and Maya bid in lira, and Marwan wins with $20 without looking up from his phone. The ending freezes: the world turns black and white, Marwan stays in colour with a violet glow and a crown, then it fades out into the end card. Made from Google Flow (Veo) clips and stills, with brand pop-ups and an original score. The owner approved the cut; v4 adds the winner ending he asked for."
+  }
+ },
+ {
+  "id": "p006-buzz",
+  "data": {
+   "caption": "POV: you list your dad's old camera for $20… and put your phone down. 📱\n\n9 bidders later, it sold for $140.\n\nThat's what happens when people bid against each other instead of asking you for a discount.\n\nDon't sell it. Let them bid for it.\nHyperBidz: live auctions for Lebanon. Coming soon.\n\nWhat would you list first? 👇\n\n#HyperBidz #Lebanon #Beirut #LiveAuction #SellSmart",
+   "captionAlt": "",
+   "cover": "f32f7e2f869c4d06e93fe41acaf27810",
+   "cta": "What would you list first?",
+   "decidedAt": "2026-10-13T16:36:00.000Z",
+   "format": "reel",
+   "igUrl": "https://www.instagram.com/reel/DecQtw8Dcxw/",
+   "media": [],
+   "metricool": {
+    "id": 395127913,
+    "uuid": "1017840214427321707"
+   },
+   "note": "",
+   "pillar": "The seller's win",
+   "previewUrl": "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-13-p006-buzz/hyperbidz-p006-buzz.mp4",
+   "publish": {
+    "coverMs": 7700,
+    "igType": "REEL",
+    "isAiGenerated": true,
+    "mediaUrls": [
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-13-p006-buzz/hyperbidz-p006-buzz.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "slot": "2026-10-13T19:40:00+03:00",
+   "status": "published",
+   "title": "The phone that couldn't stay still",
+   "why": "A woman lists her dad's old camera for $20 and puts her phone down; it buzzes off the table with bids until it sells for $140. Shot on Arena (free), framed vertically with notifications on top and a live bid ticker below, an original sound design, and the end card \"Don't sell it. Let them bid for it.\" The owner asked to post it right away."
+  }
+ },
+ {
+  "id": "p006-time-added",
+  "data": {
+   "caption": "Last-second bid? The clock saw that. ⏱\n\nOn HyperBidz, a bid in the final seconds adds time to the clock, so everyone gets a fair answer. It only ends when nobody answers.\n\nFollow @hyperbidz to catch the first live auction.\n\n#Lebanon #Beirut #LiveAuction #Lakta #HyperBidz",
+   "captionAlt": "Going once… going twice… time added.\n\nA last-second bid on HyperBidz gives everyone a fair answer. The highest bid standing wins.\n\nSend this to the friend who always bids at the last second.\n\n#Lebanon #Beirut #LiveAuction #HyperBidz #ComingSoon",
+   "cover": "9c06f0dee7e20d12f1d1e550dbf813fd",
+   "cta": "Follow",
+   "decidedAt": "2026-10-13T07:10:27.482Z",
+   "format": "reel",
+   "media": [
+    {
+     "alt": "A last-second bid adds time to the clock. Going once, going twice, hammer falling, highest bid wins.",
+     "asset": "b5067494e1461737576fe611a48e65ab"
+    }
+   ],
+   "metricool": {
+    "id": 394743630,
+    "uuid": "7359513083969357901"
+   },
+   "note": "",
+   "pillar": "How it works",
+   "previewUrl": "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-15-p006-time-added/hyperbidz-p006-time-added.mp4",
+   "publish": {
+    "coverMs": 1200,
+    "igType": "TRIAL_REEL",
+    "isAiGenerated": false,
+    "mediaUrls": [
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-15-p006-time-added/hyperbidz-p006-time-added.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "slot": "2026-10-15T10:00:00+03:00",
+   "status": "failed",
+   "title": "The clock saw that",
+   "why": "Metricool error (15 Oct 10:00): \"The instagram account does not meet the trial reel follower requirement to create trial reels.\" Not published. Fix: re-schedule it as a normal Reel (igType REEL) once you approve that. Original idea: a 13.5 s motion Reel that explains \"time added\": a last-second bid pushes the clock back, the rival answers, then Going once… Going twice… Hammer falling. Made in code, no credits."
+  }
+ },
+ {
+  "id": "p007-trust",
+  "data": {
+   "caption": "Buying from a stranger online? Know who's on the other side. 🤝\n\nOn HyperBidz every seller has a trust tier, reviews are public, and a small hold on bids and listings keeps everyone serious. Outbid? Your hold comes back.\n\nSave this for launch day.\n\n#Lebanon #Beirut #BuyAndSell #Lakta #HyperBidz",
+   "captionAlt": "New, Verified, Established, Trusted, Top seller. Five tiers, so you know who you're bidding with.\n\nLive auctions are coming to Lebanon.\n\nSend this to the friend who never trusts online sellers.\n\n#Lebanon #Beirut #OnlineShopping #LiveAuction #HyperBidz",
+   "cta": "Save",
+   "decidedAt": "2026-10-13T07:10:50.939Z",
+   "format": "carousel",
+   "igUrl": "https://www.instagram.com/p/Dei88TFCK01/",
+   "media": [
+    {
+     "alt": "Buying from a stranger? Know who's on the other side.",
+     "asset": "cb05cfdb719211ba25a8e23418e0a1f5"
+    },
+    {
+     "alt": "Every seller has a tier. Five of them: New, Verified, Established, Trusted, Top seller.",
+     "asset": "91a9935d5c26a9f1aa27bbd8d54971ad"
+    },
+    {
+     "alt": "Reviews are public. Read first, then bid.",
+     "asset": "13b788a6b54a85835b7c5e2594cc45cf"
+    },
+    {
+     "alt": "A small hold keeps everyone serious. Outbid? Your hold comes back.",
+     "asset": "dbc5d9fc328177407e073bafbefdada7"
+    },
+    {
+     "alt": "Sellers can set a reserve: reserve met or reserve not met.",
+     "asset": "039973d55a37a98c70864c38c1c525ea"
+    },
+    {
+     "alt": "Trust you can see before you bid. Live auctions for Lebanon. Coming soon.",
+     "asset": "1ce01a47edb56742b6308e05fb8a1fc0"
+    }
+   ],
+   "metricool": {
+    "id": 394743714,
+    "uuid": "-7171826668441153832"
+   },
+   "note": "",
+   "pillar": "Trust",
+   "publish": {
+    "igType": "POST",
+    "isAiGenerated": false,
+    "mediaUrls": [
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-16-p007-trust/hyperbidz-p007-slide1.jpg",
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-16-p007-trust/hyperbidz-p007-slide2.jpg",
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-16-p007-trust/hyperbidz-p007-slide3.jpg",
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-16-p007-trust/hyperbidz-p007-slide4.jpg",
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-16-p007-trust/hyperbidz-p007-slide5.jpg",
+     "https://raw.githubusercontent.com/rodolph30/hyperbidz-social/main/posts/2026-10-16-p007-trust/hyperbidz-p007-slide6.jpg"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "slot": "2026-10-16T10:00:00+03:00",
+   "status": "published",
+   "title": "Know who's on the other side",
+   "why": "First trust post: a 6-slide carousel on the four things that tell you who you're dealing with: the five seller tiers, public reviews, the small hold on bids and listings (comes back if you're outbid; no amount shown), and the reserve. Made in code, no credits."
+  }
+ },
+ {
+  "id": "p008-last-umbrella",
+  "data": {
+   "caption": "1 umbrella left. First rain. Two people need it. Then there's Marwan. ☔\n\nHe didn't even get out of the car.\n\nThe Last One · Ep. 2\nHyperBidz: live auctions for Lebanon. Coming soon.\n\nTag the friend who always shows up at the last second 👀\n\n#HyperBidz #Lebanon #Beirut #FirstRain #LebaneseHumor #LiveAuction",
+   "captionAlt": "Who gets the last umbrella on the corniche? 👀\n\nThe Last One · Ep. 2. Live auctions are coming to Lebanon.\n\n#HyperBidz #Lebanon #Beirut #Corniche #LiveAuction",
+   "credits": 40,
+   "cta": "Tag a friend",
+   "decidedAt": null,
+   "format": "reel",
+   "media": [],
+   "note": "",
+   "pillar": "The thrill",
+   "revision": 1,
+   "slot": "2026-10-19T10:00:00+03:00",
+   "stage": "concept",
+   "status": "waiting",
+   "title": "The Last One, ep. 2: The Last Umbrella",
+   "why": "Ep. 2 in the ep. 1 format. First rain of the season, a corniche kiosk at night under blue-violet street light, one plain black umbrella left on the rack. A guy holding flowers and a woman with a laptop bag reach for it at the same time (close-up of two hands), freeze-frame name tags, a split-screen stare-down with bid pop-ups (amounts blurred), Going once… Going twice… Then a black car pulls up, the window rolls down and Marwan raises one finger. The kiosk owner hands him the umbrella through the window and he drives off, bone dry; Hammer falling, end card. Built from 6 single-action shots: 3 clips on Kling 3.0 (10 credits per 5 s) plus 3 still close-ups animated in the edit, about 40 credits. The balance is 22.5 credits, so approving this needs a top-up; or write \"Flow\" in the note and I'll write the Flow prompts for you to generate, like ep. 1 (no Higgsfield credits). On hold (13 Oct, 15:11): approved, but the Higgsfield balance is 0 credits, so nothing has been generated yet. Top up about 40 credits and the next check will make it, or write \"Flow\" in the note to switch to Flow prompts."
+  }
+ },
+ {
+  "id": "p052-founder-ar1",
+  "data": {
+   "caption": "تعرف شو اللي بيخلّي الشغل يكبر؟ 🤔\nالناس الصحّ.\n\nومع HyperBidz، في مطرح إلك. 💜\n\nمزادات مباشرة للبنان. قريباً.\nتابعنا @hyperbidz\n\n#HyperBidz #لبنان #بيروت #مزاد #Lebanon #Beirut",
+   "captionAlt": "",
+   "cover": "7142e1b4f295caba77e25f249420c1f2",
+   "cta": "Follow",
+   "epTitle": "Arabic test 1",
+   "format": "reel",
+   "media": [],
+   "note": "In your own voice (Higgsfield voice 'Rodolph'); the voice change kept the Arabic words. Not scheduled: tell me when you want it out.",
+   "pillar": "Arabic test · founder",
+   "previewUrl": "https://d2ol7oe51mr4n9.cloudfront.net/user_3KV9ZL6IgSoUQrN1oHJT9LtiBf0/fb57dec9-2ad1-4aa8-9809-c2a0d6b70faa.mp4",
+   "publish": {
+    "coverMs": 950,
+    "igType": "REEL",
+    "isAiGenerated": true,
+    "mediaUrls": [
+     "https://d2ol7oe51mr4n9.cloudfront.net/user_3KV9ZL6IgSoUQrN1oHJT9LtiBf0/fb57dec9-2ad1-4aa8-9809-c2a0d6b70faa.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "status": "waiting",
+   "title": "Arabic test 1: في مطرح إلك (golden-hour office)",
+   "why": "Your first Arabic (Lebanese) test, in your own voice: \"تعرف شو اللي بيخلّي الشغل يكبر؟ الناس الصحّ. ومع HyperBidz، في مطرح إلك.\" The question types itself right-to-left in a glass panel up in the ceiling. On \"الناس الصحّ\" four people pop in along an arc, each with a violet check, linked into a network. On \"ومع HyperBidz\" the Z on the wall flares and blasts a shockwave. On \"في مطرح إلك\" the row opens and an empty dashed seat spins in the middle, + and مطرحك (your place), with a shockwave on \"إلك\". Arabic captions (Readex Pro), warm groove, last shot held with a push-in, Arabic end card: \"في مطرح إلك. على HyperBidz.\" I removed the floating HyperBidz watermark Veo put in the ceiling and the Apple logo on the laptop. Needs your approval."
+  }
+ },
+ {
+  "id": "p053-founder-ar2",
+  "data": {
+   "caption": "تعرف شو اللي بيخلّي الشغل يكبر؟ 🤔\nالناس الصحّ.\n\nومع HyperBidz، في مطرح إلك. 💜\n\nمزادات مباشرة للبنان. قريباً.\nتابعنا @hyperbidz\n\n#HyperBidz #لبنان #بيروت #مزاد #Lebanon #Beirut",
+   "captionAlt": "",
+   "cover": "6b03e46ec21e28d02e3cc51f04242c0c",
+   "cta": "Follow",
+   "epTitle": "Arabic test 2",
+   "format": "reel",
+   "media": [],
+   "note": "In your own voice (Higgsfield voice 'Rodolph'); the voice change kept the Arabic words. Not scheduled: tell me when you want it out.",
+   "pillar": "Arabic test · founder",
+   "previewUrl": "https://d2ol7oe51mr4n9.cloudfront.net/user_3KV9ZL6IgSoUQrN1oHJT9LtiBf0/7a09bd0e-959c-45bf-82d2-e60767c9feac.mp4",
+   "publish": {
+    "coverMs": 950,
+    "igType": "REEL",
+    "isAiGenerated": true,
+    "mediaUrls": [
+     "https://d2ol7oe51mr4n9.cloudfront.net/user_3KV9ZL6IgSoUQrN1oHJT9LtiBf0/7a09bd0e-959c-45bf-82d2-e60767c9feac.mp4"
+    ],
+    "network": "instagram"
+   },
+   "revision": 1,
+   "status": "waiting",
+   "title": "Arabic test 2: في مطرح إلك (office with the big sign)",
+   "why": "Your second Arabic (Lebanese) test, same line, in your own voice, staged for this shot. The question types itself right-to-left on the desk. On \"الناس الصحّ\" four people pop in on the left wall, checked and linked. On \"ومع HyperBidz\" the big ceiling sign flares with a shockwave. On \"في مطرح إلك\", right after you gesture to the side, an empty dashed seat spins in on the right with a مطرحك (your place) label and a shockwave on \"إلك\". Arabic captions, warm groove, last shot held with a push-in, Arabic end card. I removed the Apple logo on the laptop and cut the blurred last 0.4 s of the clip. Needs your approval."
+  }
+ }
+]
