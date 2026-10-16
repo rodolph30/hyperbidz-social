@@ -8,7 +8,8 @@ This file is the complete instructions for the daily lesson run and the posting 
 - The goals: **teach** how auctions work, build **awareness** of auctions (in Lebanon: courts, the state, fish halls, plates; worldwide; stock markets), and show **why auctions are convenient**, so people want to use one.
 - **"Did you know" facts**, Lebanon and worldwide, including the link between bidding and stocks.
 - **No Higgsfield and no AI video tool.** Every frame is drawn in code with the kit in `tools/lessons/`.
-- At the end of the campaign, measure how much people's knowledge and willingness to use auctions increased (see "Measurement").
+- **The account is new on Instagram.** These lessons are how it earns its first followers, so post every day, regularly, at 7:00 pm Beirut, until viewers get used to it.
+- The owner runs the before/after measurement himself (story surveys). Don't put surveys on the board.
 
 ## Rules for this campaign (owner, 16 Oct 2026; these override anything else)
 
@@ -26,8 +27,12 @@ This file is the complete instructions for the daily lesson run and the posting 
 
 ## Format
 
-- 1080x1920, 30 fps, **55 to 75 s**, H.264, under 19 MB (re-encode at a higher CRF if larger; the board's upload cap is 20 MB).
-- Arc (one idea per beat): **hook** (a paradox, a surprising number or a question, spoken in the first 2 s, with the subject already on screen) → **the idea** (one teaching device: a definition card, a simple diagram, a step list of at most 4 steps, or a chart) → **the true story** (props + the number) → **the lesson** (one sentence on a card) → **callback** to the hook with the answer → **end card**: a short line like "Follow to learn how auctions really work." (no brand).
+- 1080x1920, 30 fps, H.264, under 19 MB (re-encode at a higher CRF if larger; the board's upload cap is 20 MB).
+- **Two paces, mixed (owner, 16 Oct: "lesson 01 was slow; good, but quick things can be catchy, so be both").** The pace for each lesson is in `QUEUE.md`.
+  - **Standard:** 50–70 s, 140–175 words, narrator speed 1.0, pauses 0.3–0.7 s, up to 10 scenes.
+  - **Quick:** 20–35 s, 55–90 words, one fact and one takeaway, narrator speed 1.08 (`Timeline(LINES, speed=1.08)`), pauses 0.12–0.3 s, 3–5 scenes, transitions on the beat. Still one idea per screen: fewer props, bigger numbers, nothing overwhelming. Hook in the first second.
+  - Even standard lessons should never drag: cut any pause that isn't doing work.
+- Arc (one idea per beat; a quick lesson keeps hook → story/number → takeaway → end card): **hook** (a paradox, a surprising number or a question, spoken in the first 2 s, with the subject already on screen) → **the idea** (one teaching device: a definition card, a simple diagram, a step list of at most 4 steps, or a chart) → **the true story** (props + the number) → **the lesson** (one sentence on a card) → **callback** to the hook with the answer → **end card**: a short line like "Follow to learn how auctions really work." (no brand).
 - Text: subtitles at y≈1600 via `subtitle(im, t, TL)`; a headline only for the hook; big numbers drawn as part of the scene (counters, marquee years, cards).
 - Transitions: `zoom_through` 0.36 s between scenes; gentle camera push inside scenes.
 
@@ -43,8 +48,8 @@ This file is the complete instructions for the daily lesson run and the posting 
 ## Lessons board
 
 `https://claude.ai/artifact/1y9fTB5thL1iwc2versHBa` ("HyperBidz Lessons"; the board itself is internal and can carry the name). Database:
-- `lessons/<id>` (id like `L02`, a redo `L02-v2`): `lesson` (number), `title` (`[word]` = emphasis), `topic`, `hook`, `learn` (one line: what viewers learn), `caption`, `captionAlt`, `quiz` `{question, options[4], answer (index), extra}`, `sources` `[{label, url}]`, `script` (the narration lines as plain text), `video` and `cover` (asset ids), `duration`, `status` (`waiting` → owner sets `approved` or `changes` with `note` → you set `scheduled` → `published`; `failed` if Metricool refuses), `slot` (ISO time, 19:00 Beirut), `revision`, `createdAt`, `metricoolId`, `igUrl`, `metrics` `{reach, plays, saves, shares, quizCorrect}`.
-- `campaign/plan` `{total, titles[]}` (titles from `QUEUE.md`), `campaign/survey` `{questions[{text, kind, measures}], baselineFrames[], endlineFrames[], baseline{date, n, results[]}, endline{...}}`.
+- `lessons/<id>` (id like `L02`, a redo `L02-v2`): `lesson` (number), `title` (`[word]` = emphasis), `topic`, `hook`, `learn` (one line: what viewers learn), `caption`, `captionAlt`, `quiz` `{question, options[4], answer (index), extra}`, `sources` `[{label, url}]`, `script` (the narration lines as plain text), `video` and `cover` (asset ids), `duration`, `status` (`waiting` → owner sets `approved` or `changes` with `note` → you set `scheduled` → `published`; `failed` if Metricool refuses), `slot` (ISO time, 19:00 Beirut), `revision`, `createdAt`, `mediaUrl`, `metricoolId`, `igUrl`, `metrics` `{reach, plays, saves, shares, quizCorrect}`.
+- `campaign/plan` `{total, titles[]}` (titles from `QUEUE.md`; update it when you add lessons to the queue).
 - Upload media with the Artifact tool (`url` = the board, `file_path`, `asset: true`) and store the returned ids. Write documents with the ArtifactData tool.
 
 ## Procedure L: the daily lesson run (every morning)
@@ -57,21 +62,18 @@ This file is the complete instructions for the daily lesson run and the posting 
 6. Render to `posts/lessons/LNN-<slug>/lesson-NN.mp4`; ffprobe it (duration, 1080x1920, 30 fps, audio); loudness-normalise to −15 LUFS (`ffmpeg -c:v copy -af loudnorm=I=-15:TP=-1.5:LRA=11`); keep it under 19 MB. Extract `cover.jpg` (a frame with the hook).
 7. Write `caption.md` (hook line, 3 to 5 short teaching lines, "Source: …", a CTA like "Follow to learn how auctions really work" or "Send this to someone who still haggles", 3 to 6 hashtags such as #auction #Lebanon #Beirut #learnoninstagram + topic; two options; no HyperBidz), `quiz.md`, `sources.md`.
 8. Commit and push (`git add posts/lessons/LNN-* tools/lessons/lessonNN*.py tools/lessons/QUEUE.md`; set the lesson `status: made` with today's date in `QUEUE.md`; `git fetch -q origin main && git rebase -q FETCH_HEAD && git push -q origin HEAD:main`).
-9. Board: upload the mp4 and the cover as assets, write `lessons/LNN` with `status: waiting`, `slot` = today 19:00 Beirut (`YYYY-MM-DDT19:00:00+03:00`; if today's slot already holds an approved or scheduled lesson, the next free day).
+9. Board: upload the mp4 and the cover as assets, write `lessons/LNN` with `status: waiting`, `mediaUrl` (`https://raw.githubusercontent.com/rodolph30/hyperbidz-social/<full commit hash>/posts/lessons/LNN-<slug>/lesson-NN.mp4`; check with curl that it returns 200), and `slot` = the first day from today whose 19:00 Beirut (`YYYY-MM-DDT19:00:00+03:00`) isn't already held by another lesson that is waiting, approved or scheduled. Also add the lesson's title to `campaign/plan` if it isn't there.
 10. **Notify the owner** with SendUserMessage: "Lesson NN is ready: <title>. Approve it on the Lessons board before 6:45 pm and it posts at 7. <board link>". Also send the mp4 with SendUserFile so he can watch it right away. Never publish or schedule in this run.
 
-## Procedure P: the posting check (12:50, 15:50, 17:50 and 18:45 Beirut)
+## Procedure P: the posting check (12:45, 15:45, 17:45 and 18:45 Beirut)
 
 1. Read `lessons` on the board.
-2. For each `approved` lesson without `metricoolId`: its slot is the next 19:00 Beirut that's at least 10 minutes away and not taken by another scheduled lesson. Check the Metricool monthly cap (`PLAYBOOK.md`). Schedule it in Metricool (brand `7343454`, Instagram Reel, timezone Asia/Beirut) with the mp4's public link from this repo (jsDelivr `https://cdn.jsdelivr.net/gh/rodolph30/hyperbidz-social@<commit>/posts/lessons/...`) and caption option 1. `isAiGenerated`: not decided for this series; ask the owner once and record his answer here. Then set `status: scheduled`, `slot`, `metricoolId`.
+2. For each `approved` lesson without `metricoolId`: its slot is its own `slot` if that is still at least 10 minutes away, otherwise the next 19:00 Beirut that's at least 10 minutes away and not taken by another scheduled lesson. Check the Metricool monthly cap (`PLAYBOOK.md`). Schedule it in Metricool (brand `7343454`, Instagram Reel, timezone Asia/Beirut) with the lesson's `mediaUrl` (Metricool copies the mp4 from it when the post is created) and caption option 1. `isAiGenerated: true` (the narrator voice is synthetic; the owner's standing rule keeps Instagram's AI flag on, with no on-screen AI label). Then set `status: scheduled`, `slot`, `metricoolId`.
 3. If the cap is full, don't schedule: set the lesson's `note` to say so and message the owner that he can post it himself from the board (Save video + Copy caption).
 4. Scheduled lessons whose time has passed: confirm in Metricool, set `published` (+ `igUrl` if available). From the day after, record metrics when available.
-5. Reminder: in the **17:50** run, if today's lesson is still `waiting`, send the owner one line: "Lesson NN is still waiting. Approve it before 6:45 pm to post at 7: <board link>".
+5. Reminder: in the **17:45** run, if today's lesson is still `waiting`, send the owner one line: "Lesson NN is still waiting. Approve it before 6:45 pm to post at 7: <board link>".
 6. If you scheduled something, tell the owner in one line. Otherwise end quietly.
 
-## Measurement (owner: measure knowledge and willingness at the end)
+## Measurement
 
-- **Baseline** before the first lesson goes live: story frames in `posts/lessons/survey/baseline-*.jpg` (on the board, "Before and after"). The owner posts them with the sticker shown on each frame and screenshots the results after 24 h. Questions: ever bid in an auction (poll); who decides the final price (quiz); Lebanese courts sell seized property at public auction, true/false (quiz); where a share price comes from (quiz); how comfortable buying at auction (slider); would you use a live auction app made for Lebanon (poll).
-- **Per lesson:** the quiz from `quiz.md` as a story Quiz sticker the day after; record its correct-answer rate in `metrics.quizCorrect`.
-- **Endline** after the last lesson: the same questions plus "Did you watch our auction lessons?" (`posts/lessons/survey/endline-*.jpg`). Compare before/after, and watchers vs non-watchers. Write the results into `campaign/survey`.
-- Engagement per lesson from Metricool: reach, plays, average watch time, saves, shares, comments, follows.
+The owner runs the before/after surveys himself (16 Oct 2026); don't add surveys to the board. Each lesson still ships an optional story quiz idea in `quiz.md` and the board's Quiz tab. Once lessons are live, record per-lesson results from Metricool in the lesson's `metrics` (reach, plays, average watch time, saves, shares, comments, follows) so we can see which topics and which pace bring followers.

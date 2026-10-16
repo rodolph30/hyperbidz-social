@@ -53,8 +53,8 @@ def sc_table(t):
     for at, who, txt in hag:
         if t >= at: say = (at, who, txt)
     if say and t < e_("p3") + 0.3:
-        at, who, txt = say; x = 260 if who == "s" else 820
-        put(im, bubble(txt, 46, WHITE, STAGE, "left" if who == "s" else "right"), x, 870, min(1, (t - at) / 0.1), 0.85 + 0.15 * pop((t - at) / 0.3))
+        at, who, txt = say; x = 230 if who == "s" else 870
+        put(im, bubble(txt, 46, WHITE, STAGE, "left" if who == "s" else "right"), x, 735, min(1, (t - at) / 0.1), 0.85 + 0.15 * pop((t - at) / 0.3))
     # the price tag: $120, then it slides down to $85
     if t < s_("p5"): price = 120
     else: price = lerp_price(t, s_("p5") + 0.2, WD("p5", "Down"), 120, 85)
