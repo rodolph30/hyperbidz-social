@@ -11,5 +11,9 @@ if [ ! -s "$A/sherpa-onnx-whisper-base.en/base.en-encoder.int8.onnx" ]; then
   curl -sSL -o "$A/w.tar.bz2" https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-base.en.tar.bz2
   tar -xjf "$A/w.tar.bz2" -C "$A" && rm "$A/w.tar.bz2"
 fi
+if [ ! -s "$A/sherpa-onnx-zipformer-small-en-2023-06-26/encoder-epoch-99-avg-1.int8.onnx" ]; then
+  curl -sSL -o "$A/z.tar.bz2" https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-zipformer-small-en-2023-06-26.tar.bz2
+  tar -xjf "$A/z.tar.bz2" -C "$A" && rm "$A/z.tar.bz2"
+fi
 command -v ffmpeg >/dev/null || (apt-get install -y -qq ffmpeg >/dev/null 2>&1 || echo "ffmpeg missing: install it")
 echo "voice: $K  asr: $A  ready"

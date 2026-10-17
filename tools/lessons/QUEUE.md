@@ -4,7 +4,7 @@ One lesson a day. The daily run takes the **first lesson with `status: todo`**. 
 
 Format per lesson: number · title · status · pace (quick or standard, see `LESSONS_SERIES.md`) · music style · research items · the idea (hook → lesson → story → takeaway) · quiz idea (optional story sticker).
 
-These are **viral animated informative shorts** (owner, 16 Oct): every lesson follows the viral checklist in `LESSONS_SERIES.md`. Pace: most are **quick** (20–35 s, one fact, snappy); a few that need steps are **standard** (40–55 s). A quick lesson must still be easy to follow: one idea per screen, nothing overwhelming.
+These are **viral animated informative shorts** (owner, 16 Oct), made in **style v3** since lesson 03 (owner's reference reel, 18 Oct; see `LESSONS_SERIES.md`): every lesson follows the viral checklist in `LESSONS_SERIES.md`. Pace: most are **quick** (20–35 s, one fact, snappy); a few that need steps are **standard** (40–55 s). A quick lesson must still be easy to follow: one idea per screen, nothing overwhelming.
 
 ---
 
@@ -16,7 +16,7 @@ Quiz: "When you haggle, which way can the price go?" (only down).
 Items: W3 (+ W1). Hook: "In 193 AD, someone bought the Roman Empire at an auction." Teach the ascending (English) auction: bids go up, the last bid wins, everyone sees the competition. Story: the Praetorian Guard auctioned the throne; Didius Julianus won with 25,000 sesterces per soldier, ruled 66 days. Takeaway: the word auction comes from Latin *augere*, "to increase".
 Quiz: "In an English auction, who wins?" (the highest, last bid).
 
-### 03 · The busiest minute on Wall Street · status: todo · pace: standard · music: ambient
+### 03 · The busiest minute on Wall Street · status: made (18 Oct 2026, first lesson in style v3, made in the owner's chat) · pace: standard · music: ambient
 Items: S2, S1. Hook: "The busiest minute on the New York Stock Exchange is an auction." Teach: the closing auction gathers all buy and sell orders and finds one price that matches the most shares; about 9% of US volume trades there (check the latest figure). Takeaway: stock prices are discovered by bidding, every single day.
 Quiz: "How does the stock market set its closing price?" (a closing auction).
 

@@ -106,3 +106,92 @@ def asr_check(wav_path):
     """transcribe the narration offline (sherpa-onnx whisper base.en) to catch mispronunciations; returns text"""
     tool = os.path.join(os.path.dirname(os.path.abspath(__file__)), "asr_transcribe.py")
     return subprocess.run(["python3", tool, wav_path], capture_output=True, text=True).stdout
+
+# ---------- exact word timing (for word-by-word kinetic captions) ----------
+_REC = None
+def _recognizer():
+    """sherpa-onnx zipformer (small, English): gives token timestamps, so we know when each word is spoken"""
+    global _REC
+    if _REC is None:
+        import sherpa_onnx
+        for d in (os.environ.get("ASR_DIR", os.path.expanduser("~/.cache/asr")), "/root/.cache/asr", "/home/claude/asr"):
+            D = os.path.join(d, "sherpa-onnx-zipformer-small-en-2023-06-26")
+            if os.path.exists(D): break
+        else:
+            return None
+        _REC = sherpa_onnx.OfflineRecognizer.from_transducer(encoder=os.path.join(D, "encoder-epoch-99-avg-1.int8.onnx"),
+            decoder=os.path.join(D, "decoder-epoch-99-avg-1.onnx"), joiner=os.path.join(D, "joiner-epoch-99-avg-1.int8.onnx"),
+            tokens=os.path.join(D, "tokens.txt"), num_threads=2)
+    return _REC
+
+def _norm(w): return re.sub(r"[^a-z0-9]", "", w.lower())
+
+def units(text):
+    """split a line into display units: ([shown text], emphasis?, [spoken words]); {shown|spoken} stays one unit"""
+    prot = re.sub(r"\{[^}]*\}", lambda m: m.group(0).replace(" ", "\x01"), text)
+    out, emph = [], False
+    for tok in prot.split():
+        tok = tok.replace("\x01", " "); start_emph = emph or tok.startswith("[") or tok.startswith("{[") or "[" in tok[:2]
+        e = emph or "[" in tok
+        if "[" in tok: emph = True
+        if "]" in tok: emph = False
+        m = re.search(r"\{([^|}]*)\|([^}]*)\}", tok)
+        if m:
+            show = tok.replace(m.group(0), m.group(1)); say = tok.replace(m.group(0), m.group(2))
+        else:
+            show = say = tok
+        show = show.replace("[", "").replace("]", ""); say = say.replace("[", "").replace("]", "")
+        out.append((show, e, [w for w in say.split() if _norm(w)]))
+    return out
+
+def align(y, text):
+    """start time (s, from the start of y) of every display unit of `text`; falls back to character spacing"""
+    us = units(text); spoken = [w for _, _, ws in us for w in ws]; n = len(spoken); dur = len(y) / SR
+    times = [None] * n
+    rec = _recognizer()
+    if rec is not None and n:
+        from scipy.signal import resample_poly
+        a = resample_poly(np.asarray(y, np.float64), 1, 3).astype(np.float32)
+        st = rec.create_stream(); st.accept_waveform(16000, a); rec.decode_stream(st)
+        words, starts = [], []
+        for tok, ts in zip(st.result.tokens, st.result.timestamps):
+            if tok.startswith(" ") or not words: words.append(tok.strip()); starts.append(ts)
+            else: words[-1] += tok
+        import difflib
+        sm = difflib.SequenceMatcher(a=[_norm(w) for w in spoken], b=[_norm(w) for w in words], autojunk=False)
+        for blk in sm.get_matching_blocks():
+            for k in range(blk.size): times[blk.a + k] = starts[blk.b + k]
+    # fill gaps by character position
+    total = sum(len(w) + 1 for w in spoken) or 1; acc = 0; est = []
+    for w in spoken: est.append(dur * acc / total); acc += len(w) + 1
+    known = [(i, times[i]) for i in range(n) if times[i] is not None]
+    for i in range(n):
+        if times[i] is None:
+            prev = max([k for k in known if k[0] < i], default=None, key=lambda k: k[0]); nxt = min([k for k in known if k[0] > i], default=None, key=lambda k: k[0])
+            if prev and nxt: times[i] = prev[1] + (nxt[1] - prev[1]) * (est[i] - est[prev[0]]) / max(1e-6, est[nxt[0]] - est[prev[0]])
+            elif prev: times[i] = prev[1] + (est[i] - est[prev[0]])
+            elif nxt: times[i] = max(0, nxt[1] - (est[nxt[0]] - est[i]))
+            else: times[i] = est[i]
+    res, k = [], 0
+    for show, e, ws in us:
+        res.append((show, e, times[k] if ws and k < n else (res[-1][2] if res else 0.0))); k += len(ws)
+    return res
+
+def _timeline_words(self, key):
+    """[(shown word, emphasis, absolute start time)] for one line, cached on disk"""
+    if not hasattr(self, "_words"): self._words = {}
+    if key not in self._words:
+        y = self.audio[key]; h = hashlib.sha1((self.text[key] + str(len(y))).encode()).hexdigest()[:16]
+        path = os.path.join(CACHE, "w_" + h + ".json")
+        if os.path.exists(path): rel = json.load(open(path))
+        else: rel = align(y, self.text[key]); json.dump(rel, open(path, "w"))
+        a = self.times[key][0]; self._words[key] = [(s, e, a + float(t)) for s, e, t in rel]
+    return self._words[key]
+Timeline.words = _timeline_words
+
+def _timeline_wordtime(self, key, word):
+    """exact time a shown word starts (first match, case-insensitive); falls back to the estimate"""
+    for s, e, t in self.words(key):
+        if word.lower() in s.lower(): return t
+    return self.word(key, word)
+Timeline.wt = _timeline_wordtime
