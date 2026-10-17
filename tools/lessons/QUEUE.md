@@ -12,7 +12,7 @@ These are **viral animated informative shorts** (owner, 16 Oct): every lesson fo
 Items: W12. Haggling only moves the price down; price discovery; eBay's first sale was a broken laser pointer ($14.83, 1995); the buyers decide what things are worth.
 Quiz: "When you haggle, which way can the price go?" (only down).
 
-### 02 · The day Rome was sold · status: todo · pace: quick · music: marimba
+### 02 · The day Rome was sold · status: made (17 Oct 2026) · pace: quick · music: marimba
 Items: W3 (+ W1). Hook: "In 193 AD, someone bought the Roman Empire at an auction." Teach the ascending (English) auction: bids go up, the last bid wins, everyone sees the competition. Story: the Praetorian Guard auctioned the throne; Didius Julianus won with 25,000 sesterces per soldier, ruled 66 days. Takeaway: the word auction comes from Latin *augere*, "to increase".
 Quiz: "In an English auction, who wins?" (the highest, last bid).
 
