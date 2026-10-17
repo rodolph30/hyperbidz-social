@@ -164,7 +164,7 @@ section{display:flex;flex-direction:column;gap:12px}
     <div class="top">
       <div class="brand">
         <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F7BFF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs><path fill="url(#zg)" d="M24.75,16 L84.75,16 L81.94,36 L59.69,54.36 L44.98,41.74 L51.94,36 L21.94,36 Z"/><path fill="url(#zg)" d="M55,58.23 L48.01,64 L78.01,64 L75.2,84 L15.2,84 L18.01,64 L40.29,45.62 Z"/></svg>
-        <div><h1>HyperBidz <em>Lessons</em></h1><p>One auction lesson a day · posts at 7:00 pm Beirut once you approve it</p></div>
+        <div><h1>HyperBidz <em>Lessons</em></h1><p>One auction lesson a day · posts at 7:00 pm Beirut (11:00 am on Saturdays and Sundays) once you approve it</p></div>
       </div>
       <div class="tally" id="tally"></div>
     </div>
@@ -202,8 +202,12 @@ section{display:flex;flex-direction:column;gap:12px}
   const emph = s => esc(s).replace(/\[([^\]]+)\]/g, '<em>$1</em>');
   const beirut = (iso, o) => { try { return new Intl.DateTimeFormat('en-GB', Object.assign({timeZone:'Asia/Beirut'}, o)).format(new Date(iso)); } catch { return ''; } };
   const dayKey = d => beirut(d, {year:'numeric', month:'2-digit', day:'2-digit'});
+  // Post time: 7:00 pm on weekdays, 11:00 am on Saturdays and Sundays (owner, 17 Oct 2026).
+  const isWeekend = iso => ['Sat','Sun'].includes(beirut(iso, {weekday:'short'}));
+  const postHour = iso => iso && isWeekend(iso) ? '11 am' : '7 pm';
+  const cutoff = iso => iso && isWeekend(iso) ? '10:45 am' : '6:45 pm';
   function when(iso){
-    if (!iso) return 'Next free 7:00 pm slot';
+    if (!iso) return 'Next free slot (7 pm, or 11 am on weekends)';
     const today = dayKey(new Date()), tmr = dayKey(new Date(Date.now() + 864e5)), k = dayKey(iso);
     const time = beirut(iso, {hour:'numeric', minute:'2-digit', hour12:true}).replace(' ', ' ');
     if (k === today) return 'Today, ' + time;
@@ -228,19 +232,19 @@ section{display:flex;flex-direction:column;gap:12px}
     if (s === 'waiting'){
       if (openAsk.has(id)) return `<div class="ask"><label for="note-${id}">What should change?</label><textarea id="note-${id}" data-note="${id}" placeholder="e.g. make the hook shorter, swap the Lebanon example, slower captions">${esc(drafts[id] || '')}</textarea>
         <div class="actions"><button class="btn btn-approve" data-act="send" data-id="${id}"${dis}>Send change request</button><button class="btn btn-ghost" data-act="cancel" data-id="${id}">Cancel</button></div></div>`;
-      return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>Approve for 7 pm</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
+      return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>Approve for ${postHour(l.slot)}</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
     }
     if (s === 'approved' || s === 'changes') return `<div class="actions"><button class="btn btn-ghost" data-act="undo" data-id="${id}"${dis}>Undo, I'm not sure yet</button></div>`;
     if (s === 'manual') return `<div class="actions"><button class="btn btn-approve" data-act="posted" data-id="${id}"${dis}>I posted it</button></div>`;
     return '';
   }
   const STATUS_LINE = {
-    approved: 'Approved. I put it in Metricool for the 7:00 pm slot at my next check (checks run at 12:45, 3:45, 5:45 and 6:45 pm).',
+    approved: 'Approved. I put it in Metricool for its slot at my next check (checks run at 9:45 and 10:45 am, 12:45, 3:45, 5:45 and 6:45 pm).',
     changes: 'I’m redoing this lesson and will bring it back here.',
     scheduled: 'In Metricool. It goes live automatically at the time above.',
     published: 'Live on Instagram.',
     failed: 'Metricool could not take this one. I’ll sort it out at my next check.',
-    manual: 'Metricool’s monthly limit is full, so this one won’t post by itself. At 7 pm, save the video and copy the caption below, post it on Instagram, then tap “I posted it”.'
+    manual: 'Metricool’s monthly limit is full, so this one won’t post by itself. At the time above, save the video and copy the caption below, post it on Instagram, then tap “I posted it”.'
   };
 
   function paneHTML(l){
@@ -341,8 +345,9 @@ section{display:flex;flex-direction:column;gap:12px}
     if (f){
       const s = st(f);
       const dk = f.slot ? dayKey(f.slot) : null, isToday = dk === dayKey(new Date()), isTmr = dk === dayKey(new Date(Date.now() + 864e5));
-      $('tonightTitle').innerHTML = s === 'waiting' ? (isToday || !f.slot ? 'Tonight at <em>7</em>' : isTmr ? 'Tomorrow at <em>7</em>' : 'Next at <em>7</em>') : s === 'changes' ? 'Being <em>redone</em>' : 'Latest <em>lesson</em>';
-      $('tonightSub').textContent = s === 'waiting' ? (isToday || !f.slot ? 'Approve before 6:45 pm for tonight' : 'Approve any time before 6:45 pm on the day') : '';
+      const hr = f.slot && isWeekend(f.slot) ? '11' : '7', todayWord = hr === '11' ? 'Today' : 'Tonight';
+      $('tonightTitle').innerHTML = s === 'waiting' ? (isToday || !f.slot ? `${todayWord} at <em>${hr}</em>` : isTmr ? `Tomorrow at <em>${hr}</em>` : `Next at <em>${hr}</em>`) : s === 'changes' ? 'Being <em>redone</em>' : 'Latest <em>lesson</em>';
+      $('tonightSub').textContent = s === 'waiting' ? (isToday || !f.slot ? `Approve before ${cutoff(f.slot)} for ${hr === '11' ? 'today' : 'tonight'}` : `Approve any time before ${cutoff(f.slot)} on the day`) : '';
       const focused = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.note : null;
       const vid = document.querySelector('#tonight video'); const same = vid && vid.dataset && vid.getAttribute('src') === blob(f.video);
       const keepTime = same ? vid.currentTime : 0, keepPlay = same && !vid.paused;
@@ -351,7 +356,7 @@ section{display:flex;flex-direction:column;gap:12px}
       if (focused){ const t = document.querySelector(`[data-note="${focused}"]`); if (t){ t.focus(); t.setSelectionRange(t.value.length, t.value.length); } }
     } else {
       $('tonightTitle').innerHTML = 'Tonight at <em>7</em>'; $('tonightSub').textContent = '';
-      $('tonight').innerHTML = '<div class="empty"><b>No lesson yet.</b>Each morning a new lesson lands here with its video, caption and quiz. Approve it and it posts at 7:00 pm.</div>';
+      $('tonight').innerHTML = '<div class="empty"><b>No lesson yet.</b>Each morning a new lesson lands here with its video, caption and quiz. Approve it and it posts at 7:00 pm (11:00 am on weekends).</div>';
     }
     const total = Math.max(30, Number(plan && plan.total) || 0);
     const sorted = lessons.slice().sort((a, b) => (Number(b.lesson) || 0) - (Number(a.lesson) || 0) || (Number(b.revision) || 1) - (Number(a.revision) || 1));
@@ -401,7 +406,7 @@ section{display:flex;flex-direction:column;gap:12px}
     else if (act === 'all'){ showAll = !showAll; render(); }
     else if (act === 'ask'){ openAsk.add(id); render(); const t = $('note-' + id); if (t) t.focus(); }
     else if (act === 'cancel'){ openAsk.delete(id); render(); }
-    else if (act === 'approve'){ decide(id, {status:'approved', decidedAt: now, note: ''}, 'Approved. It posts at the next 7:00 pm slot.'); }
+    else if (act === 'approve'){ decide(id, {status:'approved', decidedAt: now, note: ''}, 'Approved. It posts at its slot: ' + when(l && l.slot)); }
     else if (act === 'send'){
       const note = (drafts[id] || '').trim();
       if (!note){ toast('Add a short note so I know what to change.'); const t = $('note-' + id); if (t) t.focus(); return; }
