@@ -20,6 +20,6 @@ That paper on the municipality's door might be an auction. 📄
 In Lebanon, things go to public auction for 3 reasons: an inheritance that can't be split, an unpaid debt, or seized goods. It happens at the court's Execution Department, announced in newspapers, the Official Gazette and on paper, at least 10 days before.
 
 Sources: Lebanese Code of Obligations and Contracts; Code of Civil Procedure.
-Follow for more special auction stories.
+Follow for more interesting auction stories.
 
 #auction #Lebanon #Beirut #learnoninstagram #realestate

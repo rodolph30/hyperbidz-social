@@ -15,4 +15,4 @@ Owner's change request (18 Oct): say why, when and where things go to auction in
 - So where does it happen? Not online. In the courthouse, at the Execution Department.
 - It's announced in two newspapers, the Official Gazette, and on paper, on the municipality's door.
 - So next time you see a notice on that door, read it. It might be an auction.
-- Follow for more special auction stories.
+- Follow for more interesting auction stories.

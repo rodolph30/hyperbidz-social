@@ -19,5 +19,5 @@ LINES = [
     ("t1", "So that closing price you see on the news?", 0.05),
     ("t2", "[An auction] set it.", 0.3),
     ("e1", "Auctions don't just sell paintings. They price [the world's biggest companies.]", 0.2),
-    ("e2", "Follow for more [special auction stories.]", 0.7),
+    ("e2", "Follow for more [interesting auction stories.]", 0.7),
 ]

@@ -4,7 +4,7 @@ One lesson a day. The daily run takes the **first lesson with `status: todo`**. 
 
 Format per lesson: number · title · status · pace (quick or standard, see `LESSONS_SERIES.md`) · music style · research items · the idea (hook → lesson → story → takeaway) · quiz idea (optional story sticker).
 
-**Owner, 18 Oct: special auction stories, not generic explainers.** Every lesson leads with a surprising story or fact (why, where, when, who, a record); a mechanism is only told through a real story. Reframe any "how X works" idea below that way before scripting it.
+**Owner, 18 Oct: interesting auction stories, not generic explainers.** Every lesson leads with a surprising story or fact (why, where, when, who, a record); a mechanism is only told through a real story. Reframe any "how X works" idea below that way before scripting it.
 
 These are **viral animated informative shorts** (owner, 16 Oct), made in **style v3** since lesson 03 (owner's reference reel, 18 Oct; see `LESSONS_SERIES.md`): every lesson follows the viral checklist in `LESSONS_SERIES.md`. Pace: most are **quick** (20–35 s, one fact, snappy); a few that need steps are **standard** (40–55 s). A quick lesson must still be easy to follow: one idea per screen, nothing overwhelming.
 

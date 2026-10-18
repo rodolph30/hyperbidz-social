@@ -21,5 +21,5 @@ LINES = [
     ("w1", "So where does it happen? Not online. In the courthouse, at the [Execution Department.]", 0.15),
     ("w2", "It's announced in two newspapers, the Official Gazette, and on paper, on [the municipality's door.]", 0.2),
     ("p1", "So next time you see a notice on that door, read it. It might be [an auction.]", 0.25),
-    ("e2", "Follow for more [special auction stories.]", 0.6),
+    ("e2", "Follow for more [interesting auction stories.]", 0.6),
 ]
