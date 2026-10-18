@@ -20,7 +20,7 @@ Quiz: "In an English auction, who wins?" (the highest, last bid).
 Items: S2, S1. Hook: "The busiest minute on the New York Stock Exchange is an auction." Teach: the closing auction gathers all buy and sell orders and finds one price that matches the most shares; about 9% of US volume trades there (check the latest figure). Takeaway: stock prices are discovered by bidding, every single day.
 Quiz: "How does the stock market set its closing price?" (a closing auction).
 
-### 04 · How a Lebanese court auction works · status: todo · pace: standard · music: pluck
+### 04 · How a Lebanese court auction works · status: made (18 Oct 2026) · pace: standard · music: pluck
 Items: cheat sheet §0, L1, L3, L4. Hook: "Every week, Lebanese courts sell apartments at public auction. Most people have never seen one." Teach step by step (4 steps max on screen): expert valuation → opening price at 60% of it → a deposit equal to the opening price to bid → bids in front of the judge, highest bid after 15 minutes wins. Takeaway: the auction is already part of Lebanese law; it's just hard to find and hard to join. Neutral tone: explain, don't criticise. Note: say "courts sell seized property" only if the weekly frequency is sourced; otherwise "regularly".
 Quiz: "In a Lebanese court auction, the opening price is…" (60% of the expert's value).
 
