@@ -189,7 +189,8 @@ section{display:flex;flex-direction:column;gap:12px}
 (() => {
   const $ = id => document.getElementById(id);
   const toastEl = $('toast');
-  let db = null, downloads = null, readonly = false;
+  let db = null, downloads = null, mcp = null, readonly = false;
+  const POSTING_CHECK = 'trig_018Kn8LYNsncbhWdmVAHyeZX';   // the "Lesson posting check" scheduled task: fired on every approval
   let lessons = [], plan = null, survey = null, loaded = false;
   let tab = {}, openAsk = new Set(), drafts = {}, busy = new Set(), showAll = false, focusId = null;
 
@@ -214,6 +215,7 @@ section{display:flex;flex-direction:column;gap:12px}
     if (k === tmr) return 'Tomorrow, ' + time;
     return beirut(iso, {weekday:'short', day:'numeric', month:'short'}) + ', ' + time;
   }
+  const late = l => !l || !l.slot || (new Date(l.slot).getTime() - Date.now()) < 10 * 60 * 1000;
   function toast(msg){ toastEl.textContent = msg; toastEl.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => toastEl.hidden = true, 2600); }
 
   function stripHTML(){
@@ -232,14 +234,14 @@ section{display:flex;flex-direction:column;gap:12px}
     if (s === 'waiting'){
       if (openAsk.has(id)) return `<div class="ask"><label for="note-${id}">What should change?</label><textarea id="note-${id}" data-note="${id}" placeholder="e.g. make the hook shorter, swap the Lebanon example, slower captions">${esc(drafts[id] || '')}</textarea>
         <div class="actions"><button class="btn btn-approve" data-act="send" data-id="${id}"${dis}>Send change request</button><button class="btn btn-ghost" data-act="cancel" data-id="${id}">Cancel</button></div></div>`;
-      return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>Approve for ${postHour(l.slot)}</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
+      return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>${late(l) ? 'Approve and post now' : 'Approve for ' + postHour(l.slot)}</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
     }
     if (s === 'approved' || s === 'changes') return `<div class="actions"><button class="btn btn-ghost" data-act="undo" data-id="${id}"${dis}>Undo, I'm not sure yet</button></div>`;
     if (s === 'manual') return `<div class="actions"><button class="btn btn-approve" data-act="posted" data-id="${id}"${dis}>I posted it</button></div>`;
     return '';
   }
   const STATUS_LINE = {
-    approved: 'Approved. I put it in Metricool for its slot at my next check (checks run at 9:45 and 10:45 am, 12:45, 3:45, 5:45 and 6:45 pm).',
+    approved: 'Approved. I’m putting it in Metricool now: at its slot, or right away if its time has already passed.',
     changes: 'I’m redoing this lesson and will bring it back here.',
     scheduled: 'In Metricool. It goes live automatically at the time above.',
     published: 'Live on Instagram.',
@@ -372,9 +374,21 @@ section{display:flex;flex-direction:column;gap:12px}
   async function decide(id, patch, msg){
     if (!db) return;
     busy.add(id); render();
-    try { await db.doc('lessons/' + id).update(patch); toast(msg); openAsk.delete(id); delete drafts[id]; }
+    let ok = false;
+    try { await db.doc('lessons/' + id).update(patch); ok = true; toast(msg); openAsk.delete(id); delete drafts[id]; }
     catch (e){ if (e && e.code === 'invalid_argument'){ readonly = true; toast('Only the board owner can approve lessons.'); } else toast('That didn’t save. Try again in a moment.'); }
     finally { busy.delete(id); render(); }
+    return ok;
+  }
+
+  // Tell the posting check to run now, so an approval is scheduled at once (and a late one posts right away).
+  async function kick(l, isLate){
+    if (!l || !mcp) return;
+    const text = `The owner just approved lesson ${l.id} on the Lessons board. ` + (isLate
+      ? 'Its slot has already passed: post it immediately (schedule it in Metricool for about 5 minutes from now), as the owner asked on 18 Oct 2026.'
+      : `Schedule it in Metricool for its slot (${l.slot}).`) + ' Check Metricool first so you never create a second post for the same lesson.';
+    try { await mcp.callTool('Claude Code Remote', 'fire_trigger', {trigger_id: POSTING_CHECK, text}); toast(isLate ? 'Posting it now. It should be live in a few minutes.' : 'Scheduling it now.'); }
+    catch (e){ toast(e && (e.code === 'not_in_manifest' || e.code === 'approval_required') ? 'Approved. Allow the board to start the posting check to post at once; otherwise the next check picks it up.' : 'Approved. The next posting check picks it up.'); }
   }
 
   async function saveBlob(url, filename, type){
@@ -406,7 +420,7 @@ section{display:flex;flex-direction:column;gap:12px}
     else if (act === 'all'){ showAll = !showAll; render(); }
     else if (act === 'ask'){ openAsk.add(id); render(); const t = $('note-' + id); if (t) t.focus(); }
     else if (act === 'cancel'){ openAsk.delete(id); render(); }
-    else if (act === 'approve'){ decide(id, {status:'approved', decidedAt: now, note: ''}, 'Approved. It posts at its slot: ' + when(l && l.slot)); }
+    else if (act === 'approve'){ const isLate = late(l); decide(id, {status:'approved', decidedAt: now, note: ''}, isLate ? 'Approved. Its time has passed, so it posts right away.' : 'Approved. It posts ' + when(l && l.slot) + '.').then(ok => { if (ok) kick(l, isLate); }); }
     else if (act === 'send'){
       const note = (drafts[id] || '').trim();
       if (!note){ toast('Add a short note so I know what to change.'); const t = $('note-' + id); if (t) t.focus(); return; }
@@ -422,6 +436,7 @@ section{display:flex;flex-direction:column;gap:12px}
   async function start(){
     const c = window.claude;
     if (c && c.use) c.use('downloads').then(d => { downloads = d; }).catch(() => {});
+    if (c && c.use) c.use('mcp').then(m => { mcp = m; }).catch(() => {});
     db = c && c.use ? await c.use('db') : null;
     if (!db){ $('tonight').innerHTML = '<div class="empty"><b>The lessons can’t load here.</b>Open the board from your Claude account to watch and approve lessons.</div>'; return; }
     try { const u = await c.use('user'); if (u && typeof u.can === 'function'){ const w = await u.can('data.write'); if (w === false) readonly = true; } } catch {}

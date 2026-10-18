@@ -21,5 +21,5 @@ LINES = [
     ("t1", "And if nobody bids? The price is [lowered,] and it's tried again, until someone buys.", 0.25),
     ("e0", "Auctions aren't new to Lebanon. They're [written into its law.]", 0.15),
     ("e1", "Open bidding, one public price, and [the best offer wins.]", 0.2),
-    ("e2", "Follow to learn how auctions really work.", 0.6),
+    ("e2", "Follow for more [special auction stories.]", 0.6),
 ]
