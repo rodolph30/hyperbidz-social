@@ -43,6 +43,8 @@ This file is the complete instructions for the daily lesson run and the posting 
 
 ### Viral checklist (every lesson)
 
+0. **Teach what people don't already know** (owner, 18 Oct 2026, on lesson 04: "everyone knows how auctions work"). Never make a generic "how an auction works" explainer. Lead with a surprising, specific story or fact: why something ends up at auction, where it happens, when, who decides, a real record or a real case. A mechanism (Dutch auction, sealed bids, the closing auction…) is only ever told through a specific real story with its numbers. These are **special auction stories**.
+
 1. **The first second is the whole game.** The first frame shows the most surprising thing in the story (the $3.24M fish, the emperor's crown with a price tag), with the narrator starting on word one and the kinetic caption showing the hook as it's said. No setup, no "today we'll learn". The first frame doubles as the cover.
 2. **Hook formulas that work:** a shocking number ("This fish sold for $3.24 million."), a paradox ("Haggling costs sellers money."), a "you didn't know" ("Rome was once sold at an auction."), a direct challenge ("You've been selling things wrong.").
 3. **Open a loop early, pay it off late.** Tease the best part in the first 5 seconds ("…and the winner's reply is the best part") so people stay.

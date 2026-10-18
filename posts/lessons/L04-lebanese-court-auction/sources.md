@@ -1,10 +1,5 @@
-# Lesson 04 sources (opened and re-checked 18 Oct 2026)
+# Lesson 04 v3 sources
 
-Lebanese Code of Civil Procedure (Decree-Law 90/1983), Lebanese University Legal Informatics Center:
-- Art. 965: opening price (بدل الطرح) set "على اساس ستة اعشار القيمة المقدرة" (six tenths of the estimated value). http://legiliban.ul.edu.lb/LawArticles.aspx?LawArticleID=982617&LawId=244565
-- Art. 973 (amended 1985): each bidder deposits, before bidding, an amount equal to the opening price, or a bank guarantee for it. http://legiliban.ul.edu.lb/LawArticles.aspx?LawArticleID=1051493&LawId=244565
-- Art. 975 (amended 1985): public session before the head of the Execution Department; the crier (المباشر) calls out the opening price; every higher bid, even an invalid one, cancels the one before. http://legiliban.ul.edu.lb/LawArticles.aspx?LawArticleID=1051498&LawId=244565
-- Art. 976: award to the last, highest bidder after fifteen minutes; with no buyer, the sale is postponed, the opening price reduced, re-advertised, and repeated until a buyer comes forward. http://legiliban.ul.edu.lb/LawArticles.aspx?LawArticleID=982628&LawId=244565
-
-Illustrative (labelled on screen): the $200,000 valuation, $120,000 opening price, the bids ($125,000, $130,000), bidder 27, and the lowered price. The size of a reduction is set by the judge.
-Not claimed: how often court auctions happen (no source), how courtrooms run them in practice.
+- Code of Obligations and Contracts, Art. 840 ("no one is compelled to remain in co-ownership") and Art. 942 (if division in kind is impossible, the property is sold at public auction through the enforcement department); Law 16/1982 on ending co-ownership. Kallas Law Firm, "دعوى إزالة الشيوع في القانون اللبناني": https://www.klfi.net/indivision/
+- Code of Civil Procedure (legiliban.ul.edu.lb): Art. 948 (a creditor with an enforceable title asks for execution), Art. 965 (opening price = six tenths of the valuation), Arts. 928–929 (seized movables: not below 60%; gold, silver, jewellery and antiques not below 90%), Arts. 969–971 (two daily newspapers, the Official Gazette, posters incl. the municipality's door, at least 10 days ahead), Art. 975 (public session before the head of the Execution Department). http://legiliban.ul.edu.lb/LawArticles.aspx?LawTreeSectionID=260007&lawId=244565
+- Illustrative: Sami and Nour's plot and 50/50 shares, the cards and the notice are drawings, not real cases.

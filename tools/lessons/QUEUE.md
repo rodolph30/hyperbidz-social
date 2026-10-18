@@ -4,6 +4,8 @@ One lesson a day. The daily run takes the **first lesson with `status: todo`**. 
 
 Format per lesson: number · title · status · pace (quick or standard, see `LESSONS_SERIES.md`) · music style · research items · the idea (hook → lesson → story → takeaway) · quiz idea (optional story sticker).
 
+**Owner, 18 Oct: special auction stories, not generic explainers.** Every lesson leads with a surprising story or fact (why, where, when, who, a record); a mechanism is only told through a real story. Reframe any "how X works" idea below that way before scripting it.
+
 These are **viral animated informative shorts** (owner, 16 Oct), made in **style v3** since lesson 03 (owner's reference reel, 18 Oct; see `LESSONS_SERIES.md`): every lesson follows the viral checklist in `LESSONS_SERIES.md`. Pace: most are **quick** (20–35 s, one fact, snappy); a few that need steps are **standard** (40–55 s). A quick lesson must still be easy to follow: one idea per screen, nothing overwhelming.
 
 ---
@@ -20,7 +22,7 @@ Quiz: "In an English auction, who wins?" (the highest, last bid).
 Items: S2, S1. Hook: "The busiest minute on the New York Stock Exchange is an auction." Teach: the closing auction gathers all buy and sell orders and finds one price that matches the most shares; about 9% of US volume trades there (check the latest figure). Takeaway: stock prices are discovered by bidding, every single day.
 Quiz: "How does the stock market set its closing price?" (a closing auction).
 
-### 04 · How a Lebanese court auction works · status: made (18 Oct 2026) · pace: standard · music: pluck
+### 04 · Why things end up at auction in Lebanon (was: How a Lebanese court auction works) · status: made (18 Oct 2026) · pace: standard · music: pluck
 Items: cheat sheet §0, L1, L3, L4. Hook: "Every week, Lebanese courts sell apartments at public auction. Most people have never seen one." Teach step by step (4 steps max on screen): expert valuation → opening price at 60% of it → a deposit equal to the opening price to bid → bids in front of the judge, highest bid after 15 minutes wins. Takeaway: the auction is already part of Lebanese law; it's just hard to find and hard to join. Neutral tone: explain, don't criticise. Note: say "courts sell seized property" only if the weekly frequency is sourced; otherwise "regularly".
 Quiz: "In a Lebanese court auction, the opening price is…" (60% of the expert's value).
 

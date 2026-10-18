@@ -1,27 +1,25 @@
-# Lesson 04 captions
+# Lesson 04 v3 · Why things end up at auction in Lebanon
 
 ## Option 1
-In Lebanon, a court auction opens at just 60% of the valuation. ⚖️
+In Lebanon, your cousin can force the family land to auction. ⚖️
 
-Here's how it works, step by step:
-1. The property is valued.
-2. The opening price is set at six tenths of that value.
-3. To bid, you first deposit the full opening price (or bring a bank guarantee).
-4. Bidding is public, before the judge. Every new bid cancels the one before, and after 15 minutes the last, highest bid wins.
-No bidders? The price is lowered and the sale is tried again.
+It's one of three ways things end up at auction here:
+1. Inheritance: the law says no one is forced to stay a co-owner. If the land can't be split, the court sells it at public auction.
+2. Unpaid debt: a bank or a creditor with a court ruling can ask the court to sell, and bidding opens at 60% of the valuation.
+3. Seized goods: cars, furniture, jewelry. Gold and antiques can't sell below 90% of their value.
+Where? Not online: at the court's Execution Department, announced in two newspapers, the Official Gazette, and on the municipality's door.
 
-Source: Lebanese Code of Civil Procedure, Arts. 965, 973, 975, 976.
-Had you ever heard of this? 👇
+Sources: Code of Obligations and Contracts Arts. 840, 942; Code of Civil Procedure Arts. 928, 929, 948, 965, 969–971, 975.
+Have you ever seen one of these notices? 👇
 
-#auction #Lebanon #Beirut #learnoninstagram #lebaneselaw
+#auction #Lebanon #Beirut #lebaneselaw #learnoninstagram
 
 ## Option 2
-The winner of a Lebanese court auction is decided by a 15-minute clock. ⏱️
+That paper on the municipality's door might be an auction. 📄
 
-The opening price is 60% of the valuation. Bidders deposit that amount first. Then it's public bidding before the judge, and after 15 minutes the highest bid wins.
-Auctions aren't new to Lebanon: they're written into its law.
+In Lebanon, things go to public auction for 3 reasons: an inheritance that can't be split, an unpaid debt, or seized goods. It happens at the court's Execution Department, announced in newspapers, the Official Gazette and on paper, at least 10 days before.
 
-Source: Lebanese Code of Civil Procedure (Arts. 965, 973, 975, 976).
-Send this to someone who thinks auctions are only for paintings.
+Sources: Lebanese Code of Obligations and Contracts; Code of Civil Procedure.
+Follow for more special auction stories.
 
 #auction #Lebanon #Beirut #learnoninstagram #realestate
