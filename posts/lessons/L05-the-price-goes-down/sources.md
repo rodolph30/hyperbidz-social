@@ -1,0 +1,8 @@
+# Lesson 05 sources (opened and re-checked 19 Oct 2026)
+
+- Royal FloraHolland, "Auction developments 2025/2026" (16 Jan 2026): "In 2025, a lot was traded via the clock: almost 5 billion flowers and plants." https://www.royalfloraholland.com/en/news-2026/week-3/auction-developments-2025-2026
+- Royal FloraHolland, "Management column: Strong together – the power of the clock" (26 Nov 2025): known worldwide as "Dutch auctioning"; "The price goes from high to low." https://www.royalfloraholland.com/en/news-2025/week-48/management-column-strong-together-the-power-of-the-clock
+- Royal FloraHolland, "About Royal FloraHolland" (student pack, 2019): the price on the clock drops; the first customer to press buys; "If you press too soon, then you pay too high a price. But if you are too late, then another customer will walk away with the flowers"; "This is much quicker, and after all we are dealing with fresh products here." https://np-royalfloraholland-production.s3-eu-west-1.amazonaws.com/8-Over-ons/Documenten/Studenten/royal-floraholland-spreekbeurt-2019-en.pdf
+- Lebanese Code of Civil Procedure, Art. 931 (legiliban, Lebanese University): if no bidders come forward, the Execution Department sets a reduction of the price and postpones the sale by 15 to 30 days, re-advertised with the reduced price; it must repeat the postponement and reduction until someone wants to buy. (Art. 976 does the same for real estate.) http://legiliban.ul.edu.lb/LawArticles.aspx?LawTreeSectionID=260002&lawId=244565
+
+On screen: € clock prices, the "Clock 4" window, and the bar heights in the court-sale card are illustrative and say so in footnotes.

@@ -26,7 +26,7 @@ Quiz: "How does the stock market set its closing price?" (a closing auction).
 Items: cheat sheet §0, L1, L3, L4. Hook: "Every week, Lebanese courts sell apartments at public auction. Most people have never seen one." Teach step by step (4 steps max on screen): expert valuation → opening price at 60% of it → a deposit equal to the opening price to bid → bids in front of the judge, highest bid after 15 minutes wins. Takeaway: the auction is already part of Lebanese law; it's just hard to find and hard to join. Neutral tone: explain, don't criticise. Note: say "courts sell seized property" only if the weekly frequency is sourced; otherwise "regularly".
 Quiz: "In a Lebanese court auction, the opening price is…" (60% of the expert's value).
 
-### 05 · The auction where the price goes down · status: todo · pace: quick · music: lofi
+### 05 · The auction where the price goes down · status: made (19 Oct 2026) · pace: quick · music: lofi
 Items: W10, L6. Hook: "There's an auction where the price goes down, not up." Teach the Dutch (descending) auction: a clock counts the price down, the first buyer to press wins. Story: Royal FloraHolland's flower clocks in Aalsmeer. Lebanon link: in a court auction with no bidders, the judge lowers the price and tries again until someone buys.
 Quiz: "In a Dutch auction, who wins?" (the first to accept the falling price).
 
