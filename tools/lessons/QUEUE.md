@@ -30,7 +30,7 @@ Quiz: "In a Lebanese court auction, the opening price is…" (60% of the expert'
 Items: W10, L6. Hook: "There's an auction where the price goes down, not up." Teach the Dutch (descending) auction: a clock counts the price down, the first buyer to press wins. Story: Royal FloraHolland's flower clocks in Aalsmeer. Lebanon link: in a court auction with no bidders, the judge lowers the price and tries again until someone buys.
 Quiz: "In a Dutch auction, who wins?" (the first to accept the falling price).
 
-### 06 · A $3.24 million fish · status: todo · pace: quick · music: keys
+### 06 · A $3.2 million fish · status: made (20 Oct 2026) · pace: quick · music: keys
 Items: W9. Hook: "This tuna sold for $3.24 million." Teach: open competition and the value of being first / prestige; why one buyer would pay that. Takeaway: in an auction the price reflects how much someone wants it, not a label.
 Quiz: "Why did the tuna sell for so much?" (two buyers really wanted it / competition).
 
