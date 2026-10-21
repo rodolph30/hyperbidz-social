@@ -34,7 +34,7 @@ Quiz: "In a Dutch auction, who wins?" (the first to accept the falling price).
 Items: W9. Hook: "This tuna sold for $3.24 million." Teach: open competition and the value of being first / prestige; why one buyer would pay that. Takeaway: in an auction the price reflects how much someone wants it, not a label.
 Quiz: "Why did the tuna sell for so much?" (two buyers really wanted it / competition).
 
-### 07 · The winner's curse · status: todo · pace: quick · music: marimba
+### 07 · The winner's curse · status: made (21 Oct 2026) · pace: quick · music: marimba
 Items: W6. Hook: "A jar of coins worth $8 sold, on average, for $10.01." Teach the winner's curse and how to bid smart: decide your maximum before you start. Takeaway: auctions reward a plan.
 Quiz: "Best way to avoid the winner's curse?" (set a maximum before bidding).
 
