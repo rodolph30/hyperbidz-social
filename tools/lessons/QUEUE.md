@@ -38,7 +38,7 @@ Quiz: "Why did the tuna sell for so much?" (two buyers really wanted it / compet
 Items: W6. Hook: "A jar of coins worth $8 sold, on average, for $10.01." Teach the winner's curse and how to bid smart: decide your maximum before you start. Takeaway: auctions reward a plan.
 Quiz: "Best way to avoid the winner's curse?" (set a maximum before bidding).
 
-### 08 · Google's auction IPO · status: todo · pace: quick · music: ambient
+### 08 · Google's auction IPO · status: made (22 Oct 2026) · pace: quick · music: ambient
 Items: S3, S4. Hook: "Google sold its first shares to the public through an online auction." Teach the Dutch-auction IPO ($85, $1.67bn) vs book-building (a hidden auction among banks' clients). Takeaway: when anyone can bid, the price is set in the open. No investment advice.
 Quiz: "How did Google set its IPO price?" (an auction).
 
