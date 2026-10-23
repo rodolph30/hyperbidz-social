@@ -1,8 +1,11 @@
-"""akhbarmazad news card, broadcast style: one story (JSON) -> 1080x1920 PNG -> 12 s image Reel (MP4).
+"""akhbarmazad news card, broadcast style: one story (JSON) -> a static 1080x1350 (4:5) news image for an Instagram photo post.
 
 Usage:
-  python3 akhbarmazad/tools/card.py akhbarmazad/posts/M001/story.json            # card.png + reel.mp4 next to it
-  python3 akhbarmazad/tools/card.py story.json --png-only
+  python3 akhbarmazad/tools/card.py akhbarmazad/posts/M001/story.json          # card.jpg next to it (Python Playwright)
+  python3 akhbarmazad/tools/card.py story.json --html                          # card.html only (render it elsewhere,
+                                                                               #  e.g. npx playwright screenshot in the Higgsfield sandbox)
+Owner, 23 Oct 2026: static images only (no video, no animation), real photos from the news, a breaking-news song
+added in Instagram when posting.
 
 Look (owner's reference, 23 Oct 2026: "it should look like news"): a TV "breaking news" frame. Red slanted
 عاجل banner, a big white headline with a gold second line, a red rule and a small dateline, a gold-framed panel
@@ -13,7 +16,9 @@ story.json fields (Arabic, right-to-left; Latin and number runs are isolated aut
   headline   white line, e.g. "لوحة سيارة في دبي"    (1 line ideally, 2 max)
   highlight  gold line,  e.g. "بـ 55 مليون درهم"      (1 line)
   dateline   small line under the red rule, e.g. "مزاد الأرقام المميزة · دبي · أبريل 2023"
-  visual     {"type": "plate", "style": "dubai"|"abudhabi"|"sharjah"|"ksa"|"generic", "code": "AA", "number": "8"}
+  photo      path or file:// URL of the real news photo (fills the gold frame); photo_credit "الصورة: وام" (shown on the photo)
+             photo_pos  CSS object-position, default "50% 40%"
+  visual     (only when there is no photo) {"type": "plate", "style": "dubai"|"abudhabi"|"sharjah"|"ksa"|"generic", "code": "AA", "number": "8"}
              {"type": "phone", "number": "058 7777777", "label": "du"}
              {"type": "emoji", "name": "camel"}       (assets/emoji/<name>.png, Microsoft Fluent Emoji, MIT)
   tag        optional red stamp on the panel, e.g. "رقم قياسي", "مزاد خيري"
@@ -22,7 +27,7 @@ story.json fields (Arabic, right-to-left; Latin and number runs are isolated aut
   winner     ticker 1 (e.g. "مزايد لم يُكشف اسمه")   event  ticker 2 (e.g. "مزادات الإمارات")   date  ticker 3 (e.g. "أبريل 2023")
   source     "المصدر: ..."
 
-Everything that matters sits inside the 3:4 grid crop (y 240..1680); the top and bottom bands are background only.
+Side margins stay at 56 px or more so the profile grid's 3:4 crop doesn't cut anything.
 """
 import html, json, os, re, subprocess, sys, tempfile
 
@@ -96,66 +101,68 @@ def visual(v):
 
 CSS = """
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1920px;background:#060B16;overflow:hidden}
+html,body{width:1080px;height:1350px;background:#060B16;overflow:hidden}
 body{font-family:'Cairo';color:#fff;position:relative}
 .bg{position:absolute;inset:0;background:
-  radial-gradient(ellipse 700px 600px at 85% 380px, rgba(46,92,170,.45), rgba(0,0,0,0) 70%),
-  radial-gradient(ellipse 800px 500px at 10% 1500px, rgba(200,24,36,.28), rgba(0,0,0,0) 70%),
+  radial-gradient(ellipse 700px 500px at 85% 160px, rgba(46,92,170,.45), rgba(0,0,0,0) 70%),
+  radial-gradient(ellipse 800px 420px at 10% 1250px, rgba(200,24,36,.30), rgba(0,0,0,0) 70%),
   linear-gradient(165deg,#0E1A33 0%,#08101F 45%,#050A14 100%)}
 .slab{position:absolute;background:linear-gradient(120deg,rgba(255,255,255,.05),rgba(255,255,255,0));transform:skewX(-24deg)}
-.streak{position:absolute;height:6px;border-radius:6px;background:linear-gradient(90deg,rgba(255,40,50,0),#FF2B36 45%,#ff8c8c 50%,#FF2B36 55%,rgba(255,40,50,0));
-  box-shadow:0 0 24px 6px rgba(255,30,40,.55);transform-origin:center}
-.handle{position:absolute;top:150px;left:0;right:0;text-align:center;font-family:'Readex';font-weight:600;font-size:30px;color:rgba(255,255,255,.55);letter-spacing:1px}
+.streak{position:absolute;height:5px;border-radius:6px;background:linear-gradient(90deg,rgba(255,40,50,0),#FF2B36 45%,#ff8c8c 50%,#FF2B36 55%,rgba(255,40,50,0));
+  box-shadow:0 0 22px 5px rgba(255,30,40,.55);transform-origin:center}
+.handle{position:absolute;top:1284px;left:0;right:0;text-align:center;font-family:'Readex';font-weight:600;font-size:27px;color:rgba(255,255,255,.6);letter-spacing:1px}
 
 /* breaking banner */
-.banner{position:absolute;top:250px;right:-40px;width:600px;height:124px;transform:skewX(-14deg);
-  background:linear-gradient(180deg,#FF3B42 0%,#D3121C 60%,#A80A14 100%);box-shadow:0 18px 40px rgba(210,20,30,.45), inset 0 3px 0 rgba(255,255,255,.35)}
-.banner:after{content:"";position:absolute;left:-46px;top:0;width:22px;height:100%;background:#D3121C}
-.banner:before{content:"";position:absolute;left:-84px;top:0;width:12px;height:100%;background:#D3121C;opacity:.75}
-.banner span{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:110px;transform:skewX(14deg);
-  font-weight:900;font-size:92px;line-height:1;text-shadow:0 4px 0 rgba(0,0,0,.25);direction:rtl}
-.banner small{font-weight:800;font-size:40px;margin-right:22px;opacity:.95}
-.brand{position:absolute;top:283px;left:70px;display:flex;align-items:center;gap:12px;font-weight:900;font-size:40px;direction:rtl}
-.brand .ico{width:54px;height:54px}
+.banner{position:absolute;top:40px;right:-40px;width:520px;height:104px;transform:skewX(-14deg);
+  background:linear-gradient(180deg,#FF3B42 0%,#D3121C 60%,#A80A14 100%);box-shadow:0 16px 36px rgba(210,20,30,.45), inset 0 3px 0 rgba(255,255,255,.35)}
+.banner:after{content:"";position:absolute;left:-42px;top:0;width:20px;height:100%;background:#D3121C}
+.banner:before{content:"";position:absolute;left:-76px;top:0;width:11px;height:100%;background:#D3121C;opacity:.75}
+.banner span{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:100px;transform:skewX(14deg);
+  font-weight:900;font-size:78px;line-height:1;text-shadow:0 4px 0 rgba(0,0,0,.25);direction:rtl}
+.brand{position:absolute;top:62px;left:58px;display:flex;align-items:center;gap:12px;font-weight:900;font-size:36px;direction:rtl}
+.brand .ico{width:48px;height:48px}
 .brand b{background:linear-gradient(180deg,#FFE7A3,#E2AE4A 55%,#A9741C);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* headline */
-.hl{position:absolute;top:400px;left:64px;right:64px;direction:rtl;text-align:right}
-.hl h1{font-weight:900;font-size:96px;line-height:1.12;text-shadow:0 6px 24px rgba(0,0,0,.45)}
-.hl h2{font-weight:900;font-size:104px;line-height:1.15;margin-top:4px;
+.hl{position:absolute;top:166px;left:58px;right:58px;direction:rtl;text-align:right}
+.hl h1{font-weight:900;font-size:80px;line-height:1.12;text-shadow:0 6px 24px rgba(0,0,0,.45)}
+.hl h2{font-weight:900;font-size:86px;line-height:1.15;margin-top:2px;
   background:linear-gradient(180deg,#FFF0C2 0%,#F4C65A 45%,#C28A28 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
-.rule{width:300px;height:7px;background:#E3202B;margin:22px 0 14px auto;border-radius:3px}
-.dateline{font-family:'Readex';font-weight:600;font-size:32px;color:rgba(255,255,255,.82);word-spacing:6px}
+.rule{width:260px;height:6px;background:#E3202B;margin:16px 0 10px auto;border-radius:3px}
+.dateline{font-family:'Readex';font-weight:600;font-size:27px;color:rgba(255,255,255,.82);word-spacing:6px}
 
-/* panel */
-.panel{position:absolute;top:960px;left:60px;right:60px;height:410px;border-radius:30px;padding:5px;
-  background:linear-gradient(135deg,#FFE7A3,#C9922E 40%,#FFE7A3 60%,#9E6A17);box-shadow:0 30px 60px rgba(0,0,0,.55)}
-.panel .in{width:100%;height:100%;border-radius:26px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;
+/* photo panel */
+.panel{position:absolute;top:458px;left:56px;right:56px;height:468px;border-radius:26px;padding:5px;
+  background:linear-gradient(135deg,#FFE7A3,#C9922E 40%,#FFE7A3 60%,#9E6A17);box-shadow:0 26px 54px rgba(0,0,0,.55)}
+.panel .in{width:100%;height:100%;border-radius:22px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;
   background:radial-gradient(ellipse 60% 70% at 50% 45%, #1E2E52 0%, #0C1529 70%, #08101F 100%)}
-.panel .in:after{content:"";position:absolute;left:0;right:0;top:0;height:45%;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0))}
-.emoji{width:330px;height:330px;object-fit:contain;filter:drop-shadow(0 26px 40px rgba(0,0,0,.6));position:relative;z-index:1}
-.stamp{position:absolute;top:26px;right:28px;z-index:2;background:#E3202B;color:#fff;font-weight:900;font-size:36px;padding:2px 26px 8px;border-radius:12px;
+.panel .in img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .in .shade{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))}
+.credit{position:absolute;left:16px;bottom:14px;z-index:2;direction:rtl;font-family:'Readex';font-weight:500;font-size:20px;color:rgba(255,255,255,.9);
+  background:rgba(0,0,0,.45);padding:3px 12px;border-radius:8px}
+.emoji{width:300px;height:300px;object-fit:contain;filter:drop-shadow(0 26px 40px rgba(0,0,0,.6));position:relative;z-index:1}
+.stamp{position:absolute;top:22px;right:24px;z-index:2;background:#E3202B;color:#fff;font-weight:900;font-size:32px;padding:2px 22px 7px;border-radius:12px;
   transform:rotate(4deg);box-shadow:0 10px 26px rgba(227,32,43,.45);border:3px solid rgba(255,255,255,.85)}
 
 /* price bar */
-.price{position:absolute;top:770px;left:60px;right:60px;height:160px;border-radius:24px;direction:rtl;display:flex;align-items:center;justify-content:space-between;padding:0 44px;
-  background:linear-gradient(90deg,#B90E18,#E3202B 50%,#B90E18);box-shadow:0 20px 40px rgba(200,20,30,.35), inset 0 3px 0 rgba(255,255,255,.25)}
-.price .k{font-weight:800;font-size:44px;line-height:1.15;white-space:nowrap}
+.price{position:absolute;top:946px;left:56px;right:56px;height:132px;border-radius:22px;direction:rtl;display:flex;align-items:center;justify-content:space-between;padding:0 38px;
+  background:linear-gradient(90deg,#B90E18,#E3202B 50%,#B90E18);box-shadow:0 18px 36px rgba(200,20,30,.35), inset 0 3px 0 rgba(255,255,255,.25)}
+.price .k{font-weight:800;font-size:40px;line-height:1.15;white-space:nowrap}
 .price .vv{display:flex;flex-direction:column;align-items:flex-start}
-.price .vv small{font-family:'Readex';font-weight:500;font-size:26px;opacity:.92;direction:rtl;margin-top:4px}
-.price .v{direction:ltr;font-weight:900;font-size:108px;line-height:1;letter-spacing:-1px;text-shadow:0 4px 0 rgba(0,0,0,.2)}
-.price .v span{font-size:48px;font-weight:800;margin-left:14px;letter-spacing:0}
+.price .vv small{font-family:'Readex';font-weight:500;font-size:23px;opacity:.92;direction:rtl;margin-top:2px}
+.price .v{direction:ltr;font-weight:900;font-size:92px;line-height:1;letter-spacing:-1px;text-shadow:0 4px 0 rgba(0,0,0,.2)}
+.price .v span{font-size:42px;font-weight:800;margin-left:12px;letter-spacing:0}
 
 /* ticker */
-.ticker{position:absolute;top:1400px;left:0;right:0;height:112px;direction:rtl;display:flex;align-items:center;padding:0 110px 0 30px;
+.ticker{position:absolute;top:1100px;left:0;right:0;height:100px;direction:rtl;display:flex;align-items:center;padding:0 40px;
   background:linear-gradient(180deg,rgba(9,16,32,.95),rgba(5,10,20,.95));border-top:2px solid rgba(255,255,255,.12);border-bottom:4px solid #E3202B}
-.ticker div{flex:1;display:flex;align-items:center;gap:14px;padding:0 26px;min-width:0}
+.ticker div{flex:1;display:flex;align-items:center;gap:12px;padding:0 22px;min-width:0}
 .ticker div+div{border-right:2px solid rgba(226,174,74,.45)}
-.ticker .ico{width:50px;height:50px;flex:none}
-.ticker p{font-family:'Readex';font-weight:500;font-size:22px;color:rgba(255,255,255,.6);line-height:1.2}
-.ticker p b{display:block;font-family:'Cairo';font-weight:800;font-size:29px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.source{position:absolute;top:1532px;left:60px;right:60px;direction:rtl;text-align:center;font-family:'Readex';font-weight:500;font-size:22px;color:rgba(255,255,255,.5)}
+.ticker .ico{width:44px;height:44px;flex:none}
+.ticker p{font-family:'Readex';font-weight:500;font-size:20px;color:rgba(255,255,255,.6);line-height:1.2;min-width:0}
+.ticker p b{display:block;font-family:'Cairo';font-weight:800;font-size:27px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.source{position:absolute;top:1218px;left:56px;right:56px;direction:rtl;text-align:center;font-family:'Readex';font-weight:500;font-size:21px;color:rgba(255,255,255,.55)}
 
 /* plates */
 .plate{display:flex;align-items:center;background:linear-gradient(180deg,#FFFFFF,#ECECE6);border:7px solid #111;border-radius:22px;height:200px;padding:0 34px;gap:26px;
@@ -184,19 +191,30 @@ body{font-family:'Cairo';color:#fff;position:relative}
 """
 
 
-def page(s):
+def hero(s, base):
+    if s.get("photo"):
+        src = s["photo"]
+        if not re.match(r"^(file|https?):", src):
+            src = "file://" + os.path.abspath(os.path.join(base, src))
+        credit = f'<div class="credit">{iso(s["photo_credit"])}</div>' if s.get("photo_credit") else ""
+        pos = html.escape(s.get("photo_pos", "50% 40%"))
+        return f'<img class="photo" src="{html.escape(src)}" style="object-position:{pos}"><div class="shade"></div>{credit}'
+    return visual(s.get("visual", {}))
+
+
+def page(s, base="."):
     stamp = f'<div class="stamp">{html.escape(s["tag"])}</div>' if s.get("tag") else ""
     usd = f'<small>{iso(s["usd"])}</small>' if s.get("usd") else ""
-    pfs = 108 if len(s['price']) <= 9 else 96 if len(s['price']) <= 11 else 84
+    pfs = 96 if len(s['price']) <= 9 else 86 if len(s['price']) <= 11 else 76
     if s.get("usd"):
-        pfs -= 14
+        pfs -= 10
     tick = []
     for icon, label, key in ((PEOPLE, "الفائز", "winner"), (GAVEL, "المزاد", "event"), (CAL, "التاريخ", "date")):
         if s.get(key):
             tick.append(f'<div>{icon}<p>{label}<b>{iso(s[key])}</b></p></div>')
     streaks = "".join(f'<div class="streak" style="width:{w}px;top:{t}px;left:{l}px;transform:rotate({r}deg);opacity:{o}"></div>'
-                      for w, t, l, r, o in ((1300, 1640, -260, -16, .9), (900, 1720, 300, -16, .55), (700, 190, 520, -16, .45), (1100, 745, -500, -16, .22)))
-    slabs = "".join(f'<div class="slab" style="width:{w}px;height:1920px;top:0;left:{l}px"></div>' for w, l in ((220, 120), (120, 520), (300, 860)))
+                      for w, t, l, r, o in ((1300, 1262, -260, -12, .9), (900, 1320, 300, -12, .55), (640, 30, 560, -12, .35)))
+    slabs = "".join(f'<div class="slab" style="width:{w}px;height:1350px;top:0;left:{l}px"></div>' for w, l in ((220, 120), (120, 520), (300, 860)))
     return f"""<!doctype html><html lang="ar"><head><meta charset="utf-8"><style>{font_faces()}{CSS}</style></head>
 <body>{DEFS}<div class="bg"></div>{slabs}{streaks}
 <div class="handle">@akhbarmazad</div>
@@ -204,7 +222,7 @@ def page(s):
 <div class="brand">{GAVEL}<span>أخبار <b>مزاد</b></span></div>
 <div class="hl"><h1>{iso(s['headline'])}</h1>{f'<h2>{iso(s["highlight"])}</h2>' if s.get('highlight') else ''}
   <div class="rule"></div><div class="dateline">{iso(s.get('dateline', ''))}</div></div>
-<div class="panel"><div class="in">{stamp}{visual(s['visual'])}</div></div>
+<div class="panel"><div class="in">{hero(s, base)}{stamp}</div></div>
 <div class="price"><div class="k">{iso(s.get('kicker', 'بيعت بـ'))}</div>
   <div class="vv"><div class="v" style="font-size:{pfs}px">{html.escape(s['price'])}<span>{html.escape(s['currency'])}</span></div>{usd}</div></div>
 <div class="ticker">{''.join(tick)}</div>
@@ -212,36 +230,37 @@ def page(s):
 </body></html>"""
 
 
-def render_png(story, out_png):
+def render(story, base, out_jpg):
     from playwright.sync_api import sync_playwright
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as f:
-        f.write(page(story))
+        f.write(page(story, base))
         tmp = f.name
+    png = out_jpg[:-4] + ".png"
     with sync_playwright() as p:
         b = p.chromium.launch(args=["--allow-file-access-from-files"])
-        pg = b.new_page(viewport={"width": 1080, "height": 1920})
+        pg = b.new_page(viewport={"width": 1080, "height": 1350})
         pg.goto("file://" + tmp)
         pg.evaluate("document.fonts.ready")
-        pg.wait_for_timeout(250)
-        pg.screenshot(path=out_png)
+        pg.wait_for_timeout(300)
+        pg.screenshot(path=png)
         b.close()
     os.unlink(tmp)
+    to_jpg(png, out_jpg)
 
 
-def render_reel(png, out_mp4, seconds=12):
-    """static image Reel with a silent track (Instagram's song is attached at posting time)"""
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-loop", "1", "-i", png,
-                    "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-t", str(seconds),
-                    "-c:v", "libx264", "-tune", "stillimage", "-pix_fmt", "yuv420p", "-r", "30",
-                    "-c:a", "aac", "-b:a", "64k", "-shortest", "-movflags", "+faststart", out_mp4], check=True)
+def to_jpg(png, out_jpg):
+    from PIL import Image
+    Image.open(png).convert("RGB").save(out_jpg, quality=92, optimize=True, progressive=True)
+    os.unlink(png)
 
 
 if __name__ == "__main__":
     src = sys.argv[1]
     story = json.load(open(src, encoding="utf-8"))
     d = os.path.dirname(os.path.abspath(src))
-    png = os.path.join(d, "card.png")
-    render_png(story, png)
-    if "--png-only" not in sys.argv:
-        render_reel(png, os.path.join(d, "reel.mp4"))
-    print("done", png)
+    if "--html" in sys.argv:
+        open(os.path.join(d, "card.html"), "w", encoding="utf-8").write(page(story, d))
+        print("html", os.path.join(d, "card.html"))
+    else:
+        render(story, d, os.path.join(d, "card.jpg"))
+        print("done", os.path.join(d, "card.jpg"))
