@@ -11,6 +11,46 @@ This file is the complete instructions for the daily lesson run and the posting 
 - **The account is new on Instagram.** These lessons are how it earns its first followers, so post every day, regularly, until viewers get used to it: **7:00 pm Beirut Monday to Friday, 11:00 am Beirut on Saturday and Sunday** (owner, 17 Oct 2026). See "Post times" below.
 - The owner runs the before/after measurement himself (story surveys). Don't put surveys on the board.
 
+## The strategy: create the need (owner, 23 Oct 2026)
+
+The owner: "make sure that in our lessons posts we are targeting problems of customers, providing solutions, and changing their perspective on their problems. All that should revolve around the HyperBidz app, without mentioning it. We are trying to create the need for that app in the market. Think big."
+
+**The idea in one line:** buying and selling in Lebanon is full of everyday pain; the rest of the world already fixed each pain with an auction mechanism; every lesson shows one pain, one surprising fact that changes how people see it, and the fix. By lesson 30 the audience has collected the whole system in their heads (competition, a countdown, a deposit, a track record, a reserve, time added, open bids) and asks themselves why Lebanon doesn't have one place that does all of it. That place is the app; we never say so.
+
+**Every lesson from 10 on follows this arc** (on top of the viral checklist and style v3):
+1. **The problem (0–5 s):** a pain the viewer has lived, acted out by Sami (selling) or Nour (buying) in a chat, a post or a phone screen. Specific and recognisable: a lowball, "Is it still available?", a no-show, a scam, a hidden price, a last-second loss, the fear of overpaying or of selling too cheap. Say it as "you" where it fits ("You post your car. The first message is half your price.").
+2. **The reframe (the surprising part):** one sourced fact, study or real story that changes how they see the problem (research items **P1–P18** in `research/auction_facts.md`, plus the A/B/C items). This is the "interesting auction story" the owner asked for on 18 Oct: never a generic explainer.
+3. **The fix:** the auction mechanism that solves it, shown simply (one card, one animation). It must be one of the mechanisms in the map below.
+4. **The takeaway:** one short line that flips the viewer's perspective and is worth repeating ("No deadline, no decision."). Then the follow line.
+
+**Problem → fix map.** The right-hand column is internal: it's the app feature each lesson quietly prepares people for. It never appears on screen, in captions or on the board text the owner might forward.
+
+| Viewer's problem | Fix shown in the lesson | Prepares people for (internal) |
+|---|---|---|
+| Lowball offers, haggling, price only goes down | Buyers compete, every bid is higher | live bidding |
+| Selling to one buyer at a time | Everyone interested bids at the same time | public feed of auctions |
+| "Is it still available?", endless chats, nobody decides | A countdown everyone sees | the countdown, "Going once… Going twice…" |
+| No-shows, time-wasters | A small amount held when you bid, returned if you're outbid | holds on bids and listings |
+| Fear of scams, trusting strangers | A public track record and reviews | trust tiers and public reviews |
+| Fear of selling too cheap | A reserve: the seller's floor | "reserve met / not met" |
+| Losing at the last second | A late bid adds time | "time added" |
+| Fear of overpaying | Set your max; you pay about one step above the runner-up | visible live bids |
+| Hidden prices, "DM for price", special prices | Every bid in the open, same rules for everyone | visible live bids |
+| Only local buyers see it | Buyers from anywhere, live | online live auctions |
+| Not knowing what your thing is worth | Let the buyers set the price; start low | live bidding, reserve |
+
+**Guardrails for problem lessons:**
+- The app is never mentioned, shown or hinted at by name, logo, colours-as-branding or UI. Generic UIs only (rule 1). The fix is described as "an auction" or "this rule", never as a product.
+- Show problems as situations, never as a company. Never name or criticise a marketplace, a classifieds site or a social network ("you post it online" is fine; naming a platform is not). Never mock people who haggle.
+- Lebanon: neutral (rule 10). A pain is a situation everybody knows, not a complaint about the country. No crisis, war or politics, no "Lebanon is broken". Real Lebanese cases (an ISF statement, a court rule) are told as facts, without naming people.
+- The fix is described honestly. Never "safe", "risk-free", "guaranteed", "100%"; never imply that an auction protects the payment or the item. Say what the mechanism does, e.g. "a deposit makes people think twice", "a track record you can check".
+- No war or violence words (PLAYBOOK): never "snipe/sniper", "kill", "attack", "strike". Say "a last-second bid".
+- Never "gambling", "betting", "bet".
+- No "last price?/akher se3er" (rule 11) even inside a fake chat; show a lowball as a number ("$4,000?") or "What's your best…" cut off, or "Final offer: half."
+- **Sami and Nour now carry the problems.** Sami is the seller who keeps hitting the old way's pains; Nour is the buyer. Keep their roles fixed so viewers recognise "a Sami episode" and "a Nour episode". Any price in their story is illustrative and labelled as such in a footnote.
+- Some lessons are **perspective lessons** with no single pain (Australia's Saturday home auctions, Japan's used cars): they change the meaning of the word "auction" from "trouble" to "normal". Keep about one in four lessons like this.
+- **Recurring takeaway.** When a lesson's fix is about letting competition set the price (seller episodes), the takeaway may end with "Let them bid." (the line the founder series used). Use it at most every other lesson so it stays a signature, not a tic.
+
 ## Post times (owner, 17 Oct 2026)
 
 - **Monday–Friday: 19:00 Beirut. Saturday and Sunday: 11:00 Beirut.** A lesson's "slot" is the post time of its day. Everywhere this file says "the 7 pm slot", read "the day's slot".
@@ -19,7 +59,7 @@ This file is the complete instructions for the daily lesson run and the posting 
 
 ## Rules for this campaign (owner, 16 Oct 2026; these override anything else)
 
-1. **Never mention HyperBidz.** No name, no logo or Z mark, no wordmark, no "coming soon", no handle on screen, no app screens or app UI. Captions don't mention it either. The videos only talk about auctions: how they work and why they're convenient.
+1. **Never mention HyperBidz.** No name, no logo or Z mark, no wordmark, no "coming soon", no handle on screen, no app screens or app UI. Captions don't mention it either. The videos only talk about auctions: how they work, why they're convenient, and (since 23 Oct 2026) the buying and selling problems they solve (see "The strategy").
 2. **No tags on screen.** No "Lesson NN" label, no chapter chips, no progress bar.
 3. **A narrator speaks the whole video** in a calm, clear, teacher-like voice (`narration.py`: Kokoro voice `am_michael`, speed 1.0; don't change it without the owner). Every on-screen idea is spoken. Since lesson 03 (v3 style) the words appear on screen word by word as they're spoken (`motion.KCaps`), instead of a subtitle pill. Speed 1.07 for v3 lessons. Say Nour as `{Nour|Nuur}` (the voice mispronounces "Nour").
 4. **Easy to follow.** One idea on screen at a time. Few words on screen besides the captions: at most one short headline, one number or one card at a time. Nothing else moving while the key point lands. If a frame has more than three things competing for attention, simplify it.
@@ -43,7 +83,7 @@ This file is the complete instructions for the daily lesson run and the posting 
 
 ### Viral checklist (every lesson)
 
-0. **Teach what people don't already know** (owner, 18 Oct 2026, on lesson 04: "everyone knows how auctions work"). Never make a generic "how an auction works" explainer. Lead with a surprising, specific story or fact: why something ends up at auction, where it happens, when, who decides, a real record or a real case. A mechanism (Dutch auction, sealed bids, the closing auction…) is only ever told through a specific real story with its numbers. These are **interesting auction stories**.
+0. **Teach what people don't already know** (owner, 18 Oct 2026, on lesson 04: "everyone knows how auctions work"). Never make a generic "how an auction works" explainer. Lead with a surprising, specific story or fact: why something ends up at auction, where it happens, when, who decides, a real record or a real case. A mechanism (Dutch auction, sealed bids, the closing auction…) is only ever told through a specific real story with its numbers. These are **interesting auction stories**. Since lesson 10 (owner, 23 Oct 2026) the story is the **reframe** inside a problem → reframe → fix → takeaway arc (see "The strategy"): start from a pain the viewer has lived, and let the story change how they see it.
 
 1. **The first second is the whole game.** The first frame shows the most surprising thing in the story (the $3.24M fish, the emperor's crown with a price tag), with the narrator starting on word one and the kinetic caption showing the hook as it's said. No setup, no "today we'll learn". The first frame doubles as the cover.
 2. **Hook formulas that work:** a shocking number ("This fish sold for $3.24 million."), a paradox ("Haggling costs sellers money."), a "you didn't know" ("Rome was once sold at an auction."), a direct challenge ("You've been selling things wrong.").
@@ -92,7 +132,7 @@ The owner shared a reference reel ("Steal 100 users from your competitor", Ben Z
 
 1. `git pull`. Read `tools/lessons/QUEUE.md`; take the first lesson with `status: todo`. Read the owner's change notes on the board (`lessons` with `status: changes`): **a lesson with changes comes first** (redo it as `-v2`, same lesson number) before making a new one.
 2. Research: open each source for the lesson's items in `research/auction_facts.md`, re-check every fact, find one vivid detail if thin. Unverifiable → drop it.
-3. Write `tools/lessons/lessonNN_lines.py` (the narration, 140–175 words) and `posts/lessons/LNN-<slug>/script.md`. Check: hook surprising in 2 s? one clear thing learned? ends on why auctions are convenient? no HyperBidz?
+3. Write `tools/lessons/lessonNN_lines.py` (the narration, 140–175 words) and `posts/lessons/LNN-<slug>/script.md`. Check: hook surprising in 2 s? one clear thing learned? ends on why auctions are convenient? no HyperBidz? From lesson 10 also: does it open on a problem the viewer has lived (Sami or Nour)? does one sourced fact change how they see it? is the fix one of the mechanisms in "The strategy" map, described honestly? is the takeaway a one-line perspective flip? does it pass the guardrails (no platform named, no war words, no "safe/guaranteed", neutral on Lebanon)?
 4. Build `tools/lessons/lessonNN.py` from `lesson03.py` (style v3). Generate the narration and run `narration.asr_check()` on the voice track: fix any line that the transcript gets wrong (except brand names the small recogniser can't spell, like eBay).
 5. Stills: look at the start, the key moment and the end of every scene. Fix overlaps, clipped text, crowded frames (rule 4).
 6. Render to `posts/lessons/LNN-<slug>/lesson-NN.mp4`; ffprobe it (duration, 1080x1920, 30 fps, audio); loudness-normalise to −15 LUFS (`ffmpeg -c:v copy -af loudnorm=I=-15:TP=-1.5:LRA=11`); keep it under 19 MB. Extract `cover.jpg` (a frame with the hook).

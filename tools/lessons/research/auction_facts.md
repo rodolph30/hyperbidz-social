@@ -508,6 +508,159 @@ Source for every step: CCP Arts. 948–987 as published at legiliban.ul.edu.lb (
 
 ---
 
+## D. PROBLEMS AND FIXES (owner, 23 Oct 2026: target customers' problems, give solutions, change their perspective)
+
+*Compiled 23 October 2026 for the problem → reframe → fix lessons (see `LESSONS_SERIES.md`, "The strategy"). Each item is a buyer's or seller's real problem, the research that changes how they see it, and the auction mechanism that fixes it. The "mirrors" line is internal only: it names the app feature the fix prepares people for. Never put it on screen or in a caption.*
+
+### P1. The first number wins: why lowball offers work
+- **Problem:** Sami posts his car; the first message is a lowball. Haggling feels like a fight he can only lose.
+- **Research:** In three experiments, whichever side made the first offer got the better deal, and first offers were a strong predictor of the final price (Galinsky & Mussweiler, *Journal of Personality and Social Psychology* 81(4), 2001). A later review: first offers often explain **over 50% of the variance** in final outcomes; Lipp (2022) reports a **.85 correlation** between first offer and final price in that study. Even professionals are pulled: real-estate agents' value estimates moved with the list price they were shown, and they **denied** being influenced (Northcraft & Neale, 1987).
+- **Reframe:** A lowball isn't an insult; it's an anchor, and it works.
+- **Fix:** In an auction, buyers name the numbers, and every new number is higher than the last.
+- **Mirrors:** live bidding.
+- **Sources:** [PubMed abstract](https://pubmed.ncbi.nlm.nih.gov/11642352), [Columbia review of first offers](https://business.columbia.edu/sites/default/files-efs/pubfiles/11691/first_offers.pdf), [Lipp 2022](https://ncmr.lps.library.cmu.edu/article/id/574), [Australian PM&C on Northcraft & Neale](https://www.pmc.gov.au/news/anchors-away-prices-anchors-and-auctions).
+- **Confidence:** Verified (abstracts and reviews). Say "a strong predictor" or "over half"; don't say "decides the price".
+
+### P2. One more buyer beats the best negotiator
+- **Problem:** Selling to one buyer at a time: every chat starts again from zero.
+- **Research:** Bulow & Klemperer, "Auctions versus Negotiations", *American Economic Review* 86(1), 1996: under standard assumptions a simple public auction is always more profitable than the best-structured negotiation, "provided that it attracts at least one extra bidder"; "the value of negotiating skill is small relative to the value of additional competition."
+- **Reframe:** Your price problem isn't your negotiating; it's that only one buyer sees it at a time.
+- **Fix:** Put every interested buyer in the same place at the same time.
+- **Mirrors:** a public feed of live auctions.
+- **Sources:** [Klemperer's abstract (Nuffield)](https://www.nuffield.ox.ac.uk/economics/papers/abstracts/klempc.htm), [IDEAS record](https://ideas.repec.org/a/aea/aecrev/v86y1996i1p180-94.html).
+- **Confidence:** Verified. It's a theory result "under standard assumptions"; present it as what economists proved, not a guarantee.
+
+### P3. No deadline, no decision
+- **Problem:** "Is it still available?" Days of chats, maybes, "I'll think about it".
+- **Research:** Roth, Murnighan & Schoumaker, *AER* 78(4), 1988: in four bargaining experiments with a 9-minute clock on screen, **41% of agreements came in the last 30 seconds**, and **53% of those in the last 5 seconds** ("a striking concentration of agreements reached in the very last seconds before the deadline").
+- **Reframe:** People don't decide when they're ready; they decide when time runs out.
+- **Fix:** A countdown everyone can see.
+- **Mirrors:** the auction countdown.
+- **Sources:** [the paper (Stanford)](https://web.stanford.edu/~alroth/papers/1988_AER_Deadline_Effect.pdf).
+- **Confidence:** Verified (lab experiments; say "in experiments").
+
+### P4. The last-second steal, and the clock that fixes it
+- **Problem:** Nour leads for days, then someone bids at the very last second and she has no time to answer.
+- **Research:** Roth & Ockenfels (*AER* 2002) compared eBay (fixed end time) with Amazon's auctions (automatically extended until 10 minutes pass without a bid). In their eBay sample, **89 of 240 auctions had bids in the last minute and 29 in the last ten seconds**; on Amazon **only one bid** came in the last minute. 20% of last bids on eBay came in the last hour vs 7% on Amazon. Roth (HBS interview, 2005): 37% of the eBay auctions had bids in the last minute, 12% in the last 10 seconds.
+- **Reframe:** A last-second win isn't skill; it's a rule that gives nobody time to answer.
+- **Fix:** A late bid adds time, so every bid can be answered.
+- **Mirrors:** "time added".
+- **Sources:** [the paper (Stanford)](https://stanford.edu/%7Ealroth/papers/eBay.veryshortaer.pdf), [HBS Working Knowledge](https://hbswk.hbs.edu/item/amazon-ebay-and-the-bidding-wars).
+- **Confidence:** Verified (2000-era data; say "in a study of eBay and Amazon auctions"). Never use the word "snipe/sniping" on screen or in captions (PLAYBOOK bans war words): say "last-second bids".
+
+### P5. The no-show: why a deposit changes behaviour
+- **Problem:** "I'm coming at 5." Nobody comes.
+- **Research:** A booking platform's own data, Dec 2023 to Mar 2024: bookings with **full prepayment had a 0.9% no-show rate; with a deposit 1.7%; with a card hold 3%** (Tock). Lebanese law uses the same idea: to bid in a court auction you first deposit the full opening price, and losing bidders get it back (CCP Art. 973; item L1).
+- **Reframe:** Serious people don't mind putting something down; time-wasters do.
+- **Fix:** A small amount held when you bid, returned if you're outbid.
+- **Mirrors:** the held amount on bids and listings (never state the amount).
+- **Sources:** [Tock](https://www.exploretock.com/join/resources/eliminate-no-shows-3-tock-tools/), item L1.
+- **Confidence:** Partly verified (company data; attribute it: "one booking platform found…").
+
+### P6. Reputation is worth 8%
+- **Problem:** Nour doesn't know the seller. Why trust a stranger?
+- **Research:** Resnick, Zeckhauser, Swanson & Lockwood, *Experimental Economics* 2006, the first randomised field experiment on a reputation system: a high-reputation eBay dealer sold matched pairs of vintage-postcard lots under his own name and under brand-new seller names. Buyers paid **8.1% more** to the established name.
+- **Reframe:** Trust isn't a feeling; it's a track record you can see.
+- **Fix:** Public reviews and visible seller levels.
+- **Mirrors:** trust tiers and public reviews (never say every seller is verified).
+- **Sources:** [Resnick's project page](https://presnick.people.si.umich.edu/papers/postcards/index.html), [Cambridge](https://www.cambridge.org/core/journals/experimental-economics/article/abs/value-of-reputation-on-ebay-a-controlled-experiment/610EA11BA19583907061AFB677BE4338).
+- **Confidence:** Verified (an early press release said 7.6%; the published paper says 8.1%; use 8.1%).
+
+### P7. Paying a stranger first
+- **Problem:** Online, someone has to pay before they see the item, and that's where scams live.
+- **Research:** US FTC: consumers reported losing **$12.5 billion** to fraud in 2024; **online shopping was the second most reported fraud category**. In 2025, 3 million reports and **$15.9 billion** lost. Lebanon: on 9 Jul 2026 the ISF announced the arrest of a man who offered electrical appliances on social media, took payment, never delivered and refused refunds.
+- **Reframe:** The risk isn't buying online; it's buying with no record, no rules and no one watching.
+- **Fix:** Public track records plus money on the line from both sides. Never say "safe", "guaranteed" or "risk-free" (PLAYBOOK), and never claim the sale is protected: the sale is completed between buyer and seller.
+- **Mirrors:** trust tiers, reviews, holds.
+- **Sources:** [FTC 2025 release](https://www.ftc.gov/news-events/news/press-releases/2025/03/new-ftc-data-show-big-jump-reported-losses-fraud-125-billion-2024), [FTC 2026 testimony](https://www.ftc.gov/news-events/news/press-releases/2026/03/ftc-testifies-joint-economic-committee-agencys-efforts-combat-fraud), [ISF statement](https://isf.gov.lb/news/suspect-arrested-for-fraudulent-sales-of-electrical-appliances-through-social-media-have-you-been-one-of-his-victims).
+- **Confidence:** Verified. Never show or name the suspect.
+
+### P8. Australia sells homes by auction every weekend
+- **Problem (perspective):** In Lebanon, "auction" sounds like trouble: courts, banks, seizures.
+- **Research:** Cotality (formerly CoreLogic): **1,749 homes** went to auction across Australia's capital cities in the week ending 11 Oct 2026 (Melbourne 703, Sydney 632); **2,871** in the week ending 15 Mar 2026. "Auctions are a popular way of selling houses in Australia, particularly in… Sydney and Melbourne" (Bloomberg). Note: 2026 clearance rates were weak (under 50% in October); don't claim auctions always sell.
+- **Reframe:** Somewhere else, "auction" just means Saturday.
+- **Fix:** n/a (perspective lesson).
+- **Sources:** [Cotality preview, 18 Oct 2026](https://discover.cotality.com/hubfs/Article-Reports/Finalised%20clearance%20rates%20and%20auction%20market%20preview%2018%20October%202026.pdf), [Cotality, 16 Mar 2026](https://www.cotality.com/au/press-releases/strong-listings-activity-driving-auctions-up-but-clearance-rates-fading), [Business Times/Bloomberg](https://www.businesstimes.com.sg/property/australia-home-auction-clearance-rate-stuck-below-50-second-week).
+- **Confidence:** Verified.
+
+### P9. Melbourne made the price public (Oct 2026)
+- **Problem:** "DM for price"; buyers never know the real number, or turn up and find it was never in their range.
+- **Research:** Victoria, from 1 Oct 2026 (auctions from 16 Oct 2026): agents must publish the seller's **reserve price at least 7 days before** an auction, as a single dollar amount (no "from", "over", "+"); if it isn't published in time, **the auction can't go ahead**; the **sold price** must be published within 7 days of an unconditional sale and stay public for **18 months**. The minister: the purpose is "to end the frustration that prospective buyers feel when they go to an auction and learn that the house was never in their price range."
+- **Reframe:** Hidden prices aren't a tactic; they're a cost, and some places now ban them.
+- **Fix:** Bids in the open: everyone sees the same number at the same time.
+- **Mirrors:** visible live bids; "reserve met / not met".
+- **Sources:** [Consumer Affairs Victoria: the changes](https://www.consumer.vic.gov.au/licensing-and-registration/estate-agents/new-changes-to-property-sales-and-underquoting-laws), [CAV: selling by auction](https://www.consumer.vic.gov.au/housing/buying-and-selling-property/selling-property/selling-property-by-auction), [Hansard, 14 Aug 2026](https://www.parliament.vic.gov.au/parliamentary-activity/hansard/hansard-details/HANSARD-974425065-36367).
+- **Confidence:** Verified (official). Don't comment on whether the law is good for sellers.
+
+### P10. The reserve price: a floor, not a ceiling
+- **Problem:** Sami: "What if it sells for nothing?"
+- **Research:** "The lowest price a seller is prepared to accept for their property at auction… is called the seller's reserve price." If bids don't reach it, the property is "passed in" and the highest bidder gets the first right to negotiate (Consumer Affairs Victoria).
+- **Reframe:** An auction doesn't mean "any price"; the seller sets the floor and the buyers set the rest.
+- **Fix:** A reserve.
+- **Mirrors:** "reserve met / reserve not met".
+- **Sources:** [CAV: selling by auction](https://www.consumer.vic.gov.au/housing/buying-and-selling-property/selling-property/selling-property-by-auction).
+- **Confidence:** Verified.
+
+### P11. Japan's used cars go through auctions
+- **Problem (perspective):** "Auctions are for art, or for seized things."
+- **Research:** USS, Japan's largest car-auction group, FY2025 (Apr 2025–Mar 2026): a record **3.5 million vehicles** consigned, 67% sold; the whole Japanese car-auction market about **8 million vehicles** consigned; its Tokyo site handled **more than 20,000 vehicles in single auctions** in March and April 2026.
+- **Reframe:** One of the world's biggest car markets prices ordinary used cars by auction, every week.
+- **Sources:** [USS results script, May 2026](https://www.ussnet.co.jp/en/ir/item/script2026_4q.pdf), [USS auction data, Apr 2026](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260406/20260406598760.pdf).
+- **Confidence:** Verified (company IR). These are dealer auctions; say "dealers", not "everyone".
+
+### P12. You never pay much more than the runner-up
+- **Problem:** Nour fears auctions make her overpay.
+- **Research:** In an open ascending auction, bidders stop when the price passes what the item is worth to them, so the winner pays about **what the second-highest bidder was willing to pay, plus one step** (Vickrey 1961; Lucking-Reiley, *JEP* 2000; EconPort).
+- **Reframe:** You don't pay what you're willing to pay; you pay one step above the last person who wanted it.
+- **Fix:** Decide your maximum; the bidding stops when the last rival stops (callback to lesson 07).
+- **Sources:** [Lucking-Reiley 2000](http://www.davidreiley.com/papers/VickreyHistory.pdf), [EconPort: English auction](https://www.econport.org/econport/request?page=man_auctions_englishauction).
+- **Confidence:** Verified as theory (private values). Say "about" and "one step".
+
+### P13. We pay extra just to avoid haggling
+- **Problem:** Most people hate haggling: it's awkward, slow, and feels like a fight.
+- **Research:** Hunsaker, Zhang & Lee (*Negotiation and Conflict Management Research*; Indiana University, 19 Dec 2025): across five studies, "95% of individuals choose not to negotiate up to 51% of the time"; people needed savings of **21–36%** of the price before negotiating felt worth it; businesses can raise prices **5–11%** and more than half of consumers will pay it. Consumer Reports (2016): 70% of used-car buyers haggled, succeeded 83% of the time, median saving **$900 (8%)** below the asking price.
+- **Reframe:** Haggling has a price, and both sides pay it.
+- **Fix:** Bidding replaces the back-and-forth with open rules.
+- **Sources:** [Newswise / Indiana University](https://www.newswise.com/articles/why-many-americans-avoid-negotiating-even-when-it-costs-them), [Consumer Reports](https://www.consumerreports.org/used-car-buying/why-haggling-for-your-next-car-really-pays).
+- **Confidence:** Partly verified (press release; quote it exactly).
+
+### P14. Your best buyer doesn't live on your street
+- **Problem:** Sami's buyers are whoever happens to see his post nearby.
+- **Research:** Christie's: **81% of all bids were placed online** in 2024 (78% in 2023); **63% of new buyers** made their first purchase online in 2025. Lebanon's Ministry of Economy and Trade estimates the Lebanese diaspora at about **12 million** people.
+- **Reframe:** Your buyer might be in Sydney, Paris or Dubai, and willing to pay more than anyone nearby.
+- **Fix:** Live online bidding open to everyone.
+- **Sources:** [Christie's 2024 results](https://press.christies.com/56b-global-sales-in-2024-christies-sold-highest-value-lot-of-the-year-private-sales-up-40-yoy/), [artnet, Apr 2026](https://news.artnet.com/market/online-auctions-continue-to-draw-in-first-time-art-buyers-as-sales-grow-2763806), [Ministry of Economy and Trade](https://www.economy.gov.lb/en/projects/e-commerce).
+- **Confidence:** Verified (diaspora figure is the ministry's estimate: attribute it).
+
+### P15. Your home is full of unsold money
+- **Problem:** Things sit in cupboards "in case", losing value.
+- **Research:** eBay's Recommerce Report (2021): the average American home has **36 unwanted items worth $3,675**. musicMagpie (2021): an older iPhone loses about **10% of its resale value in the first month** after a new model comes out, and **23% after three months**.
+- **Reframe:** Unused things aren't savings; they're losing value every month.
+- **Sources:** [Forbes on eBay's report](https://www.forbes.com/sites/joanverdon/2021/03/16/average-home-has-36-things-that-could-sell-on-ebay-report-says), [WalesOnline on musicMagpie](https://www.walesonline.co.uk/news/cost-of-living/average-household-sitting-842-unused-25124999).
+- **Confidence:** Partly verified (company surveys; attribute them; US/UK data, not Lebanon).
+
+### P16. £45 in 1958, $450.3 million in 2017
+- **Problem:** Sami prices things by guessing, and may give away what he doesn't know is valuable.
+- **Research:** Leonardo's *Salvator Mundi* sold at Sotheby's in **1958 for £45**; it re-emerged in **2005**, bought from an American estate at a small regional auction house; on 15 Nov 2017 Christie's sold it for **$450,312,500 after 19 minutes** of bidding, at least 45 bids, after the auctioneer opened at $75 million (Christie's).
+- **Reframe:** The seller didn't know what it was. Competition found out.
+- **Fix:** Let the buyers set the price.
+- **Sources:** [Christie's press release](https://press.christies.com/christies-sells-leonardo-da-vincis-500-year/), [Christie's story](https://www.christies.com/en/stories/leonardo-and-post-war-results-new-york-ad70dd5889e64989a76c94e4358c760d).
+- **Confidence:** Verified. Never draw Christ's face or the painting itself: show a frame, a price tag and a clock.
+
+### P17. Start low, end high
+- **Problem:** Sami thinks a low starting price means a low final price.
+- **Research:** Ku, Galinsky & Murnighan, *JPSP* 90(6), 2006, six studies: in auctions, **lower starting prices led to higher final prices**, because they bring more bidders, who then invest time and keep going. On real eBay data for **179 Persian rugs and 87 Nikon cameras**, a low start led to a higher final price, with more bids and more bidders.
+- **Reframe:** In haggling, start high. In an auction, start low: the crowd does the rest.
+- **Fix:** A low start plus a reserve (P10) protects the floor.
+- **Sources:** [PubMed abstract](https://pubmed.ncbi.nlm.nih.gov/16784346), [Kellogg Insight](https://insight.kellogg.northwestern.edu/article/place_your_bids).
+- **Confidence:** Verified. Only works with traffic: the same paper shows a misspelled listing (few visitors) behaves like a normal anchor.
+
+### P18. Lebanon online, for context (not hooks)
+- About **2 in 5** people in Lebanon shop online; **3 in 5** say in-store shopping can't be replaced (Ipsos, Oct 2024). Lebanon had **4.52 million** social-media user identities and **2.50 million** Instagram users in early 2024 (DataReportal).
+- **Sources:** [Ipsos](https://www.ipsos.com/en-lb/spotlightlebanon-online-shopper-behaviour-attitudes), [DataReportal](https://datareportal.com/reports/digital-2024-lebanon).
+
+---
+
 ## Unverified, partly verified or dropped (don't script without more work)
 
 | Topic | Status |
