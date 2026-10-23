@@ -1,6 +1,6 @@
 # akhbarmazad: posting order
 
-The daily run takes the first story with `status: todo`, **unless** a fresh verified result from the last 7 days is more insane (then it goes first and is added to `research/auction_wins.md`). Story ids on the desk run M001, M002, … in posting order; `R#` is the entry number in `research/auction_wins.md`. Never two plate stories in a row: skip ahead to the next non-plate story and come back.
+The daily run takes the first story with `status: todo`, **unless** a fresh verified result from the last 7 days is more insane (then it goes first and is added to `research/auction_wins.md`). Story ids on the desk run M001, M002, … in posting order; `R#` is the entry number in `research/auction_wins.md`. Never two plate stories in a row: skip ahead to the next non-plate story and come back. **Lebanon (owner, 23 Oct 2026): about every fourth post is a Lebanese story**, taken from `research/lebanon_wins.md` (its own ranked list) until its rows are merged here.
 
 **Fresh news to watch now:** Dubai RTA 121st open plate auction on Sat 24 Oct 2026 (BB 80, BB 18, CC 44); Saudi Absher plate auctions (several a month); Julien's Michael Jackson and Princess Diana sales in Abu Dhabi, 5–10 Dec (evening sale 7 Dec); RM Sotheby's Abu Dhabi, 9 Dec. Full list: "Recurring events to watch" in the research file.
 

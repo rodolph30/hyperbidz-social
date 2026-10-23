@@ -17,7 +17,7 @@ His choices (23 Oct 2026):
 ## Rules
 
 1. **No HyperBidz** for now: no name, logo, app, link or hint, on the card or in the caption. The page earns trust as a news page first; the owner decides when it starts promoting HyperBidz.
-2. **Only the Gulf and the Middle East**: UAE (Dubai, Abu Dhabi, Sharjah…), Saudi Arabia (Riyadh, Jeddah, Qassim…), Qatar, Kuwait, Bahrain, Oman. A record bought by a Gulf buyer elsewhere only if the buyer's origin is publicly reported.
+2. **The Gulf, the Middle East and Lebanon** (owner, 23 Oct 2026: "I want also from Lebanon, don't forget that"): UAE (Dubai, Abu Dhabi, Sharjah…), Saudi Arabia (Riyadh, Jeddah, Qassim…), Qatar, Kuwait, Bahrain, Oman, and **Lebanon** (plates and numbers, Lebanese art records at auction anywhere, charity auctions for Lebanon, Lebanese buyers of famous lots, Lebanese state auctions with a reported final price). **About one story in four is Lebanese**, more when there's fresh Lebanese news. A record bought by a Gulf or Lebanese buyer elsewhere only if the buyer's origin is publicly reported. Lebanese stories stay neutral: no politics, no sects, no crisis or bank blame, no war.
 3. **Insane, or skip it.** Every story must make someone stop and send it to a friend: an absurd price, an unexpected item (a number, a sheep, a falcon, a fish), a record, a bidding war. A dull result isn't news for this page.
 4. **Facts only.** Every name, price, date and place comes from sources you opened: one official (the organiser, WAM, SPA, QNA, KUNA, the auction house) or two reputable outlets. If sources disagree, use the official figure. Never round a price up; "نحو" (about) for conversions.
 5. **The winner.** Name the buyer only if a reputable outlet named them publicly. Otherwise "مزايد لم يُكشف اسمه". Never guess, never imply.
@@ -74,9 +74,9 @@ Upload media with the Artifact tool (`url` = the desk, `asset: true`), write doc
 
 ## Story bank
 
-- `research/auction_wins.md`: verified stories with sources, ranked by "insane factor", plus recurring events to watch. `QUEUE.md`: the posting order and status of each story.
+- `research/auction_wins.md`: verified Gulf stories with sources, ranked by "insane factor", plus recurring events to watch. `research/lebanon_wins.md`: the same for Lebanon. `QUEUE.md`: the posting order and status of each story.
 - **Fresh news first.** Each run, search the web for auction results from the last 7 days in the region (plates and numbers auctions, falcon and camel auctions, Sotheby's/Christie's/RM Sotheby's sales in Dubai, Abu Dhabi, Riyadh, Doha). A verified fresh insane result goes before the bank. Add every new verified story to the research file.
-- Mix the topics: never two plate stories in a row; rotate countries.
+- Mix the topics: never two plate stories in a row; rotate countries, with a Lebanese story about every fourth post. Fresh-news searches include Lebanon (NNA, L'Orient Today, Annahar, Lebanese artists at Christie's/Sotheby's/Bonhams/Artcurial).
 
 ## Procedure A: the daily story run (every morning)
 
