@@ -21,7 +21,7 @@ story.json fields (Arabic, right-to-left; Latin and number runs are isolated aut
   visual     (only when there is no photo) {"type": "plate", "style": "dubai"|"abudhabi"|"sharjah"|"ksa"|"generic", "code": "AA", "number": "8"}
              {"type": "phone", "number": "058 7777777", "label": "du"}
              {"type": "emoji", "name": "camel"}       (assets/emoji/<name>.png, Microsoft Fluent Emoji, MIT)
-  tag        optional red stamp on the panel, e.g. "رقم قياسي", "مزاد خيري"
+  tag        optional red stamp on the panel, e.g. "رقم قياسي", "مزاد خيري"; tag_side "left" moves it off a face"
   kicker     price label, default "بيعت بـ"
   price      "55,000,000"   currency "درهم"   usd "نحو 15 مليون دولار" (optional)
   winner     ticker 1 (e.g. "مزايد لم يُكشف اسمه")   event  ticker 2 (e.g. "مزادات الإمارات")   date  ticker 3 (e.g. "أبريل 2023")
@@ -145,6 +145,8 @@ body{font-family:'Cairo';color:#fff;position:relative}
 .stamp{position:absolute;top:22px;right:24px;z-index:2;background:#E3202B;color:#fff;font-weight:900;font-size:32px;padding:2px 22px 7px;border-radius:12px;
   transform:rotate(4deg);box-shadow:0 10px 26px rgba(227,32,43,.45);border:3px solid rgba(255,255,255,.85)}
 
+.stamp.left{right:auto;left:24px;transform:rotate(-4deg)}
+
 /* price bar */
 .price{position:absolute;top:946px;left:56px;right:56px;height:132px;border-radius:22px;direction:rtl;display:flex;align-items:center;justify-content:space-between;padding:0 38px;
   background:linear-gradient(90deg,#B90E18,#E3202B 50%,#B90E18);box-shadow:0 18px 36px rgba(200,20,30,.35), inset 0 3px 0 rgba(255,255,255,.25)}
@@ -203,7 +205,7 @@ def hero(s, base):
 
 
 def page(s, base="."):
-    stamp = f'<div class="stamp">{html.escape(s["tag"])}</div>' if s.get("tag") else ""
+    stamp = f'<div class="stamp {"left" if s.get("tag_side") == "left" else ""}">{html.escape(s["tag"])}</div>' if s.get("tag") else ""
     usd = f'<small>{iso(s["usd"])}</small>' if s.get("usd") else ""
     pfs = 96 if len(s['price']) <= 9 else 86 if len(s['price']) <= 11 else 76
     if s.get("usd"):

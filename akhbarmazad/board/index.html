@@ -56,7 +56,7 @@ section{display:flex;flex-direction:column;gap:12px}
 .shead h2{font-size:24px;font-weight:700}
 .desk{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
 .media{display:flex;flex-direction:column;gap:10px}
-.frame{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:12px;overflow:hidden;background:#0B0B0E}
+.frame{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:12px;overflow:hidden;background:#0B0B0E}
 .frame img,.frame video{width:100%;height:100%;object-fit:cover;display:block}
 .frame .none{position:absolute;inset:0;display:grid;place-items:center;color:#cfc6b6;font-size:13px;text-align:center;padding:16px}
 .toggle{display:flex;gap:6px}
@@ -99,7 +99,7 @@ section{display:flex;flex-direction:column;gap:12px}
 .sources a{color:var(--gold)}
 .list{display:flex;flex-direction:column;gap:10px}
 .srow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px 10px 10px}
-.srow .thumb{width:64px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--surface-2)}
+.srow .thumb{width:64px;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--surface-2)}
 .srow .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .srow h3{font-family:var(--font-ar);font-weight:700;font-size:18px;line-height:1.4}
 .srow p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
@@ -123,7 +123,7 @@ section{display:flex;flex-direction:column;gap:12px}
   <header>
     <div class="mast">
       <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="var(--gold)"><rect x="5" y="16" width="38" height="16" rx="4" transform="rotate(-45 24 24)"/></g><line x1="30" y1="30" x2="55" y2="55" stroke="var(--gold)" stroke-width="7" stroke-linecap="round"/><rect x="4" y="54" width="30" height="7" rx="3.5" fill="var(--gold)" opacity=".55"/></svg>
-      <div><h1 lang="ar">أخبار <b>مزاد</b></h1><p>The desk for @akhbarmazad · one auction story a day at 9:00 pm Riyadh, once you approve it</p></div>
+      <div><h1 lang="ar">أخبار <b>مزاد</b></h1><p>The desk for @akhbarmazad · one auction story a day, a news image with a breaking-news song, at 9:00 pm Riyadh once you approve it</p></div>
     </div>
     <div class="tally" id="tally"></div>
   </header>
@@ -187,10 +187,10 @@ section{display:flex;flex-direction:column;gap:12px}
   const STATUS_LINE = {
     approved: 'Approved. I’m scheduling it now: at its time, or right away if the time has passed.',
     changes: 'I’m redoing this story and will bring it back here.',
-    scheduled: 'Scheduled. It goes live by itself at the time above, with its song.',
+    scheduled: 'Scheduled. It goes live by itself at the time above.',
     published: 'Live on Instagram.',
     failed: 'The post didn’t go through. I’ll sort it out at my next check.',
-    manual: 'This one won’t post by itself yet. Save the Reel (or the card) and copy the caption, post it on @akhbarmazad with the song above, then tap “I posted it”.'
+    manual: 'This one won’t post by itself yet. Tap Save image and Copy caption, post it on @akhbarmazad as a photo, add the song named above in Instagram’s Music, then tap “I posted it”.'
   };
 
   function paneHTML(s){
@@ -213,11 +213,11 @@ section{display:flex;flex-direction:column;gap:12px}
     const id = safeId(s.id), k = st(s), v = view[id] || 'card';
     const media = v === 'reel' && s.video ? `<video controls playsinline preload="metadata" poster="${blob(s.image)}" src="${blob(s.video)}"></video>`
       : (s.image ? `<img src="${blob(s.image)}" alt="">` : `<div class="none">Card on the way</div>`);
-    const song = s.song && (s.song.title || s.song.artist) ? `${esc(s.song.title || '')}${s.song.artist ? ' · ' + esc(s.song.artist) : ''}` : 'Picked when it posts';
+    const song = s.song && (s.song.title || s.song.artist) ? `${esc(s.song.title || '')}${s.song.artist ? ' · ' + esc(s.song.artist) : ''}` : 'A breaking-news theme';
     return `<article class="desk" id="story-${id}">
       <div class="media"><div class="frame">${media}</div>
         <div class="toggle">${s.video ? `<button class="mini" aria-pressed="${v === 'card'}" data-act="view" data-id="${id}" data-view="card">Card</button><button class="mini" aria-pressed="${v === 'reel'}" data-act="view" data-id="${id}" data-view="reel">Reel</button>` : ''}
-          ${s.video ? `<button class="mini" data-act="dl" data-id="${id}">Save Reel</button>` : ''}${s.image ? `<button class="mini" data-act="dlimg" data-id="${id}">Save card</button>` : ''}</div></div>
+          ${s.video ? `<button class="mini" data-act="dl" data-id="${id}">Save Reel</button>` : ''}${s.image ? `<button class="mini" data-act="dlimg" data-id="${id}">Save image</button>` : ''}</div></div>
       <div class="detail">
         <div class="eyerow"><span class="label">Story ${esc(s.id)}${s.place ? ' · ' + esc(s.placeEn || s.place) : ''}</span><span class="chip st-${k}">${LABEL[k] || esc(k)}</span>${Number(s.revision) > 1 ? `<span class="chip">Version ${Number(s.revision)}</span>` : ''}</div>
         <h2 class="headline ar" lang="ar">${esc(s.headline || '')}</h2>
@@ -315,7 +315,7 @@ section{display:flex;flex-direction:column;gap:12px}
     else if (act === 'undo'){ decide(id, {status:'waiting', decidedAt: null, note: ''}, 'Moved back to Needs you'); }
     else if (act === 'posted'){ decide(id, {status:'published', postedBy:'owner', postedAt: now}, 'Marked as posted'); }
     else if (act === 'dl' && s){ saveBlob(blob(s.video), `akhbarmazad ${safeId(s.id)}.mp4`, 'video/mp4'); }
-    else if (act === 'dlimg' && s){ saveBlob(blob(s.image), `akhbarmazad ${safeId(s.id)}.png`, 'image/png'); }
+    else if (act === 'dlimg' && s){ saveBlob(blob(s.image), `akhbarmazad ${safeId(s.id)}.jpg`, 'image/jpeg'); }
   });
 
   async function start(){
