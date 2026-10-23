@@ -42,7 +42,7 @@ Quiz: "Best way to avoid the winner's curse?" (set a maximum before bidding).
 Items: S3, S4. Hook: "Google sold its first shares to the public through an online auction." Teach the Dutch-auction IPO ($85, $1.67bn) vs book-building (a hidden auction among banks' clients). Takeaway: when anyone can bid, the price is set in the open. No investment advice.
 Quiz: "How did Google set its IPO price?" (an auction).
 
-### 09 · The Lebanese 10% rule · status: todo · pace: standard · music: pluck
+### 09 · The Lebanese 10% rule · status: made (23 Oct 2026) · pace: standard · music: pluck
 Items: L5 (+ cheat sheet step 14). Hook: "In Lebanon, you can win an auction and still lose it, to someone with 10% more." Teach زيادة العشر exactly as Art. 978 says (only if the winner doesn't pay within 3 days; a new session where anyone can take over with +10%). Keep day counts as the article states and avoid anything the research flags as "check with a lawyer".
 Quiz: "When does the 10% rule apply?" (when the winner doesn't pay in time).
 
