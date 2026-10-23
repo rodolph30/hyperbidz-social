@@ -1,0 +1,333 @@
+<title>Akhbar Mazad Desk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Readex+Pro:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a news desk. Masthead with today's tally, then "On the desk" (the story that needs a decision: the card beside
+   the headline, price, song and the approve button), then "The wire": every story as a row, newest first.
+   Ink-black and newsprint with one gold accent, the same gold as the cards. */
+:root{
+  --bg:#F4F1EA; --surface:#FFFFFF; --surface-2:#ECE7DC; --line:#DAD3C4;
+  --fg:#17140F; --fg-2:#4A4337; --muted:#766D5E;
+  --gold:#A2740F; --gold-soft:#F6E9C8; --on-gold:#1A1406;
+  --red:#C62D30; --red-soft:#FBE3E3;
+  --ok:#1E7D4F; --ok-bg:#DDF2E6; --warn:#8A6100; --warn-bg:#FFF1CF;
+  --font-ar:"Cairo", "Readex Pro", Tahoma, sans-serif;
+  --font-ui:"Readex Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E0D0B; --surface:#181612; --surface-2:#221F19; --line:#332E25;
+  --fg:#F4EFE4; --fg-2:#D3CABA; --muted:#A59B88;
+  --gold:#F2C14E; --gold-soft:#2C230F; --on-gold:#1A1406;
+  --red:#FF6B6E; --red-soft:#3A1416;
+  --ok:#47CF8A; --ok-bg:#0F2A1C; --warn:#F2C14E; --warn-bg:#2E2408; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0E0D0B; --surface:#181612; --surface-2:#221F19; --line:#332E25;
+  --fg:#F4EFE4; --fg-2:#D3CABA; --muted:#A59B88;
+  --gold:#F2C14E; --gold-soft:#2C230F; --on-gold:#1A1406;
+  --red:#FF6B6E; --red-soft:#3A1416;
+  --ok:#47CF8A; --ok-bg:#0F2A1C; --warn:#F2C14E; --warn-bg:#2E2408; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-ui);font-size:15px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:22px 56px}
+.wrap{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{margin:0;text-wrap:balance}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.label{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ar{font-family:var(--font-ar);direction:rtl;text-align:right;unicode-bidi:plaintext}
+
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 20px;border-bottom:3px double var(--line);padding-bottom:16px}
+.mast{display:flex;align-items:center;gap:14px}
+.mast svg{width:46px;height:46px;flex:none}
+.mast h1{font-family:var(--font-ar);font-weight:900;font-size:40px;line-height:1}
+.mast h1 b{color:var(--gold)}
+.mast p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+.tally{display:flex;flex-wrap:wrap;gap:8px}
+.tally span{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--surface-2);color:var(--fg-2);font-variant-numeric:tabular-nums}
+.tally span b{color:var(--fg)}
+.tally .hot{background:var(--gold-soft);color:var(--gold)}
+.tally .hot b{color:var(--gold)}
+
+section{display:flex;flex-direction:column;gap:12px}
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px}
+.shead h2{font-size:24px;font-weight:700}
+.desk{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.media{display:flex;flex-direction:column;gap:10px}
+.frame{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:12px;overflow:hidden;background:#0B0B0E}
+.frame img,.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.frame .none{position:absolute;inset:0;display:grid;place-items:center;color:#cfc6b6;font-size:13px;text-align:center;padding:16px}
+.toggle{display:flex;gap:6px}
+.detail{display:flex;flex-direction:column;gap:14px;min-width:0}
+.eyerow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chip{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg-2)}
+.chip.st-waiting{background:var(--gold-soft);color:var(--gold)}
+.chip.st-approved,.chip.st-scheduled{background:var(--warn-bg);color:var(--warn)}
+.chip.st-published{background:var(--ok-bg);color:var(--ok)}
+.chip.st-changes,.chip.st-failed{background:var(--red-soft);color:var(--red)}
+.chip.st-manual{background:var(--gold-soft);color:var(--gold)}
+.headline{font-family:var(--font-ar);font-weight:900;font-size:34px;line-height:1.35}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.fact{background:var(--surface-2);border-radius:12px;padding:10px 12px;min-width:0}
+.fact .v{font-weight:700;font-size:16px;margin-top:2px;word-break:break-word}
+.fact .v.price{font-family:var(--font-mono);color:var(--gold);font-variant-numeric:tabular-nums}
+.slot{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:14px;color:var(--fg-2)}
+.slot b{font-family:var(--font-mono);font-size:13px;color:var(--fg)}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:700;font-size:15px;cursor:pointer;min-height:46px}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn-approve{background:var(--gold);color:var(--on-gold)}
+.btn-change{background:var(--surface-2);color:var(--fg)}
+.btn-ghost{background:transparent;color:var(--fg-2);border:1px solid var(--line)}
+.ask{display:flex;flex-direction:column;gap:8px}
+.ask label{font-weight:700;font-size:14px}
+.ask textarea{font:inherit;min-height:90px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:10px 12px;resize:vertical}
+.note{margin:0;padding:10px 12px;border-radius:10px;background:var(--red-soft);color:var(--fg);font-size:14px}
+.status-line{margin:0;font-size:14px;color:var(--fg-2)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;border-bottom:2px solid transparent;padding:8px 10px;margin-bottom:-1px;color:var(--muted);cursor:pointer;font-weight:500;font-size:14px}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--gold)}
+.pane{font-size:14.5px;min-width:0}
+.pane pre{white-space:pre-wrap;word-break:break-word;margin:0;line-height:1.7;font-size:15.5px}
+.pane .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.mini{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:10px;padding:7px 12px;font-weight:500;font-size:13.5px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.mini[aria-pressed="true"]{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+.sources{margin:0;padding-left:18px}
+.sources li{padding:3px 0;word-break:break-word}
+.sources a{color:var(--gold)}
+.list{display:flex;flex-direction:column;gap:10px}
+.srow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px 10px 10px}
+.srow .thumb{width:64px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--surface-2)}
+.srow .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.srow h3{font-family:var(--font-ar);font-weight:700;font-size:18px;line-height:1.4}
+.srow p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+.srow.current{outline:2px solid var(--gold);outline-offset:-1px}
+.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+.empty b{display:block;color:var(--fg);font-size:20px;margin-bottom:4px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:500;font-size:14px;z-index:20;max-width:calc(100% - 32px)}
+@media (max-width:720px){
+  .desk{grid-template-columns:minmax(0,1fr);padding:14px}
+  .media{max-width:340px;width:100%;margin:0 auto}
+  .mast h1{font-size:32px}
+  .headline{font-size:28px}
+  .srow{grid-template-columns:52px minmax(0,1fr)}
+  .srow .thumb{width:52px}
+  .srow .open{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto!important} }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="mast">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="var(--gold)"><rect x="5" y="16" width="38" height="16" rx="4" transform="rotate(-45 24 24)"/></g><line x1="30" y1="30" x2="55" y2="55" stroke="var(--gold)" stroke-width="7" stroke-linecap="round"/><rect x="4" y="54" width="30" height="7" rx="3.5" fill="var(--gold)" opacity=".55"/></svg>
+      <div><h1 lang="ar">أخبار <b>مزاد</b></h1><p>The desk for @akhbarmazad · one auction story a day at 9:00 pm Riyadh, once you approve it</p></div>
+    </div>
+    <div class="tally" id="tally"></div>
+  </header>
+
+  <section id="deskSec" aria-label="On the desk">
+    <div class="shead"><h2 id="deskTitle">On the desk</h2><span class="label" id="deskSub"></span></div>
+    <div id="desk"><div class="empty"><b>Loading the stories…</b>The next story shows here with its card, caption and sources.</div></div>
+  </section>
+
+  <section aria-label="The wire">
+    <div class="shead"><h2>The wire</h2><span class="label" id="wireSub"></span></div>
+    <div class="list" id="list"></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const toastEl = $('toast');
+  let db = null, downloads = null, mcp = null, readonly = false;
+  const POSTING_CHECK = 'trig_01R4YKPXeoJEUNpSzFkHWPvm';   // the "Akhbar Mazad posting check" scheduled task, fired on every approval
+  let stories = [], loaded = false;
+  let tab = {}, view = {}, openAsk = new Set(), drafts = {}, busy = new Set(), focusId = null;
+
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safeId = s => String(s ?? '').replace(/[^A-Za-z0-9_\-]/g, '');
+  const blob = id => id ? '/_blob/' + safeId(id) : '';
+  const st = s => s.status || 'waiting';
+  const LABEL = {waiting:'Needs you', approved:'Approved', changes:'Being redone', scheduled:'Scheduled', published:'Live', failed:'Needs attention', manual:'Post it yourself'};
+  const riyadh = (iso, o) => { try { return new Intl.DateTimeFormat('en-GB', Object.assign({timeZone:'Asia/Riyadh'}, o)).format(new Date(iso)); } catch { return ''; } };
+  const dayKey = d => riyadh(d, {year:'numeric', month:'2-digit', day:'2-digit'});
+  function when(iso){
+    if (!iso) return 'Next free slot (9 pm Riyadh)';
+    const today = dayKey(new Date()), tmr = dayKey(new Date(Date.now() + 864e5)), k = dayKey(iso);
+    const time = riyadh(iso, {hour:'numeric', minute:'2-digit', hour12:true}) + ' Riyadh';
+    if (k === today) return 'Today, ' + time;
+    if (k === tmr) return 'Tomorrow, ' + time;
+    return riyadh(iso, {weekday:'short', day:'numeric', month:'short'}) + ', ' + time;
+  }
+  const late = s => !s || !s.slot || (new Date(s.slot).getTime() - Date.now()) < 10 * 60 * 1000;
+  function toast(msg){ toastEl.textContent = msg; toastEl.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => toastEl.hidden = true, 2600); }
+
+  function tally(){
+    const need = stories.filter(s => ['waiting','manual'].includes(st(s))).length, up = stories.filter(s => ['approved','scheduled'].includes(st(s))).length, live = stories.filter(s => st(s) === 'published').length;
+    $('tally').innerHTML = `<span class="${need ? 'hot' : ''}"><b>${need}</b> need you</span><span><b>${up}</b> coming up</span><span><b>${live}</b> live</span>`;
+  }
+
+  function actionsHTML(s){
+    if (readonly) return '';
+    const id = safeId(s.id), k = st(s), dis = busy.has(id) ? ' disabled' : '';
+    if (k === 'waiting'){
+      if (openAsk.has(id)) return `<div class="ask"><label for="note-${id}">What should change?</label><textarea id="note-${id}" data-note="${id}" placeholder="e.g. shorter headline, use the USD price, different song">${esc(drafts[id] || '')}</textarea>
+        <div class="actions"><button class="btn btn-approve" data-act="send" data-id="${id}"${dis}>Send change request</button><button class="btn btn-ghost" data-act="cancel" data-id="${id}">Cancel</button></div></div>`;
+      return `<div class="actions"><button class="btn btn-approve" data-act="approve" data-id="${id}"${dis}>${late(s) ? 'Approve and post now' : 'Approve for 9 pm'}</button><button class="btn btn-change" data-act="ask" data-id="${id}"${dis}>Request change</button></div>`;
+    }
+    if (k === 'approved' || k === 'changes') return `<div class="actions"><button class="btn btn-ghost" data-act="undo" data-id="${id}"${dis}>Undo, I'm not sure yet</button></div>`;
+    if (k === 'manual') return `<div class="actions"><button class="btn btn-approve" data-act="posted" data-id="${id}"${dis}>I posted it</button></div>`;
+    return '';
+  }
+  const STATUS_LINE = {
+    approved: 'Approved. I’m scheduling it now: at its time, or right away if the time has passed.',
+    changes: 'I’m redoing this story and will bring it back here.',
+    scheduled: 'Scheduled. It goes live by itself at the time above, with its song.',
+    published: 'Live on Instagram.',
+    failed: 'The post didn’t go through. I’ll sort it out at my next check.',
+    manual: 'This one won’t post by itself yet. Save the Reel (or the card) and copy the caption, post it on @akhbarmazad with the song above, then tap “I posted it”.'
+  };
+
+  function paneHTML(s){
+    const id = safeId(s.id), t = tab[id] || 'caption';
+    let body = '';
+    if (t === 'caption'){
+      body = `<pre class="ar" lang="ar" id="cap-${id}">${esc(s.caption || 'Caption on the way.')}</pre>
+        <div class="row">${s.caption ? `<button class="mini" data-act="copy" data-id="${id}">Copy caption</button>` : ''}</div>`;
+    } else if (t === 'sources'){
+      const src = Array.isArray(s.sources) ? s.sources : [];
+      body = src.length ? `<ul class="sources">${src.map(x => `<li>${esc(x.label || '')}${x.url ? ` · <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url.replace(/^https?:\/\//, '').slice(0, 70))}</a>` : ''}</li>`).join('')}</ul>` : '<p class="status-line">Sources on the way.</p>';
+    } else {
+      body = `<p class="status-line">${esc(s.check || 'Not checked yet.')}</p>${s.english ? `<p class="status-line" style="margin-top:8px"><b>In English:</b> ${esc(s.english)}</p>` : ''}`;
+    }
+    const tabs = [['caption','Caption'],['sources','Sources'],['check','Fact check']];
+    return `<div class="tabs" role="tablist">${tabs.map(([k, n]) => `<button class="tab" role="tab" aria-selected="${k === t}" data-act="tab" data-id="${id}" data-tab="${k}">${n}</button>`).join('')}</div><div class="pane" role="tabpanel">${body}</div>`;
+  }
+
+  function deskHTML(s){
+    const id = safeId(s.id), k = st(s), v = view[id] || 'card';
+    const media = v === 'reel' && s.video ? `<video controls playsinline preload="metadata" poster="${blob(s.image)}" src="${blob(s.video)}"></video>`
+      : (s.image ? `<img src="${blob(s.image)}" alt="">` : `<div class="none">Card on the way</div>`);
+    const song = s.song && (s.song.title || s.song.artist) ? `${esc(s.song.title || '')}${s.song.artist ? ' · ' + esc(s.song.artist) : ''}` : 'Picked when it posts';
+    return `<article class="desk" id="story-${id}">
+      <div class="media"><div class="frame">${media}</div>
+        <div class="toggle">${s.video ? `<button class="mini" aria-pressed="${v === 'card'}" data-act="view" data-id="${id}" data-view="card">Card</button><button class="mini" aria-pressed="${v === 'reel'}" data-act="view" data-id="${id}" data-view="reel">Reel</button>` : ''}
+          ${s.video ? `<button class="mini" data-act="dl" data-id="${id}">Save Reel</button>` : ''}${s.image ? `<button class="mini" data-act="dlimg" data-id="${id}">Save card</button>` : ''}</div></div>
+      <div class="detail">
+        <div class="eyerow"><span class="label">Story ${esc(s.id)}${s.place ? ' · ' + esc(s.placeEn || s.place) : ''}</span><span class="chip st-${k}">${LABEL[k] || esc(k)}</span>${Number(s.revision) > 1 ? `<span class="chip">Version ${Number(s.revision)}</span>` : ''}</div>
+        <h2 class="headline ar" lang="ar">${esc(s.headline || '')}</h2>
+        <div class="facts">
+          <div class="fact"><div class="label">Price</div><div class="v price">${esc(s.priceEn || '')}</div></div>
+          <div class="fact"><div class="label">Item</div><div class="v">${esc(s.itemEn || '')}</div></div>
+          <div class="fact"><div class="label">Song</div><div class="v">${song}</div></div>
+        </div>
+        <div class="slot"><span>Posts</span><b>${esc(when(s.slot))}</b>${s.confidence ? `<span>Facts: ${esc(s.confidence)}</span>` : ''}</div>
+        ${s.note && k === 'changes' ? `<p class="note"><b>Your note:</b> ${esc(s.note)}</p>` : ''}
+        ${STATUS_LINE[k] ? `<p class="status-line">${STATUS_LINE[k]}</p>` : ''}
+        ${s.igUrl ? `<a class="mini" style="align-self:flex-start" href="${esc(s.igUrl)}" target="_blank" rel="noopener">View on Instagram ↗</a>` : ''}
+        ${actionsHTML(s)}
+        ${paneHTML(s)}
+      </div></article>`;
+  }
+
+  function rowHTML(s, current){
+    const id = safeId(s.id), k = st(s);
+    return `<div class="srow${current ? ' current' : ''}">
+      <div class="thumb">${s.image ? `<img src="${blob(s.image)}" alt="" loading="lazy">` : ''}</div>
+      <div style="min-width:0"><div class="eyerow"><span class="label">${esc(s.id)} · ${esc(s.priceEn || '')}</span><span class="chip st-${k}">${LABEL[k] || esc(k)}</span></div>
+        <h3 class="ar" lang="ar">${esc(s.headline || '')}</h3><p>${esc(when(s.slot))}${s.metrics && s.metrics.reach ? ` · ${Number(s.metrics.reach).toLocaleString('en')} reached` : ''}</p></div>
+      ${current ? '' : `<button class="mini open" data-act="focus" data-id="${id}">Open</button>`}</div>`;
+  }
+
+  function pick(){
+    const by = id => stories.find(s => safeId(s.id) === id);
+    if (focusId && by(focusId)) return by(focusId);
+    const order = s => s.slot ? new Date(s.slot).getTime() : Infinity;
+    for (const k of ['manual', 'waiting', 'changes']){ const l = stories.filter(s => st(s) === k).sort((a, b) => order(a) - order(b)); if (l.length) return l[0]; }
+    return stories.slice().sort((a, b) => String(b.id).localeCompare(String(a.id)))[0];
+  }
+
+  function render(){
+    if (!loaded) return;
+    tally();
+    const f = pick();
+    if (f){
+      const k = st(f), isToday = f.slot && dayKey(f.slot) === dayKey(new Date());
+      $('deskTitle').textContent = k === 'waiting' ? (isToday || !f.slot ? 'Tonight at 9' : 'Next story') : k === 'changes' ? 'Being redone' : k === 'manual' ? 'Post it yourself' : 'Latest story';
+      $('deskSub').textContent = k === 'waiting' ? 'Approve before 8:45 pm Riyadh on the day' : '';
+      const focused = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.note : null;
+      $('desk').innerHTML = deskHTML(f);
+      if (focused){ const t = document.querySelector(`[data-note="${focused}"]`); if (t){ t.focus(); t.setSelectionRange(t.value.length, t.value.length); } }
+    } else {
+      $('desk').innerHTML = '<div class="empty"><b>No story yet.</b>Each morning a new auction story lands here as a finished card with its caption and sources. Approve it and it posts at 9 pm Riyadh.</div>';
+    }
+    const sorted = stories.slice().sort((a, b) => String(b.id).localeCompare(String(a.id)));
+    $('wireSub').textContent = `${stories.length} ${stories.length === 1 ? 'story' : 'stories'}`;
+    $('list').innerHTML = sorted.map(s => rowHTML(s, f && s.id === f.id)).join('') || '<div class="empty"><b>The wire is empty.</b>Stories appear here as they’re made.</div>';
+  }
+
+  async function decide(id, patch, msg){
+    if (!db) return false;
+    busy.add(id); render();
+    let ok = false;
+    try { await db.doc('stories/' + id).update(patch); ok = true; toast(msg); openAsk.delete(id); delete drafts[id]; }
+    catch (e){ if (e && e.code === 'invalid_argument'){ readonly = true; toast('Only the board owner can approve stories.'); } else toast('That didn’t save. Try again in a moment.'); }
+    finally { busy.delete(id); render(); }
+    return ok;
+  }
+
+  async function kick(s, isLate){
+    if (!s || !mcp || !POSTING_CHECK) return;
+    const text = `The owner just approved story ${s.id} on the Akhbar Mazad desk. ` + (isLate ? 'Its time has passed: post it now (about 5 minutes from now).' : `Schedule it for its slot (${s.slot}).`) + ' Check for an existing post first so it never goes out twice.';
+    try { await mcp.callTool('Claude Code Remote', 'fire_trigger', {trigger_id: POSTING_CHECK, text}); toast(isLate ? 'Posting it now.' : 'Scheduling it now.'); }
+    catch (e){ toast('Approved. The next posting check picks it up.'); }
+  }
+
+  async function saveBlob(url, filename, type){
+    if (!downloads){ toast('Saving files isn’t available in this view. Open the desk in Claude on a computer or phone app.'); return; }
+    try { toast('Preparing ' + filename + '…'); const r = await fetch(url); if (!r.ok) throw new Error('http');
+      await downloads.save({filename, data: new Blob([await r.arrayBuffer()], {type})}); toast('Saved ' + filename); }
+    catch (err){ const c = err && err.code; toast(c === 'declined' ? 'Save cancelled.' : c === 'rate_limited' ? 'A save prompt is already open.' : 'The save didn’t go through here. Try the desk in Claude on a computer.'); }
+  }
+  async function copyText(text, el){
+    try { await navigator.clipboard.writeText(text); toast('Caption copied'); }
+    catch { if (el){ const r = document.createRange(); r.selectNodeContents(el); const g = getSelection(); g.removeAllRanges(); g.addRange(r); } toast('Selected. Press copy to grab it.'); }
+  }
+
+  document.addEventListener('input', e => { const id = e.target.dataset && e.target.dataset.note; if (id) drafts[id] = e.target.value; });
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-act]'); if (!b) return;
+    const id = b.dataset.id, act = b.dataset.act, now = new Date().toISOString();
+    const s = stories.find(x => safeId(x.id) === id);
+    if (act === 'tab'){ tab[id] = b.dataset.tab; render(); }
+    else if (act === 'view'){ view[id] = b.dataset.view; render(); }
+    else if (act === 'copy' && s){ copyText(s.caption, $('cap-' + id)); }
+    else if (act === 'focus'){ focusId = id; render(); $('deskSec').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); }
+    else if (act === 'ask'){ openAsk.add(id); render(); const t = $('note-' + id); if (t) t.focus(); }
+    else if (act === 'cancel'){ openAsk.delete(id); render(); }
+    else if (act === 'approve'){ const isLate = late(s); decide(id, {status:'approved', decidedAt: now, note: ''}, isLate ? 'Approved. It posts right away.' : 'Approved. It posts ' + when(s && s.slot) + '.').then(ok => { if (ok) kick(s, isLate); }); }
+    else if (act === 'send'){ const note = (drafts[id] || '').trim(); if (!note){ toast('Add a short note so I know what to change.'); const t = $('note-' + id); if (t) t.focus(); return; } decide(id, {status:'changes', decidedAt: now, note}, 'Change requested'); }
+    else if (act === 'undo'){ decide(id, {status:'waiting', decidedAt: null, note: ''}, 'Moved back to Needs you'); }
+    else if (act === 'posted'){ decide(id, {status:'published', postedBy:'owner', postedAt: now}, 'Marked as posted'); }
+    else if (act === 'dl' && s){ saveBlob(blob(s.video), `akhbarmazad ${safeId(s.id)}.mp4`, 'video/mp4'); }
+    else if (act === 'dlimg' && s){ saveBlob(blob(s.image), `akhbarmazad ${safeId(s.id)}.png`, 'image/png'); }
+  });
+
+  async function start(){
+    const c = window.claude;
+    if (c && c.use) c.use('downloads').then(d => { downloads = d; }).catch(() => {});
+    if (c && c.use) c.use('mcp').then(m => { mcp = m; }).catch(() => {});
+    db = c && c.use ? await c.use('db') : null;
+    if (!db){ $('desk').innerHTML = '<div class="empty"><b>The stories can’t load here.</b>Open the desk from your Claude account to see and approve stories.</div>'; return; }
+    try { const u = await c.use('user'); if (u && typeof u.can === 'function'){ const w = await u.can('data.write'); if (w === false) readonly = true; } } catch {}
+    db.collection('stories').onSnapshot(snap => { stories = snap.docs.map(d => Object.assign({id: d.id}, d.data())); loaded = true; render(); },
+      () => { $('desk').innerHTML = '<div class="empty"><b>The desk lost its connection.</b>Reload the page to see the latest story.</div>'; });
+  }
+  start();
+})();
+</script>
