@@ -48,7 +48,7 @@ Quiz: "How did Google set its IPO price?" (an auction).
 Items: L5 (+ cheat sheet step 14). Hook: "In Lebanon, you can win an auction and still lose it, to someone with 10% more." Teach زيادة العشر exactly as Art. 978 says (only if the winner doesn't pay within 3 days; a new session where anyone can take over with +10%). Keep day counts as the article states and avoid anything the research flags as "check with a lawyer".
 Quiz: "When does the 10% rule apply?" (when the winner doesn't pay in time).
 
-### 10 · The first number wins · status: todo · pace: quick · music: lofi · who: Sami
+### 10 · The first number wins · status: made (24 Oct 2026) · pace: quick · music: lofi · who: Sami
 Items: P1. **Problem:** you post your car; the first message offers half (show it as a number, e.g. "$4,500?" on an illustrative $9,000 car; never "last price"). **Reframe:** in negotiation experiments, whoever names the first number gets the better deal, and the first offer strongly predicts the final price (Galinsky & Mussweiler 2001; over half the variance); even real-estate agents were pulled by the list price and denied it (Northcraft & Neale 1987). A lowball isn't rude, it's an anchor. **Fix:** in an auction the buyers name the numbers, and each one is higher than the last. **Takeaway:** "In a chat, the first number pulls the price down. In an auction, every number pushes it up." Hook idea: "That lowball offer? Science says it just set your price."
 Quiz: "In a negotiation, what strongly predicts the final price?" (the first offer).
 
