@@ -1,4 +1,6 @@
-"""Auction short 10 (v3, quick, who: Sami): "The first number wins". Problem: Sami posts his car and the first message is a
+"""Auction short 10 v2 (25 Oct 2026, after the owner's "I didn't get a thing" on v1): one story with Sami's car from start
+to end, one sourced fact. v1 description follows.
+Auction short 10 (v3, quick, who: Sami): "The first number wins". Problem: Sami posts his car and the first message is a
 lowball. Reframe: first offers are anchors: whoever names the first number gets the better deal, and the first offer strongly
 predicts the final price (Galinsky & Mussweiler, 2001); even real-estate agents were pulled by the list price and denied it
 (Northcraft & Neale, 1987). Fix: in an auction the buyers name the numbers and each one is higher.
@@ -16,9 +18,9 @@ S = lambda k: TL.t(k)[0]; E = lambda k: TL.t(k)[1]; WT = TL.wt
 TOTAL = TL.end + 0.5
 STYLE, SEED = "lofi", 10
 XF = 0.16
-SC = [("hook", False, 0.0, S("s1") - 0.1), ("exp", True, S("s1") - 0.1, S("s2") - 0.1), ("pred", False, S("s2") - 0.1, S("s3") - 0.1),
-      ("agents", True, S("s3") - 0.1, S("r1") - 0.1), ("anchor", False, S("r1") - 0.1, S("f1") - 0.1), ("fix", True, S("f1") - 0.1, S("tk") - 0.1),
-      ("take", False, S("tk") - 0.1, S("e2") - 0.15), ("outro", True, S("e2") - 0.15, TOTAL)]
+SC = [("hook", False, 0.0, S("p1") - 0.1), ("haggle", True, S("p1") - 0.1, S("r1") - 0.1), ("anchor", False, S("r1") - 0.1, S("s1") - 0.1),
+      ("exp", True, S("s1") - 0.1, S("f1") - 0.1), ("fix", False, S("f1") - 0.1, S("tk") - 0.1),
+      ("take", True, S("tk") - 0.1, S("e2") - 0.15), ("outro", False, S("e2") - 0.15, TOTAL)]
 GREY_TXT = (110, 116, 130)
 
 # ---------- drawings ----------
@@ -60,7 +62,7 @@ def bubble_msg(text, size=84, fill=(236, 237, 242), col=L_INK):
 
 # ---------- scenes ----------
 def sc_hook(t):
-    im = bg(False); ts = WT("h1", "set"); tl = WT("h1", "lowball")
+    im = bg(False); tl = WT("h1", "4,500")
     pw, ph = 620, 1100; p = phone(pw, ph, False)
     lc = card(540, 470, False, 26, fill=(246, 247, 251)); lc.alpha_composite(car(420), (60, 40))
     lc.alpha_composite(head("sami", 64), (30, 270)); lc.alpha_composite(T("Sami · Used car", 32, L_INK, 600), (110, 284))
@@ -70,11 +72,30 @@ def sc_hook(t):
     b = bubble_msg("$4,500?", 96, (255, 228, 233), RED_UI)
     bb = b.resize((int(b.width * pk), int(b.height * pk)), Image.LANCZOS); p.alpha_composite(bb, (50, 670))
     put(im, lift(p), 540, 1150, 1, 0.97 + 0.03 * spring(t / 0.5))
-    if t >= ts:
-        x0 = 540 - pw / 2 + 40 + 30; y = 1150 - ph / 2 + 110 + 360 + 46
-        strike(im, x0 - 8, y, x0 + pr.width + 8, eout((t - ts) / 0.3))
-    if t >= ts + 0.1: put(im, pill("the new starting point", 40, VIOLET), 540, 1150 + 400, ease((t - ts - 0.1) / 0.2), 0.85 + 0.15 * spring((t - ts - 0.1) / 0.4))
     footnote(im, "Car and prices are illustrative", False, 1850)
+    return im
+
+def sc_haggle(t):
+    im = bg(True); t0 = S("p1"); t8 = WT("p1", "8,000"); t6 = WT("p1", "6,000"); t7 = WT("p1", "7,000")
+    w, h = 900, 1060; win = window(w, h, "Chat · Used car", True)
+    msgs = ((t0 - 0.1, False, "$4,500?"), (t8 - 0.05, True, "$8,000"), (t6 - 0.05, False, "$6,000"))
+    for i, (ti, mine, txt) in enumerate(msgs):
+        k = spring((t - ti) / 0.35)
+        if k <= 0: continue
+        b = bubble_msg(txt, 80, (47, 123, 255) if mine else (60, 66, 86), D_INK)
+        if mine:
+            b = b.transpose(Image.FLIP_LEFT_RIGHT); ImageDraw.Draw(b).rounded_rectangle((20, 12, b.width - 20, b.height - 30), radius=20, fill=(47, 123, 255, 255))
+            tt = T(txt, 80, D_INK, 700); b.alpha_composite(tt, (35, 23))
+        av = head("sami" if mine else ("B", VIOLET), 84)
+        y = int(130 + i * 230 + (1 - k) * 30)
+        if mine: win.alpha_composite(b, (w - 50 - 100 - b.width, y)); win.alpha_composite(av, (w - 50 - av.width, y + 20))
+        else: win.alpha_composite(av, (50, y + 20)); win.alpha_composite(b, (150, y))
+    if t >= t7 - 0.05:
+        kk = spring((t - t7 + 0.05) / 0.4); dc = card(700, 220, True, 28, fill=(30, 40, 60))
+        dc.alpha_composite(T("DEAL", 30, D_MUTE, 700, True), (50, 40)); v = T("$7,000", 110, D_INK, 700); dc.alpha_composite(v, (650 - v.width, 50))
+        dc.putalpha(dc.getchannel("A").point(lambda p: int(p * min(1, kk * 1.5)))); win.alpha_composite(dc, (100, int(800 + (1 - kk) * 40)))
+    k = ease((t - t0 + 0.12) / 0.25); put(im, lift(win, True), 540, 1130, k, 0.96 + 0.04 * spring((t - t0 + 0.12) / 0.5))
+    footnote(im, "Car and prices are illustrative", True, 1850)
     return im
 
 def sc_exp(t):
@@ -94,57 +115,7 @@ def sc_exp(t):
         win.alpha_composite(row, (50, int(130 + i * 290 + (1 - k) * 30)))
     k = ease((t - t0 + 0.12) / 0.25); put(im, lift(win, True), 540, 1120, k, 0.96 + 0.04 * spring((t - t0 + 0.12) / 0.5))
     stamp_at(im, big_stamp("BETTER DEAL", GREEN_UI, 84, -8), 540, 1640, t, tb)
-    footnote(im, "Galinsky & Mussweiler, 2001 · 3 experiments · names illustrative", True)
-    return im
-
-DOTS = [(0.08, 0.12), (0.15, 0.2), (0.22, 0.18), (0.3, 0.33), (0.37, 0.3), (0.45, 0.46), (0.52, 0.5), (0.6, 0.55), (0.67, 0.7), (0.75, 0.68), (0.83, 0.82), (0.9, 0.86)]
-def sc_pred(t):
-    im = bg(False); t0 = S("s2"); tsg = WT("s2", "strong"); tfin = WT("s2", "final")
-    w, h = 880, 860; c = card(w, h, False, 30); d = ImageDraw.Draw(c)
-    c.alpha_composite(T("FINAL PRICE", 26, GREY_TXT, 700, True), (60, 44))
-    ox, oy, ex, ey = 90, 760, 820, 110
-    d.line([(ox, oy), (ex, oy)], fill=(200, 204, 214, 255), width=4); d.line([(ox, oy), (ox, ey)], fill=(200, 204, 214, 255), width=4)
-    lab = T("FIRST OFFER →", 26, GREY_TXT, 700, True); c.alpha_composite(lab, (ex - lab.width, oy + 30))
-    for i, (x, y) in enumerate(DOTS):
-        k = spring((t - t0 - 0.05 - i * 0.12) / 0.3)
-        if k <= 0: continue
-        cx, cy, r = ox + x * (ex - ox), oy - y * (oy - ey), 18 * min(1, k)
-        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(LILAC if i % 3 else BLUE) + (255,))
-    kl = eout((t - tsg) / 0.6)
-    if kl > 0:
-        x1 = ox + 0.04 * (ex - ox) + kl * 0.9 * (ex - ox); y1 = oy - 0.06 * (oy - ey) - kl * 0.88 * (oy - ey)
-        d.line([(ox + 0.04 * (ex - ox), oy - 0.06 * (oy - ey)), (x1, y1)], fill=VIOLET + (255,), width=10)
-    k = ease((t - t0 + 0.12) / 0.25); put(im, lift(c), 540, 1110, k, 0.96 + 0.04 * spring((t - t0 + 0.12) / 0.5))
-    if t >= tfin: put(im, pill("first offer → final price", 40, VIOLET), 540, 1640, ease((t - tfin) / 0.2), 0.85 + 0.15 * spring((t - tfin) / 0.4))
-    footnote(im, "Dots illustrative · Galinsky & Mussweiler, 2001", False, 1850)
-    return im
-
-def house(s=260, col=BLUE):
-    im = Image.new("RGBA", (s, s), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-    d.polygon([(s * 0.5, s * 0.06), (s * 0.95, s * 0.45), (s * 0.05, s * 0.45)], fill=col + (255,))
-    d.rectangle((s * 0.15, s * 0.43, s * 0.85, s * 0.95), fill=col + (255,))
-    d.rectangle((s * 0.42, s * 0.62, s * 0.58, s * 0.95), fill=(200, 220, 255, 255))
-    for x in (0.22, 0.64): d.rectangle((s * x, s * 0.55, s * (x + 0.14), s * 0.69), fill=(200, 220, 255, 255))
-    return im
-
-def sc_agents(t):
-    im = bg(True); t0 = S("s3"); tlp = WT("s3", "list"); tp = WT("s3", "pulled"); td = WT("s3", "denied")
-    k0 = spring((t - t0 + 0.1) / 0.45); put(im, house(250), 540, 720 + (1 - k0) * 40, min(1, k0 * 1.5))
-    w = 900; c = card(w, 430, True, 30); d = ImageDraw.Draw(c)
-    bx0, bx1, by = 80, 820, 250
-    d.rounded_rectangle((bx0, by - 8, bx1, by + 8), radius=8, fill=(60, 66, 86, 255))
-    # the list price marker moves right on "pulled"; the agents' estimate follows it on "list"
-    lp = 0.3 + 0.45 * eout((t - tp + 0.1) / 0.5); est = 0.3 + 0.38 * eout((t - tlp) / 0.7)
-    lx = bx0 + lp * (bx1 - bx0); exn = bx0 + est * (bx1 - bx0)
-    d.polygon([(lx, by - 20), (lx - 22, by - 56), (lx + 22, by - 56)], fill=VIOLET + (255,))
-    ll = T("LIST PRICE", 26, LILAC, 700, True); c.alpha_composite(ll, (int(clamp(lx - ll.width / 2, 20, w - ll.width - 20)), by - 110))
-    d.ellipse((exn - 22, by - 22, exn + 22, by + 22), fill=BLUE + (255,))
-    el = T("AGENTS' ESTIMATE", 26, (150, 190, 255), 700, True); c.alpha_composite(el, (int(clamp(exn - el.width / 2, 20, w - el.width - 20)), by + 50))
-    put(im, lift(c, True), 540, 1200 + (1 - k0) * 60, min(1, k0 * 1.5))
-    if t >= td - 0.05:
-        put(im, bubble_msg("“It didn’t affect me.”", 46, (40, 46, 60), D_INK), 540, 1560, ease((t - td + 0.05) / 0.2), 0.85 + 0.15 * spring((t - td + 0.05) / 0.4))
-    stamp_at(im, big_stamp("IT DID", RED_UI, 90, -8), 540, 1700, t, td + 0.45)
-    footnote(im, "Northcraft & Neale, 1987 · positions illustrative", True)
+    footnote(im, "Galinsky & Mussweiler, 2001 · 3 experiments · avatars illustrative", True)
     return im
 
 def sc_anchor(t):
@@ -159,13 +130,15 @@ def sc_anchor(t):
         kk = spring((t - ta + 0.1) / 0.45); ay = 1230 + (1 - kk) * -160
         ImageDraw.Draw(im).line([(540, 1000 - 340 + 70), (540, ay - 170)], fill=(150, 155, 166, 255), width=8)
         put(im, anchor_icon(380), 540, ay, min(1, kk * 1.5))
-        put(im, pill("ANCHOR", 44, VIOLET), 540, 1560, ease((t - ta - 0.1) / 0.2), 0.85 + 0.15 * spring((t - ta - 0.1) / 0.4))
-    footnote(im, "A first offer anchors the whole negotiation", False, 1850)
+        tdn = WT("r1", "down.")
+        if t < tdn - 0.05: put(im, pill("ANCHOR", 44, VIOLET), 540, 1560, ease((t - ta - 0.1) / 0.2), 0.85 + 0.15 * spring((t - ta - 0.1) / 0.4))
+        else: put(im, pill("$9,000  →  $7,000", 52, RED_UI), 540, 1560, ease((t - tdn + 0.05) / 0.2), 0.85 + 0.15 * spring((t - tdn + 0.05) / 0.4))
+    footnote(im, "A first offer anchors the whole negotiation · prices illustrative", False, 1850)
     return im
 
 BIDS = ((("B", VIOLET), "Bidder 3", 4500), ("nour", "Nour", 5600), (("C", GREEN_APP), "Bidder 4", 6900), (("B", VIOLET), "Bidder 3", 8100), ("nour", "Nour", 9400))
 def sc_fix(t):
-    im = bg(True); t0 = S("f1"); tby = WT("f1", "buyers"); th = WT("f1", "higher")
+    im = bg(False); t0 = S("f1"); tby = WT("f1", "buyers"); th = WT("f1", "higher")
     times = [tby - 0.1 + i * (th - tby) / 4.2 for i in range(5)]
     n = sum(1 for x in times if t >= x)
     w, h = 900, 1020; c = window(w, h, "Live auction · the same car", True)
@@ -183,27 +156,27 @@ def sc_fix(t):
         c.alpha_composite(row, (50, int(500 + j * 150 + (1 - kk) * -30)))
     k = ease((t - t0 + 0.12) / 0.25); put(im, lift(c, True), 540, 1140, k, 0.96 + 0.04 * spring((t - t0 + 0.12) / 0.5))
     if t >= th: put(im, pill("↑  every bid is higher", 42, GREEN_UI), 540, 1730, ease((t - th) / 0.2), 0.85 + 0.15 * spring((t - th) / 0.4))
-    footnote(im, "Example numbers · names illustrative", True, 1850)
+    footnote(im, "Example numbers · names illustrative", False, 1850)
     return im
 
 def sc_take(t):
-    im = bg(False); t0 = S("tk"); tsw = WT("tk", "auction") - 0.2; tdn = WT("tk", "down."); tup = WT("tk", "up.")
+    im = bg(True); t0 = S("tk"); tsw = WT("tk", "auction") - 0.2; tdn = WT("tk", "down."); tup = WT("tk", "up.")
     chat = t < tsw
     ts_ = t0 if chat else tsw; k = spring((t - ts_ + 0.1) / 0.45)
-    c = card(860, 900, False, 30)
+    c = card(860, 900, True, 30)
     lab = T("IN A CHAT" if chat else "IN AN AUCTION", 30, GREY_TXT, 700, True); c.alpha_composite(lab, (int(430 - lab.width / 2), 50))
-    a, b = ("$9,000", "$4,500") if chat else ("$4,500", "$9,400")
-    tr = T(f"{a}  →  {b}", 76, L_INK, 700); c.alpha_composite(tr, (int(430 - tr.width / 2), 120))
-    tk_ = WT("tk", "pulls") if chat else WT("tk", "pushes"); ka = spring((t - tk_) / 0.45)
+    a, b = ("$9,000", "$7,000") if chat else ("$4,500", "$9,400")
+    tr = T(f"{a}  →  {b}", 76, D_INK, 700); c.alpha_composite(tr, (int(430 - tr.width / 2), 120))
+    tk_ = WT("tk", "down.") - 0.35 if chat else WT("tk", "up.") - 0.35; ka = spring((t - tk_) / 0.45)
     if ka > 0:
         ar = arrow(420, not chat, RED_UI if chat else GREEN_UI); ar = ar.resize((max(1, int(420 * min(1, ka))),) * 2, Image.LANCZOS)
         c.alpha_composite(ar, (int(430 - ar.width / 2), int(470 - ar.height / 2 + 50 + (1 - ka) * (-60 if chat else 60))))
     put(im, lift(c), 540, 1130 + (1 - k) * 60, min(1, k * 1.5))
-    footnote(im, "Example numbers", False, 1850)
+    footnote(im, "Example numbers", True, 1850)
     return im
 
 def sc_outro(t):
-    im = bg(True); k = t - S("e2") + 0.15
+    im = bg(False); k = t - S("e2") + 0.15
     for i, (x, n, col) in enumerate(((330, 14, BLUE), (540, 27, VIOLET), (750, 8, GREEN_APP))):
         kk = spring((k - i * 0.12) / 0.45)
         if kk > 0: put(im, paddle(n, col, 120), x, 760 + (1 - kk) * 80, min(1, kk * 1.5))
@@ -215,7 +188,7 @@ def sc_outro(t):
     if t > TOTAL - 0.45: im = Image.blend(im.convert("RGB"), Image.new("RGB", (W, H), STAGE), clamp((t - (TOTAL - 0.45)) / 0.45)).convert("RGBA")
     return im
 
-FN = {"hook": sc_hook, "exp": sc_exp, "pred": sc_pred, "agents": sc_agents, "anchor": sc_anchor, "fix": sc_fix, "take": sc_take, "outro": sc_outro}
+FN = {"hook": sc_hook, "haggle": sc_haggle, "exp": sc_exp, "anchor": sc_anchor, "fix": sc_fix, "take": sc_take, "outro": sc_outro}
 
 def scene_at(i, t):
     name, dark, t0, t1 = SC[i]; im = FN[name](t)
@@ -233,14 +206,11 @@ def frame(t):
 def audio(path):
     s = Snd(TOTAL)
     for _, _, t0, _ in SC[1:]: s.whoosh(t0 - 0.18, 0.36, 0.06)
-    s.pop(WT("h1", "lowball"), 0.04, 650); ts = WT("h1", "set"); s.tick(ts, 0.02, 1800); s.pop(ts + 0.1, 0.04, 560)
+    s.pop(WT("h1", "4,500"), 0.04, 650)
+    s.pop(S("p1") - 0.1, 0.035, 540); s.pop(WT("p1", "8,000") - 0.05, 0.035, 600); s.pop(WT("p1", "6,000") - 0.05, 0.035, 660); s.ding(WT("p1", "7,000"), 1318, 0.03)
     for i in range(2): s.pop(S("s1") + 0.05 + i * 0.2, 0.03, 520 + i * 60)
     s.ding(WT("s1", "first"), 1318, 0.03); s.thud(WT("s1", "better"), 0.07)
-    for i in range(len(DOTS)): s.tick(S("s2") + 0.05 + i * 0.12, 0.01, 2000 + i * 40)
-    s.ding(WT("s2", "strong"), 1568, 0.03); s.pop(WT("s2", "final"), 0.04, 650)
-    s.pop(WT("s3", "list"), 0.04, 600); s.tick(WT("s3", "pulled"), 0.02, 1800)
-    s.pop(WT("s3", "denied"), 0.04, 700); s.thud(WT("s3", "denied") + 0.45, 0.08)
-    s.pop(WT("r1", "rude"), 0.04, 620); s.thud(WT("r1", "anchor"), 0.09)
+    s.pop(WT("r1", "rude"), 0.04, 620); s.thud(WT("r1", "anchor"), 0.09); s.pop(WT("r1", "down."), 0.04, 480)
     tby, th = WT("f1", "buyers"), WT("f1", "higher")
     for i in range(5): s.pop(tby - 0.1 + i * (th - tby) / 4.2, 0.035, 560 + i * 70)
     s.ding(th, 1568, 0.03)

@@ -1,9 +1,9 @@
 # Lesson 10 quiz (optional story Quiz sticker)
 
-**In negotiation experiments, what strongly predicted the final price?**
-- A. The seller's mood
-- B. The first offer ✅
-- C. The last offer
-- D. How long the chat lasted
+**In negotiation experiments, who got the better deal?**
+- A. The buyer, always
+- B. Whoever named the first number ✅
+- C. Whoever waited longest
+- D. The seller, always
 
-Extra: Whoever made the first offer, buyer or seller, got the better outcome (Galinsky & Mussweiler, 2001).
+Extra: Across 3 experiments, whichever party, buyer or seller, made the first offer got the better outcome (Galinsky & Mussweiler, 2001).
