@@ -9,7 +9,7 @@ Same seller, same postcards. Buyers paid 8.1% more to the name with a track reco
 An online auction can show every seller's past sales and reviews, for anyone to check.
 Trust isn't a feeling. It's a track record you can check.
 
-Source: Resnick, Zeckhauser, Swanson & Lockwood, "The value of reputation on eBay: A controlled experiment", Experimental Economics (2006). The phone, price and seller in the video are illustrative.
+Source: Resnick, Zeckhauser, Swanson & Lockwood, Experimental Economics (2006). The phone, price and seller in the video are illustrative.
 Have you ever paid a stranger first? How did it go? 👇
 
 #auction #Lebanon #Beirut #learnoninstagram #onlineshopping #trust
