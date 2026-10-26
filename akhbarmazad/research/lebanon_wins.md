@@ -53,6 +53,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Sources:** [Orlando Sentinel, 15 Nov 1990 (wire report)](https://www.orlandosentinel.com/1990/11/15/diamond-brings-13-million-its-as-big-as-quails-egg/); [Mouawad, World Records (official)](https://www.mouawad.com/int-en/world-records-mouawad-splendor.html); also [CNBC, 2013](https://www.cnbc.com/2013/07/24/The-worlds-richest-diamond-owners.html) and [UPI, 1995](https://www.upi.com/Archives/1995/05/17/Saudi-sheik-buys-worlds-most-expensive-jewel/4002800683200).
 - **Confidence:** Verified
 - **Photo:** Mouawad's own World Records page shows the stone (image owned by Mouawad; our fetch could not read its meta tags, so ask Mouawad for a press image). CNBC used a photo credited "www.mouawad.com". The Orlando Sentinel page has no photo (its og:image is a site fallback logo).
+- **Re-checked 26 Oct 2026 (M004):** Mouawad's page (fetched in the Higgsfield sandbox with a cookie jar; it redirect-loops without one) shows the Guinness certificate: "sold for £8,100,000 ($12,760,000) to Robert Mouawad, at Sotheby's, Geneva, Switzerland, on 14 Nov 1990". Usable photos: `World%20Records/mouawad-splendor-banner-video-poster.jpg` (2560x1180, stone on black; used on M004) and `World%20Records/NLGy6jjI.jpeg` (935x924, stone on white).
 
 ### 2. Plate "300 M": LBP 5.75 billion
 - **EN headline:** Plate "300 M" sells for LBP 5.75 billion, about 128 times its legal starting price
