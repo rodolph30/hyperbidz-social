@@ -56,7 +56,7 @@ Quiz: "In a negotiation, what strongly predicts the final price?" (the first off
 Items: P7, P6. **Problem:** Nour finds a phone online; the seller wants the money first. **Reframe:** US consumers reported losing $12.5 billion to fraud in 2024, and online shopping was the second most reported category (FTC); in Lebanon the ISF arrested a man in July 2026 who took payment for appliances on social media and never delivered (no names, no photo). Then the twist: trust can be measured. In a controlled eBay experiment, buyers paid 8.1% more to the same dealer when he sold under his established name (Resnick et al. 2006). **Fix:** a public track record and reviews, and money on the line from both sides. Never "safe" or "guaranteed". **Takeaway:** "Trust isn't a feeling. It's a track record you can check."
 Quiz: "How much more did buyers pay the seller with a track record?" (8.1%).
 
-### 12 · "Is it still available?" · status: todo · pace: quick · music: marimba · who: Sami
+### 12 · "Is it still available?" · status: made (27 Oct 2026; one story, one fact: the deadline effect, 41% / 53%) · pace: quick · music: marimba · who: Sami
 Items: P3. **Problem:** Sami's inbox: "Is it still available?", "I'll think about it", "Can you hold it till next week?" Days pass, nobody decides. **Reframe:** in bargaining experiments with a 9-minute clock on screen, 41% of deals came in the last 30 seconds, and over half of those in the last 5 seconds (Roth, Murnighan & Schoumaker 1988). People don't decide when they're ready; they decide when time runs out. **Fix:** a countdown everyone can see. **Takeaway:** "No deadline, no decision."
 Quiz: "When did most late deals happen in the experiments?" (in the last seconds before the deadline).
 
