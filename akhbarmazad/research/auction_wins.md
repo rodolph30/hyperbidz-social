@@ -63,6 +63,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 | 45 | Kuwait: 55555555 sells for KD 210,000 | Viva number 55555555 | ≈$685K–735K | Kuwait | 2010 | Partly verified |
 | 46 | Qatari owner buys stallion for AED 850,000 in Ajman | Stallion Admiraal | $231K | Ajman | 2024 | Verified |
 | 47 | Bahrain plate 630000 fetches BD 79,000 | Bahrain plate 630000 | $210K | Manama | 2018 | Verified |
+| 48 | Two digits, AED 6.72m: CC 44 tops Dubai's 121st plate auction | Dubai plate CC 44 | $1.83M | Dubai | 2026 | Verified |
 
 ---
 
@@ -631,6 +632,18 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [WAM via MENAFN](https://menafn.com/1097622669/UAE-Arabian-Auction-accomplishes-a-new-achievement-in-3rd-Public-Auction-in-Bahrain)
 - **Confidence:** Verified (one official agency text). It is an older and modest record, so use it as Bahrain filler.
 - **Photo rights:** Not checked. Ask Mazad / Arabian Auction.
+
+### 48. CC 44: AED 6.72m at RTA's 121st open auction (fresh, posted as M005)
+- **EN headline:** Two digits, AED 6.72m: CC 44 tops Dubai's 121st plate auction
+- **AR headline:** رقمان على لوحة سيارة بـ6.72 مليون درهم في دبي
+- **Item:** Dubai plate **CC 44**.
+- **Winner:** Not disclosed.
+- **Price:** AED 6,720,000 (≈ US$1.83M at 3.6725).
+- **Where/when:** RTA 121st open auction of distinguished plates, Hilton Dubai Al Habtoor City, Saturday 24 October 2026 (results released 26 Oct).
+- **Wow detail:** BB 18 went for AED 6.62m, just AED 100,000 behind; BB 80 AED 5.9m; BB 117 AED 1.016m. 60 plates raised AED 65.721m. (The 120th auction, 27 Dec 2025, raised a record AED 109m, BB 12 top at AED 9.66m.)
+- **Sources:** [RTA](https://www.rta.ae/wps/portal/rta/ae/home/news-and-media/all-news/NewsDetails/121st-open-auction-of-distinguished-vehicle-number-plates-generates-aed-65-million), [Khaleej Times](https://www.khaleejtimes.com/uae/dubai-rta-number-plate-auction-cc44-highest-selling), [Gulf News](https://gulfnews.com/uae/dubais-bb-plate-fever-three-number-plates-fetch-dh1353m-while-cc44-leads-auction-at-dh672m-1.500724267)
+- **Confidence:** Verified (official + two outlets)
+- **Photo rights:** RTA photo ("Supplied" on Gulf News), credited.
 
 ---
 

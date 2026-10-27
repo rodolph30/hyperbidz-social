@@ -2,7 +2,7 @@
 
 The daily run takes the first story with `status: todo`, **unless** a fresh verified result from the last 7 days is more insane (then it goes first and is added to `research/auction_wins.md`). Story ids on the desk run M001, M002, … in posting order; `R#` is the entry number in `research/auction_wins.md`, `L#` in `research/lebanon_wins.md` (Lebanon, about every fourth post). Never two plate stories in a row: skip ahead to the next non-plate story and come back. **Lebanon (owner, 23 Oct 2026): about every fourth post is a Lebanese story** (merged below).
 
-**Fresh news to watch now:** Dubai RTA 121st open plate auction on Sat 24 Oct 2026 (BB 80, BB 18, CC 44); Saudi Absher plate auctions (several a month); Julien's Michael Jackson and Princess Diana sales in Abu Dhabi, 5–10 Dec (evening sale 7 Dec); RM Sotheby's Abu Dhabi, 9 Dec; **Christie's "Mawasim" Middle Eastern art sale in Abu Dhabi on Sun 1 Nov 2026** (Lebanese lots: Paul Guiragossian's *Noces*, est. $300–500K; Nabil Nahas, est. $300–400K): post the results on 2 Nov if a Lebanese lot does something big (no war-themed works). Full list: "Recurring events to watch" in the research file.
+**Fresh news to watch now:** Saudi Absher plate auctions (several a month); Julien's Michael Jackson and Princess Diana sales in Abu Dhabi, 5–10 Dec (evening sale 7 Dec); RM Sotheby's Abu Dhabi, 9 Dec; **Christie's "Mawasim" Middle Eastern art sale in Abu Dhabi on Sun 1 Nov 2026** (Lebanese lots: Paul Guiragossian's *Noces*, est. $300–500K; Nabil Nahas, est. $300–400K): post the results on 2 Nov if a Lebanese lot does something big (no war-themed works). Full list: "Recurring events to watch" in the research file.
 
 | Order | Ref | Story | Price (USD) | Place | Year | Confidence | Status |
 |---|---|---|---|---|---|---|---|
@@ -70,6 +70,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 62 | R32 | The SAR 1.75m falcon: Riyadh's all-time auction record | $466.7K | Malham, Riyadh | 2021 | Verified | todo |
 | 63 | L16 | Caland's "Vive la liberté" fetches £330,200 | ≈ $433,300 | London (Christie's) | 2025 | Verified | todo |
 | 64 | L17 | Lebanese jeweller buys the 60.19 ct "Mouawad Mondera" for CHF 7.16m | ≈ $4.1M (our conversion) | Geneva (Christie's) | 2000 | Partly verified | todo |
+| 65 | R48 | Fresh: two digits, AED 6.72m: CC 44 tops Dubai's 121st plate auction | $1.83M | Dubai | 2026 | Verified | made: M005 (27 Oct 2026) |
 
 ## Weekly notes (topics and songs that did best)
 
