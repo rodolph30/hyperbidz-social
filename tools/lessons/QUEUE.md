@@ -60,7 +60,7 @@ Quiz: "How much more did buyers pay the seller with a track record?" (8.1%).
 Items: P3. **Problem:** Sami's inbox: "Is it still available?", "I'll think about it", "Can you hold it till next week?" Days pass, nobody decides. **Reframe:** in bargaining experiments with a 9-minute clock on screen, 41% of deals came in the last 30 seconds, and over half of those in the last 5 seconds (Roth, Murnighan & Schoumaker 1988). People don't decide when they're ready; they decide when time runs out. **Fix:** a countdown everyone can see. **Takeaway:** "No deadline, no decision."
 Quiz: "When did most late deals happen in the experiments?" (in the last seconds before the deadline).
 
-### 13 · The last-second loss · status: todo · pace: quick · music: ambient · who: Nour
+### 13 · The last-second loss · status: made (28 Oct 2026; one story, one study: 89 / 29 of 240 vs just one) · pace: quick · music: ambient · who: Nour
 Items: P4. **Problem:** Nour leads an online auction for three days, and someone outbids her one second before the end. No time to answer. **Reframe:** in a study of 240 eBay auctions with a fixed end time, 89 had bids in the last minute and 29 in the last ten seconds; Amazon's auctions, which added time after every late bid, got just one bid in the last minute (Roth & Ockenfels 2002). The last-second win wasn't skill, it was the rule. **Fix:** a late bid adds time, so every bid can be answered. Never say "snipe". **Takeaway:** "A fair finish gives every bid an answer."
 Quiz: "What stops last-second bids from winning unanswered?" (a rule that adds time after a late bid).
 
