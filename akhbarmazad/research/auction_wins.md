@@ -645,6 +645,18 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Confidence:** Verified (official + two outlets)
 - **Photo rights:** RTA photo ("Supplied" on Gulf News), credited.
 
+### 49. Wild peregrine from Arar: SAR 375,000 (fresh, posted as M006)
+- **EN headline:** A wild peregrine caught near Arar sells for SAR 375,000, top price of the 2026 National Center for Falcons Auction so far
+- **AR headline:** صقر بري من عرعر يُباع بـ375 ألف ريال
+- **Item:** Young peregrine falcon (فرخ شاهين), trapped by seven trappers in Umm Khansar, Arar.
+- **Winner:** Not disclosed.
+- **Price:** SAR 375,000 (≈ US$100,000 at 3.75); opening bid SAR 110,000.
+- **Where/when:** National Center for Falcons Auction 2026, eighth night, Riyadh (Malham), October 2026 (SPA English dateline 24 Oct; exact evening unclear, so the card says "October 2026"). The auction runs to 30 Nov.
+- **Wow detail:** Highest price of this year's auction so far; the bird weighs 1,110 g (Al Yamamah). Other nights: SAR 221K (5th), SAR 291K for two birds (7th), SAR 211K (9th).
+- **Sources:** [SPA](https://www.spa.gov.sa/en/N2709484), [Al Yamamah](https://www.alyamamahonline.com/7912), [Riyadh Daily](https://www.alriyadhdaily.com/article/b6b0683c97bf478eb5b69a3074717a81), [Ien](https://ien.sa/64045)
+- **Confidence:** Verified (official + outlets)
+- **Photo rights:** SPA press photo, credited.
+
 ---
 
 ## Recurring events to watch (late 2026 → early 2027)
@@ -665,6 +677,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 | Late Jan / early Feb (2025: 8 Feb; 2026: 31 Jan) | Sotheby's "Origins", Diriyah | Saudi art records | 2027 date not announced |
 | Ramadan 2027 (expected to start around 7–8 Feb 2027, moon-dependent) | "Most Noble Number" charity auctions: Dubai live (Armani Hotel in 2025 and 2026) and Abu Dhabi online | The biggest plate and phone-number prices of each year (P 7, DD 5, DD 6) | Annual; 2027 dates not announced |
 | 5–25 Aug (annual) | International Falcon Breeders Auction, Malham (National Center for Falcons) | SAR 1M+ falcons; 2026 set a record SAR 33M in sales | Annual |
+| **Now – 30 Nov 2026** | National Center for Falcons Auction (local wild-trapped peregrines), nightly, Riyadh | SAR 375K top so far (M006); a bigger price may come before 30 Nov | Confirmed (SPA) |
 | Late Aug – early Sep (annual) | ADIHEX, Abu Dhabi: falcon, camel and horse auctions | Holder of the 2026 falcon world record | Annual |
 | Early Sep (2026: 8–12 Sep) | S'hail, Katara, Doha: daily falcon auction | Qatar falcon records | Annual |
 | Aug–Sep | Crown Prince Camel Festival, Taif | Finals camels valued at SAR 3–6M each (expert estimates, not auction prices) | Annual |

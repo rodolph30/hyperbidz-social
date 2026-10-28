@@ -71,6 +71,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 63 | L16 | Caland's "Vive la liberté" fetches £330,200 | ≈ $433,300 | London (Christie's) | 2025 | Verified | todo |
 | 64 | L17 | Lebanese jeweller buys the 60.19 ct "Mouawad Mondera" for CHF 7.16m | ≈ $4.1M (our conversion) | Geneva (Christie's) | 2000 | Partly verified | todo |
 | 65 | R48 | Fresh: two digits, AED 6.72m: CC 44 tops Dubai's 121st plate auction | $1.83M | Dubai | 2026 | Verified | made: M005 (27 Oct 2026) |
+| 66 | R49 | Fresh: wild peregrine from Arar sells for SAR 375,000, top of the 2026 NCF auction so far | $100K | Riyadh | 2026 | Verified | made: M006 (28 Oct 2026) |
 
 ## Weekly notes (topics and songs that did best)
 
