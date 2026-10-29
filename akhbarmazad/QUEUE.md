@@ -8,7 +8,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 |---|---|---|---|---|---|---|---|
 | 1 | R1 | Dubai's "P 7" becomes the world's most expensive number plate | $14.98M | Dubai | 2023 | Verified | made: M002 (24 Oct 2026) |
 | 2 | R4 | One ticket, SAR 10m: the golden seat for Messi vs Ronaldo | $2.67M | Riyadh | 2023 | Verified | made: M003 (25 Oct 2026) |
-| 3 | R9 | 666-6666: the world's most expensive phone number, still | $2.75M | Doha | 2006 | Verified | todo |
+| 3 | R9 | 666-6666: the world's most expensive phone number, still | $2.75M | Doha | 2006 | Verified | made: M007 (29 Oct 2026) |
 | 4 | L1 | Lebanese jeweller pays a world-record $12.76m for one diamond | $12.76M | Geneva (Sotheby's) | 1990 | Verified | made: M004 (26 Oct 2026) |
 | 5 | R6 | Saudi plate "ع 1" fetches SAR 21 million on Absher | $5.6M | Saudi Arabia (online) | 2024 | Verified | todo |
 | 6 | R15 | A single kingfish sold for AED 200,000 | $54.5K | Abu Dhabi | 2020 | Verified | todo |
