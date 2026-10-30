@@ -85,6 +85,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Sources:** [Christie's "World Auction Records" PDF (official)](https://www.christies.com/presscenter/pdf/9014/Combined%20Records%20and%20Top%20Tens_9014_1.pdf); [Christie's lot page](https://www.christies.com/en/lot/lot-6134619) (page data shows "USD 336,500"); [Le Commerce du Levant, 11 May 2018](https://www.lecommercedulevant.com/article/28309-un-saliba-douaihy-de-la-collection-rockefeller-adjuge-336-5000-dollars-a-new-york).
 - **Confidence:** Verified
 - **Photo:** The Christie's lot page og:image is the painting (© Christie's Images Ltd). Le Commerce du Levant's og:image reuses the same Christie's image.
+- **Re-checked 30 Oct 2026 (M008):** Christie's lot page data: price realised USD 336,500, estimate USD 25,000–35,000, painted in 1963, 106.9 x 66.3 cm, 10 May 2018; the Christie's records PDF lists lot 583 as a world auction record for the artist. Le Commerce du Levant confirms price, estimate and date. The Christie's image host timed out from the sandbox; the card uses Le Commerce du Levant's 800x502 copy of the Christie's image, credited كريستيز.
 
 ### 4. Aref El Rayess, *The World of Petrol*: $565,694
 - **EN headline:** Aref El Rayess painting sells for more than 5x its top estimate and quadruples his record

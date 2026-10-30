@@ -13,7 +13,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 5 | R6 | Saudi plate "ع 1" fetches SAR 21 million on Absher | $5.6M | Saudi Arabia (online) | 2024 | Verified | todo |
 | 6 | R15 | A single kingfish sold for AED 200,000 | $54.5K | Abu Dhabi | 2020 | Verified | todo |
 | 7 | R8 | DD 6 sells for AED 37m on a charity night topping AED 1.1bn | $10.07M | Dubai | 2026 | Verified | todo |
-| 8 | L3 | From the Rockefeller collection: Lebanese painting sells for nearly 10x its estimate | $336,500 | New York (Christie's) | 2018 | Verified | todo |
+| 8 | L3 | From the Rockefeller collection: Lebanese painting sells for nearly 10x its estimate | $336,500 | New York (Christie's) | 2018 | Verified | made: M008 (30 Oct 2026) |
 | 9 | R11 | McLaren F1 sells for $25.3m: the region's biggest car sale | $25.32M | Abu Dhabi | 2025 | Verified | todo |
 | 10 | R3 | A riding helmet just sold for AED 24 million | $6.55M | Dubai | 2015 | Verified | todo |
 | 11 | R2 | Abu Dhabi plate "1" sold for AED 52.2m, a record for 15 years | $14.21M | Abu Dhabi | 2008 | Verified | todo |

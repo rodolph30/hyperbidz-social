@@ -18,6 +18,7 @@ story.json fields (Arabic, right-to-left; Latin and number runs are isolated aut
   dateline   small line under the red rule, e.g. "مزاد الأرقام المميزة · دبي · أبريل 2023"
   photo      path or file:// URL of the real news photo (fills the gold frame); photo_credit "الصورة: وام" (shown on the photo)
              photo_pos  CSS object-position, default "50% 40%"
+             photo_fit  "cover" (default) or "contain" (shows the whole picture, e.g. a painting, on the navy panel)
   visual     (only when there is no photo) {"type": "plate", "style": "dubai"|"abudhabi"|"sharjah"|"ksa"|"generic", "code": "AA", "number": "8"}
              {"type": "phone", "number": "058 7777777", "label": "du"}
              {"type": "emoji", "name": "camel"}       (assets/emoji/<name>.png, Microsoft Fluent Emoji, MIT)
@@ -200,7 +201,8 @@ def hero(s, base):
             src = "file://" + os.path.abspath(os.path.join(base, src))
         credit = f'<div class="credit">{iso(s["photo_credit"])}</div>' if s.get("photo_credit") else ""
         pos = html.escape(s.get("photo_pos", "50% 40%"))
-        return f'<img class="photo" src="{html.escape(src)}" style="object-position:{pos}"><div class="shade"></div>{credit}'
+        fit = "contain" if s.get("photo_fit") == "contain" else "cover"
+        return f'<img class="photo" src="{html.escape(src)}" style="object-position:{pos};object-fit:{fit}"><div class="shade"></div>{credit}'
     return visual(s.get("visual", {}))
 
 
