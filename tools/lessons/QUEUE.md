@@ -68,7 +68,7 @@ Quiz: "What stops last-second bids from winning unanswered?" (a rule that adds t
 Items: P8. **Perspective:** in Lebanon, "auction" sounds like trouble: courts, banks, seizures. In Australia it's how families sell their home: in one ordinary week this October, 1,749 homes went to auction across the capital cities, 703 in Melbourne and 632 in Sydney (Cotality). Show the open process: a set date, everyone bidding in the open, the highest bid wins. Don't claim they always sell (2026 clearance rates were under 50%). Any detail about front-yard auctions needs its own source first. **Takeaway:** "Here, 'auction' sounds like trouble. There, it sounds like Saturday."
 Quiz: "In Australia's big cities, what do people often sell by auction?" (their homes).
 
-### 15 · One more buyer · status: todo · pace: quick · music: lofi · who: Sami
+### 15 · One more buyer · status: made (30 Oct 2026; one story, one fact: Bulow & Klemperer 1996, one extra bidder beats the best negotiation) · pace: quick · music: lofi · who: Sami
 Items: P2. **Problem:** Sami sells to one buyer at a time; every chat starts from zero and he gives a little more each time. **Reframe:** two economists proved that a simple auction with just one extra bidder earns more than the best possible negotiation, and "the value of negotiating skill is small relative to the value of additional competition" (Bulow & Klemperer 1996). **Fix:** put everyone who wants it in one place, at one time. **Takeaway:** "One more buyer beats the best negotiator. Let them bid."
 Quiz: "According to Bulow and Klemperer, what's worth more than negotiating skill?" (one extra bidder).
 
