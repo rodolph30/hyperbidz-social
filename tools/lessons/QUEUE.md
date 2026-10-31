@@ -72,7 +72,7 @@ Quiz: "In Australia's big cities, what do people often sell by auction?" (their 
 Items: P2. **Problem:** Sami sells to one buyer at a time; every chat starts from zero and he gives a little more each time. **Reframe:** two economists proved that a simple auction with just one extra bidder earns more than the best possible negotiation, and "the value of negotiating skill is small relative to the value of additional competition" (Bulow & Klemperer 1996). **Fix:** put everyone who wants it in one place, at one time. **Takeaway:** "One more buyer beats the best negotiator. Let them bid."
 Quiz: "According to Bulow and Klemperer, what's worth more than negotiating skill?" (one extra bidder).
 
-### 16 · Afraid of overpaying? · status: todo · pace: quick · music: keys · who: Nour
+### 16 · Afraid of overpaying? · status: made (31 Oct 2026; one story, one fact: you pay about one step above the runner-up, Vickrey via Lucking-Reiley 2000, plus the 1893 stamp sale notice) · pace: quick · music: keys · who: Nour
 Items: P12 (+ callback to lesson 07). **Problem:** Nour avoids auctions: "I'll get carried away and pay too much." **Reframe:** in an open auction you don't pay what you're willing to pay. Bidders stop when the price passes their limit, so the winner pays about what the runner-up was willing to pay, plus one step (Vickrey; Lucking-Reiley 2000). **Fix:** decide your maximum before it starts (lesson 07) and let the others stop first. **Takeaway:** "You pay one step above the last person who wanted it."
 Quiz: "At an open auction, the winner usually pays about…" (one step above the second-highest bidder's limit).
 
