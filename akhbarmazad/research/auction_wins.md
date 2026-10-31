@@ -140,6 +140,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [Gulf News](https://gulfnews.com/world/gulf/saudi/premium-saudi-number-plate-fetches-sr21-million-1.102204516); [Akhbaar24 (Arabic)](https://www.akhbaar24.com/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF/%D8%A8%D9%8A%D8%B9-%D9%84%D9%88%D8%AD%D8%A9-%D8%B9-1-%D8%A8%D9%8021-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%B1%D9%8A%D8%A7%D9%84-60892); also [Sada (Arabic)](https://slaati.com/2024/04/17/p2485828.html)
 - **Confidence:** Verified across several outlets. No official Traffic/MOI statement was found.
 - **Photo rights:** No official photo was found; Gulf News used Shutterstock. Use a designed plate graphic.
+- **Re-checked 31 Oct 2026 (M009):** Gulf News and Sada re-opened; facts hold. Akhbaar24's own article graphic shows the plate ع 1 / 1E (used, credited "الصورة: أخبار 24"). Sada says "10 bidders", Gulf News "10 adjudications": number left out.
 
 ### 7. T. rex "Stan": $31.8 million, bought by Abu Dhabi
 - **EN headline:** Abu Dhabi bought a T. rex: "Stan" sold for $31.8m

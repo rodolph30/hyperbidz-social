@@ -10,7 +10,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 2 | R4 | One ticket, SAR 10m: the golden seat for Messi vs Ronaldo | $2.67M | Riyadh | 2023 | Verified | made: M003 (25 Oct 2026) |
 | 3 | R9 | 666-6666: the world's most expensive phone number, still | $2.75M | Doha | 2006 | Verified | made: M007 (29 Oct 2026) |
 | 4 | L1 | Lebanese jeweller pays a world-record $12.76m for one diamond | $12.76M | Geneva (Sotheby's) | 1990 | Verified | made: M004 (26 Oct 2026) |
-| 5 | R6 | Saudi plate "ع 1" fetches SAR 21 million on Absher | $5.6M | Saudi Arabia (online) | 2024 | Verified | todo |
+| 5 | R6 | Saudi plate "ع 1" fetches SAR 21 million on Absher | $5.6M | Saudi Arabia (online) | 2024 | Verified | made: M009 (31 Oct 2026) |
 | 6 | R15 | A single kingfish sold for AED 200,000 | $54.5K | Abu Dhabi | 2020 | Verified | todo |
 | 7 | R8 | DD 6 sells for AED 37m on a charity night topping AED 1.1bn | $10.07M | Dubai | 2026 | Verified | todo |
 | 8 | L3 | From the Rockefeller collection: Lebanese painting sells for nearly 10x its estimate | $336,500 | New York (Christie's) | 2018 | Verified | made: M008 (30 Oct 2026) |
