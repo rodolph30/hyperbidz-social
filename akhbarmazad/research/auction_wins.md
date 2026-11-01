@@ -248,7 +248,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Wow detail:** WAM called it a new record for the sport. The whole fish auction raised AED 592,000 for the Emirates Red Crescent. The tournament's heaviest kingfish weighed 30.85 kg; WAM does not say whether that was the fish that sold for AED 200K.
 - **Sources:** [WAM (official)](https://www.wam.ae/en/article/hszr9td4-most-expensive-kingfish-sells-for-us54000-abu)
 - **Confidence:** Verified (one official source)
-- **Photo rights:** WAM may hold photos. Not checked.
+- **Photo rights:** WAM photo of the tournament's first-place kingfish (placard dated 25 Jan 2020), carried by Emirates 24|7 and El Correo del Golfo with a WAM credit; used for M010 as "from the tournament" (WAM doesn't say it is the sold fish). Re-checked 1 Nov 2026: WAM, Emirates 24|7 and El Correo all give AED 200,000 (US$54,000), total AED 592,000 for the Emirates Red Crescent, auction held 25 Jan 2020.
 
 ### 16. du number 052-2222222: AED 8 million
 - **EN headline:** 052-2222222: Emirati businessman pays AED 8m for a phone number
