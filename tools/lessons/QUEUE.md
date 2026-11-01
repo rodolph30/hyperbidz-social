@@ -76,7 +76,7 @@ Quiz: "According to Bulow and Klemperer, what's worth more than negotiating skil
 Items: P12 (+ callback to lesson 07). **Problem:** Nour avoids auctions: "I'll get carried away and pay too much." **Reframe:** in an open auction you don't pay what you're willing to pay. Bidders stop when the price passes their limit, so the winner pays about what the runner-up was willing to pay, plus one step (Vickrey; Lucking-Reiley 2000). **Fix:** decide your maximum before it starts (lesson 07) and let the others stop first. **Takeaway:** "You pay one step above the last person who wanted it."
 Quiz: "At an open auction, the winner usually pays about…" (one step above the second-highest bidder's limit).
 
-### 17 · The no-show · status: todo · pace: quick · music: marimba · who: Sami
+### 17 · The no-show · status: made (1 Nov 2026; one story, one fact: Tock no-shows 3% / 1.7% / 0.9%, plus CCP Art. 973 deposit) · pace: quick · music: marimba · who: Sami
 Items: P5, L1. **Problem:** "I'm on my way." Sami waits an hour. Nobody comes. **Reframe:** one booking platform found that bookings with a deposit had a 1.7% no-show rate, and fully prepaid ones 0.9% (Tock, Dec 2023–Mar 2024). Lebanese law knew this already: to bid at a court auction you first deposit the full opening price, and losers get it back (CCP Art. 973). **Fix:** a small amount held when you bid, returned if you're outbid (never state an amount). **Takeaway:** "Serious buyers don't mind a deposit. Time-wasters do."
 Quiz: "In a Lebanese court auction, what happens to a losing bidder's deposit?" (it's returned).
 
