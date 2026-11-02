@@ -2,7 +2,7 @@
 
 The daily run takes the first story with `status: todo`, **unless** a fresh verified result from the last 7 days is more insane (then it goes first and is added to `research/auction_wins.md`). Story ids on the desk run M001, M002, … in posting order; `R#` is the entry number in `research/auction_wins.md`, `L#` in `research/lebanon_wins.md` (Lebanon, about every fourth post). Never two plate stories in a row: skip ahead to the next non-plate story and come back. **Lebanon (owner, 23 Oct 2026): about every fourth post is a Lebanese story** (merged below).
 
-**Fresh news to watch now:** Saudi Absher plate auctions (several a month); Julien's Michael Jackson and Princess Diana sales in Abu Dhabi, 5–10 Dec (evening sale 7 Dec); RM Sotheby's Abu Dhabi, 9 Dec; **Christie's "Mawasim" Middle Eastern art sale in Abu Dhabi on Sun 1 Nov 2026** (Lebanese lots: Paul Guiragossian's *Noces*, est. $300–500K; Nabil Nahas, est. $300–400K): post the results on 2 Nov if a Lebanese lot does something big (no war-themed works). Full list: "Recurring events to watch" in the research file.
+**Fresh news to watch now:** Saudi Absher plate auctions (several a month); Julien's Michael Jackson and Princess Diana sales in Abu Dhabi, 5–10 Dec (evening sale 7 Dec); RM Sotheby's Abu Dhabi, 9 Dec; **Christie's "Mawasim" Middle Eastern art sale in Abu Dhabi on Sun 1 Nov 2026** (Lebanese lots: Paul Guiragossian's *Noces*, est. $300–500K; Nabil Nahas, est. $300–400K): post the results on 2 Nov if a Lebanese lot does something big (no war-themed works). **Result (checked 2 Nov):** total $8,940,800, nine artist records; Guiragossian *Noces* $486,400 (within estimate, a record for the medium), Baalbaki *Babel Tower* $281,600; top lot Farmanfarmaian $844,800 (est. $150–250K). Nothing big enough for a Lebanese post; not used. Full list: "Recurring events to watch" in the research file.
 
 | Order | Ref | Story | Price (USD) | Place | Year | Confidence | Status |
 |---|---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 4 | L1 | Lebanese jeweller pays a world-record $12.76m for one diamond | $12.76M | Geneva (Sotheby's) | 1990 | Verified | made: M004 (26 Oct 2026) |
 | 5 | R6 | Saudi plate "ع 1" fetches SAR 21 million on Absher | $5.6M | Saudi Arabia (online) | 2024 | Verified | made: M009 (31 Oct 2026) |
 | 6 | R15 | A single kingfish sold for AED 200,000 | $54.5K | Abu Dhabi | 2020 | Verified | made: M010 (1 Nov 2026) |
-| 7 | R8 | DD 6 sells for AED 37m on a charity night topping AED 1.1bn | $10.07M | Dubai | 2026 | Verified | todo |
+| 7 | R8 | DD 6 sells for AED 37m on a charity night topping AED 1.1bn | $10.07M | Dubai | 2026 | Verified | made: M011 (2 Nov 2026) |
 | 8 | L3 | From the Rockefeller collection: Lebanese painting sells for nearly 10x its estimate | $336,500 | New York (Christie's) | 2018 | Verified | made: M008 (30 Oct 2026) |
 | 9 | R11 | McLaren F1 sells for $25.3m: the region's biggest car sale | $25.32M | Abu Dhabi | 2025 | Verified | todo |
 | 10 | R3 | A riding helmet just sold for AED 24 million | $6.55M | Dubai | 2015 | Verified | todo |

@@ -165,6 +165,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [WAM via Big News Network (official agency text)](https://www.bignewsnetwork.com/news/278908110/aed91405-million-raised-by-most-noble-number-auction-in-dubai); [Khaleej Times](https://www.khaleejtimes.com/uae/dd-6-number-plate-sold-for-dh37-million-dubais-most-noble-number-auction); also [Gulf News](https://gulfnews.com/uae/transport/dubais-most-noble-number-charity-auction-kicks-off-dd-999-plate-sells-for-dh51-million-1.500467026)
 - **Confidence:** Verified
 - **Photo rights:** Official event photos are via WAM, MBRGI and Emirates Auction. Ask MBRGI or Emirates Auction.
+- **Posted as M011 (2 Nov 2026):** re-checked Khaleej Times and Al Bayan (AED 37M, buyer not named, AED 91.405M raised, AED 1,136,221,000 with pledges); photo: Al Bayan's sold-screen photo.
 
 ### 9. Phone number 666-6666: QR 10 million (world record)
 - **EN headline:** Phone number 666-6666 sold for QR 10m, still the world's most expensive
