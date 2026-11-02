@@ -80,7 +80,7 @@ Quiz: "At an open auction, the winner usually pays about…" (one step above the
 Items: P5, L1. **Problem:** "I'm on my way." Sami waits an hour. Nobody comes. **Reframe:** one booking platform found that bookings with a deposit had a 1.7% no-show rate, and fully prepaid ones 0.9% (Tock, Dec 2023–Mar 2024). Lebanese law knew this already: to bid at a court auction you first deposit the full opening price, and losers get it back (CCP Art. 973). **Fix:** a small amount held when you bid, returned if you're outbid (never state an amount). **Takeaway:** "Serious buyers don't mind a deposit. Time-wasters do."
 Quiz: "In a Lebanese court auction, what happens to a losing bidder's deposit?" (it's returned).
 
-### 18 · Japan's used cars · status: todo · pace: quick · music: ambient · who: perspective
+### 18 · Japan's used cars · status: made (2 Nov 2026; one story: 20,000+ cars in one Tokyo auction, 8 million a year, USS record 3.5 million, the site ran out of room) · pace: quick · music: ambient · who: perspective
 Items: P11. **Perspective:** "auctions are for paintings, or for seized things." In Japan, about 8 million used cars were put up at dealer auctions in a year; USS alone handled a record 3.5 million, and its Tokyo site took more than 20,000 cars in a single auction this spring (USS, FY2025). A country famous for reliable cars prices its used ones by bidding, every week. Say "dealers". **Takeaway:** "When millions of cars need a fair price, a whole country uses auctions."
 Quiz: "How do Japan's car dealers trade used cars?" (at auctions).
 
