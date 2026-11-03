@@ -84,7 +84,7 @@ Quiz: "In a Lebanese court auction, what happens to a losing bidder's deposit?" 
 Items: P11. **Perspective:** "auctions are for paintings, or for seized things." In Japan, about 8 million used cars were put up at dealer auctions in a year; USS alone handled a record 3.5 million, and its Tokyo site took more than 20,000 cars in a single auction this spring (USS, FY2025). A country famous for reliable cars prices its used ones by bidding, every week. Say "dealers". **Takeaway:** "When millions of cars need a fair price, a whole country uses auctions."
 Quiz: "How do Japan's car dealers trade used cars?" (at auctions).
 
-### 19 · Afraid it sells for nothing? · status: todo · pace: quick · music: pluck · who: Sami
+### 19 · Afraid it sells for nothing? · status: made (3 Nov 2026; one story, one fact: the reserve and "passed in", Consumer Affairs Victoria) · pace: quick · music: pluck · who: Sami
 Items: P10. **Problem:** Sami's biggest fear: "What if one person bids $10 and takes my car?" **Reframe + fix:** the reserve: "the lowest price a seller is prepared to accept"; if bidding doesn't reach it, it doesn't sell, and the top bidder only gets the first chance to negotiate (Consumer Affairs Victoria). An auction isn't "any price": the seller sets the floor, the buyers set the rest. **Takeaway:** "A reserve is a floor, not a ceiling."
 Quiz: "What's a reserve price?" (the lowest price the seller will accept).
 
