@@ -101,6 +101,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Confidence:** Verified
 - **Photo:** The Sotheby's lot page og:image is the painting (© Sotheby's). AD Middle East's og:image shows the painting beside a Sotheby's staff member, credited "Photo: Supplied". The National's og:image is a Mahmoud Saïd painting, so it is not usable for this story.
 - **Caution:** The National calls the painting "highly symbolic and political" (oil and the Arab world). Name the title and the price only; no interpretation.
+- **Re-checked 3 Nov 2026 (M012):** AD Middle East ($565,694, est. $75–100K, quadrupled his record), The National ($565,694), Sotheby's lot page (Lot 11, est. £60–80K, closed 23 Apr 2024). Photo: Sotheby's og:image (painting) fetched via the sandbox.
 
 ### 5. Plate "111111 Y": LBP 3.15 billion
 - **EN headline:** Six ones, LBP 3.15 billion: a plate goes for about 233 times its starting price
