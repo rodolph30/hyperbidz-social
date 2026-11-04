@@ -88,7 +88,7 @@ Quiz: "How do Japan's car dealers trade used cars?" (at auctions).
 Items: P10. **Problem:** Sami's biggest fear: "What if one person bids $10 and takes my car?" **Reframe + fix:** the reserve: "the lowest price a seller is prepared to accept"; if bidding doesn't reach it, it doesn't sell, and the top bidder only gets the first chance to negotiate (Consumer Affairs Victoria). An auction isn't "any price": the seller sets the floor, the buyers set the rest. **Takeaway:** "A reserve is a floor, not a ceiling."
 Quiz: "What's a reserve price?" (the lowest price the seller will accept).
 
-### 20 · The haggling tax · status: todo · pace: quick · music: lofi · who: both
+### 20 · The haggling tax · status: made (4 Nov 2026; one story, one study: 95% skip negotiating up to 51% of the time, +5–11% and more than half pay it, Hunsaker, Zhang & Lee 2025) · pace: quick · music: lofi · who: both
 Items: P13. **Problem:** haggling: awkward, slow, and it feels like a fight. **Reframe:** across five studies, "95% of individuals choose not to negotiate up to 51% of the time"; people only thought haggling worth it for savings of 21–36%; and businesses can raise prices 5–11% and more than half of people will pay it (Hunsaker, Zhang & Lee, 2025). Haggling has a price, and both sides pay it. **Fix:** open bidding replaces the back-and-forth with the same rules for everyone. **Takeaway:** "No haggling. Just bids."
 Quiz: "How much extra will many people pay to avoid haggling?" (about 5–11%).
 
