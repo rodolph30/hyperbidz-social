@@ -202,6 +202,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [RM Sotheby's press release](https://rmsothebys.com/media-center/press-releases/rm-sotheby-s-inaugural-abu-dhabi-collectors-week-auction-grosses-85-million-becoming-the-region-s-most-successful-collector-car-auction-ever); [Observer](https://observer.com/2025/12/auction-news-sothebys-collectors-week-abu-dhabi-133-million-sales)
 - **Confidence:** Verified
 - **Photo rights:** Owned by RM Sotheby's ("Courtesy Sotheby's/RM"). Ask RM Sotheby's.
+- **Re-checked 4 Nov 2026 (M013):** press release, lot page (Lot 432), Observer and Octane all give $25,317,500. Photo used: the lot page og:image `cdn.rmsothebys.com/6/a/7/0/6/7/6a70674126ea603eed2f365e7c16313ee35562e0.jpg` (1280x640, the car in white on black), credited "الصورة: آر إم سوذبيز".
 
 ### 12. Saudi "King 1" plate (م ل ك 1): SAR 15.7 million all-in
 - **EN headline:** "King 1": Saudi plate م ل ك 1 goes for SAR 15.7m all-in
