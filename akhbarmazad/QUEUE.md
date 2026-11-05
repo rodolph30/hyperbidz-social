@@ -15,7 +15,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 7 | R8 | DD 6 sells for AED 37m on a charity night topping AED 1.1bn | $10.07M | Dubai | 2026 | Verified | made: M011 (2 Nov 2026) |
 | 8 | L3 | From the Rockefeller collection: Lebanese painting sells for nearly 10x its estimate | $336,500 | New York (Christie's) | 2018 | Verified | made: M008 (30 Oct 2026) |
 | 9 | R11 | McLaren F1 sells for $25.3m: the region's biggest car sale | $25.32M | Abu Dhabi | 2025 | Verified | made: M013 (4 Nov 2026) |
-| 10 | R3 | A riding helmet just sold for AED 24 million | $6.55M | Dubai | 2015 | Verified | todo |
+| 10 | R3 | A riding helmet just sold for AED 24 million | $6.55M | Dubai | 2015 | Verified | made: M014 (5 Nov 2026) |
 | 11 | R2 | Abu Dhabi plate "1" sold for AED 52.2m, a record for 15 years | $14.21M | Abu Dhabi | 2008 | Verified | todo |
 | 12 | L10 | Touch's special numbers sell for 10x their official price at e-auction | ≈ $120,000 in total | Lebanon (online, Touch) | 2025–26 | Verified | todo (skipped 3 Nov 2026: no real photo of the item, only a drawn card; owner wants real photos) |
 | 13 | R16 | 052-2222222: AED 8m for a phone number | $2.18M | Dubai | 2015 | Verified | todo |
