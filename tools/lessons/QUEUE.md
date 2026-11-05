@@ -92,7 +92,7 @@ Quiz: "What's a reserve price?" (the lowest price the seller will accept).
 Items: P13. **Problem:** haggling: awkward, slow, and it feels like a fight. **Reframe:** across five studies, "95% of individuals choose not to negotiate up to 51% of the time"; people only thought haggling worth it for savings of 21–36%; and businesses can raise prices 5–11% and more than half of people will pay it (Hunsaker, Zhang & Lee, 2025). Haggling has a price, and both sides pay it. **Fix:** open bidding replaces the back-and-forth with the same rules for everyone. **Takeaway:** "No haggling. Just bids."
 Quiz: "How much extra will many people pay to avoid haggling?" (about 5–11%).
 
-### 21 · "DM for price" · status: todo · pace: quick · music: keys · who: Nour
+### 21 · "DM for price" · status: made (5 Nov 2026; one story, one rule: Victoria's reserve price public 7 days before a home auction or no auction, from 1 Oct 2026, and the government's stated purpose, Hansard 14 Aug 2026) · pace: quick · music: keys · who: Nour
 Items: P9. **Problem:** Nour asks the price and gets "DM", then a different number than her friend got. **Reframe:** since this month in Melbourne, a home auction can't go ahead unless the seller's minimum price has been public for 7 days, and the sold price must be published afterwards; the minister said the aim is to end buyers' frustration at learning "the house was never in their price range" (Victoria, from 1 Oct 2026). Hidden prices aren't a tactic; they're a cost. **Fix:** every bid in the open: everyone sees the same number at the same time. **Takeaway:** "When the price is public, nobody gets a special price."
 Quiz: "What must Melbourne sellers publish 7 days before an auction?" (their reserve price).
 
