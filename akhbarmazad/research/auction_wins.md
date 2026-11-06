@@ -91,7 +91,8 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Wow detail:** Above AED 47M, only two bidders were left. He more than doubled the previous record of AED 25.2M, set by his cousin Talal Khouri for plate "5". Proceeds went to build a hospital for traffic-accident victims. He told Gulf News the plate was for personal use and not for sale.
 - **Sources:** [Abu Dhabi Police (official)](https://adpolice.gov.ae/en/Media-Center/News/2021/06/19/Number-plate-1-auctioned-for-52-2-million--enters-world-record-); [Gulf News](https://gulfnews.com/uae/transport/abu-dhabi-licence-plate-no1-wins-record-dh522m-1.85130); [KUNA](https://www.kuna.net.kw/ArticleDetails.aspx?id=1884720&language=en)
 - **Confidence:** Verified
-- **Photo rights:** 2008 photos were not checked. Likely owned by Emirates Auction, Abu Dhabi Police or the press agencies. Ask before use.
+- **Photo rights:** Emirates Auction's own photo of plate "1" on stage (credited "Photo: Emirates Auction" by Khaleej Times, also on EA's news page), used for M015. The National's photo of Saeed Al Khouri with the plate is AFP: don't use.
+- **Re-checked 6 Nov 2026:** Abu Dhabi Police, Gulf News, Khaleej Times (Saeed Abdulghafar Khoury, Emirates Palace, 16 Feb 2008, AED 52.2M; opening bid AED 1M per Gulf News; 90 plates, AED 89M).
 
 ### 3. A riding helmet for AED 24 million
 - **EN headline:** A riding helmet just sold for AED 24 million
