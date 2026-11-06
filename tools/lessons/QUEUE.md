@@ -96,7 +96,7 @@ Quiz: "How much extra will many people pay to avoid haggling?" (about 5–11%).
 Items: P9. **Problem:** Nour asks the price and gets "DM", then a different number than her friend got. **Reframe:** since this month in Melbourne, a home auction can't go ahead unless the seller's minimum price has been public for 7 days, and the sold price must be published afterwards; the minister said the aim is to end buyers' frustration at learning "the house was never in their price range" (Victoria, from 1 Oct 2026). Hidden prices aren't a tactic; they're a cost. **Fix:** every bid in the open: everyone sees the same number at the same time. **Takeaway:** "When the price is public, nobody gets a special price."
 Quiz: "What must Melbourne sellers publish 7 days before an auction?" (their reserve price).
 
-### 22 · £45, then $450 million · status: todo · pace: quick · music: marimba · who: Sami
+### 22 · £45, then $450 million · status: made (6 Nov 2026; one story: £45 in 1958 as a supposed copy, $450,312,500 in 2017 after 19 minutes and 45+ bids, Christie's) · pace: quick · music: marimba · who: Sami
 Items: P16 (was the old lesson 10). **Problem:** Sami prices his things by guessing, and a guess can give away a fortune. **Reframe:** a painting sold for £45 in 1958; in 2017, after 19 minutes and at least 45 bids, it sold for $450.3 million (Christie's). Nobody "set" that price: the bidders found it. Show a frame, a tag and a clock; never draw the painting. **Fix:** let the buyers set the price. **Takeaway:** "Your price isn't what you ask. It's what people compete for. Let them bid."
 Quiz: "What did the painting sell for in 1958?" (£45).
 
