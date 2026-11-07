@@ -1,0 +1,3 @@
+# Sources (lesson 23, re-checked 7 Nov 2026)
+
+- FAO, Fishery and Aquaculture Country Profile: Lebanon (narrative updated 2024): "There are fish auctions at the ports of Dora, Ouzaii, Saida, Tripoli and Sour." "The Sidawi auction is the second auction in Northern Lebanon. It was founded in 1958, into a construction of about 400 years old, characterized by stone arches. It is located in Mina-Tripoli, 100 meters from the fishing port." "Customers are private consumers, restaurants and fishmongers in Tripoli and surroundings." "It is open all day, throughout the year." https://www.fao.org/fishery/facp/lbn_en/en

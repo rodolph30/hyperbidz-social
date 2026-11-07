@@ -100,7 +100,7 @@ Quiz: "What must Melbourne sellers publish 7 days before an auction?" (their res
 Items: P16 (was the old lesson 10). **Problem:** Sami prices his things by guessing, and a guess can give away a fortune. **Reframe:** a painting sold for £45 in 1958; in 2017, after 19 minutes and at least 45 bids, it sold for $450.3 million (Christie's). Nobody "set" that price: the bidders found it. Show a frame, a tag and a clock; never draw the painting. **Fix:** let the buyers set the price. **Takeaway:** "Your price isn't what you ask. It's what people compete for. Let them bid."
 Quiz: "What did the painting sell for in 1958?" (£45).
 
-### 23 · Tripoli's fish auction · status: todo · pace: quick · music: ambient · who: perspective (Lebanon)
+### 23 · Tripoli's fish auction · status: made (7 Nov 2026; one story: fish auctions at Dora, Ouzai, Saida, Tripoli and Sour; Tripoli's hall since 1958 under ~400-year-old arches, FAO) · pace: quick · music: ambient · who: perspective (Lebanon)
 Items: L23 (was the old lesson 14). **Perspective:** Lebanon already trusts auctions every morning: fish auctions at Dora, Ouzai, Saida, Tripoli and Sour; in Tripoli a hall founded in 1958 under 400-year-old arches (FAO). Fish must sell fast at a fair price: everyone hears every bid. **Takeaway:** "Lebanon already sells its fish by auction. Fast, fair, in the open." (Neutral, no "why not everything else?" sarcasm.)
 Quiz: "Why are fish sold by auction?" (they must sell fast, at a fair price).
 
