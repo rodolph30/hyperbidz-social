@@ -131,6 +131,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Sources:** [Christie's press release (official)](https://press.christies.com/silsila-highlights-from-the-dalloul-collection-including-modern-and-contemporary-middle-eastern-art-at-christies-totals-ps4112260/); [Christie's lot page](https://www.christies.com/en/lot/lot-6557714) (page data: estimate £75,000–85,000, realised £393,700); also [Artdaily](https://artdaily.com/news/187108/Christie-s-London-sale-of-Middle-Eastern-art-totals--pound4-1-million--led-by-Saloua-Raouda-Choucair) and [The Middle East Observer](https://meobserver.news/culture/arts-literature/2025/11/10/middle-eastern-masters-shine-at-christies-london-generating-5-2m-in-sales/).
 - **Confidence:** Verified
 - **Photo:** The Christie's lot page og:image is the sculpture (© Christie's Images Ltd). Christie's story page og:image is a 1970s portrait of the artist in her studio (© Choucair Foundation), not the item, so do not use it.
+- **Re-checked 7 Nov 2026 (M016):** Christie's press release and lot page page-data re-opened (est. GBP 75,000–85,000, realised GBP 393,700, 6 Nov 2025). The christies.com image host timed out from the sandbox; Artdaily's copy of the same press image (`https://artdaily.cc/imagenes/2025/11/08/chrilond-2.jpg`, 956x640) was used, credited كريستيز.
 
 ### 7. "Mouawad Blue": $4.6 million
 - **EN headline:** A Lebanese jeweller bought a blue diamond for $4.6m, then the highest auction price for any diamond
