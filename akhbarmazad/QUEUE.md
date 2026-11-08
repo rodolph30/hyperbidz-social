@@ -18,7 +18,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 10 | R3 | A riding helmet just sold for AED 24 million | $6.55M | Dubai | 2015 | Verified | made: M014 (5 Nov 2026) |
 | 11 | R2 | Abu Dhabi plate "1" sold for AED 52.2m, a record for 15 years | $14.21M | Abu Dhabi | 2008 | Verified | made: M015 (6 Nov 2026) |
 | 12 | L10 | Touch's special numbers sell for 10x their official price at e-auction | ≈ $120,000 in total | Lebanon (online, Touch) | 2025–26 | Verified | todo (skipped 3 Nov 2026: no real photo of the item, only a drawn card; owner wants real photos) |
-| 13 | R16 | 052-2222222: AED 8m for a phone number | $2.18M | Dubai | 2015 | Verified | todo |
+| 13 | R16 | 052-2222222: AED 8.01m for a phone number | $2.18M | Dubai | 2015 | Verified | made: M017 (8 Nov 2026) |
 | 14 | R20 | Jane Birkin's own Birkin bag sells for $2.86m | $2.86M | Abu Dhabi | 2025 | Verified | todo |
 | 15 | R7 | Abu Dhabi bought a T. rex: "Stan" for $31.8m | $31.8M | New York (buyer: Abu Dhabi) | 2020 | Verified | todo |
 | 16 | L2 | Plate "300 M" sells for LBP 5.75 billion, about 128x its starting price | ≈ $196,600 (market rate) | Bsaba, Chouf (Interior Ministry committee) | 2022 | Verified | todo |

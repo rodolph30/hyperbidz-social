@@ -258,12 +258,12 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **AR headline:** رجل أعمال إماراتي يدفع 8 ملايين درهم مقابل الرقم 0522222222
 - **Item:** du mobile number **052-222-2222**.
 - **Winner:** Emirati businessman **Mohamed Hilal** (The National).
-- **Price:** AED 8,000,000 (≈ US$2.18M).
-- **Where/when:** du's first special-number auction, Dubai Festival City. Saturday 25 April 2015.
+- **Price:** AED 8,010,000 exactly (Khaleej Times, Emirates 24|7, and the du stage screens in du's photo; The National and Gulf News round to Dh8m) (≈ US$2.18M).
+- **Where/when:** du's first special-number auction (run with Al Fujairah Auctions), InterContinental Dubai Festival City. Saturday 25 April 2015.
 - **Wow detail:** It was a UAE record for a phone number. The auction raised AED 18.9M, partly for charity. Two years later, in 2017, du's 058-888-8888 sold for AED 4.52M to businessman Balwinder Sahni (Gulf News).
 - **Sources:** [The National](https://www.thenationalnews.com/uae/du-auction-raises-dh18-9million-for-uae-charities-1.76195); [Gulf News](https://gulfnews.com/business/watch-how-uaes-rich-bid-to-own-a-unique-mobile-number-1.1984886)
 - **Confidence:** Verified
-- **Photo rights:** The National's image is credited "Courtesy Du". Ask du.
+- **Photo rights:** du's own stage photo (screens: "052 - 2222222 SOLD", AED 8,010,000), carried by The National credited "Courtesy Du"; used for M017 credited "الصورة: دو · ذا ناشونال". Re-checked 8 Nov 2026 (Khaleej Times, The National, du press release, Emirates 24|7, Middle East Eye: Hilal "didn't want to buy the number, I was just there").
 
 ### 17. Godolphin's 4.6 million-guinea yearling
 - **EN headline:** Godolphin pays 4.6m guineas for one yearling, a European record for a colt
