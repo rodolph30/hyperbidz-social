@@ -104,7 +104,7 @@ Quiz: "What did the painting sell for in 1958?" (£45).
 Items: L23 (was the old lesson 14). **Perspective:** Lebanon already trusts auctions every morning: fish auctions at Dora, Ouzai, Saida, Tripoli and Sour; in Tripoli a hall founded in 1958 under 400-year-old arches (FAO). Fish must sell fast at a fair price: everyone hears every bid. **Takeaway:** "Lebanon already sells its fish by auction. Fast, fair, in the open." (Neutral, no "why not everything else?" sarcasm.)
 Quiz: "Why are fish sold by auction?" (they must sell fast, at a fair price).
 
-### 24 · Your best buyer doesn't live on your street · status: todo · pace: quick · music: pluck · who: Sami
+### 24 · Your best buyer doesn't live on your street · status: made (8 Nov 2026; one story, one fact: 81% of Christie's bids online in 2024, plus the ministry's 12 million diaspora estimate) · pace: quick · music: pluck · who: Sami
 Items: P14. **Problem:** Sami's post only reaches people nearby, so his price is whatever his neighbourhood will pay. **Reframe:** at Christie's, 81% of all bids in 2024 were placed online, and 63% of new buyers in 2025 made their first purchase online; Lebanon's own diaspora is estimated at about 12 million people (Ministry of Economy and Trade estimate). **Fix:** live online bidding, open to buyers anywhere. **Takeaway:** "Your best buyer might be in Sydney."
 Quiz: "What share of Christie's bids were placed online in 2024?" (81%).
 
