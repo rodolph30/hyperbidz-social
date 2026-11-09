@@ -108,7 +108,7 @@ Quiz: "Why are fish sold by auction?" (they must sell fast, at a fair price).
 Items: P14. **Problem:** Sami's post only reaches people nearby, so his price is whatever his neighbourhood will pay. **Reframe:** at Christie's, 81% of all bids in 2024 were placed online, and 63% of new buyers in 2025 made their first purchase online; Lebanon's own diaspora is estimated at about 12 million people (Ministry of Economy and Trade estimate). **Fix:** live online bidding, open to buyers anywhere. **Takeaway:** "Your best buyer might be in Sydney."
 Quiz: "What share of Christie's bids were placed online in 2024?" (81%).
 
-### 25 · Your home is full of money · status: todo · pace: quick · music: lofi · who: Sami
+### 25 · Your home is full of money · status: made (9 Nov 2026; one story, two numbers: 36 unused items worth $3,675, eBay Recommerce Report 2021; older iPhones −10% in a month, −23% in three, musicMagpie 2021) · pace: quick · music: lofi · who: Sami
 Items: P15. **Problem:** the drawer of old phones, the bike nobody rides, "keeping it just in case". **Reframe:** eBay's survey found the average American home holds 36 unwanted items worth $3,675; and an older iPhone loses about 10% of its resale value in the month after a new model, 23% after three months (musicMagpie). Attribute both; they're not Lebanese figures. **Fix:** sell it while it's worth something; let buyers bid. **Takeaway:** "Unused things aren't savings. They lose value every month."
 Quiz: "What happens to an old phone's value after a new model comes out?" (it drops fast).
 
