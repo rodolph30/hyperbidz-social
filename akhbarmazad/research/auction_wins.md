@@ -154,6 +154,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [National Geographic](https://www.nationalgeographic.com/science/article/stan-the-t-rex-found-worlds-most-expensive-fossil-finds-home-in-a-new-museum); [New York Times](https://www.nytimes.com/2022/03/23/arts/design/stan-t-rex-abu-dhabi.html); also [The Art Newspaper](https://www.theartnewspaper.com/2022/03/24/stan-tyrannosaurus-rex-fossil-christies-new-abu-dhabi-natural-history-museum)
 - **Confidence:** Verified
 - **Photo rights:** An official image of the mounted skeleton is credited "Department of Culture and Tourism, Abu Dhabi". Auction-room photos are Getty. Ask DCT Abu Dhabi.
+- **Posted as M019 (10 Nov 2026).** Re-checked: $31,847,500 on 6 Oct 2020, estimate $6–8M (Just Collecting, Miami Herald); Abu Dhabi Media Office photo used. Bidding length differs (10 vs 20 min), left out; the fossil record has since been beaten, so no "most expensive ever" claim.
 
 ### 8. Dubai plate "DD 6": AED 37 million
 - **EN headline:** DD 6 sells for AED 37m as a Dubai charity night tops AED 1.1 billion
