@@ -112,7 +112,7 @@ Quiz: "What share of Christie's bids were placed online in 2024?" (81%).
 Items: P15. **Problem:** the drawer of old phones, the bike nobody rides, "keeping it just in case". **Reframe:** eBay's survey found the average American home holds 36 unwanted items worth $3,675; and an older iPhone loses about 10% of its resale value in the month after a new model, 23% after three months (musicMagpie). Attribute both; they're not Lebanese figures. **Fix:** sell it while it's worth something; let buyers bid. **Takeaway:** "Unused things aren't savings. They lose value every month."
 Quiz: "What happens to an old phone's value after a new model comes out?" (it drops fast).
 
-### 26 · Start low, end high · status: todo · pace: quick · music: keys · who: Sami
+### 26 · Start low, end high · status: made (10 Nov 2026; one story, one study: 179 rugs / 87 cameras, low starts → more bidders → higher, misspelled → low stayed low, Ku, Galinsky & Murnighan 2006) · pace: quick · music: keys · who: Sami
 Items: P17 (+ P10). **Problem:** Sami thinks a low starting price means a low final price. **Reframe:** six studies found that in auctions, lower starting prices led to higher final prices; on real eBay data for 179 Persian rugs and 87 Nikon cameras, the low starts drew more bidders and ended higher (Ku, Galinsky & Murnighan 2006). It only works with people watching. **Fix:** start low, protect the floor with a reserve (lesson 19). **Takeaway:** "In a chat, start high. In an auction, start low and let them bid."
 Quiz: "In the eBay study, what did lower starting prices lead to?" (more bidders and higher final prices).
 
