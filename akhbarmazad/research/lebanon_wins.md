@@ -284,6 +284,18 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 
 ---
 
+### 18. Kahlil Gibran, *Portrait of Mrs Alexander Morten*: £182,500 (added 11 Nov 2026)
+- **EN headline:** Gibran's "lost" portrait sells for nearly 10x its estimate and goes home to Lebanon
+- **AR headline:** لوحة بريشة جبران بنحو 10 أضعاف تقديرها
+- **Item:** Kahlil Gibran, *Portrait of Mrs Alexander Morten* (1914), oil on canvas, 66 x 63 cm. Lot 2, Bonhams "The Art of Lebanon" (the first sale of Lebanese art at an international auction house).
+- **Winner:** "a Lebanese institution" (Blouin Artinfo, Bonhams release via Artdaily); not named.
+- **Price:** £182,500 with premium (£150,000 hammer). Estimate £20,000–30,000. ≈ $266,000 (our conversion, ~1.46 $/£).
+- **Where/when:** Bonhams, London, New Bond Street. 27 April 2016.
+- **Wow detail:** Shown in Gibran's first New York exhibition (1914), then unseen for about a century; Bonhams: the first appearance of an oil painting by Gibran at international auction.
+- **Sources:** [Bonhams lot page (official)](https://www.bonhams.com/auction/23623/lot/2/kahlil-gibran-lebanon-1883-1931-portrait-of-mrs-alexander-morten/); [The Art Newspaper](https://www.theartnewspaper.com/2016/04/25/object-lessons-from-dalis-diary-to-a-yongzheng-vase); [Blouin Artinfo (PDF)](https://dafbeirut.org/sites/default/files/pubpress_docs/Blouinartinfo-2016.pdf); [Artdaily](https://artdaily.cc/news/86945/Ten-world-records-broken-by-Bonhams-at-pioneering-Lebanese-and-Middle-Eastern-Art-Sale).
+- **Confidence:** Verified (official + two outlets).
+- **Photo:** Bonhams lot page og:image is the painting (© Bonhams). Used for M020.
+
 ## Recurring Lebanese auction events to watch
 
 | When | Event | Why it matters | Status of date |
@@ -317,4 +329,4 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Etel Adnan, *Staring at the Sun* (her first ceramic offered at auction), $180,000, Sotheby's Origins, Diriyah, 8 Feb 2025.** Verified (Sotheby's), but it sold within its $150,000–250,000 estimate. It works as a filler only.
 - **Touch first-round numbers (78 78 79 79 and 78 7777 11, $34,550 including fees).** One minor outlet only; kept as a detail in entry 10, not as its own story.
 - **Phoenician or heritage objects.** Excluded under the page rules (provenance and repatriation risk).
-- **Kahlil Gibran.** Only small lots (drawings, books) were found; there is no striking verified result.
+- **Kahlil Gibran.** Only small lots (drawings, books) were found at first; the 2016 Bonhams portrait was found on 11 Nov 2026 (entry 18).

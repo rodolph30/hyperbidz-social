@@ -72,6 +72,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 64 | L17 | Lebanese jeweller buys the 60.19 ct "Mouawad Mondera" for CHF 7.16m | ≈ $4.1M (our conversion) | Geneva (Christie's) | 2000 | Partly verified | todo |
 | 65 | R48 | Fresh: two digits, AED 6.72m: CC 44 tops Dubai's 121st plate auction | $1.83M | Dubai | 2026 | Verified | made: M005 (27 Oct 2026) |
 | 66 | R49 | Fresh: wild peregrine from Arar sells for SAR 375,000, top of the 2026 NCF auction so far | $100K | Riyadh | 2026 | Verified | made: M006 (28 Oct 2026) |
+| 67 | L18 | Fresh find: Gibran's lost portrait sells for nearly 10x its estimate and goes home to Lebanon | ≈ $266,000 (£182,500) | London (Bonhams) | 2016 | Verified | made: M020 (11 Nov 2026; Lebanon's turn, L10 and L2 still have no real photo) |
 
 ## Weekly notes (topics and songs that did best)
 
