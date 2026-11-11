@@ -116,7 +116,7 @@ Quiz: "What happens to an old phone's value after a new model comes out?" (it dr
 Items: P17 (+ P10). **Problem:** Sami thinks a low starting price means a low final price. **Reframe:** six studies found that in auctions, lower starting prices led to higher final prices; on real eBay data for 179 Persian rugs and 87 Nikon cameras, the low starts drew more bidders and ended higher (Ku, Galinsky & Murnighan 2006). It only works with people watching. **Fix:** start low, protect the floor with a reserve (lesson 19). **Takeaway:** "In a chat, start high. In an auction, start low and let them bid."
 Quiz: "In the eBay study, what did lower starting prices lead to?" (more bidders and higher final prices).
 
-### 27 · From the crier to the clock · status: todo · pace: quick · music: marimba · who: perspective (Lebanon)
+### 27 · From the crier to the clock · status: made (11 Nov 2026; one story: the municipality's crier in CCP Art. 930, notice in two newspapers, the Official Gazette and the municipality's door ten days ahead, Arts. 970–971) · pace: quick · music: marimba · who: perspective (Lebanon)
 Items: L8, L3 (was the old lesson 24). **Perspective:** Lebanese law still mentions the municipality's crier, and court auctions are announced in newspapers, the Official Gazette and on the municipality's door. The crier's job was always the same: make the sale public, so everyone can bid and the price is fair. Show the crier's role passing to a countdown everyone can watch. Neutral: no criticism of Lebanese procedures. **Takeaway:** "An auction is only as fair as it is public."
 Quiz: "What was the crier's job?" (to make the sale public).
 
