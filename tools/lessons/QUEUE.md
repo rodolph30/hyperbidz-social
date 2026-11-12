@@ -120,7 +120,7 @@ Quiz: "In the eBay study, what did lower starting prices lead to?" (more bidders
 Items: L8, L3 (was the old lesson 24). **Perspective:** Lebanese law still mentions the municipality's crier, and court auctions are announced in newspapers, the Official Gazette and on the municipality's door. The crier's job was always the same: make the sale public, so everyone can bid and the price is fair. Show the crier's role passing to a countdown everyone can watch. Neutral: no criticism of Lebanese procedures. **Takeaway:** "An auction is only as fair as it is public."
 Quiz: "What was the crier's job?" (to make the sale public).
 
-### 28 · How to bid like a pro · status: todo · pace: standard · music: ambient · who: Nour
+### 28 · How to bid like a pro · status: made (12 Nov 2026; five rules, one sourced fact each: +8.1% track record, one step above the runner-up, the reserve, time added, deposit back under CCP Art. 977) · pace: standard · music: ambient · who: Nour
 Items: P6, P12, P10, P4, P5 and lesson 07. Nour's five rules, one per beat: check the seller's track record; set your maximum before it starts; know the reserve; don't panic at the end, a late bid adds time; the hold comes back if you're outbid. **Takeaway:** "A plan beats a bidding war."
 Quiz: "What's the first thing to decide before bidding?" (your maximum).
 
