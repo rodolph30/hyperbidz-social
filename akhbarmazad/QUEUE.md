@@ -23,7 +23,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 15 | R7 | Abu Dhabi bought a T. rex: "Stan" for $31.8m | $31.8M | New York (buyer: Abu Dhabi) | 2020 | Verified | made: M019 (10 Nov 2026) |
 | 16 | L2 | Plate "300 M" sells for LBP 5.75 billion, about 128x its starting price | ≈ $196,600 (market rate) | Bsaba, Chouf (Interior Ministry committee) | 2022 | Verified | todo |
 | 17 | R31 | Qatari pays QR 13.7m for plate 55555 | $3.76M | Doha | 2011 | Partly verified | todo |
-| 18 | R10 | An F1 car that hasn't raced yet sold for $11.48m | $11.48M | Abu Dhabi | 2025 | Verified | todo |
+| 18 | R10 | An F1 car that hasn't raced yet sold for $11.48m | $11.48M | Abu Dhabi | 2025 | Verified | made: M021 (12 Nov 2026; R31 skipped for now: one source only, no photo) |
 | 19 | R17 | Godolphin pays 4.6m guineas for one yearling, a European record | ≈$6.38M | Newmarket (buyer: Dubai) | 2026 | Verified | todo |
 | 20 | L4 | Aref El Rayess painting sells for more than 5x its top estimate | $565,694 | London (Sotheby's) | 2024 | Verified | made: M012 (3 Nov 2026) |
 | 21 | R25 | "Desert Rose" diamond sets a record at $8.8m | $8.8M | Abu Dhabi | 2025 | Verified | todo |
