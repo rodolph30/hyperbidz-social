@@ -266,7 +266,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Confidence:** Verified
 - **Photo rights:** du's own stage photo (screens: "052 - 2222222 SOLD", AED 8,010,000), carried by The National credited "Courtesy Du"; used for M017 credited "الصورة: دو · ذا ناشونال". Re-checked 8 Nov 2026 (Khaleej Times, The National, du press release, Emirates 24|7, Middle East Eye: Hilal "didn't want to buy the number, I was just there").
 
-### 17. Godolphin's 4.6 million-guinea yearling
+### 17. Godolphin's 4.6 million-guinea yearling (posted as M022)
 - **EN headline:** Godolphin pays 4.6m guineas for one yearling, a European record for a colt
 - **AR headline:** «جودلفين» تدفع 4.6 مليون جنيه غيني في مهر واحد... رقم قياسي أوروبي
 - **Item:** A yearling colt by **Night Of Thunder** out of My Astra, consigned by Norelands.
