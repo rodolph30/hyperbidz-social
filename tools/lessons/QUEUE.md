@@ -124,7 +124,7 @@ Quiz: "What was the crier's job?" (to make the sale public).
 Items: P6, P12, P10, P4, P5 and lesson 07. Nour's five rules, one per beat: check the seller's track record; set your maximum before it starts; know the reserve; don't panic at the end, a late bid adds time; the hold comes back if you're outbid. **Takeaway:** "A plan beats a bidding war."
 Quiz: "What's the first thing to decide before bidding?" (your maximum).
 
-### 29 · How to sell like a pro · status: todo · pace: standard · music: pluck · who: Sami
+### 29 · How to sell like a pro · status: made (13 Nov 2026; five rules, one sourced fact each: 179 rugs / 87 cameras low starts end higher, the reserve, one extra bidder beats the best negotiation, 41% of deals in the last 30 s, 81% of Christie's bids online in 2024) · pace: standard · music: pluck · who: Sami
 Items: P17, P10, P2, P3, P14. Sami's five rules: start low; set a reserve; get more buyers in the room; give it a deadline; let buyers from anywhere in. **Takeaway:** "Don't price it. Let them bid."
 Quiz: "Why start an auction low?" (it brings more bidders).
 
