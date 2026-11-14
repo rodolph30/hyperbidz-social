@@ -128,7 +128,7 @@ Quiz: "What's the first thing to decide before bidding?" (your maximum).
 Items: P17, P10, P2, P3, P14. Sami's five rules: start low; set a reserve; get more buyers in the room; give it a deadline; let buyers from anywhere in. **Takeaway:** "Don't price it. Let them bid."
 Quiz: "Why start an auction low?" (it brings more bidders).
 
-### 30 · Seven problems, one fix · status: todo · pace: standard · music: lofi · who: finale
+### 30 · Seven problems, one fix · status: made (14 Nov 2026; recap montage of seven problems and fixes, then 1,882 homes in one October week in Australia (Cotality), about 8 million used cars a year in Japan (USS), Tripoli's fish auction since 1958 (FAO)) · pace: standard · music: lofi · who: finale
 Recap of the campaign as a fast montage, each problem struck through and its fix landing: lowball → buyers compete; one buyer at a time → everyone at once; "still available?" → a countdown; no-show → a deposit; scam fear → a track record; hidden price → open bids; "what's it worth?" → the buyers decide. Then the perspective close: Australia sells homes this way, Japan sells cars this way, Tripoli sells fish this way. End on the open question, no brand: "So why do we still sell everything else by chat?" (rhetorical, not sarcastic). The owner decides what follows.
 Quiz: "Which fix stops time-wasters?" (a deposit).
 
