@@ -365,7 +365,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 ### 25. "Desert Rose" diamond: $8.8 million
 - **EN headline:** The "Desert Rose" diamond sets a record at $8.8m in Abu Dhabi
 - **AR headline:** ماسة «وردة الصحراء» تحقق رقماً قياسياً بـ8.8 مليون دولار
-- **Item:** **The Desert Rose**, a pear-shaped fancy vivid orangy-pink diamond, GIA natural colour, VVS1. Weight is given as 31.86 ct (Observer and The National caption) and 31.68 ct (The National text); 31.86 appears more often.
+- **Item:** **The Desert Rose**, a pear-shaped fancy vivid orangy-pink diamond, GIA natural colour, VVS1. Weight: **31.68 ct** (Sotheby's/GIA figure per Rapaport, National Jeweler, The National text; Observer and one caption say 31.86). Re-checked 14 Nov 2026.
 - **Winner:** Not disclosed.
 - **Price:** US$8.8M (one caption in The National says $8.9M; the main text in both outlets says $8.8M).
 - **Where/when:** Sotheby's, Abu Dhabi Collectors' Week. 5 December 2025.

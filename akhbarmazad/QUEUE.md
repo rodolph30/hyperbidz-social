@@ -26,7 +26,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 18 | R10 | An F1 car that hasn't raced yet sold for $11.48m | $11.48M | Abu Dhabi | 2025 | Verified | made: M021 (12 Nov 2026; R31 skipped for now: one source only, no photo) |
 | 19 | R17 | Godolphin pays 4.6m guineas for one yearling, a European record | ≈$6.38M | Newmarket (buyer: Dubai) | 2026 | Verified | made: M022 (13 Nov 2026; L10, L2 still without a real photo, R31 one source; no fresh insane result 6–13 Nov) |
 | 20 | L4 | Aref El Rayess painting sells for more than 5x its top estimate | $565,694 | London (Sotheby's) | 2024 | Verified | made: M012 (3 Nov 2026) |
-| 21 | R25 | "Desert Rose" diamond sets a record at $8.8m | $8.8M | Abu Dhabi | 2025 | Verified | todo |
+| 21 | R25 | "Desert Rose" diamond sets a record at $8.8m | $8.8M | Abu Dhabi | 2025 | Verified | made: M023 (14 Nov 2026; no fresh insane result 7–14 Nov: NCF falcons ≤ SAR 106K, Sharjah Arabian horse auction AED 1.265M total; L10/L2 still no photo, R31 one source; Lebanon next) |
 | 22 | R26 | Pagani Zonda LM Roadster hits $11.09m in Dubai | $11.09M | Dubai | 2024 | Verified | todo |
 | 23 | R13 | AA 9: AED 38m for two letters and a digit | $10.35M | Dubai | 2021 | Verified | todo |
 | 24 | L6 | Choucair wooden sculpture beats its top estimate by 363% | ≈ $512,700 (£393,700) | London (Christie's) | 2025 | Verified | made: M016 (7 Nov 2026) |
