@@ -33,7 +33,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 25 | R12 | "King 1": Saudi plate م ل ك 1 goes for SAR 15.7m all-in | $3.57M hammer / $4.2M all-in | Riyadh | 2025 | Partly verified | todo |
 | 26 | R27 | 1940s Rolex sells for $4.7m, a world record for the model | $4.72M | Dubai | 2025 | Verified | todo |
 | 27 | R18 | "My ambition is to be number one": Sharjah plate 1 for AED 18m | $4.90M | Sharjah | 2016 | Verified | todo |
-| 28 | L7 | Lebanese jeweller buys a blue diamond for $4.6m, then the highest auction price for any diamond | $4.6M | Geneva (Christie's) | 1984 | Verified | todo |
+| 28 | L7 | Lebanese jeweller buys a blue diamond for $4.6m, then the highest auction price for any diamond | $4.6M | Geneva (Christie's) | 1984 | Verified | made: M024 (15 Nov 2026; Lebanon's turn; L10/L2/L5 still no real photo; no fresh insane result 8–15 Nov: NCF falcons ≤ SAR 190K, Dubai prayer-bead sale AED 235K skipped (religious item)) |
 | 29 | R39 | Sotheby's first Saudi auction: Banksy goes for $1.2m | $1.2M | Diriyah | 2025 | Verified | todo |
 | 30 | R38 | Saudi painter's "Coffee Shop" sells for $2.1m, 10x estimate | $2.1M | Diriyah | 2026 | Verified | todo |
 | 31 | R34 | 058-0000000: AED 4.5m for seven zeros | $1.23M | Dubai | 2026 | Verified | todo |

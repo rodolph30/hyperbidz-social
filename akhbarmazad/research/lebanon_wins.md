@@ -145,7 +145,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
   - The stone had been missing from view for decades; it was set by Cartier around 1913 and resurfaced only at this sale.
 - **Sources:** [Mouawad, Diamond Gallery (official)](https://www.mouawad.com/hk-en/diamond-gallery-mouawad-blue.html); [Gem-A, 2017](https://gem-a.com/gem-hub/mouawad-tereschenko-diamond-second-largest-blue-diamond/).
 - **Confidence:** Verified (official, plus Gem-A).
-- **Photo:** Gem-A's og:image shows a large blue pear-shaped stone on a hand. It is not confirmed to be the actual stone (it may be a model), so check the caption before use. Mouawad's gallery page has the official image (owned by Mouawad; ask permission).
+- **Photo:** Gem-A's og:image shows a large blue pear-shaped stone on a hand. It is not confirmed to be the actual stone (it may be a model), so check the caption before use. Mouawad's gallery page has the official image (owned by Mouawad; ask permission). **Used for M024 (15 Nov 2026):** Mouawad's gallery banner `mouawad-blue-banner.jpg` (2560x1180, the stone on black), centre-cropped, credited "الصورة: معوّض"; facts re-checked on both sources that day.
 
 ### 8. Saloua Raouda Choucair, *Poem* (bronze): £698,500
 - **EN headline:** A six-part bronze "Poem" sets Choucair's world record at £698,500
