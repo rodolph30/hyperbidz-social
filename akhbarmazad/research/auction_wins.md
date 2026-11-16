@@ -385,6 +385,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [Octane magazine](https://www.octane-magazine.com/news/11m-pagani-zonda-leads-rm-sothebys-2024-dubai-auction); [The Classic Valuer](https://www.theclassicvaluer.com/auction-summary/rm-sothebys-dubai-2024-38d625)
 - **Confidence:** Verified
 - **Photo rights:** Octane credits "Photos: RM Sotheby's". Ask RM Sotheby's.
+- **Used:** M025 (16 Nov 2026), photo = Octane lead image (RM Sotheby's), re-checked same day.
 
 ### 27. Rolex Ref. 4113: $4.7 million
 - **EN headline:** Rare 1940s Rolex sells for $4.7m in Dubai, a world record for the model
