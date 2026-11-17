@@ -229,6 +229,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [Dubai Media Office (official)](https://www.mediaoffice.ae/en/news/2021/may/01-05/mansoor-bin-mohammed-attends-the-most-noble-number-auction); [Gulf News](https://gulfnews.com/uae/dubai-car-number-plate-sells-for-record-dh38-million-helps-raise-total-of-dh4849-million-for-charity-1.1619896704842); also [Khaleej Times](https://www.khaleejtimes.com/uae/dubai-aa9-worlds-second-most-expensive-car-number-plate-sold-for-dh38-million)
 - **Confidence:** Verified
 - **Photo rights:** Official photos are via Dubai Media Office and RTA. Gulf Today ran a photo of the buyer with his name withheld. Ask Dubai Media Office.
+- **Posted:** M026 (17 Nov 2026), re-checked against Dubai Media Office and Gulf News; photo: Gulf News staff photo of the plate on the auction screen.
 
 ### 14. Dubai plate "DD 5": AED 35 million (BinGhatti)
 - **EN headline:** BinGhatti outbids a 13-year-old to win DD 5 for AED 35m

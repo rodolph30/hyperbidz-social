@@ -28,7 +28,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 20 | L4 | Aref El Rayess painting sells for more than 5x its top estimate | $565,694 | London (Sotheby's) | 2024 | Verified | made: M012 (3 Nov 2026) |
 | 21 | R25 | "Desert Rose" diamond sets a record at $8.8m | $8.8M | Abu Dhabi | 2025 | Verified | made: M023 (14 Nov 2026; no fresh insane result 7–14 Nov: NCF falcons ≤ SAR 106K, Sharjah Arabian horse auction AED 1.265M total; L10/L2 still no photo, R31 one source; Lebanon next) |
 | 22 | R26 | Pagani Zonda LM Roadster hits $11.09m in Dubai | $11.09M | Dubai | 2024 | Verified | made: M025 (16 Nov 2026; no fresh insane result 9–16 Nov: NCF falcon top SAR 360K; L10/L2 still no photo, R31 one source; Lebanon not due) |
-| 23 | R13 | AA 9: AED 38m for two letters and a digit | $10.35M | Dubai | 2021 | Verified | todo |
+| 23 | R13 | AA 9: AED 38m for two letters and a digit | $10.35M | Dubai | 2021 | Verified | made: M026 (17 Nov 2026; no fresh insane result 10–17 Nov: NCF falcon top SAR 360K, Absher rounds without reported big prices; L10/L2 still no photo, R31 one source; Lebanon not due) |
 | 24 | L6 | Choucair wooden sculpture beats its top estimate by 363% | ≈ $512,700 (£393,700) | London (Christie's) | 2025 | Verified | made: M016 (7 Nov 2026) |
 | 25 | R12 | "King 1": Saudi plate م ل ك 1 goes for SAR 15.7m all-in | $3.57M hammer / $4.2M all-in | Riyadh | 2025 | Partly verified | todo |
 | 26 | R27 | 1940s Rolex sells for $4.7m, a world record for the model | $4.72M | Dubai | 2025 | Verified | todo |
