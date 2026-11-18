@@ -31,7 +31,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 23 | R13 | AA 9: AED 38m for two letters and a digit | $10.35M | Dubai | 2021 | Verified | made: M026 (17 Nov 2026; no fresh insane result 10–17 Nov: NCF falcon top SAR 360K, Absher rounds without reported big prices; L10/L2 still no photo, R31 one source; Lebanon not due) |
 | 24 | L6 | Choucair wooden sculpture beats its top estimate by 363% | ≈ $512,700 (£393,700) | London (Christie's) | 2025 | Verified | made: M016 (7 Nov 2026) |
 | 25 | R12 | "King 1": Saudi plate م ل ك 1 goes for SAR 15.7m all-in | $3.57M hammer / $4.2M all-in | Riyadh | 2025 | Partly verified | todo |
-| 26 | R27 | 1940s Rolex sells for $4.7m, a world record for the model | $4.72M | Dubai | 2025 | Verified | todo |
+| 26 | R27 | 1940s Rolex sells for $4.7m, a world record for the model | $4.72M | Dubai | 2025 | Verified | made: M027 (18 Nov 2026; no fresh insane result 11–18 Nov: NCF falcon nights ≤ SAR 388K for two birds, FutureGrail 2026 sale in Singapore; L10/L2 still no photo, R31 one source, R12 plate after plate; Lebanon not due) |
 | 27 | R18 | "My ambition is to be number one": Sharjah plate 1 for AED 18m | $4.90M | Sharjah | 2016 | Verified | todo |
 | 28 | L7 | Lebanese jeweller buys a blue diamond for $4.6m, then the highest auction price for any diamond | $4.6M | Geneva (Christie's) | 1984 | Verified | made: M024 (15 Nov 2026; Lebanon's turn; L10/L2/L5 still no real photo; no fresh insane result 8–15 Nov: NCF falcons ≤ SAR 190K, Dubai prayer-bead sale AED 235K skipped (religious item)) |
 | 29 | R39 | Sotheby's first Saudi auction: Banksy goes for $1.2m | $1.2M | Diriyah | 2025 | Verified | todo |

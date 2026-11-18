@@ -399,6 +399,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [The National](https://www.thenationalnews.com/lifestyle/2025/11/17/rare-rolex-sells-for-47-million-dollars-in-dubai-auction); [Gulf News](https://gulfnews.com/business/markets/ultra-rare-rolex-sells-for-47-million-in-record-breaking-dubai-auction-1.500349100)
 - **Confidence:** Verified
 - **Photo rights:** Credited "Photo: FutureGrail". Ask FutureGrail.
+- **Used:** M027 (18 Nov 2026), photo = Gulf News lead image (supplied, FutureGrail shoot), re-checked same day.
 
 ### 28. Dubai plate "D 5": AED 33 million
 - **EN headline:** D5 for AED 33m: the plate that put Dubai's plate craze on the world map
