@@ -200,6 +200,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Sources:** [The Art Newspaper](https://www.theartnewspaper.com/2024/03/06/sothebys-london-modern-contemporary-evening-sale); [Artnet News](https://news.artnet.com/market/sothebys-london-march-2024-by-the-numbers-2448136); [Sotheby's lot page](https://www.sothebys.com/en/buy/auction/2024/modern-contemporary-evening-auction/untitled).
 - **Confidence:** Verified
 - **Photo:** The Sotheby's lot page og:image is the painting (© Sotheby's). The Art Newspaper's og:image is the saleroom (courtesy Sotheby's), not the item.
+- **Used:** M028 (19 Nov 2026), facts re-checked that day against The Art Newspaper, Artnet and the Sotheby's lot page.
 
 ### 12. Huguette Caland world record: £444,500
 - **EN headline:** Huguette Caland world record: a 1980 Paris canvas sells for £444,500

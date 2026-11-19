@@ -49,7 +49,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 41 | R24 | 050-7777777 sold for AED 7,877,777 | $2.15M | Abu Dhabi & Dubai | 2014 | Verified | todo |
 | 42 | R5 | World record: white falcon sells for AED 2.1m | $572K | Abu Dhabi | 2026 | Verified | made: M001 (23 Oct 2026) |
 | 43 | R14 | BinGhatti outbids a 13-year-old to win DD 5 for AED 35m | $9.53M | Dubai | 2025 | Verified | todo |
-| 44 | L11 | Etel Adnan world record: £444,500 in London | $564,159 | London (Sotheby's) | 2024 | Verified | todo |
+| 44 | L11 | Etel Adnan world record: £444,500 in London | $564,159 | London (Sotheby's) | 2024 | Verified | made: M028 (19 Nov 2026; Lebanon's turn (last Lebanese M024); no fresh insane result 12–19 Nov: NCF falcon nights ≤ SAR 520K for three birds, Doyle NY Nahas $102,100, no new RTA/Absher results; L10/L2 still no photo, L8 too close to M016 Choucair) |
 | 45 | R19 | Pogačar's Tour de France bike sells for $190,500 | $190.5K | Abu Dhabi | 2025 | Verified | todo |
 | 46 | R23 | BB 88: AED 14m for a "double-eight" plate | $3.81M | Dubai | 2025 | Verified | todo |
 | 47 | R28 | D5 for AED 33m | $8.99M | Dubai | 2016 | Verified | todo |
