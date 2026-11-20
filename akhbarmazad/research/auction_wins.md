@@ -279,7 +279,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Confidence:** Verified
 - **Photo rights:** The official sale-ring photo is credited "Alisha Meeder / Tattersalls". Ask Tattersalls.
 
-### 18. Sharjah plate "1": AED 18 million
+### 18. Sharjah plate "1": AED 18 million (posted as M029)
 - **EN headline:** "My ambition is to be number one": Sharjah plate 1 sold for AED 18m
 - **AR headline:** «طموحي أن أكون الأول دائماً»: لوحة الشارقة رقم 1 بـ18 مليون درهم
 - **Item:** Sharjah plate **1**.
