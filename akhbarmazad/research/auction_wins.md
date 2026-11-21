@@ -543,7 +543,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Wow detail:** It was the first international art and luxury auction ever held in Saudi Arabia, with participants from 45 countries. Nearly a third of buyers were Saudi. Louay Kayyali's *Then What??* set an artist record at $900,000.
 - **Sources:** [Sotheby's (official)](https://www.sothebys.com/en/articles/sothebys-inaugural-auction-in-diriyah-achieves-17m); [Arab News](https://www.arabnews.com/art-culture/sothebys-origins-auction-in-diriyah-achieves-more-than-17-million-in-sales-with-saudi-artists-shining-2589567); also [The Art Newspaper](https://www.theartnewspaper.com/2025/02/10/records-set-arab-artists-sothebys-debut-saudi-arabia-auction)
 - **Confidence:** Verified
-- **Photo rights:** Sotheby's and Getty. Ask Sotheby's.
+- **Photo rights:** Sotheby's and Getty. Ask Sotheby's. Used Sotheby's own lot image (M030, 21 Nov 2026). Lot estimate $800,000–1,200,000 (Sotheby's lot page), so it sold at the top of its estimate.
 
 ### 40. S'hail falcon: QR 911,000
 - **EN headline:** Mongolian falcon sells for QR 911,000 at Katara's S'hail
