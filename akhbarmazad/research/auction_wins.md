@@ -504,10 +504,10 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Winner:** Not disclosed.
 - **Price:** AED 2,800,000 (≈ US$762K).
 - **Where/when:** Dubai Arabian Horse Stud auction in the stud's indoor arena, run on site by Emirates Auction and online via the Kaheelah platform. Saturday 10 October 2026.
-- **Wow detail:** The sale set a record total of AED 17.361M for 55 horses. D Hanneen sold for AED 2.3M; two fillies sold for AED 2.2M each. The organisers called it the "Auction of Millions".
-- **Sources:** [WAM (official)](https://www.wam.ae/en/article/c2ottab-dubai-arabian-horse-stud-auction-achieves-record); [Sharjah24](https://sharjah24.ae/en/Articles/2026/10/11/d79)
+- **Wow detail:** She is a 7-month-old filly (Al Bayan, Al Khaleej, quoting Emirates Horse Auctions CEO Saud Al Rahmani: he doesn't think a filly that young ever sold for AED 2.8m in the Gulf). By FA El Rasheem out of D Ohda. The sale set a record total of AED 17.361M for 55 horses. D Hanneen sold for AED 2.3M; two fillies sold for AED 2.2M each. The organisers called it the "Auction of Millions".
+- **Sources:** [WAM (official)](https://www.wam.ae/en/article/c2ottab-dubai-arabian-horse-stud-auction-achieves-record); [Sharjah24](https://sharjah24.ae/en/Articles/2026/10/11/d79); [Al Bayan](https://www.albayan.ae/sports/equestrian/1557487); Al Khaleej (11 Oct 2026). Posted as M031 (22 Nov 2026).
 - **Confidence:** Verified
-- **Photo rights:** Not checked. Likely Dubai Arabian Horse Stud / WAM. Ask the stud.
+- **Photo rights:** Used Al Bayan's own ring photo (a young bay with handler, not captioned with the horse's name), credited "الصورة: البيان · من المزاد".
 
 ### 37. SAR 1.3 million falcon, bought by Nova Falcon
 - **EN headline:** Canadian-bred falcon fetches SAR 1.3m, the top bird of Riyadh's 2026 auction

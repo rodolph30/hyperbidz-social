@@ -36,13 +36,13 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 28 | L7 | Lebanese jeweller buys a blue diamond for $4.6m, then the highest auction price for any diamond | $4.6M | Geneva (Christie's) | 1984 | Verified | made: M024 (15 Nov 2026; Lebanon's turn; L10/L2/L5 still no real photo; no fresh insane result 8–15 Nov: NCF falcons ≤ SAR 190K, Dubai prayer-bead sale AED 235K skipped (religious item)) |
 | 29 | R39 | Sotheby's first Saudi auction: Banksy goes for $1.2m | $1.2M | Diriyah | 2025 | Verified | made: M030 (21 Nov 2026; no fresh insane result 14–21 Nov: NCF falcon nights ≤ SAR 520K for three birds, Mongolian falcon auction top SAR 250K, no new RTA/Absher/Abu Dhabi plate results; after M029 plate so no plate (L2/R31/R12 skipped); L10 still no photo and Lebanon not due) |
 | 30 | R38 | Saudi painter's "Coffee Shop" sells for $2.1m, 10x estimate | $2.1M | Diriyah | 2026 | Verified | todo |
-| 31 | R34 | 058-0000000: AED 4.5m for seven zeros | $1.23M | Dubai | 2026 | Verified | todo |
+| 31 | R34 | 058-0000000: AED 4.5m for seven zeros | $1.23M | Dubai | 2026 | Verified | todo (skipped 22 Nov 2026: re-verified (WAM, Gulf News, Khaleej Times), but no real photo of the number in the coverage: KT, Gulf News, TravelsDubai show DD 6, Emarat Al Youm the totals screen) |
 | 32 | L5 | Six ones, LBP 3.15 billion: plate "111111 Y" goes for about 233x its starting price | ≈ $111,700 (market rate) | Jdeideh–Bouchrieh–Sed (Interior Ministry committee) | 2022 | Verified | todo |
 | 33 | R22 | Omani goat sells for 2,500 rials, about 12x the usual top price | $6.5K | Barka, Oman | 2025 | Partly verified | todo |
 | 34 | R45 | Kuwait: 55555555 sells for KD 210,000 | ≈$685K–735K | Kuwait | 2010 | Partly verified | todo |
 | 35 | R47 | Bahrain plate 630000 fetches BD 79,000 | $210K | Manama | 2018 | Verified | todo |
 | 36 | L9 | A 21-cm wooden cube sells for $144,000 in Diriyah | $144,000 | Diriyah, Riyadh (Sotheby's) | 2025 | Verified | todo |
-| 37 | R36 | Arabian mare sells for AED 2.8m in Dubai | $762K | Dubai | 2026 | Verified | todo |
+| 37 | R36 | A 7-month-old Arabian filly sells for AED 2.8m in Dubai | $762K | Dubai | 2026 | Verified | made: M031 (22 Nov 2026; no fresh insane result 15–22 Nov: NCF falcon nights ≤ SAR 520K for three birds, the AED 1.5M ADIHEX falcon is from August; R38 held back (Sotheby's Diriyah again right after M030), R34 skipped: no real photo of the number, only DD 6 and hall photos; L10/L2 still no photo, Lebanon due next (M032); R47 Bahrain filler; photo is Al Bayan's from the auction ring, not confirmed as D Eshrah) |
 | 38 | R42 | Camel calf sells for AED 500,000 at ADIHEX | $136K | Abu Dhabi | 2025 | Partly verified | todo |
 | 39 | R21 | Four Patek Philippe watches, one hammer: $11.9m | $11.9M | Abu Dhabi | 2025 | Verified | todo |
 | 40 | L8 | Bronze "Poem" sets Choucair's world record at £698,500 | $889,271 | London (Sotheby's) | 2023 | Verified | todo |
