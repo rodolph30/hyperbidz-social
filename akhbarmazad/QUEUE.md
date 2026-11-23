@@ -61,7 +61,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 53 | R35 | BB 12 tops Dubai's biggest-ever plate night: AED 109m | $2.63M | Dubai | 2025 | Verified | todo |
 | 54 | R37 | SAR 1.3m falcon tops Riyadh's 2026 auction | $346.7K | Malham, Riyadh | 2026 | Verified | todo |
 | 55 | R40 | Mongolian falcon sells for QR 911,000 at S'hail | $250K | Doha | 2022 | Verified | todo |
-| 56 | L14 | Shafic Abboud triptych sets his world record at £368,750 | ≈ $490,000 | London (Christie's) | 2017 | Verified | todo |
+| 56 | L14 | Shafic Abboud triptych sets his world record at £368,750 | ≈ $490,000 | London (Christie's) | 2017 | Verified | made: M032 (23 Nov 2026; Lebanon's turn (last Lebanese M028); no fresh insane result 16–23 Nov: NCF falcon nights ≤ SAR 520K for three birds, Ajman horse auction AED 10M+ total (horse right after M031), no new RTA/Absher results, Arcache Beirut online sale no results; L10/L2/L5 still no photo, L9 is the same Diriyah sale as M030, L8 too close to M016 Choucair, L12 same £444,500 as M028 Adnan; photo: Christie's image via Le Commerce du Levant) |
 | 57 | R41 | Saudi-bred Hur falcon hits SAR 500,000 | $133K | Malham, Riyadh | 2023 | Verified | todo |
 | 58 | R43 | Rare Salali goat sells for AED 70,000 | $19.1K | Ras Al Khaimah | 2025 | Partly verified | todo |
 | 59 | R44 | Plate 411 sells for QR 3.55m in Doha | $975K | Doha | 2016 | Verified | todo |

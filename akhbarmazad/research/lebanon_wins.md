@@ -241,6 +241,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Sources:** [Christie's lot page (official; estimate, price and date in page data)](https://www.christies.com/en/lot/lot-6099014); [Le Commerce du Levant (records table)](https://www.lecommercedulevant.com/article/28309-un-saliba-douaihy-de-la-collection-rockefeller-adjuge-336-5000-dollars-a-new-york).
 - **Confidence:** Verified
 - **Photo:** The Christie's lot page og:image is the triptych (© Christie's Images Ltd).
+- **Used:** M032 (23 Nov 2026). Re-checked against the Christie's lot page data (GBP 368,750, est. 150–200K, 25 Oct 2017) and Le Commerce du Levant's sale report ([article 27830](https://www.lecommercedulevant.com/article/27830-une-toile-de-chafic-abboud-adjugee-a-pres-dun-demi-million-de-dollars): record broken, ≈ $490,000). Photo: Christie's image via that article's og:image (Christie's host times out from the sandbox).
 
 ### 15. Saliba Douaihy, Wadi Qannoubine: £165,100 (June 2026)
 - **EN headline:** Douaihy's Wadi Qannoubine landscape sells for more than twice its estimate
