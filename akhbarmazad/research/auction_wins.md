@@ -521,7 +521,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Confidence:** Verified
 - **Photo rights:** SPA photo, plus video posted by the National Center for Falcons (@NCFSaudi). Ask SPA or the Center.
 
-### 38. Safeya Binzagr's "Coffee Shop in Madina Road": $2.1 million
+### 38. Safeya Binzagr's "Coffee Shop in Madina Road": $2.1 million (posted as M033)
 - **EN headline:** Saudi painter's "Coffee Shop" sells for $2.1m, 10 times its estimate
 - **AR headline:** لوحة صفية بن زقر «مقهى على طريق المدينة» تُباع بـ2.1 مليون دولار
 - **Item:** Painting *Coffee Shop in Madina Road* by the late Saudi pioneer **Safeya Binzagr**.
@@ -532,6 +532,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [Observer](https://observer.com/2026/02/sothebys-origins-ii-auction-diriyah-saudi-auction-safeya-binzagr-coffee-shop); [Sotheby's H1 2026 results release (official PDF)](https://www.sothebys.com/en/docs/pdf/sothebys-announces-record-first-half-2026-results.pdf)
 - **Confidence:** Verified
 - **Photo rights:** Owned by Sotheby's (artwork copyright: the artist's estate). Ask Sotheby's.
+- **Re-check 24 Nov 2026:** Sotheby's lot page: Lot 3, est. $150–200K, closed 31 Jan 2026, oil on board 1968. The Art Newspaper: hammer $1.6m ($2.1m with fees), two bidders incl. a relative of the artist, sold on the phone. Arab News gives a $1.65m hammer, so no hammer used. Exact with-fees figure unpublished (TradeArabia: "just over $2 million"), so "about $2.1m".
 
 ### 39. Sotheby's first-ever Saudi auction: Banksy $1.2 million
 - **EN headline:** Sotheby's first-ever Saudi auction: a Banksy goes for $1.2m in Diriyah

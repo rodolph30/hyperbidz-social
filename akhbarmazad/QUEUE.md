@@ -35,7 +35,7 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 | 27 | R18 | "My ambition is to be number one": Sharjah plate 1 for AED 18m | $4.90M | Sharjah | 2016 | Verified | made: M029 (20 Nov 2026; no fresh insane result 13–20 Nov: NCF falcon nights ≤ SAR 520K for three birds, no new RTA/Absher/Abu Dhabi plate results found; L10/L2 still no photo and Lebanon not due (M028 was Lebanese), R31 one source, R12 has no real photo (only an X screenshot)) |
 | 28 | L7 | Lebanese jeweller buys a blue diamond for $4.6m, then the highest auction price for any diamond | $4.6M | Geneva (Christie's) | 1984 | Verified | made: M024 (15 Nov 2026; Lebanon's turn; L10/L2/L5 still no real photo; no fresh insane result 8–15 Nov: NCF falcons ≤ SAR 190K, Dubai prayer-bead sale AED 235K skipped (religious item)) |
 | 29 | R39 | Sotheby's first Saudi auction: Banksy goes for $1.2m | $1.2M | Diriyah | 2025 | Verified | made: M030 (21 Nov 2026; no fresh insane result 14–21 Nov: NCF falcon nights ≤ SAR 520K for three birds, Mongolian falcon auction top SAR 250K, no new RTA/Absher/Abu Dhabi plate results; after M029 plate so no plate (L2/R31/R12 skipped); L10 still no photo and Lebanon not due) |
-| 30 | R38 | Saudi painter's "Coffee Shop" sells for $2.1m, 10x estimate | $2.1M | Diriyah | 2026 | Verified | todo |
+| 30 | R38 | Saudi painter's "Coffee Shop" sells for $2.1m, 10x estimate | $2.1M | Diriyah | 2026 | Verified | made: M033 (24 Nov 2026; no fresh insane result 17–24 Nov: NCF falcon nights ≤ SAR 580K for three birds, Ajman horse auction totals only, no new RTA/Absher plate results, nothing Lebanese; Lebanon not due (M032 was Lebanese); L10/L2 still no photo, R31 one source, R12 no real photo; exact with-fees price unpublished, card says نحو 2.1 مليون دولار) |
 | 31 | R34 | 058-0000000: AED 4.5m for seven zeros | $1.23M | Dubai | 2026 | Verified | todo (skipped 22 Nov 2026: re-verified (WAM, Gulf News, Khaleej Times), but no real photo of the number in the coverage: KT, Gulf News, TravelsDubai show DD 6, Emarat Al Youm the totals screen) |
 | 32 | L5 | Six ones, LBP 3.15 billion: plate "111111 Y" goes for about 233x its starting price | ≈ $111,700 (market rate) | Jdeideh–Bouchrieh–Sed (Interior Ministry committee) | 2022 | Verified | todo |
 | 33 | R22 | Omani goat sells for 2,500 rials, about 12x the usual top price | $6.5K | Barka, Oman | 2025 | Partly verified | todo |
@@ -77,3 +77,4 @@ The daily run takes the first story with `status: todo`, **unless** a fresh veri
 ## Weekly notes (topics and songs that did best)
 
 (Every Monday: reach, shares and follows per topic; lean the order toward what works.)
+M033
