@@ -315,7 +315,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Confidence:** Verified
 - **Photo rights:** Images are credited "Photo: Sotheby's". Ask Sotheby's.
 
-### 21. Patek Philippe Star Caliber 2000 set: $11.9 million
+### 21. Patek Philippe Star Caliber 2000 set: $11.9 million (posted as M034)
 - **EN headline:** Four Patek Philippe watches, one hammer: $11.9m in Abu Dhabi
 - **AR headline:** أربع ساعات «باتيك فيليب» تُباع معاً بـ11.9 مليون دولار في أبوظبي
 - **Item:** A four-piece **Patek Philippe Star Caliber 2000** set (yellow gold, pink gold, white gold and platinum; double dials; 21 complications).
@@ -326,6 +326,7 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Sources:** [The National](https://www.thenationalnews.com/magazine/2025/12/05/birkin-bag-sells-for-29m-at-sothebys-collectors-week-in-abu-dhabi); [Observer](https://observer.com/2025/12/auction-news-sothebys-collectors-week-abu-dhabi-133-million-sales)
 - **Confidence:** Verified
 - **Photo rights:** Owned by Sotheby's. Ask before use.
+- **Re-checked 25 Nov 2026:** Sotheby's lot page (lot 342, est. $10–20M, closed 5 Dec 2025) and press release (first complete set offered publicly; second most valuable watch sold at Sotheby's). Photo used: Sotheby's lot image ad2502-dcr58-cs-01.
 
 ### 22. Omani goat: OMR 2,500
 - **EN headline:** Omani goat sells for 2,500 rials, about 12 times the usual top price
