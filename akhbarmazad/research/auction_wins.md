@@ -360,9 +360,9 @@ Compiled 23 October 2026. 47 entries in total: **41 Verified** and **6 Partly ve
 - **Price:** AED 7,877,777 (≈ US$2.15M).
 - **Where/when:** Emirates Auction, held simultaneously at Emirates Palace (Abu Dhabi) and Armani Hotel (Dubai) with the halls linked by satellite. Saturday 8 March 2014.
 - **Wow detail:** The buyer does not own the number. The price only bought the right to use it on a two-year contract, and the regulator warned the number could be withdrawn. Bidding opened at AED 437,000. The 70 numbers raised AED 20M, partly for the Khalifa bin Zayed Al Nahyan Foundation.
-- **Sources:** [Emirates Auction media page (organiser; reproduces The National's report)](https://www.emiratesauction.com/media-center/news/153/mobile-phone-number-777-7777-fetches-nearly-dh8-million-at-uae-auction)
-- **Confidence:** Verified (organiser's official page)
-- **Photo rights:** Not checked. Ask Emirates Auction or e&.
+- **Sources:** [Emirates Auction media page (organiser; reproduces The National's report)](https://www.emiratesauction.com/media-center/news/153/mobile-phone-number-777-7777-fetches-nearly-dh8-million-at-uae-auction); [The National](https://www.thenationalnews.com/uae/mobile-phone-number-777-7777-fetches-nearly-dh8-million-at-uae-auction-1.599009); [Khaleej Times](https://www.khaleejtimes.com/uae/uaes-priciest-mobile-number-tops-dh7-8-million) (a bidder offered AED 7,777,777; the winner added AED 100,000); [Emirates 24|7](https://www.emirates247.com/news/emirates/emirati-wins-mobile-number-050-7777777-for-dh7-87-million-2014-03-09-1.540891) (buyer an Emirati, unnamed)
+- **Confidence:** Verified (organiser's official page + The National, Khaleej Times; re-checked 26 Nov 2026)
+- **Photo:** Emirates Auction handout of the bidding hall (screen shows 050 777 7777), via The National. Used for M035.
 
 ### 25. "Desert Rose" diamond: $8.8 million
 - **EN headline:** The "Desert Rose" diamond sets a record at $8.8m in Abu Dhabi
