@@ -158,6 +158,7 @@ Compiled 23 October 2026. 17 entries: **16 Verified** and **1 Partly verified**.
 - **Sources:** [The National, 31 Dec 2023](https://www.thenationalnews.com/arts-culture/art-design/2023/12/31/arab-artworks-auction-christies-sothebys/); [Sotheby's "2023 In Review" (official)](https://www.sothebys.com/en/articles/2023-in-review-middle-eastern-art); [Sotheby's lot page (estimate, date)](https://www.sothebys.com/en/buy/auction/2023/modern-contemporary-evening-auction-2/poem).
 - **Confidence:** Verified
 - **Photo:** The Sotheby's lot page carries the lot images (© Sotheby's), but our fetch found no og:image tag. The National's og:image is a Christie's saleroom shot (Mahmoud Saïd); the Choucair image is inside its gallery, captioned "Photo: Sotheby's". Ask Sotheby's.
+- **Used for M036 (27 Nov 2026):** facts re-checked on the Sotheby's lot page (lot 147, six parts, 185 x 75 x 37 cm, est. GBP 250–350K, closed 27 Jun 2023), Sotheby's 2023 review (698,500GBP, artist record) and The National ($889,271). Photo: the lot page's `l23006-cqd7b-cs-01.jpg` (brightspotcdn, 2048x2560), cropped around the sculpture, credited "الصورة: سوذبيز".
 
 ### 9. Choucair's *Secret of the Cube*: $144,000 in Diriyah
 - **EN headline:** A 21-cm wooden cube sells for $144,000 in Diriyah
